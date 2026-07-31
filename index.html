@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science & Advanced Excel Master Study Hub | Complete Notes & Practice Questions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #090d16;
+            --bg-card: rgba(22, 30, 46, 0.78);
+            --bg-card-hover: rgba(33, 45, 69, 0.88);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent-cyan: #38bdf8;
+            --accent-purple: #c084fc;
+            --accent-emerald: #34d399;
+            --accent-amber: #fbbf24;
+            --accent-rose: #f43f5e;
+            --accent-blue: #60a5fa;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.65;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.14) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(192, 132, 252, 0.14) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(52, 211, 153, 0.10) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+            background: rgba(9, 13, 22, 0.88);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+        }
+
+        .header-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .brand-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #090d16;
+            box-shadow: 0 4px 25px rgba(56, 189, 248, 0.35);
+        }
+
+        .brand-title h1 {
+            font-family: var(--font-heading);
+            font-size: 1.45rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-title p {
+            font-size: 0.82rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 480px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.9rem;
+            background: rgba(22, 30, 46, 0.9);
+            border: 1px solid var(--border-color);
+            border-radius: 99px;
+            color: #fff;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+            background: rgba(30, 41, 59, 1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        /* Layout */
+        .app-layout {
+            max-width: 1440px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1080px) {
+            .app-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 1.25rem;
+            height: fit-content;
+            position: sticky;
+            top: 90px;
+            backdrop-filter: blur(12px);
+        }
+
+        .sidebar-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+            font-weight: 700;
+            padding-left: 0.5rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .nav-item button {
+            width: 100%;
+            text-align: left;
+            padding: 0.75rem 0.9rem;
+            border-radius: 14px;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.25s ease;
+        }
+
+        .nav-item button:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            transform: translateX(4px);
+        }
+
+        .nav-item button.active {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(192, 132, 252, 0.22));
+            color: var(--accent-cyan);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Hero Banner */
+        .hero-card {
+            background: linear-gradient(135deg, rgba(22, 30, 46, 0.95), rgba(9, 13, 22, 0.95));
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(192, 132, 252, 0.22) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.95rem;
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 99px;
+            color: var(--accent-cyan);
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 1.1rem;
+        }
+
+        .hero-card h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.85rem;
+            line-height: 1.25;
+        }
+
+        .hero-card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            max-width: 820px;
+            margin-bottom: 1.8rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-box {
+            background: rgba(9, 13, 22, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 1.1rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: var(--font-heading);
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-header {
+            margin-bottom: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .section-header h3 {
+            font-family: var(--font-heading);
+            font-size: 1.65rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .ds-pill {
+            background: rgba(192, 132, 252, 0.15);
+            color: var(--accent-purple);
+            border: 1px solid rgba(192, 132, 252, 0.35);
+            font-size: 0.78rem;
+            padding: 0.3rem 0.85rem;
+            border-radius: 99px;
+            font-weight: 600;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 22px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(56, 189, 248, 0.45);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.85rem;
+            gap: 0.5rem;
+        }
+
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .card-tag {
+            font-size: 0.68rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .tag-basic { background: rgba(52, 211, 153, 0.18); color: var(--accent-emerald); }
+        .tag-logical { background: rgba(56, 189, 248, 0.18); color: var(--accent-cyan); }
+        .tag-agg { background: rgba(52, 211, 153, 0.18); color: var(--accent-emerald); }
+        .tag-text { background: rgba(251, 191, 36, 0.18); color: var(--accent-amber); }
+        .tag-fin { background: rgba(244, 63, 94, 0.18); color: var(--accent-rose); }
+        .tag-db { background: rgba(192, 132, 252, 0.18); color: var(--accent-purple); }
+        .tag-date { background: rgba(96, 165, 250, 0.18); color: var(--accent-blue); }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.1rem;
+        }
+
+        /* Formula Box */
+        .formula-box {
+            background: #060911;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            overflow-x: auto;
+        }
+
+        .copy-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-muted);
+            padding: 0.35rem 0.7rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent-cyan);
+            color: #090d16;
+        }
+
+        /* Practice Questions Box Inside Topic Card */
+        .card-practice-qs {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px dashed rgba(56, 189, 248, 0.3);
+            border-radius: 14px;
+            padding: 0.9rem 1rem;
+            margin-top: 1rem;
+        }
+
+        .practice-qs-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .practice-q-item {
+            font-size: 0.84rem;
+            margin-bottom: 0.65rem;
+            color: #cbd5e1;
+        }
+
+        .practice-q-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .q-text {
+            font-weight: 600;
+            color: #f8fafc;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .q-ans {
+            color: var(--accent-emerald);
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            background: rgba(52, 211, 153, 0.1);
+            padding: 0.15rem 0.5rem;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        /* Short Notes Revision Box */
+        .section-short-notes {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .short-notes-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 0.6rem;
+        }
+
+        .short-notes-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.85rem;
+        }
+
+        .short-notes-list li {
+            position: relative;
+            padding-left: 1.4rem;
+            font-size: 0.88rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        .short-notes-list li::before {
+            content: '📌';
+            position: absolute;
+            left: 0;
+            top: 1px;
+            font-size: 0.8rem;
+        }
+
+        /* Tables & Grids */
+        .ds-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.88rem;
+        }
+
+        .ds-table th {
+            background: rgba(30, 41, 59, 0.9);
+            color: var(--accent-cyan);
+            padding: 0.85rem 1rem;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .ds-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .ds-table tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* Quiz */
+        .quiz-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2.25rem;
+        }
+
+        .quiz-q {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 1.35rem;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            margin-bottom: 1.65rem;
+        }
+
+        .quiz-opt {
+            padding: 0.9rem 1.35rem;
+            background: rgba(9, 13, 22, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.92rem;
+            text-align: left;
+            color: var(--text-main);
+            font-family: var(--font-body);
+        }
+
+        .quiz-opt:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        .quiz-opt.correct {
+            background: rgba(52, 211, 153, 0.22) !important;
+            border-color: var(--accent-emerald) !important;
+            color: var(--accent-emerald);
+        }
+
+        .quiz-opt.wrong {
+            background: rgba(244, 63, 94, 0.22) !important;
+            border-color: var(--accent-rose) !important;
+            color: var(--accent-rose);
+        }
+
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), #0284c7);
+            color: #090d16;
+            font-weight: 700;
+            padding: 0.8rem 1.65rem;
+            border-radius: 99px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-body);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 22px rgba(56, 189, 248, 0.45);
+        }
+
+        footer {
+            max-width: 1440px;
+            margin: 3rem auto 2rem;
+            padding: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <div class="brand-icon">DS</div>
+                <div class="brand-title">
+                    <h1>Data Science & Excel Master Study Hub</h1>
+                    <p>Excel Basics, Advanced Formulas & Topic-wise Practice Questions</p>
+                </div>
+            </div>
+            
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="फॉर्म्युला किंवा सराव प्रश्न शोधा (उदा. VLOOKUP, SUMIFS, Practice Questions)..." onkeyup="searchContent()">
+            </div>
+        </div>
+    </header>
+
+    <!-- App Layout -->
+    <div class="app-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-title">संपूर्ण विषय सूची (All Topics)</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <button class="active" onclick="showTab('overview', this)">
+                        <span>📌</span> मुख्य परिचय (Overview)
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('basics', this)">
+                        <span>🔰</span> 0. Excel Basics & Fundamentals
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('logical', this)">
+                        <span>🧠</span> 1. Logical & Error Handling
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('agg', this)">
+                        <span>📊</span> 2. Counting & Aggregation
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('text', this)">
+                        <span>🔤</span> 3. Text Engineering & Cleaning
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('lookup', this)">
+                        <span>🔍</span> 4. Lookup & Reference (VLOOKUP)
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('date', this)">
+                        <span>📅</span> 5. Date & Time Analytics
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('financial', this)">
+                        <span>💰</span> 6. Financial Modeling (PMT/PV)
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('database', this)">
+                        <span>🗃️</span> 7. Database, Pivots & Rules
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('mis', this)">
+                        <span>🎯</span> 8. MIS Exam Suite Breakdown
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('shortcuts', this)">
+                        <span>⚡</span> 9. Excel Keyboard Shortcuts
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('dsbridge', this)">
+                        <span>🐍</span> 10. Excel ➔ Python Matrix
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button onclick="showTab('quiz', this)">
+                        <span>📝</span> 11. 12-Question Master Quiz
+                    </button>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- OVERVIEW SECTION -->
+            <section id="overview" class="content-section active">
+                <div class="hero-card">
+                    <div class="hero-badge">🎯 Every Topic Included + 2-3 Practice Questions Per Topic</div>
+                    <h2>ॲडव्हान्स एक्सेल व डेटा सायन्स मास्टर स्टडी पोर्टल</h2>
+                    <p>तुमच्या <strong>"Advance Excel"</strong> फोल्डरमधील १२ फाईल्स, १६ वर्कशीट्स, ६०+ फॉर्म्युले आणि **प्रत्येक विषयावरील २ ते ३ सराव प्रश्न (Practice Questions)** येथे समाविष्ट केले आहेत.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">सराव प्रश्न (Practice Qs)</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">एक्सेल वर्कबुक्स</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">16</div>
+                            <div class="stat-label">मास्टर शीट्स</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">कोर्स कव्हरेज</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1rem;">📁 सर्व फाईल्सचा आढावा (File Master Inventory)</h3>
+                    <table class="ds-table">
+                        <thead>
+                            <tr>
+                                <th>फाईलचे नाव</th>
+                                <th>वर्कशीट्स</th>
+                                <th>प्रमुख संकल्पना (Key Topics Covered)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Excel Formulas - Copy.xlsx</strong></td>
+                                <td>16 Sheets</td>
+                                <td>Excel Basics, IF, Nested IF, AND/OR, COUNTA/BLANK, SUMIF/S, COUNTIF/S, AVERAGEIF/S, SUBTOTAL, SUMPRODUCT, LEFT/RIGHT/MID, PMT.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Assignment 3 - Text , Logical...</strong></td>
+                                <td>5 Sheets</td>
+                                <td>Named Ranges, Region TA-DA, Employee Retirement logic, Data Validation Constraints (1-1000 bounds).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MIS Test Paper.xlsx</strong></td>
+                                <td>14 Sheets</td>
+                                <td>100 Marks Benchmark MIS Test Suite (Test 1 to 11), Pivot Table 24 & 25.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Logical Function - Tax Calc...</strong></td>
+                                <td>6 Sheets</td>
+                                <td>Rahul Dravid, Sachin Tendulkar Income Tax Slabs (<2.5L 0%, 2.5L-5L 5%, >5L 20%), EMI Risk Flagging.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 0. EXCEL BASICS & CORE FUNDAMENTALS -->
+            <section id="basics" class="content-section">
+                <div class="section-header">
+                    <h3>🔰 0. Excel Basics & Core Fundamentals</h3>
+                    <span class="ds-pill">Foundation Topics & Practice Qs</span>
+                </div>
+
+                <div class="grid-cards">
+                    <!-- Basic Card 1 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">1. Excel Screen & Cell Address</div>
+                                <span class="card-tag tag-basic">Basics</span>
+                            </div>
+                            <p class="card-desc">Columns (A, B, C...) आणि Rows (1, 2, 3...) मिळून सेल तयार होतो (उदा. **A1**, **C15**).</p>
+                            <div class="formula-box">
+                                <code>Column Letter + Row Number (e.g. C15)</code>
+                            </div>
+                        </div>
+
+                        <!-- Practice Qs -->
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions (२-३ प्रश्न)</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) कॉलम C आणि रो 15 जोडणाऱ्या सेलचा ॲड्रेस काय असेल?</span>
+                                <span class="q-ans">उत्तर: C15</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) निवडलेल्या सेलमधील ॲड्रेस स्क्रीनवर कुठे दिसतो?</span>
+                                <span class="q-ans">उत्तर: Name Box मधे</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. ३) Workbook आणि Worksheet मधील मुख्य फरक काय?</span>
+                                <span class="q-ans">उत्तर: Workbook म्हणजे पूर्ण फाईल, Worksheet हा त्यातील तक्ता.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Basic Card 2 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">2. Basic Data Types</div>
+                                <span class="card-tag tag-basic">Data Types</span>
+                            </div>
+                            <p class="card-desc">Text डावीकडे (Left), Number उजवीकडे (Right) अलाईन होतात. तारीख 1 Jan 1900 पासूनचा सिरीअल नंबर असते.</p>
+                            <div class="formula-box">
+                                <code>Text (Left) | Number (Right) | Date</code>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) एक्सेल मध्ये नंबर आणि टेक्स्ट च्या अलाईनमेंट मध्ये काय फरक असतो?</span>
+                                <span class="q-ans">उत्तर: Text डावीकडे व Number उजवीकडे अलाईन होतो.</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) नंबर डावीकडे दिसत असेल तर त्याचा अर्थ काय?</span>
+                                <span class="q-ans">उत्तर: तो डेटा Text फॉरमॅटमध्ये सेव्ह झाला आहे.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Basic Card 3 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">3. Basic Arithmetic Operators</div>
+                                <span class="card-tag tag-basic">Arithmetic</span>
+                            </div>
+                            <p class="card-desc">बेरीज (`+`), वजाबाकी (`-`), गुणाकार (`*`), भागाकार (`/`), टक्केवारी (`%`), घातांक (`^`).</p>
+                            <div class="formula-box">
+                                <code>=A1+B1 | =A1-B1 | =A1*B1 | =A1/B1</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) A1 मधील संख्येचे 15% काढण्याचा फॉर्म्युला काय?</span>
+                                <span class="q-ans">उत्तर: =A1*15%</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) `=10+5*2` चे उत्तर BODMAS नुसार काय येईल?</span>
+                                <span class="q-ans">उत्तर: 20 (आधी गुणाकार)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Basic Card 4 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">4. Cell Referencing ($ Sign)</div>
+                                <span class="card-tag tag-basic">Cell Lock</span>
+                            </div>
+                            <p class="card-desc">`F4` की दाबून सेल लॉक करणे. Relative (`A1`), Absolute (`$A$1`), Mixed (`$A1`).</p>
+                            <div class="formula-box">
+                                <code>Press F4 to lock cell ($A$1)</code>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) फॉर्म्युला ड्रॅग करताना सेल लॉक करण्यासाठी कोणती की दाबतात?</span>
+                                <span class="q-ans">उत्तर: F4 Key ($A$1)</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) A1 मधील `=B1*10` फॉर्म्युला A2 मध्ये कॉपी केल्यास काय होईल?</span>
+                                <span class="q-ans">उत्तर: =B2*10 (Relative Reference)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 1. LOGICAL FUNCTIONS & ERROR HANDLING -->
+            <section id="logical" class="content-section">
+                <div class="section-header">
+                    <h3>🧠 1. Logical Functions & Error Handling</h3>
+                    <span class="ds-pill">Decision Rules & Practice Qs</span>
+                </div>
+
+                <div class="grid-cards">
+                    <!-- Logical Card 1 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">Basic IF Function</div>
+                                <span class="card-tag tag-logical">Basic</span>
+                            </div>
+                            <p class="card-desc">अट सत्य (True) की असत्य (False) तपासून निकाल देणे (उदा. Salary > ₹15,000).</p>
+                            <div class="formula-box">
+                                <code>=IF(C2>15000, 1000, 0)</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) पगार > 15000 असल्यास 10% बोनस, नाहीतर 0 देणारा फॉर्म्युला लिहा.</span>
+                                <span class="q-ans">उत्तर: =IF(C2>15000, C2*10%, 0)</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) IF मध्ये value_if_false न लिहिल्यास काय उत्तर येते?</span>
+                                <span class="q-ans">उत्तर: FALSE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logical Card 2 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">Nested IF (Multi-Slab)</div>
+                                <span class="card-tag tag-logical">Multi-Level</span>
+                            </div>
+                            <p class="card-desc">एकापेक्षा जास्त अटींच्या पातळ्या (उदा. Manager -> 5000, Supervisor -> 3000, Else -> 1000).</p>
+                            <div class="formula-box">
+                                <code>=IF(Desg="Manager", 5000, IF(Desg="Supervisor", 3000, 1000))</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) Marks >= 75 -> "A", Marks >= 50 -> "B", Else -> "C" साठी फॉर्म्युला लिहा.</span>
+                                <span class="q-ans">उत्तर: =IF(A1>=75,"A",IF(A1>=50,"B","C"))</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) Nested IF मध्ये एकाच वेळी किती अटी जोडता येतात?</span>
+                                <span class="q-ans">उत्तर: 64 पातळींपर्यंत</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logical Card 3 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">IF with AND Function</div>
+                                <span class="card-tag tag-logical">Strict Logic</span>
+                            </div>
+                            <p class="card-desc">सर्व अटी एकाच वेळी सत्य असणे आवश्यक (उदा. Gender = Female AND Salary < 50,000).</p>
+                            <div class="formula-box">
+                                <code>=IF(AND(Gender="Female", Salary<50000), "Eligible", "Not")</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) लिंग="Female" आणि पगार < 50000 असल्यास "Eligible" चा फॉर्म्युला लिहा.</span>
+                                <span class="q-ans">उत्तर: =IF(AND(A2="Female", B2<50000), "Eligible", "Not")</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) AND मध्ये 1 अट असत्य असेल तर काय निकाल येतो?</span>
+                                <span class="q-ans">उत्तर: FALSE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logical Card 4 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">IFERROR Function</div>
+                                <span class="card-tag tag-logical">Error Handling</span>
+                            </div>
+                            <p class="card-desc">फॉर्म्युलामध्ये `#N/A` किंवा `#DIV/0!` एरर आल्यास त्याऐवजी कस्टम मेसेज किंवा 0 दाखवणे.</p>
+                            <div class="formula-box">
+                                <code>=IFERROR(A2/B2, 0)</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) A1/B1 करताना `#DIV/0!` एरर लपवण्यासाठी कसा फॉर्म्युला लिहाल?</span>
+                                <span class="q-ans">उत्तर: =IFERROR(A1/B1, 0)</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) VLOOKUP मधील `#N/A` ऐवजी "Not Found" दाखवण्याचा फॉर्म्युला?</span>
+                                <span class="q-ans">उत्तर: =IFERROR(VLOOKUP(...), "Not Found")</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. COUNTING & AGGREGATION -->
+            <section id="agg" class="content-section">
+                <div class="section-header">
+                    <h3>📊 2. Counting & Aggregation Functions</h3>
+                    <span class="ds-pill">Aggregations & Practice Qs</span>
+                </div>
+
+                <div class="grid-cards">
+                    <!-- Agg Card 1 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">SUMIF & SUMIFS</div>
+                                <span class="card-tag tag-agg">Summation</span>
+                            </div>
+                            <p class="card-desc">अटींनुसार एकूण बेरीज करणे (उदा. North मधील Sales विभागाचा पगार).</p>
+                            <div class="formula-box">
+                                <code>=SUMIFS(Salary, Dept, "Sales", Region, "North")</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) "Sales" विभागातील कर्मचाऱ्यांच्या पगाराची बेरीज कशी कराल?</span>
+                                <span class="q-ans">उत्तर: =SUMIF(Dept_Range, "Sales", Salary_Range)</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) SUMIF आणि SUMIFS मधील Sum Range कुठे लिहीतात?</span>
+                                <span class="q-ans">उत्तर: SUMIF मध्ये शेवटी, SUMIFS मध्ये सुरवातीला.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agg Card 2 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">COUNTIF & COUNTIFS</div>
+                                <span class="card-tag tag-agg">Frequency</span>
+                            </div>
+                            <p class="card-desc">अटी पूर्ण करणाऱ्या नोंदी मोजणे (उदा. Cash व्यवहारांची संख्या).</p>
+                            <div class="formula-box">
+                                <code>=COUNTIFS(Type, "Cash", Mode, "Credit")</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) Type="Cash" असलेल्या नोंदी मोजण्याचा फॉर्म्युला काय?</span>
+                                <span class="q-ans">उत्तर: =COUNTIF(Type_Range, "Cash")</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) पगार > 50000 असणाऱ्या कर्मचाऱ्यांची संख्या कशी मोजाल?</span>
+                                <span class="q-ans">उत्तर: =COUNTIF(Salary_Range, ">50000")</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agg Card 3 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">SUBTOTAL Function</div>
+                                <span class="card-tag tag-agg">Dynamic Filters</span>
+                            </div>
+                            <p class="card-desc">फिल्टर केलेल्या डेटावरच डायनॅमिक कॅल्क्युलेशन (Code 9 = SUM, 1 = AVERAGE).</p>
+                            <div class="formula-box">
+                                <code>=SUBTOTAL(9, Amount_Range)</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) फिल्टर केलेल्या डेटाची बेरीज करण्यासाठी कोणता कोड वापरतात?</span>
+                                <span class="q-ans">उत्तर: Code 9 (किंवा 109)</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) SUBTOTAL मधील 9 आणि 109 मधील फरक काय?</span>
+                                <span class="q-ans">उत्तर: Code 109 मॅन्युअली लपवलेल्या Rows सोडतो.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agg Card 4 -->
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">SUMPRODUCT Function</div>
+                                <span class="card-tag tag-agg">Vector Product</span>
+                            </div>
+                            <p class="card-desc">नग (Quantity) × दर (Rate) गुणाकार करून थेट एकूण बेरीज काढणे.</p>
+                            <div class="formula-box">
+                                <code>=SUMPRODUCT(Qty_Range, Rate_Range)</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) Qty आणि Rate चे स्वतंत्र गुणाकार न करता एकूण बेरीज कशी काढाल?</span>
+                                <span class="q-ans">उत्तर: =SUMPRODUCT(Qty_Range, Rate_Range)</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) Qty={5,10} आणि Rate={100,200} असल्यास SUMPRODUCT चे उत्तर काय?</span>
+                                <span class="q-ans">उत्तर: 2500 -> (5*100) + (10*200)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. LOOKUP & REFERENCE ANALYTICS -->
+            <section id="lookup" class="content-section">
+                <div class="section-header">
+                    <h3>🔍 4. Lookup & Reference Analytics</h3>
+                    <span class="ds-pill">Data Joining & Practice Qs</span>
+                </div>
+
+                <div class="grid-cards">
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">VLOOKUP (Exact Match)</div>
+                                <span class="card-tag tag-db">Vertical Lookup</span>
+                            </div>
+                            <p class="card-desc">तक्त्यामधून आयडी किंवा नावावरून डेटा हुडकणे (`0` = Exact Match).</p>
+                            <div class="formula-box">
+                                <code>=VLOOKUP(A2, B2:D100, 3, 0)</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) VLOOKUP मध्ये 3ऱ्या कॉलम मधील पगार शोधणारा फॉर्म्युला कसा लिहाल?</span>
+                                <span class="q-ans">उत्तर: =VLOOKUP(Emp_ID, Table, 3, 0)</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) Exact Match साठी शेवटचा आर्गुमेंट काय ठेवतात?</span>
+                                <span class="q-ans">उत्तर: 0 किंवा FALSE</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. ३) VLOOKUP ची मुख्य मर्यादा कोणती?</span>
+                                <span class="q-ans">उत्तर: तो फक्त डावीकडून उजवीकडे (Left-to-Right) डेटा शोधतो.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">INDEX + MATCH Combination</div>
+                                <span class="card-tag tag-db">Dynamic Lookup</span>
+                            </div>
+                            <p class="card-desc">VLOOKUP ची मर्यादा मोडून डाव्या बाजूचा डेटा शोधण्यासाठी (Left Lookup).</p>
+                            <div class="formula-box">
+                                <code>=INDEX(Salary, MATCH(Emp_ID, ID_Range, 0))</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) डाव्या बाजूचा डेटा (Left Lookup) शोधण्यासाठी कोणते फॉर्म्युले वापरतात?</span>
+                                <span class="q-ans">उत्तर: INDEX + MATCH</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) MATCH फंक्शन काय शोधतो?</span>
+                                <span class="q-ans">उत्तर: शोधायच्या व्हॅल्यूची पोझिशन/नंबर.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. FINANCIAL MODELING -->
+            <section id="financial" class="content-section">
+                <div class="section-header">
+                    <h3>💰 6. Financial Modeling & Risk Analytics</h3>
+                    <span class="ds-pill">Banking & Practice Qs</span>
+                </div>
+
+                <div class="grid-cards">
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">PMT (Monthly EMI)</div>
+                                <span class="card-tag tag-fin">Loan EMI</span>
+                            </div>
+                            <p class="card-desc">कर्जाचा मासिक हप्ता काढणे. (Rate/12, Months, -Loan Amount).</p>
+                            <div class="formula-box">
+                                <code>=PMT(10%/12, 36, -100000)</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) ₹1 लाख लोन, 10% दर व 3 वर्षांसाठी EMI काढण्याचा फॉर्म्युला?</span>
+                                <span class="q-ans">उत्तर: =PMT(10%/12, 36, -100000)</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) PMT मध्ये Loan Amount च्या आधी वजा (`-`) का लावतात?</span>
+                                <span class="q-ans">उत्तर: पॉझिटिव्ह EMI उत्तर येण्यासाठी.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                <div class="card-title">IPMT vs PPMT</div>
+                                <span class="card-tag tag-fin">Interest & Principal</span>
+                            </div>
+                            <p class="card-desc">मासिक हप्त्यातील व्याजाचा भाग (IPMT) आणि मुद्दल भाग (PPMT) वेगळा करणे.</p>
+                            <div class="formula-box">
+                                <code>=IPMT(10%/12, 1, 36, -100000)</code>
+                                <button class="copy-btn" onclick="copyFormula(this)">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="card-practice-qs">
+                            <div class="practice-qs-title">❓ Topic Practice Questions</div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. १) पहिल्या महिन्याच्या EMI मधील व्याजाचा (Interest) भाग कसा काढाल?</span>
+                                <span class="q-ans">उत्तर: =IPMT(10%/12, 1, 36, -100000)</span>
+                            </div>
+                            <div class="practice-q-item">
+                                <span class="q-text">प्र. २) `IPMT + PPMT` ची बेरीज कशाच्या बरोबर असते?</span>
+                                <span class="q-ans">उत्तर: एकूण EMI (`PMT`) च्या बरोबर.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. EXCEL TO PYTHON MATRIX -->
+            <section id="dsbridge" class="content-section">
+                <div class="section-header">
+                    <h3>🐍 10. Excel to Python/Pandas Conversion Matrix</h3>
+                    <span class="ds-pill">Data Science Translation Guide</span>
+                </div>
+
+                <table class="ds-table">
+                    <thead>
+                        <tr>
+                            <th>Excel Function</th>
+                            <th>Excel Syntax Example</th>
+                            <th>Python (Pandas / NumPy) Equivalent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>IF Function</strong></td>
+                            <td><code>=IF(A2>15000, 1000, 0)</code></td>
+                            <td><code>np.where(df['Salary'] > 15000, 1000, 0)</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>SUMIF / SUMIFS</strong></td>
+                            <td><code>=SUMIF(Dept, "Sales", Salary)</code></td>
+                            <td><code>df[df['Dept']=='Sales']['Salary'].sum()</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>VLOOKUP</strong></td>
+                            <td><code>=VLOOKUP(A2, Table, 2, 0)</code></td>
+                            <td><code>pd.merge(df1, df2, on='ID', how='left')</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 11. QUIZ MODE -->
+            <section id="quiz" class="content-section">
+                <div class="section-header">
+                    <h3>📝 11. 12-Question Master Quiz</h3>
+                    <span class="ds-pill">Complete Self-Test</span>
+                </div>
+
+                <div class="quiz-container">
+                    <div id="quizQuestion" class="quiz-q">प्र. १) कर्जाचा मासिक हप्ता (EMI) काढण्यासाठी कोणता फॉर्म्युला वापरतात?</div>
+                    <div id="quizOptions" class="quiz-options">
+                        <button class="quiz-opt" onclick="checkAnswer(this, false)">=SUMIFS()</button>
+                        <button class="quiz-opt" onclick="checkAnswer(this, true)">=PMT()</button>
+                        <button class="quiz-opt" onclick="checkAnswer(this, false)">=SUBTOTAL()</button>
+                        <button class="quiz-opt" onclick="checkAnswer(this, false)">=COUNTIF()</button>
+                    </div>
+                    <div class="quiz-nav">
+                        <span id="quizScore" style="color: var(--accent-cyan); font-weight: 700;">Score: 0 / 0</span>
+                        <button class="btn-primary" onclick="nextQuestion()">पुढील प्रश्न ➔</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created for <strong>Lucky</strong> | Data Science & Advanced Excel Master Study Portal © 2026</p>
+    </footer>
+
+    <script>
+        // Tab Navigation
+        function showTab(tabId, btn) {
+            document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.nav-item button').forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Copy Formula
+        function copyFormula(btn) {
+            const code = btn.previousElementSibling.innerText;
+            navigator.clipboard.writeText(code);
+            const origText = btn.innerText;
+            btn.innerText = 'Copied! ✓';
+            btn.style.background = '#34d399';
+            btn.style.color = '#090d16';
+            setTimeout(() => {
+                btn.innerText = origText;
+                btn.style.background = '';
+                btn.style.color = '';
+            }, 2000);
+        }
+
+        // Live Search
+        function searchContent() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            
+            if (query.trim() === '') {
+                cards.forEach(card => card.style.display = 'flex');
+                return;
+            }
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Quiz Data
+        const quizData = [
+            {
+                q: "प्र. १) कर्जाचा मासिक हप्ता (EMI) काढण्यासाठी कोणता फॉर्म्युला वापरतात?",
+                opts: ["=SUMIFS()", "=PMT()", "=SUBTOTAL()", "=COUNTIF()"],
+                ans: 1
+            },
+            {
+                q: "प्र. २) एकापेक्षा जास्त अटींवर आधारित संख्या मोजण्यासाठी (Multi-Condition Count) कोणता फॉर्म्युला योग्य आहे?",
+                opts: ["=COUNT()", "=COUNTA()", "=COUNTIFS()", "=SUMIF()"],
+                ans: 2
+            },
+            {
+                q: "प्र. ३) नाव आणि आडनाव आपोआप विलग करणारी एक्सेल शॉर्टकट की कोणती?",
+                opts: ["Ctrl + E (Flash Fill)", "Ctrl + Z", "Alt + F4", "Ctrl + Shift + L"],
+                ans: 0
+            },
+            {
+                q: "प्र. ४) VLOOKUP मध्ये Exact Match साठी शेवटचा आर्गुमेंट काय ठेवतात?",
+                opts: ["1 किंवा TRUE", "0 किंवा FALSE", "-1", "100"],
+                ans: 1
+            },
+            {
+                q: "प्र. ५) फॉर्म्युला ड्रॅग करताना सेल रेफरन्स लॉक ($A$1) करण्यासाठी कोणती की दाबतात?",
+                opts: ["F2", "F4", "F8", "F12"],
+                ans: 1
+            },
+            {
+                q: "प्र. ६) एरर आले असल्यास `#N/A` ऐवजी सानुकूल मेसेज किंवा 0 दाखवण्यासाठी कोणता फॉर्म्युला वापरतात?",
+                opts: ["=IFERROR()", "=ISNA()", "=IF()", "=CLEAN()"],
+                ans: 0
+            },
+            {
+                q: "प्र. ७) आजची सिस्टीम तारीख थेट मिळवण्यासाठी कोणता फॉर्म्युला वापरतात?",
+                opts: ["=DATE()", "=TODAY()", "=TIME()", "=NOW_DATE()"],
+                ans: 1
+            },
+            {
+                q: "प्र. ८) फिल्टर केलेल्या सेल्सचीच बेरीज किंवा काउंट करण्यासाठी कोणता फॉर्म्युला वापरला जातो?",
+                opts: ["=SUM()", "=SUBTOTAL()", "=SUMPRODUCT()", "=DSUM()"],
+                ans: 1
+            },
+            {
+                q: "प्र. ९) पँडास (Pandas) मधील `pd.merge()` हा एक्सेलच्या कोणत्या फॉर्म्युलासारखा काम करतो?",
+                opts: ["=VLOOKUP()", "=COUNTIF()", "=TEXT()", "=CONCAT()"],
+                ans: 0
+            },
+            {
+                q: "प्र. १०) मजकुरातील अतिरिक्त फालतू रिकाम्या जागा (Extra Spaces) काढण्यासाठी कोणता फॉर्म्युला वापरतात?",
+                opts: ["=TRIM()", "=CLEAN()", "=LEN()", "=MID()"],
+                ans: 0
+            },
+            {
+                q: "प्र. ११) नग (Quantity) × दर (Rate) गुणाकार करून थेट एकूण बेरीज काढण्यासाठी कोणता फॉर्म्युला वापरतात?",
+                opts: ["=SUMPRODUCT()", "=MULTIPLY()", "=COUNTIFS()", "=AVERAGEIFS()"],
+                ans: 0
+            },
+            {
+                q: "प्र. १२) लोन हप्त्यामधील व्याजाचा (Interest) भाग वेगळा काढण्यासाठी कोणता फॉर्म्युला वापरतात?",
+                opts: ["=PPMT()", "=IPMT()", "=RATE()", "=PV()"],
+                ans: 1
+            }
+        ];
+
+        let currentQ = 0;
+        let score = 0;
+        let answered = false;
+
+        function loadQuestion() {
+            const q = quizData[currentQ];
+            document.getElementById('quizQuestion').innerText = q.q;
+            const optsContainer = document.getElementById('quizOptions');
+            optsContainer.innerHTML = '';
+            
+            q.opts.forEach((optText, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'quiz-opt';
+                btn.innerText = optText;
+                btn.onclick = () => selectAnswer(btn, idx === q.ans);
+                optsContainer.appendChild(btn);
+            });
+            answered = false;
+            document.getElementById('quizScore').innerText = `Score: ${score} / ${quizData.length}`;
+        }
+
+        function selectAnswer(btn, isCorrect) {
+            if (answered) return;
+            answered = true;
+            if (isCorrect) {
+                btn.classList.add('correct');
+                score++;
+            } else {
+                btn.classList.add('wrong');
+            }
+            document.getElementById('quizScore').innerText = `Score: ${score} / ${quizData.length}`;
+        }
+
+        function nextQuestion() {
+            if (currentQ < quizData.length - 1) {
+                currentQ++;
+                loadQuestion();
+            } else {
+                alert(`अभिनंदन! तुम्ही १२ प्रश्नांची संपूर्ण टेस्ट पूर्ण केली आहे.\nतुमचा अंतिम स्कोअर: ${score} / ${quizData.length}`);
+                currentQ = 0;
+                score = 0;
+                loadQuestion();
+            }
+        }
+
+        // Initialize Quiz
+        loadQuestion();
+    </script>
+</body>
+</html>

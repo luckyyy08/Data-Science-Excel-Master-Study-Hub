@@ -1,0 +1,4 @@
+# Git Ignore for Data Science Excel Hub
+*.log
+*.tmp
+node_modules/
