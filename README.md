@@ -1,33 +1,42 @@
-# 📊 Data Science & Advanced Excel Master Study Hub
+# 📚 Data Science & Advance Excel Master Study Hub
 
-An interactive, responsive, single-page web portal created for **Data Science & Business Analytics** learners. It covers complete Excel fundamentals, advanced formulas, real-world MIS test suites, shortcuts, and direct mappings to **Python (Pandas & NumPy)** code.
-
----
-
-## 🌟 Key Features
-
-- 🔰 **Module 0: Excel Basics & Fundamentals**: Cell addresses, data types, arithmetic operators, formulas vs. functions, relative/absolute cell referencing (`$A$1`).
-- 🧠 **Module 1: Logical Functions & Error Handling**: `IF`, `NESTED IF`, `AND`, `OR`, Income Tax Slabs, `IFERROR`.
-- 📊 **Module 2: Counting & Aggregation**: `SUMIF`, `SUMIFS`, `COUNTIF`, `COUNTIFS`, `AVERAGEIF`, `AVERAGEIFS`, `COUNTA`, `COUNTBLANK`, `SUBTOTAL`, `SUMPRODUCT`.
-- 🔤 **Module 3: Text Engineering & Data Cleaning**: `LEFT`, `RIGHT`, `MID`, `FIND`, `SUBSTITUTE`, `TRIM`, `LEN`, `UPPER`, `LOWER`, `PROPER`, `Flash Fill (Ctrl+E)`.
-- 🔍 **Module 4: Lookup & Reference Analytics**: `VLOOKUP`, `HLOOKUP`, `INDEX + MATCH`.
-- 📅 **Module 5: Temporal Analytics & Date Functions**: `TODAY`, `NOW`, `YEAR`, `MONTH`, `DAY`, `DATEDIF` (Age Calculator).
-- 💰 **Module 6: Financial Modeling & Risk**: `PMT` (EMI Calculator), `IPMT`, `PPMT`, `PV`, `FV`.
-- 🗃️ **Module 7: Database, Pivots & Rules**: Data Validation constraints, `DSUM`, `DAVERAGE`, Pivot Tables, Slicers.
-- 🎯 **Module 8: MIS Exam Suite**: Breakdown of 11 practical benchmark tests and pivot summaries.
-- ⚡ **Module 9: Keyboard Shortcuts**: Essential productivity shortcuts.
-- 🐍 **Module 10: Excel ➔ Python/Pandas Conversion Matrix**: Side-by-side Pandas code snippets for Data Science.
-- 📝 **Module 11: 12-Question Master Self-Test Quiz**: Interactive quiz mode with instant scoring.
-- ❓ **Topic-wise Practice Questions**: 2 to 3 practice questions with answers embedded under every topic!
+Welcome to the **Advance Excel & Data Science Master Study Hub** repository.  
+This repository contains analyzed Excel study workbooks, practical MIS test modules, interactive handwritten notes, and a sheet-by-sheet study plan.
 
 ---
 
-## 🚀 How to Open
+## 🌟 Key Features & Study Resources
 
-Simply open `index.html` in any web browser!
+- 📝 **[Advance Excel Handwritten Study Notes (Web App)](index.html)**: Interactive, notebook-styled study guide with Google Fonts (`Kalam`, `Caveat`), multiple paper themes (Ruled, Legal Pad, Grid, Blackboard), search functionality, sticky notes, and dual Marathi + English explanations.
+- 🎯 **[Sheet-by-Sheet Study Roadmap](C:\Users\Lucky\.gemini\antigravity-ide\brain\4dc21de9-7df4-4e09-8633-1eac847b1627\Sheet_By_Sheet_Study_Plan.md)**: A 4-level, step-by-step learning path mapped to all Excel workbooks in the workspace.
+- 📊 **Analyzed Excel Modules**:
+  - `Assignment 3 - Text , Logical, Date, Sumifs etc...xlsx`
+  - `Logical Function - If , And , Or , Nested if...xlsx`
+  - `DATE FUNCTION.xlsx`
+  - `Database Function.xlsx`
+  - `MIS Test Paper.xlsx` (11 MIS Practical Modules)
+  - `Logical Functions DONE.xlsx`, `Test2.xlsx`, `Analytics Test.xlsx`
 
 ---
 
-## 👤 Author
+## 🚀 Covered Excel Functions
 
-Created for **Lucky** | Data Science & Advanced Excel Study Portal © 2026
+- **Logical Functions**: `IF`, `IFS`, `AND`, `OR`, `NESTED IF`, Income Tax Slabs
+- **Aggregation & Math**: `SUMIF`, `SUMIFS`, `COUNT`, `COUNTA`, `COUNTBLANK`, `COUNTIF`, `COUNTIFS`, `AVERAGEIF`, `AVERAGEIFS`, `SUBTOTAL(9)`, `SUMPRODUCT`
+- **Text Functions**: `LEFT`, `MID`, `RIGHT`, `FIND`, `SEARCH`, `LEN`, `TRIM`, `SUBSTITUTE`, `PROPER`, `UPPER`, `LOWER`, `CONCAT`, `Flash Fill (Ctrl+E)`
+- **Date & Time**: `TODAY`, `NOW`, `DATE`, `YEAR`, `MONTH`, `DAY`, `WEEKDAY`, `DATEDIF`, `EDATE`, `EOMONTH`, `WORKDAY`, `NETWORKDAYS`, `NETWORKDAYS.INTL`, `DAYS`
+- **Database Functions**: `DSUM`, `DAVERAGE`, `DCOUNT`, `DCOUNTA`, `DMAX`, `DMIN`, `DGET`
+- **Financial Functions**: `PMT`, `IPMT`, `PPMT` (EMI Calculations)
+- **MIS & Data Analysis**: Pivot Tables, Data Filtering, Cross-sheet dynamic summaries
+
+---
+
+## 📖 How to Use
+
+1. Open `index.html` or `Advance_Excel_Handwritten_Notes.html` in any web browser.
+2. Select your preferred notebook paper theme (Ruled, Legal Pad, Grid, Blackboard).
+3. Search for any formula using the search bar.
+4. Solve practical exercises and check your answers in the interactive quiz section.
+
+---
+*Created with ❤️ for Advance Excel Mastery*

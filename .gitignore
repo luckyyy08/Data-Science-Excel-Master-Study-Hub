@@ -1,4 +1,12 @@
-# Git Ignore for Data Science Excel Hub
-*.log
-*.tmp
+# Temporary Excel Lock Files
+~$*.xlsx
+~$*.xls
+
+# Node modules & Scratch
 node_modules/
+package-lock.json
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+*.log
