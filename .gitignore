@@ -6,6 +6,9 @@
 node_modules/
 package-lock.json
 
+# Generated HTML subdirectories
+*_files/
+
 # System & IDE files
 .DS_Store
 Thumbs.db
