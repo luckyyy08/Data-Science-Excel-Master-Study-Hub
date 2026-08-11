@@ -11,9 +11,9 @@
   
   <style>
     :root {
-      --paper-bg: #fffdf5;
-      --line-color: #e2e8f0;
-      --margin-color: #ff8a8a;
+      --paper-bg: #faf7eb;
+      --line-color: #d1d5db;
+      --margin-color: #ef5350;
       --ink-blue: #1e3a8a;
       --ink-black: #1f2937;
       --highlighter-yellow: #fef08a;
@@ -32,16 +32,19 @@
     body.theme-ruled {
       --paper-bg: #faf7eb;
       --line-color: #d1d5db;
+      background-color: #cbd5e1;
       background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 27px, var(--line-color) 28px);
     }
     body.theme-yellow {
       --paper-bg: #fff9c4;
       --line-color: #e6ee9c;
       --margin-color: #ef5350;
+      background-color: #fef08a;
       background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 27px, var(--line-color) 28px);
     }
     body.theme-grid {
       --paper-bg: #ffffff;
+      background-color: #e2e8f0;
       background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
       background-size: 20px 20px;
     }
@@ -62,7 +65,6 @@
     }
 
     body {
-      background-color: #e2e8f0;
       font-family: var(--font-hand);
       color: var(--ink-black);
       line-height: 1.6;
@@ -74,25 +76,26 @@
     /* Top Control Bar */
     .top-bar {
       max-width: 1100px;
-      margin: 0 auto 15px auto;
+      margin: 0 auto 20px auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 10px;
       font-family: var(--font-sans);
-      background: rgba(255, 255, 255, 0.95);
-      padding: 12px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.98);
+      padding: 14px 22px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
       backdrop-filter: blur(8px);
       position: sticky;
       top: 10px;
       z-index: 100;
+      border: 1px solid #cbd5e1;
     }
 
     .top-bar h1 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: #0f172a;
       display: flex;
@@ -103,12 +106,12 @@
     .controls {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .theme-btn {
-      padding: 6px 12px;
+      padding: 7px 14px;
       border-radius: 20px;
       border: 1px solid #cbd5e1;
       background: white;
@@ -129,7 +132,7 @@
       position: relative;
     }
     .search-box input {
-      padding: 6px 12px 6px 32px;
+      padding: 7px 14px 7px 34px;
       border-radius: 20px;
       border: 1px solid #cbd5e1;
       font-size: 0.9rem;
@@ -149,18 +152,18 @@
       max-width: 1100px;
       margin: 0 auto;
       background: var(--paper-bg);
-      border-radius: 4px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+      border-radius: 6px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06);
       position: relative;
-      padding: 40px 50px 60px 80px;
+      padding: 45px 50px 60px 85px;
       min-height: 100vh;
-      border-left: 2px solid var(--margin-color);
+      border-left: 3px solid var(--margin-color);
     }
 
     /* Spiral Rings Effect */
     .spiral-holes {
       position: absolute;
-      left: 20px;
+      left: 22px;
       top: 30px;
       bottom: 30px;
       display: flex;
@@ -172,21 +175,21 @@
     .hole {
       width: 16px;
       height: 16px;
-      background: #cbd5e1;
+      background: #94a3b8;
       border-radius: 50%;
-      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.4), 0 0 0 2px #94a3b8;
+      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.5), 0 0 0 2px #cbd5e1;
       position: relative;
     }
     .hole::after {
       content: '';
       position: absolute;
-      left: -20px;
+      left: -22px;
       top: 4px;
-      width: 24px;
+      width: 26px;
       height: 8px;
-      background: linear-gradient(90deg, #64748b, #cbd5e1, #475569);
+      background: linear-gradient(90deg, #475569, #94a3b8, #334155);
       border-radius: 4px;
-      box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
     }
 
     /* Cover / Notebook Header */
@@ -200,7 +203,7 @@
 
     .notebook-title {
       font-family: var(--font-title);
-      font-size: 3.5rem;
+      font-size: 3.6rem;
       font-weight: 700;
       color: var(--ink-blue);
       text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
@@ -210,35 +213,36 @@
 
     .notebook-subtitle {
       font-size: 1.4rem;
-      color: #64748b;
+      color: #475569;
       font-weight: 400;
     }
 
     .tag-badge {
       display: inline-block;
       background: var(--highlighter-yellow);
-      padding: 3px 12px;
+      padding: 4px 14px;
       border-radius: 15px;
       font-size: 1rem;
       font-weight: 700;
-      transform: rotate(-2deg);
+      transform: rotate(-1.5deg);
       border: 1px dashed #d97706;
       margin-top: 10px;
+      color: #92400e;
     }
 
     /* Section Styling */
     .note-section {
-      margin-bottom: 45px;
+      margin-bottom: 50px;
       position: relative;
     }
 
     .section-title {
       font-family: var(--font-title);
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       color: #b91c1c;
       border-bottom: 2px dashed #fca5a5;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
+      padding-bottom: 6px;
+      margin-bottom: 22px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -246,10 +250,10 @@
 
     /* Folder Inventory Table */
     .inventory-card {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.9);
       border: 2px solid #cbd5e1;
       border-radius: 8px;
-      padding: 15px;
+      padding: 16px;
       margin-bottom: 25px;
       font-family: var(--font-sans);
       font-size: 0.95rem;
@@ -261,30 +265,30 @@
     }
 
     .inventory-table th, .inventory-table td {
-      padding: 8px 12px;
+      padding: 9px 12px;
       text-align: left;
       border-bottom: 1px solid #e2e8f0;
     }
     .inventory-table th {
-      background: #f8fafc;
-      color: #334155;
-      font-weight: 600;
+      background: #f1f5f9;
+      color: #1e293b;
+      font-weight: 700;
     }
 
     /* Formula Cards & Notes Grid */
     .notes-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 22px;
       margin-bottom: 25px;
     }
 
     .card {
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.92);
       border-radius: 8px;
-      padding: 18px 22px;
-      box-shadow: 2px 4px 12px rgba(0,0,0,0.06);
-      border: 1px solid #e2e8f0;
+      padding: 20px 24px;
+      box-shadow: 3px 5px 15px rgba(0,0,0,0.06);
+      border: 1px solid #cbd5e1;
       position: relative;
     }
 
@@ -293,13 +297,13 @@
       justify-content: space-between;
       align-items: baseline;
       margin-bottom: 10px;
-      border-bottom: 1px solid #f1f5f9;
-      padding-bottom: 5px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 6px;
     }
 
     .func-name {
       font-family: var(--font-title);
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       color: var(--ink-blue);
       font-weight: 700;
     }
@@ -309,7 +313,7 @@
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 2px 8px;
+      padding: 3px 9px;
       border-radius: 4px;
       background: #e0f2fe;
       color: #0369a1;
@@ -320,40 +324,42 @@
       font-size: 0.95rem;
       background: #0f172a;
       color: #38bdf8;
-      padding: 8px 12px;
+      padding: 10px 14px;
       border-radius: 6px;
-      margin: 8px 0 12px 0;
+      margin: 10px 0 12px 0;
       overflow-x: auto;
+      white-space: pre;
     }
 
     .formula-example {
       font-family: var(--font-code);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       background: #ecfdf5;
       color: #065f46;
-      border-left: 3px solid #10b981;
-      padding: 6px 10px;
-      margin: 6px 0;
+      border-left: 4px solid #10b981;
+      padding: 8px 12px;
+      margin: 8px 0;
       word-break: break-all;
     }
 
     .explanation-mr {
       color: #1e293b;
-      font-size: 1.15rem;
-      margin-top: 10px;
-      background: rgba(254, 240, 138, 0.35);
-      padding: 6px 10px;
-      border-radius: 4px;
+      font-size: 1.18rem;
+      margin-top: 12px;
+      background: rgba(254, 240, 138, 0.4);
+      padding: 8px 12px;
+      border-radius: 6px;
+      border-left: 3px solid #eab308;
     }
 
     /* Sticky Notes */
     .sticky-note {
       background: var(--sticky-yellow);
-      padding: 15px 20px;
-      border-radius: 2px;
-      box-shadow: 3px 5px 10px rgba(0,0,0,0.15);
+      padding: 18px 22px;
+      border-radius: 3px;
+      box-shadow: 3px 6px 12px rgba(0,0,0,0.15);
       position: relative;
-      margin: 20px 0;
+      margin: 25px 0;
       transform: rotate(-1deg);
       border-left: 5px solid #eab308;
     }
@@ -370,9 +376,9 @@
 
     .sticky-title {
       font-family: var(--font-title);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -380,24 +386,24 @@
 
     /* Tape Effect */
     .tape {
-      width: 80px;
-      height: 25px;
-      background: rgba(255, 255, 255, 0.6);
+      width: 90px;
+      height: 26px;
+      background: rgba(255, 255, 255, 0.7);
       position: absolute;
-      top: -12px;
+      top: -13px;
       left: 50%;
       transform: translateX(-50%) rotate(-3deg);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      border: 1px dashed rgba(0,0,0,0.1);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      border: 1px dashed rgba(0,0,0,0.15);
     }
 
     /* Handwritten Flowchart / Diagrams */
     .hand-diagram {
       border: 2px dashed #94a3b8;
       border-radius: 8px;
-      padding: 15px;
-      margin: 15px 0;
-      background: rgba(255,255,255,0.6);
+      padding: 16px;
+      margin: 16px 0;
+      background: rgba(255,255,255,0.75);
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
@@ -409,9 +415,9 @@
     .diagram-step {
       background: white;
       border: 2px solid var(--ink-blue);
-      padding: 8px 14px;
+      padding: 8px 16px;
       border-radius: 20px;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       box-shadow: 2px 2px 0px var(--ink-blue);
     }
     .arrow {
@@ -422,41 +428,47 @@
 
     /* Quiz Section */
     .quiz-card {
-      background: #f8fafc;
+      background: #ffffff;
       border: 2px solid #cbd5e1;
       border-radius: 8px;
-      padding: 18px;
-      margin-bottom: 15px;
+      padding: 20px;
+      margin-bottom: 16px;
       font-family: var(--font-sans);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
 
     .quiz-q {
       font-weight: 600;
       color: #0f172a;
       margin-bottom: 10px;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
     }
 
     .quiz-ans {
       display: none;
       background: #f0fdf4;
       border: 1px solid #86efac;
-      padding: 10px;
+      padding: 12px;
       border-radius: 6px;
       margin-top: 10px;
       color: #166534;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
+      font-family: var(--font-code);
     }
 
     .toggle-ans-btn {
-      background: #3b82f6;
+      background: #2563eb;
       color: white;
       border: none;
-      padding: 5px 12px;
-      border-radius: 4px;
+      padding: 6px 14px;
+      border-radius: 5px;
       cursor: pointer;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .toggle-ans-btn:hover {
+      background: #1d4ed8;
     }
 
     /* Footer */
@@ -465,16 +477,16 @@
       margin-top: 50px;
       padding-top: 20px;
       border-top: 2px dashed #cbd5e1;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: #64748b;
     }
 
     @media (max-width: 768px) {
       .notebook {
-        padding: 30px 20px 40px 40px;
+        padding: 30px 20px 40px 45px;
       }
       .spiral-holes {
-        left: 8px;
+        left: 10px;
       }
       .notes-grid {
         grid-template-columns: 1fr;
@@ -486,15 +498,15 @@
 
   <!-- Top Control Bar -->
   <div class="top-bar">
-    <h1>📚 Advance Excel - Handwritten Master Notes</h1>
+    <h1>📚 Advance Excel - Master Handwritten Notes</h1>
     <div class="controls">
       <div class="search-box">
         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         <input type="text" id="searchInput" placeholder="Search formula (e.g. SUMIFS)..." onkeyup="filterNotes()">
       </div>
-      <button class="theme-btn" onclick="setTheme('ruled')">📝 Ruled</button>
+      <button class="theme-btn" onclick="setTheme('ruled')">📝 Ruled Paper</button>
       <button class="theme-btn" onclick="setTheme('yellow')">🟡 Legal Pad</button>
-      <button class="theme-btn" onclick="setTheme('grid')">📐 Grid</button>
+      <button class="theme-btn" onclick="setTheme('grid')">📐 Grid Paper</button>
       <button class="theme-btn" onclick="setTheme('dark')">🌙 Blackboard</button>
       <button class="theme-btn" onclick="window.print()" style="background:#2563eb; color:white; border:none;">🖨️ Print PDF</button>
     </div>
@@ -603,9 +615,9 @@
             <span class="category-tag">Logical</span>
           </div>
           <div>कन्डिशन तपासून TRUE किंवा FALSE आऊटपुट देण्यासाठी.</div>
-          <div class="syntax-box">=IF(logical_test, value_if_true, value_if_false)</div>
-          <div class="formula-example">=IF(Salary>=15000, "Eligible", "Not-Eligible")</div>
-          <div class="formula-example">=IF(E5>=15000, E5*5%, 0)</div>
+          <div class="syntax-box">&#61;IF(logical_test, value_if_true, value_if_false)</div>
+          <div class="formula-example">&#61;IF(Salary&gt;&#61;15000, "Eligible", "Not-Eligible")</div>
+          <div class="formula-example">&#61;IF(E5&gt;&#61;15000, E5*5%, 0)</div>
           <div class="explanation-mr">💡 <b>मराठीत:</b> जर Salary १५,००० पेक्षा जास्त असेल तर ५% बोनस द्या, नाहीतर ० द्या.</div>
         </div>
 
@@ -616,8 +628,8 @@
             <span class="category-tag">Logical (Excel 2019+)</span>
           </div>
           <div>अनेक अटी (Multiple Conditions) एकाच फॉर्म्युल्यात मांडण्यासाठी.</div>
-          <div class="syntax-box">=IFS(condition1, val1, condition2, val2, ...)</div>
-          <div class="formula-example">=IFS(C3>=1000000, "30%", C3>=500000, "20%", C3>=250000, "5%", C3<250000, "NO TAX")</div>
+          <div class="syntax-box">&#61;IFS(condition1, val1, condition2, val2, ...)</div>
+          <div class="formula-example">&#61;IFS(C3&gt;&#61;1000000, "30%", C3&gt;&#61;500000, "20%", C3&gt;&#61;250000, "5%", C3&lt;250000, "NO TAX")</div>
           <div class="explanation-mr">💡 <b>मराठीत:</b> इन्कम टॅक्स स्लॅब कॅल्क्युलेशनसाठी अतिशय सोपा फॉर्म्युला! एकापेक्षा जास्त Nested IF लिहिण्याऐवजी IFS वापरावा.</div>
         </div>
 
@@ -628,8 +640,8 @@
             <span class="category-tag">Logical</span>
           </div>
           <div>अनेक अटी एकत्र जोडण्यासाठी.</div>
-          <div class="syntax-box">=IF(AND(C5="Borivali", E5>35000), 1000, 0)</div>
-          <div class="syntax-box">=IF(OR(Branch="Borivali", Salary>=15000), "Yes", "No")</div>
+          <div class="syntax-box">&#61;IF(AND(C5&#61;"Borivali", E5&gt;35000), 1000, 0)</div>
+          <div class="syntax-box">&#61;IF(OR(Branch&#61;"Borivali", Salary&gt;&#61;15000), "Yes", "No")</div>
           <div class="explanation-mr">💡 <b>AND:</b> सर्व अटी पूर्ण झाल्या तरच TRUE.<br>💡 <b>OR:</b> कोणतीही एक अट पूर्ण झाली तरी TRUE.</div>
         </div>
 
@@ -640,7 +652,7 @@
             <span class="category-tag">Logical</span>
           </div>
           <div>एका IF मध्ये दुसरा IF वापरणे.</div>
-          <div class="syntax-box">=IF(C7="High", D7-5, IF(C7="Medium", D7-3, IF(C7="Low", D7-1, "")))</div>
+          <div class="syntax-box">&#61;IF(C7&#61;"High", D7-5, IF(C7&#61;"Medium", D7-3, IF(C7&#61;"Low", D7-1, "")))</div>
           <div class="explanation-mr">💡 <b>उदा (SMS Matrix):</b> Risk Flag जर "High" असेल तर EMI तारखेच्या ५ दिवस आधी SMS पाठवा, "Medium" असेल तर ३ दिवस आधी पाठवा.</div>
         </div>
       </div>
@@ -666,10 +678,10 @@
             <span class="category-tag">Math & Trig</span>
           </div>
           <div>अटीवर आधारित बेरीज (Conditional Total) करण्यासाठी.</div>
-          <div class="syntax-box">=SUMIF(range, criteria, [sum_range])</div>
-          <div class="syntax-box">=SUMIFS(sum_range, criteria_range1, criteria1, criteria_range2, criteria2)</div>
-          <div class="formula-example">=SUMIF(Designation, "Manager", Salary)</div>
-          <div class="formula-example">=SUMIFS(Amount, Transaction_Type, "Online", Debit_Credit, "Credit")</div>
+          <div class="syntax-box">&#61;SUMIF(range, criteria, [sum_range])</div>
+          <div class="syntax-box">&#61;SUMIFS(sum_range, criteria_range1, criteria1, criteria_range2, criteria2)</div>
+          <div class="formula-example">&#61;SUMIF(Designation, "Manager", Salary)</div>
+          <div class="formula-example">&#61;SUMIFS(Amount, Transaction_Type, "Online", Debit_Credit, "Credit")</div>
           <div class="explanation-mr">💡 <b>महत्त्वाचा फरक:</b> <code>SUMIF</code> मध्ये sum_range शेवटी असतो, तर <code>SUMIFS</code> मध्ये sum_range सर्वात आधी लिहावा लागतो!</div>
         </div>
 
@@ -680,11 +692,11 @@
             <span class="category-tag">Statistical</span>
           </div>
           <div>सेल्स मोजण्यासाठी (Counting Cells).</div>
-          <div class="syntax-box">=COUNT(range) ➔ फक्त Numbers मोजते</div>
-          <div class="syntax-box">=COUNTA(range) ➔ भरलेले सर्व सेल्स (Text + Numbers)</div>
-          <div class="syntax-box">=COUNTBLANK(range) ➔ रिकामे सेल्स (Empty Cells)</div>
-          <div class="formula-example">=COUNTIF(Transaction_Type, "UPI")</div>
-          <div class="formula-example">=COUNTIFS(Transaction_Type, "UPI", Debit_Credit, "Debit")</div>
+          <div class="syntax-box">&#61;COUNT(range) ➔ फक्त Numbers मोजते</div>
+          <div class="syntax-box">&#61;COUNTA(range) ➔ भरलेले सर्व सेल्स (Text + Numbers)</div>
+          <div class="syntax-box">&#61;COUNTBLANK(range) ➔ रिकामे सेल्स (Empty Cells)</div>
+          <div class="formula-example">&#61;COUNTIF(Transaction_Type, "UPI")</div>
+          <div class="formula-example">&#61;COUNTIFS(Transaction_Type, "UPI", Debit_Credit, "Debit")</div>
         </div>
 
         <!-- AVERAGEIF & AVERAGEIFS -->
@@ -694,8 +706,8 @@
             <span class="category-tag">Statistical</span>
           </div>
           <div>अटीवर आधारित सरासरी (Average) काढण्यासाठी.</div>
-          <div class="syntax-box">=AVERAGEIF(range, criteria, [average_range])</div>
-          <div class="formula-example">=AVERAGEIFS(Amount, Transaction_Type, "Card", Debit_Credit, "Credit")</div>
+          <div class="syntax-box">&#61;AVERAGEIF(range, criteria, [average_range])</div>
+          <div class="formula-example">&#61;AVERAGEIFS(Amount, Transaction_Type, "Card", Debit_Credit, "Credit")</div>
         </div>
 
         <!-- SUBTOTAL & SUMPRODUCT -->
@@ -705,9 +717,9 @@
             <span class="category-tag">Advanced Math</span>
           </div>
           <div>फिल्टर केलेल्या डेटावर गणना करणे आणि गुणाकारांची बेरीज करणे.</div>
-          <div class="syntax-box">=SUBTOTAL(9, C2:C100) ➔ Hidden rows सोडून SUM</div>
-          <div class="syntax-box">=SUMPRODUCT(Qty_Range, Rate_Range)</div>
-          <div class="formula-example">=SUMPRODUCT(C2:C10, D2:D10) ➔ (Qty * Rate) ची Total</div>
+          <div class="syntax-box">&#61;SUBTOTAL(9, C2:C100) ➔ Hidden rows सोडून SUM</div>
+          <div class="syntax-box">&#61;SUMPRODUCT(Qty_Range, Rate_Range)</div>
+          <div class="formula-example">&#61;SUMPRODUCT(C2:C10, D2:D10) ➔ (Qty * Rate) ची Total</div>
           <div class="explanation-mr">💡 <b>SUBTOTAL code 9:</b> फिल्टर केल्यावर फक्त दिसणाऱ्या (Visible) रो चीच Total दाखवतो!</div>
         </div>
       </div>
@@ -725,12 +737,12 @@
             <span class="category-tag">Text</span>
           </div>
           <div>टेक्स्ट मधील शब्द किंवा अंक वेगळे (Extract) करण्यासाठी.</div>
-          <div class="syntax-box">=LEFT(text, num_chars) ➔ डावीकडून</div>
-          <div class="syntax-box">=RIGHT(text, num_chars) ➔ उजवीकडून</div>
-          <div class="syntax-box">=MID(text, start_num, num_chars) ➔ मधून</div>
-          <div class="formula-example">=LEFT("Mumbai - 400086", 6) ➔ "Mumbai"</div>
-          <div class="formula-example">=RIGHT("Mumbai - 400086", 6) ➔ "400086"</div>
-          <div class="formula-example">=MID("IV-RAHUL-986", 4, 5) ➔ "RAHUL"</div>
+          <div class="syntax-box">&#61;LEFT(text, num_chars) ➔ डावीकडून</div>
+          <div class="syntax-box">&#61;RIGHT(text, num_chars) ➔ उजवीकडून</div>
+          <div class="syntax-box">&#61;MID(text, start_num, num_chars) ➔ मधून</div>
+          <div class="formula-example">&#61;LEFT("Mumbai - 400086", 6) ➔ "Mumbai"</div>
+          <div class="formula-example">&#61;RIGHT("Mumbai - 400086", 6) ➔ "400086"</div>
+          <div class="formula-example">&#61;MID("IV-RAHUL-986", 4, 5) ➔ "RAHUL"</div>
         </div>
 
         <!-- FIND, SUBSTITUTE & Flash Fill -->
@@ -740,9 +752,9 @@
             <span class="category-tag">Text</span>
           </div>
           <div>अक्षर शोधणे आणि बदलणे.</div>
-          <div class="syntax-box">=FIND(find_text, within_text)</div>
-          <div class="syntax-box">=SUBSTITUTE(text, old_text, new_text)</div>
-          <div class="formula-example">=SUBSTITUTE("9812-34-56-78", "-", "") ➔ "9812345678"</div>
+          <div class="syntax-box">&#61;FIND(find_text, within_text)</div>
+          <div class="syntax-box">&#61;SUBSTITUTE(text, old_text, new_text)</div>
+          <div class="formula-example">&#61;SUBSTITUTE("9812-34-56-78", "-", "") ➔ "9812345678"</div>
           <div class="explanation-mr">⚡ <b>Flash Fill (Ctrl + E):</b> फॉर्म्युला न वापरता नमुना टाईप करून ऑटोमॅटिक डेटा वेगळा करण्यासाठी Ctrl + E वापरा!</div>
         </div>
 
@@ -753,9 +765,9 @@
             <span class="category-tag">Text</span>
           </div>
           <div>अक्षरांचा आकार (Case) बदलण्यासाठी.</div>
-          <div class="syntax-box">=PROPER("barack hussein") ➔ "Barack Hussein"</div>
-          <div class="syntax-box">=UPPER("mumbai") ➔ "MUMBAI"</div>
-          <div class="syntax-box">=LOWER("EXCEL") ➔ "excel"</div>
+          <div class="syntax-box">&#61;PROPER("barack hussein") ➔ "Barack Hussein"</div>
+          <div class="syntax-box">&#61;UPPER("mumbai") ➔ "MUMBAI"</div>
+          <div class="syntax-box">&#61;LOWER("EXCEL") ➔ "excel"</div>
         </div>
 
         <!-- TRIM, LEN, SEARCH, CONCAT -->
@@ -765,12 +777,12 @@
             <span class="category-tag">Text Utility</span>
           </div>
           <div>टेक्स्ट मधील स्पेस काढणे, लांबी मोजणे व शोधणे.</div>
-          <div class="syntax-box">=TRIM(text) ➔ अतिरिक्त मोकळ्या जागा (Extra Spaces) काढण्यासाठी</div>
-          <div class="syntax-box">=LEN(text) ➔ अक्षरांची एकूण संख्या मोजण्यासाठी</div>
-          <div class="syntax-box">=SEARCH(find_text, within_text) ➔ अक्षराचा क्रमांक शोधणे</div>
-          <div class="syntax-box">=CONCAT(text1, text2) ➔ दोन किंवा अधिक शब्द एकत्र जोडणे</div>
-          <div class="formula-example">=TRIM("  Rahul   Dravid  ") ➔ "Rahul Dravid"</div>
-          <div class="formula-example">=LEN("Mumbai") ➔ 6</div>
+          <div class="syntax-box">&#61;TRIM(text) ➔ अतिरिक्त मोकळ्या जागा (Extra Spaces) काढण्यासाठी</div>
+          <div class="syntax-box">&#61;LEN(text) ➔ अक्षरांची एकूण संख्या मोजण्यासाठी</div>
+          <div class="syntax-box">&#61;SEARCH(find_text, within_text) ➔ अक्षराचा क्रमांक शोधणे</div>
+          <div class="syntax-box">&#61;CONCAT(text1, text2) ➔ दोन किंवा अधिक शब्द एकत्र जोडणे</div>
+          <div class="formula-example">&#61;TRIM("  Rahul   Dravid  ") ➔ "Rahul Dravid"</div>
+          <div class="formula-example">&#61;LEN("Mumbai") ➔ 6</div>
           <div class="explanation-mr">💡 <b>TRIM & LEN:</b> डेटा क्लीनिंग करताना नावांमधील अतिरिक्त स्पेस काढून लांबी तपासण्यासाठी अतिशय उपयुक्त!</div>
         </div>
       </div>
@@ -788,11 +800,11 @@
             <span class="category-tag">Date & Time</span>
           </div>
           <div>आजची तारीख व वेळेवर काम करणे.</div>
-          <div class="syntax-box">=TODAY() ➔ आजची तारीख</div>
-          <div class="syntax-box">=NOW() ➔ तारीख + वेळ</div>
-          <div class="syntax-box">=YEAR(A6), =MONTH(A6), =DAY(A6)</div>
-          <div class="syntax-box">=TEXT(A6, "dddd") ➔ वार (Day Name e.g. "Monday")</div>
-          <div class="syntax-box">=TEXT(A6, "mmmm") ➔ महिन्याचे नाव (e.g. "August")</div>
+          <div class="syntax-box">&#61;TODAY() ➔ आजची तारीख</div>
+          <div class="syntax-box">&#61;NOW() ➔ तारीख + वेळ</div>
+          <div class="syntax-box">&#61;YEAR(A6), &#61;MONTH(A6), &#61;DAY(A6)</div>
+          <div class="syntax-box">&#61;TEXT(A6, "dddd") ➔ वार (Day Name e.g. "Monday")</div>
+          <div class="syntax-box">&#61;TEXT(A6, "mmmm") ➔ महिन्याचे नाव (e.g. "August")</div>
         </div>
 
         <!-- DATEDIF, EDATE, EOMONTH, WORKDAY -->
@@ -802,10 +814,10 @@
             <span class="category-tag">Date & Time</span>
           </div>
           <div>वय (Age), मॅच्युरिटी डेट व कामाचे दिवस मोजणे.</div>
-          <div class="syntax-box">=DATEDIF(BirthDate, TODAY(), "Y") & " Years"</div>
-          <div class="syntax-box">=EDATE(StartDate, 6) ➔ ६ महिन्यांनंतरची तारीख</div>
-          <div class="syntax-box">=EOMONTH(StartDate, 0) ➔ चालू महिन्याचा शेवटचा दिवस</div>
-          <div class="syntax-box">=NETWORKDAYS(StartDate, EndDate, Holidays)</div>
+          <div class="syntax-box">&#61;DATEDIF(BirthDate, TODAY(), "Y") & " Years"</div>
+          <div class="syntax-box">&#61;EDATE(StartDate, 6) ➔ ६ महिन्यांनंतरची तारीख</div>
+          <div class="syntax-box">&#61;EOMONTH(StartDate, 0) ➔ चालू महिन्याचा शेवटचा दिवस</div>
+          <div class="syntax-box">&#61;NETWORKDAYS(StartDate, EndDate, Holidays)</div>
           <div class="explanation-mr">💡 <b>NETWORKDAYS:</b> शनिवार, रविवार आणि सुट्ट्या सोडून शुद्ध कामाचे दिवस मोजते!</div>
         </div>
 
@@ -816,10 +828,10 @@
             <span class="category-tag">Custom Dates</span>
           </div>
           <div>कस्टम सुट्ट्या व तारखांमधील एकूण दिवस.</div>
-          <div class="syntax-box">=NETWORKDAYS.INTL(start_date, end_date, [weekend], [holidays])</div>
-          <div class="syntax-box">=DAYS(end_date, start_date)</div>
-          <div class="syntax-box">=WEEKDAY(serial_number, [return_type])</div>
-          <div class="formula-example">=NETWORKDAYS.INTL(A11, B11, 11, A14:A17)</div>
+          <div class="syntax-box">&#61;NETWORKDAYS.INTL(start_date, end_date, [weekend], [holidays])</div>
+          <div class="syntax-box">&#61;DAYS(end_date, start_date)</div>
+          <div class="syntax-box">&#61;WEEKDAY(serial_number, [return_type])</div>
+          <div class="formula-example">&#61;NETWORKDAYS.INTL(A11, B11, 11, A14:A17)</div>
           <div class="explanation-mr">💡 <b>INTL काय करतो?:</b> जर सुट्टी फक्त रविवारीच असेल (Weekend = 11), तर <code>NETWORKDAYS.INTL</code> वापरून काम मोजता येते!</div>
         </div>
       </div>
@@ -844,10 +856,10 @@
             <span class="category-tag">Database</span>
           </div>
           <div>टेबलवर स्ट्रक्चरल क्रायटेरिया (Criteria Range) लावून गणना करणे.</div>
-          <div class="syntax-box">=DSUM(database, field, criteria)</div>
-          <div class="syntax-box">=DAVERAGE(database, field, criteria)</div>
-          <div class="syntax-box">=DCOUNT(database, field, criteria)</div>
-          <div class="formula-example">=DSUM(A1:F100, "Salary", H1:I2)</div>
+          <div class="syntax-box">&#61;DSUM(database, field, criteria)</div>
+          <div class="syntax-box">&#61;DAVERAGE(database, field, criteria)</div>
+          <div class="syntax-box">&#61;DCOUNT(database, field, criteria)</div>
+          <div class="formula-example">&#61;DSUM(A1:F100, "Salary", H1:I2)</div>
           <div class="explanation-mr">💡 <b>फायदा:</b> यात Criteria चे वेगळे मिनी-टेबल तयार करून हवा तसा मल्टी-कॉलम डेटा फिल्टर करून टोटल काढता येते!</div>
         </div>
       </div>
@@ -864,12 +876,12 @@
             <span class="category-tag">Financial</span>
           </div>
           <div>कर्जाचे हप्ते (EMI), व्याज (Interest), मुद्दल (Principal) व प्रेझेंट व्हॅल्यू (PV) काढण्यासाठी.</div>
-          <div class="syntax-box">=PMT(rate/12, nper, -pv) ➔ महिन्याचा एकूण EMI</div>
-          <div class="syntax-box">=IPMT(rate/12, per, nper, -pv) ➔ ठराविक हप्त्याचे व्याज</div>
-          <div class="syntax-box">=PPMT(rate/12, per, nper, -pv) ➔ ठराविक हप्त्याची मुद्दल</div>
-          <div class="syntax-box">=PV(rate/12, nper, -pmt) ➔ हप्त्यांवरून एकूण कर्जाची रक्कम</div>
-          <div class="formula-example">=PMT(13.5%/12, 3*12, -28790)</div>
-          <div class="formula-example">=PV(13.5%/12, 3*12, -864)</div>
+          <div class="syntax-box">&#61;PMT(rate/12, nper, -pv) ➔ महिन्याचा एकूण EMI</div>
+          <div class="syntax-box">&#61;IPMT(rate/12, per, nper, -pv) ➔ ठराविक हप्त्याचे व्याज</div>
+          <div class="syntax-box">&#61;PPMT(rate/12, per, nper, -pv) ➔ ठराविक हप्त्याची मुद्दल</div>
+          <div class="syntax-box">&#61;PV(rate/12, nper, -pmt) ➔ हप्त्यावरून एकूण कर्जाची रक्कम</div>
+          <div class="formula-example">&#61;PMT(13.5%/12, 3*12, -28790)</div>
+          <div class="formula-example">&#61;PV(13.5%/12, 3*12, -864)</div>
           <div class="explanation-mr">💡 <b>महत्त्वाची टीप:</b> वार्षिक व्याजाला १२ ने भागा (Rate/12) आणि वर्षाचे महिने करा (Years * 12). कर्जाची रक्कम माइनस (-) मध्ये टाकावी लागते!</div>
         </div>
       </div>
@@ -887,10 +899,10 @@
           </div>
           <div>अटीनुसार डेटाला रंग देणे आणि व्हिज्युअल हायलाईट करणे.</div>
           <div class="syntax-box">Home Tab ➔ Conditional Formatting ➔ Highlight Cells Rules</div>
-          <div class="syntax-box">1. Greater Than / Less Than / Between (उदा. Sales > 50,000)</div>
+          <div class="syntax-box">1. Greater Than / Less Than / Between (उदा. Sales &gt; 50,000)</div>
           <div class="syntax-box">2. Text that Contains / Duplicate Values (डुप्लिकेट डेटा हायलाईट करणे)</div>
           <div class="syntax-box">3. Data Bars, Color Scales & Icon Sets (ट्रेंड्स दाखवण्यासाठी)</div>
-          <div class="syntax-box">4. Custom Formula Rule: =AND($E2="South", $F2>100)</div>
+          <div class="syntax-box">4. Custom Formula Rule: &#61;AND($E2&#61;"South", $F2&gt;100)</div>
           <div class="explanation-mr">💡 <b>फायदा:</b> डेटा एंट्री करताना चुका लगेच ओळखण्यासाठी आणि सेल्स ट्रेंड हायलाईट करण्यासाठी <code>Conditional Formatting Set 1 & Set 2</code> शीट्स वापरा!</div>
         </div>
       </div>
@@ -923,37 +935,37 @@
       <div class="quiz-card">
         <div class="quiz-q">प्र. १) जर एखाद्या कर्मचाऱ्याचा पगार ₹३५,००० पेक्षा जास्त असेल आणि ब्रांच "Borivali" असेल तर १००० बोनस देण्याचा फॉर्म्युला काय येईल?</div>
         <button class="toggle-ans-btn" onclick="toggleAns('q1')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q1"><code>=IF(AND(Branch="Borivali", Salary>35000), 1000, 0)</code></div>
+        <div class="quiz-ans" id="q1">&#61;IF(AND(Branch&#61;"Borivali", Salary&gt;35000), 1000, 0)</div>
       </div>
 
       <div class="quiz-card">
         <div class="quiz-q">प्र. २) "Mumbai -400086" या टेक्स्ट मधून पिनकोड (400086) वेगळा करण्यासाठी कोणता फॉर्म्युला वापराल?</div>
-        <button class="toggle-ans-btn" onclick="toggleAns('q2')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q2"><code>=RIGHT("Mumbai -400086", 6)</code></div>
+        <button class="toggle-ans-btn" onclick="toggleAns('q2')">&#61;RIGHT("Mumbai -400086", 6)</button>
+        <div class="quiz-ans" id="q2">&#61;RIGHT("Mumbai -400086", 6)</div>
       </div>
 
       <div class="quiz-card">
         <div class="quiz-q">प्र. ३) फिल्टर (Filter) केलेल्या डेटावर फक्त visible असणाऱ्या संख्यांची बेरीज करण्यासाठी कोणता फॉर्म्युला वापरला जातो?</div>
         <button class="toggle-ans-btn" onclick="toggleAns('q3')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q3"><code>=SUBTOTAL(9, Range)</code> (9 हा SUM चा कोड आहे)</div>
+        <div class="quiz-ans" id="q3">&#61;SUBTOTAL(9, Range) (9 हा SUM चा कोड आहे)</div>
       </div>
 
       <div class="quiz-card">
         <div class="quiz-q">प्र. ४) ₹५,००,००० कर्जावर १०% वार्षिक व्याजाने ५ वर्षांसाठी (६० महिने) दरमहा भरवा लागणारा EMI काढण्याचे सूत्र काय आहे?</div>
         <button class="toggle-ans-btn" onclick="toggleAns('q4')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q4"><code>=PMT(10%/12, 60, -500000)</code></div>
+        <div class="quiz-ans" id="q4">&#61;PMT(10%/12, 60, -500000)</div>
       </div>
 
       <div class="quiz-card">
         <div class="quiz-q">प्र. ५) नावांमधील अतिरिक्त मोकळ्या जागा (Extra Spaces) काढून टाकण्यासाठी कोणता फॉर्म्युला वापरला जातो?</div>
         <button class="toggle-ans-btn" onclick="toggleAns('q5')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q5"><code>=TRIM(Cell)</code></div>
+        <div class="quiz-ans" id="q5">&#61;TRIM(Cell)</div>
       </div>
 
       <div class="quiz-card">
-        <div class="quiz-q">प्र. ६) हप्त्याची रक्कम (EMI = ₹864) आणि कालावधी (३ वर्षे) माहीत असताना मूळ कर्जाची रक्कम काढण्यासाठी कोणता फॉर्म्युला वापरला जातो?</div>
+        <div class="quiz-q">प्र. ६) हप्त्याची रक्कम (EMI &#61; ₹864) आणि कालावधी (३ वर्षे) माहीत असताना मूळ कर्जाची रक्कम काढण्यासाठी कोणता फॉर्म्युला वापरला जातो?</div>
         <button class="toggle-ans-btn" onclick="toggleAns('q6')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q6"><code>=PV(13.5%/12, 3*12, -864)</code></div>
+        <div class="quiz-ans" id="q6">&#61;PV(13.5%/12, 3*12, -864)</div>
       </div>
 
       <div class="quiz-card">
