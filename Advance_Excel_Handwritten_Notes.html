@@ -711,16 +711,19 @@
         </div>
 
         <!-- SUBTOTAL & SUMPRODUCT -->
-        <div class="card" data-search="subtotal sumproduct filter dynamic">
+        <div class="card" data-search="subtotal sumproduct filter dynamic median">
           <div class="card-header">
-            <span class="func-name">4. SUBTOTAL & SUMPRODUCT</span>
+            <span class="func-name">4. SUBTOTAL, MEDIAN & SUMPRODUCT</span>
             <span class="category-tag">Advanced Math</span>
           </div>
-          <div>फिल्टर केलेल्या डेटावर गणना करणे आणि गुणाकारांची बेरीज करणे.</div>
-          <div class="syntax-box">&#61;SUBTOTAL(9, C2:C100) ➔ Hidden rows सोडून SUM</div>
+          <div>फिल्टर डेटावर गणना करणे, मधली संख्या (Median) व गुणाकारांची बेरीज.</div>
+          <div class="syntax-box">&#61;MEDIAN(range) ➔ दिलेल्या नंबर मालिकेतील मध्यक संख्या</div>
+          <div class="syntax-box">&#61;SUBTOTAL(9, C2:C100) ➔ Filter केल्यावर visible cells ची SUM</div>
+          <div class="syntax-box">&#61;SUBTOTAL(109, C2:C100) ➔ Manually Hidden + Filtered सोडून SUM</div>
           <div class="syntax-box">&#61;SUMPRODUCT(Qty_Range, Rate_Range)</div>
+          <div class="formula-example">&#61;MEDIAN(J7:J44) ➔ पगार/किंमतींचा मध्यक (Median)</div>
           <div class="formula-example">&#61;SUMPRODUCT(C2:C10, D2:D10) ➔ (Qty * Rate) ची Total</div>
-          <div class="explanation-mr">💡 <b>SUBTOTAL code 9:</b> फिल्टर केल्यावर फक्त दिसणाऱ्या (Visible) रो चीच Total दाखवतो!</div>
+          <div class="explanation-mr">💡 <b>SUBTOTAL Code 9 vs 109:</b> Code <code>9</code> हा फक्त फिल्टर केलेल्या डेटाची बेरीज करतो. पण Code <code>109</code> हा मॅन्युअली लपवलेले (Hidden) रो देखील वगळून बेरीज करतो!</div>
         </div>
       </div>
     </div>
@@ -771,19 +774,18 @@
         </div>
 
         <!-- TRIM, LEN, SEARCH, CONCAT -->
-        <div class="card" data-search="trim len search concat text length spaces">
+        <div class="card" data-search="trim len search concat text length spaces dynamic code generation">
           <div class="card-header">
-            <span class="func-name">4. TRIM, LEN, SEARCH & CONCAT</span>
+            <span class="func-name">4. TRIM, LEN, CONCAT & Code Gen</span>
             <span class="category-tag">Text Utility</span>
           </div>
-          <div>टेक्स्ट मधील स्पेस काढणे, लांबी मोजणे व शोधणे.</div>
+          <div>टेक्स्ट मधील स्पेस काढणे, लांबी मोजणे व युनिक कोड जनरेट करणे.</div>
           <div class="syntax-box">&#61;TRIM(text) ➔ अतिरिक्त मोकळ्या जागा (Extra Spaces) काढण्यासाठी</div>
           <div class="syntax-box">&#61;LEN(text) ➔ अक्षरांची एकूण संख्या मोजण्यासाठी</div>
-          <div class="syntax-box">&#61;SEARCH(find_text, within_text) ➔ अक्षराचा क्रमांक शोधणे</div>
-          <div class="syntax-box">&#61;CONCAT(text1, text2) ➔ दोन किंवा अधिक शब्द एकत्र जोडणे</div>
+          <div class="syntax-box">&#61;CONCAT(text1, text2, ...) ➔ दोन किंवा अधिक शब्द जोडणे</div>
+          <div class="formula-example">&#61;UPPER(CONCAT("VI", LEFT(FirstName,1), RIGHT(LastName,3), EmpCode))</div>
           <div class="formula-example">&#61;TRIM("  Rahul   Dravid  ") ➔ "Rahul Dravid"</div>
-          <div class="formula-example">&#61;LEN("Mumbai") ➔ 6</div>
-          <div class="explanation-mr">💡 <b>TRIM & LEN:</b> डेटा क्लीनिंग करताना नावांमधील अतिरिक्त स्पेस काढून लांबी तपासण्यासाठी अतिशय उपयुक्त!</div>
+          <div class="explanation-mr">💡 <b>Dynamic Code Generation:</b> कंपनीमध्ये कर्मचाऱ्यांचा VAN ID किंवा Unique Passcode बनवण्यासाठी <code>CONCAT</code> सोबत <code>LEFT</code>, <code>RIGHT</code> आणि <code>UPPER</code> वापरला जातो! (उदा: <code>MIS Test Paper - Test 2</code>).</div>
         </div>
       </div>
     </div>
