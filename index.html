@@ -1,1017 +1,325 @@
-<!DOCTYPE html>
-<html lang="mr">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advance Excel - Handwritten Master Notes & Study Hub</title>
-  <!-- Google Fonts: Kalam, Caveat, Architects Daughter, Outfit, Fira Code -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@600;700&family=Fira+Code:wght@400;600&family=Kalam:wght@300;400;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --paper-bg: #faf7eb;
-      --line-color: #d1d5db;
-      --margin-color: #ef5350;
-      --ink-blue: #1e3a8a;
-      --ink-black: #1f2937;
-      --highlighter-yellow: #fef08a;
-      --highlighter-green: #bbf7d0;
-      --highlighter-pink: #fbcfe8;
-      --sticky-yellow: #fef9c3;
-      --sticky-pink: #ffe4e6;
-      --sticky-green: #dcfce7;
-      --font-hand: 'Kalam', 'Caveat', cursive;
-      --font-title: 'Caveat', cursive;
-      --font-code: 'Fira Code', monospace;
-      --font-sans: 'Outfit', sans-serif;
+<meta name="Excel Workbook Frameset">
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link rel=File-List href="index_files/filelist.xml">
+<title>Advance Excel - Handwritten Master Notes &amp; Study Hub</title>
+<![if !supportTabStrip]>
+<link id="shLink" href="index_files/sheet001.html">
+
+<link id="shLink">
+
+<script language="JavaScript">
+<!--
+ var c_lTabs=1;
+
+ var c_rgszSh=new Array(c_lTabs);
+ c_rgszSh[0] = "index";
+
+
+
+ var c_rgszClr=new Array(8);
+ c_rgszClr[0]="window";
+ c_rgszClr[1]="buttonface";
+ c_rgszClr[2]="windowframe";
+ c_rgszClr[3]="windowtext";
+ c_rgszClr[4]="threedlightshadow";
+ c_rgszClr[5]="threedhighlight";
+ c_rgszClr[6]="threeddarkshadow";
+ c_rgszClr[7]="threedshadow";
+
+ var g_iShCur;
+ var g_rglTabX=new Array(c_lTabs);
+
+function fnGetIEVer()
+{
+ var ua=window.navigator.userAgent
+ var msie=ua.indexOf("MSIE")
+ if (msie>0 && window.navigator.platform=="Win32")
+  return parseInt(ua.substring(msie+5,ua.indexOf(".", msie)));
+ else
+  return 0;
+}
+
+function fnBuildFrameset()
+{
+ var szHTML="<frameset rows=\"*,18\" border=0 width=0 frameborder=no framespacing=0>"+
+  "<frame src=\""+document.all.item("shLink")[0].href+"\" name=\"frSheet\" noresize>"+
+  "<frameset cols=\"54,*\" border=0 width=0 frameborder=no framespacing=0>"+
+  "<frame src=\"\" name=\"frScroll\" marginwidth=0 marginheight=0 scrolling=no>"+
+  "<frame src=\"\" name=\"frTabs\" marginwidth=0 marginheight=0 scrolling=no>"+
+  "</frameset></frameset><plaintext>";
+
+ with (document) {
+  open("text/html","replace");
+  write(szHTML);
+  close();
+ }
+
+ fnBuildTabStrip();
+}
+
+function fnBuildTabStrip()
+{
+ var szHTML=
+  "<html><head><style>.clScroll {font:8pt Courier New;color:"+c_rgszClr[6]+";cursor:default;line-height:10pt;}"+
+  ".clScroll2 {font:10pt Arial;color:"+c_rgszClr[6]+";cursor:default;line-height:11pt;}</style></head>"+
+  "<body onclick=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" onselectstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+" topmargin=0 leftmargin=0><table cellpadding=0 cellspacing=0 width=100%>"+
+  "<tr><td colspan=6 height=1 bgcolor="+c_rgszClr[2]+"></td></tr>"+
+  "<tr><td style=\"font:1pt\">&nbsp;<td>"+
+  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(0);\" onmouseout=\"parent.fnMouseOutScroll(0);\"><a>&#171;</a></td>"+
+  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(0);\" ondblclick=\"parent.fnScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(1);\" onmouseout=\"parent.fnMouseOutScroll(1);\"><a>&lt</a></td>"+
+  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(1);\" ondblclick=\"parent.fnScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(2);\" onmouseout=\"parent.fnMouseOutScroll(2);\"><a>&gt</a></td>"+
+  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(3);\" onmouseout=\"parent.fnMouseOutScroll(3);\"><a>&#187;</a></td>"+
+  "<td style=\"font:1pt\">&nbsp;<td></tr></table></body></html>";
+
+ with (frames['frScroll'].document) {
+  open("text/html","replace");
+  write(szHTML);
+  close();
+ }
+
+ szHTML =
+  "<html><head>"+
+  "<style>A:link,A:visited,A:active {text-decoration:none;"+"color:"+c_rgszClr[3]+";}"+
+  ".clTab {cursor:hand;background:"+c_rgszClr[1]+";font:9pt Arial;padding-left:3px;padding-right:3px;text-align:center;}"+
+  ".clBorder {background:"+c_rgszClr[2]+";font:1pt;}"+
+  "</style></head><body onload=\"parent.fnInit();\" onselectstart=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+
+  " topmargin=0 leftmargin=0><table id=tbTabs cellpadding=0 cellspacing=0>";
+
+ var iCellCount=(c_lTabs+1)*2;
+
+ var i;
+ for (i=0;i<iCellCount;i+=2)
+  szHTML+="<col width=1><col>";
+
+ var iRow;
+ for (iRow=0;iRow<6;iRow++) {
+
+  szHTML+="<tr>";
+
+  if (iRow==5)
+   szHTML+="<td colspan="+iCellCount+"></td>";
+  else {
+   if (iRow==0) {
+    for(i=0;i<iCellCount;i++)
+     szHTML+="<td height=1 class=\"clBorder\"></td>";
+   } else if (iRow==1) {
+    for(i=0;i<c_lTabs;i++) {
+     szHTML+="<td height=1 nowrap class=\"clBorder\">&nbsp;</td>";
+     szHTML+=
+      "<td id=tdTab height=1 nowrap class=\"clTab\" onmouseover=\"parent.fnMouseOverTab("+i+");\" onmouseout=\"parent.fnMouseOutTab("+i+");\">"+
+      "<a href=\""+document.all.item("shLink")[i].href+"\" target=\"frSheet\" id=aTab>&nbsp;"+c_rgszSh[i]+"&nbsp;</a></td>";
     }
-
-    /* Paper themes */
-    body.theme-ruled {
-      --paper-bg: #faf7eb;
-      --line-color: #d1d5db;
-      background-color: #cbd5e1;
-      background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 27px, var(--line-color) 28px);
-    }
-    body.theme-yellow {
-      --paper-bg: #fff9c4;
-      --line-color: #e6ee9c;
-      --margin-color: #ef5350;
-      background-color: #fef08a;
-      background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 27px, var(--line-color) 28px);
-    }
-    body.theme-grid {
-      --paper-bg: #ffffff;
-      background-color: #e2e8f0;
-      background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
-      background-size: 20px 20px;
-    }
-    body.theme-dark {
-      --paper-bg: #1e293b;
-      --line-color: #334155;
-      --margin-color: #f43f5e;
-      --ink-blue: #93c5fd;
-      --ink-black: #f8fafc;
-      background-color: #0f172a;
-      background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 27px, var(--line-color) 28px);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-hand);
-      color: var(--ink-black);
-      line-height: 1.6;
-      font-size: 1.25rem;
-      padding: 20px 10px;
-      transition: all 0.3s ease;
-    }
-
-    /* Top Control Bar */
-    .top-bar {
-      max-width: 1100px;
-      margin: 0 auto 20px auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--font-sans);
-      background: rgba(255, 255, 255, 0.98);
-      padding: 14px 22px;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-      backdrop-filter: blur(8px);
-      position: sticky;
-      top: 10px;
-      z-index: 100;
-      border: 1px solid #cbd5e1;
-    }
-
-    .top-bar h1 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #0f172a;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .theme-btn {
-      padding: 7px 14px;
-      border-radius: 20px;
-      border: 1px solid #cbd5e1;
-      background: white;
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.2s ease;
-    }
-    .theme-btn:hover {
-      background: #f1f5f9;
-      transform: translateY(-1px);
-    }
-
-    .search-box {
-      position: relative;
-    }
-    .search-box input {
-      padding: 7px 14px 7px 34px;
-      border-radius: 20px;
-      border: 1px solid #cbd5e1;
-      font-size: 0.9rem;
-      width: 220px;
-      outline: none;
-    }
-    .search-box svg {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #64748b;
-    }
-
-    /* Main Notebook Container */
-    .notebook {
-      max-width: 1100px;
-      margin: 0 auto;
-      background: var(--paper-bg);
-      border-radius: 6px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06);
-      position: relative;
-      padding: 45px 50px 60px 85px;
-      min-height: 100vh;
-      border-left: 3px solid var(--margin-color);
-    }
-
-    /* Spiral Rings Effect */
-    .spiral-holes {
-      position: absolute;
-      left: 22px;
-      top: 30px;
-      bottom: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      pointer-events: none;
-    }
-    .hole {
-      width: 16px;
-      height: 16px;
-      background: #94a3b8;
-      border-radius: 50%;
-      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.5), 0 0 0 2px #cbd5e1;
-      position: relative;
-    }
-    .hole::after {
-      content: '';
-      position: absolute;
-      left: -22px;
-      top: 4px;
-      width: 26px;
-      height: 8px;
-      background: linear-gradient(90deg, #475569, #94a3b8, #334155);
-      border-radius: 4px;
-      box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
-    }
-
-    /* Cover / Notebook Header */
-    .notebook-header {
-      text-align: center;
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 3px double var(--ink-blue);
-      position: relative;
-    }
-
-    .notebook-title {
-      font-family: var(--font-title);
-      font-size: 3.6rem;
-      font-weight: 700;
-      color: var(--ink-blue);
-      text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
-      line-height: 1.1;
-      margin-bottom: 5px;
-    }
-
-    .notebook-subtitle {
-      font-size: 1.4rem;
-      color: #475569;
-      font-weight: 400;
-    }
-
-    .tag-badge {
-      display: inline-block;
-      background: var(--highlighter-yellow);
-      padding: 4px 14px;
-      border-radius: 15px;
-      font-size: 1rem;
-      font-weight: 700;
-      transform: rotate(-1.5deg);
-      border: 1px dashed #d97706;
-      margin-top: 10px;
-      color: #92400e;
-    }
-
-    /* Section Styling */
-    .note-section {
-      margin-bottom: 50px;
-      position: relative;
-    }
-
-    .section-title {
-      font-family: var(--font-title);
-      font-size: 2.4rem;
-      color: #b91c1c;
-      border-bottom: 2px dashed #fca5a5;
-      padding-bottom: 6px;
-      margin-bottom: 22px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    /* Folder Inventory Table */
-    .inventory-card {
-      background: rgba(255, 255, 255, 0.9);
-      border: 2px solid #cbd5e1;
-      border-radius: 8px;
-      padding: 16px;
-      margin-bottom: 25px;
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-    }
-
-    .inventory-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .inventory-table th, .inventory-table td {
-      padding: 9px 12px;
-      text-align: left;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    .inventory-table th {
-      background: #f1f5f9;
-      color: #1e293b;
-      font-weight: 700;
-    }
-
-    /* Formula Cards & Notes Grid */
-    .notes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 22px;
-      margin-bottom: 25px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 8px;
-      padding: 20px 24px;
-      box-shadow: 3px 5px 15px rgba(0,0,0,0.06);
-      border: 1px solid #cbd5e1;
-      position: relative;
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #e2e8f0;
-      padding-bottom: 6px;
-    }
-
-    .func-name {
-      font-family: var(--font-title);
-      font-size: 1.9rem;
-      color: var(--ink-blue);
-      font-weight: 700;
-    }
-
-    .category-tag {
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 3px 9px;
-      border-radius: 4px;
-      background: #e0f2fe;
-      color: #0369a1;
-    }
-
-    .syntax-box {
-      font-family: var(--font-code);
-      font-size: 0.95rem;
-      background: #0f172a;
-      color: #38bdf8;
-      padding: 10px 14px;
-      border-radius: 6px;
-      margin: 10px 0 12px 0;
-      overflow-x: auto;
-      white-space: pre;
-    }
-
-    .formula-example {
-      font-family: var(--font-code);
-      font-size: 0.92rem;
-      background: #ecfdf5;
-      color: #065f46;
-      border-left: 4px solid #10b981;
-      padding: 8px 12px;
-      margin: 8px 0;
-      word-break: break-all;
-    }
-
-    .explanation-mr {
-      color: #1e293b;
-      font-size: 1.18rem;
-      margin-top: 12px;
-      background: rgba(254, 240, 138, 0.4);
-      padding: 8px 12px;
-      border-radius: 6px;
-      border-left: 3px solid #eab308;
-    }
-
-    /* Sticky Notes */
-    .sticky-note {
-      background: var(--sticky-yellow);
-      padding: 18px 22px;
-      border-radius: 3px;
-      box-shadow: 3px 6px 12px rgba(0,0,0,0.15);
-      position: relative;
-      margin: 25px 0;
-      transform: rotate(-1deg);
-      border-left: 5px solid #eab308;
-    }
-    .sticky-note.pink {
-      background: var(--sticky-pink);
-      border-left-color: #f43f5e;
-      transform: rotate(1deg);
-    }
-    .sticky-note.green {
-      background: var(--sticky-green);
-      border-left-color: #22c55e;
-      transform: rotate(-0.5deg);
-    }
-
-    .sticky-title {
-      font-family: var(--font-title);
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* Tape Effect */
-    .tape {
-      width: 90px;
-      height: 26px;
-      background: rgba(255, 255, 255, 0.7);
-      position: absolute;
-      top: -13px;
-      left: 50%;
-      transform: translateX(-50%) rotate(-3deg);
-      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
-      border: 1px dashed rgba(0,0,0,0.15);
-    }
-
-    /* Handwritten Flowchart / Diagrams */
-    .hand-diagram {
-      border: 2px dashed #94a3b8;
-      border-radius: 8px;
-      padding: 16px;
-      margin: 16px 0;
-      background: rgba(255,255,255,0.75);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .diagram-step {
-      background: white;
-      border: 2px solid var(--ink-blue);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 1.15rem;
-      box-shadow: 2px 2px 0px var(--ink-blue);
-    }
-    .arrow {
-      font-size: 1.5rem;
-      color: #e11d48;
-      font-weight: bold;
-    }
-
-    /* Quiz Section */
-    .quiz-card {
-      background: #ffffff;
-      border: 2px solid #cbd5e1;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 16px;
-      font-family: var(--font-sans);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-
-    .quiz-q {
-      font-weight: 600;
-      color: #0f172a;
-      margin-bottom: 10px;
-      font-size: 1.08rem;
-    }
-
-    .quiz-ans {
-      display: none;
-      background: #f0fdf4;
-      border: 1px solid #86efac;
-      padding: 12px;
-      border-radius: 6px;
-      margin-top: 10px;
-      color: #166534;
-      font-size: 0.98rem;
-      font-family: var(--font-code);
-    }
-
-    .toggle-ans-btn {
-      background: #2563eb;
-      color: white;
-      border: none;
-      padding: 6px 14px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.88rem;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .toggle-ans-btn:hover {
-      background: #1d4ed8;
-    }
-
-    /* Footer */
-    .notebook-footer {
-      text-align: center;
-      margin-top: 50px;
-      padding-top: 20px;
-      border-top: 2px dashed #cbd5e1;
-      font-size: 1.15rem;
-      color: #64748b;
-    }
-
-    @media (max-width: 768px) {
-      .notebook {
-        padding: 30px 20px 40px 45px;
-      }
-      .spiral-holes {
-        left: 10px;
-      }
-      .notes-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body class="theme-ruled">
-
-  <!-- Top Control Bar -->
-  <div class="top-bar">
-    <h1>📚 Advance Excel - Master Handwritten Notes</h1>
-    <div class="controls">
-      <div class="search-box">
-        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        <input type="text" id="searchInput" placeholder="Search formula (e.g. SUMIFS)..." onkeyup="filterNotes()">
-      </div>
-      <button class="theme-btn" onclick="setTheme('ruled')">📝 Ruled Paper</button>
-      <button class="theme-btn" onclick="setTheme('yellow')">🟡 Legal Pad</button>
-      <button class="theme-btn" onclick="setTheme('grid')">📐 Grid Paper</button>
-      <button class="theme-btn" onclick="setTheme('dark')">🌙 Blackboard</button>
-      <button class="theme-btn" onclick="window.print()" style="background:#2563eb; color:white; border:none;">🖨️ Print PDF</button>
-    </div>
-  </div>
-
-  <!-- Main Notebook -->
-  <div class="notebook">
-
-    <!-- Spiral Rings -->
-    <div class="spiral-holes">
-      <div class="hole"></div><div class="hole"></div><div class="hole"></div>
-      <div class="hole"></div><div class="hole"></div><div class="hole"></div>
-      <div class="hole"></div><div class="hole"></div><div class="hole"></div>
-      <div class="hole"></div><div class="hole"></div><div class="hole"></div>
-      <div class="hole"></div><div class="hole"></div><div class="hole"></div>
-    </div>
-
-    <!-- Notebook Header -->
-    <div class="notebook-header">
-      <div class="notebook-title">Advance Excel Master Study Notes</div>
-      <div class="notebook-subtitle">हँडरिटन नोट्स व फॉर्म्युला मास्टर गाइड (Analyzed Workspace Inventory: 24 Files)</div>
-      <span class="tag-badge">✨ Complete Folder Analysis & Step-by-Step Study Roadmap</span>
-    </div>
-
-    <!-- Section 0: Analyzed Files Breakdown -->
-    <div class="note-section">
-      <div class="section-title">📁 Analyzed Excel Files Breakdown (तुमच्या फोल्डर मधील सर्व २४ फाईल्स)</div>
-      <div class="inventory-card">
-        <p style="margin-bottom:10px; font-weight:600; color:#475569;">खालील सर्व Excel फाईल्सचे संपूर्ण सखोल ॲनालिसिस करून या मास्टर स्टडी नोट्स तयार करण्यात आल्या आहेत:</p>
-        <table class="inventory-table">
-          <thead>
-            <tr>
-              <th>File Name</th>
-              <th>Sheets</th>
-              <th>Key Formulas & Topics Analyzed</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>Assignment 3 - Text, Logical, Date...</b></td>
-              <td>15 Sheets</td>
-              <td>IF, NESTED IF, SUMIF, SUMIFS, COUNTIF, COUNTIFS, AVERAGEIFS, Text, Date, Financial (PMT/IPMT)</td>
-            </tr>
-            <tr>
-              <td><b>Logical Function - If, And, Or, Tax...</b></td>
-              <td>6 Sheets</td>
-              <td>Logical IF/AND/OR, Multi-slab Income Tax calculations, Risk Flags, Nested IF Matrices</td>
-            </tr>
-            <tr>
-              <td><b>Conditional Formatting Set 1 & Set 2</b></td>
-              <td>6 Sheets</td>
-              <td>Highlight Rules, Data Bars, Color Scales, Icon Sets, Custom Formula formatting</td>
-            </tr>
-            <tr>
-              <td><b>financial.xlsx</b></td>
-              <td>3 Sheets</td>
-              <td>PV (Present Value), PMT, PPMT, IPMT, Downpayment calculations, Loan Tenure modeling</td>
-            </tr>
-            <tr>
-              <td><b>store.xlsx (Superstore Big Data)</b></td>
-              <td>1 Sheet (9,995 rows)</td>
-              <td>Real-world Enterprise Dataset, Pivot Tables, Regional Sales, Profit/Discount Analytics</td>
-            </tr>
-            <tr>
-              <td><b>TEXT FUNCTION.xlsx</b></td>
-              <td>1 Sheet</td>
-              <td>UPPER, LOWER, PROPER, TRIM, LEN, SEARCH, CONCAT, LEFT, RIGHT, MID</td>
-            </tr>
-            <tr>
-              <td><b>DATE FUNCTION.xlsx</b></td>
-              <td>1 Sheet</td>
-              <td>TODAY, NOW, YEAR, MONTH, DAY, DATE, DATEDIF, EDATE, EOMONTH, NETWORKDAYS, NETWORKDAYS.INTL, DAYS</td>
-            </tr>
-            <tr>
-              <td><b>Database Function.xlsx</b></td>
-              <td>1 Sheet</td>
-              <td>DSUM, DAVERAGE, DCOUNT, DCOUNTA, DMAX, DMIN, DGET (Structured DB Queries)</td>
-            </tr>
-            <tr>
-              <td><b>MIS Test Paper.xlsx</b></td>
-              <td>17 Sheets</td>
-              <td>11 Practical Test Modules (Text extraction, Pivot Tables, SUMIF, VLOOKUP, Cross-sheet references)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Section 1: Logical Functions -->
-    <div class="note-section" id="sec-logical">
-      <div class="section-title">🧠 Module 1: Logical Functions (लॉजिकल फॉर्म्युले)</div>
-
-      <div class="hand-diagram">
-        <div class="diagram-step">Logical Condition</div>
-        <div class="arrow">➔</div>
-        <div class="diagram-step" style="border-color:#16a34a;">TRUE: Output 1</div>
-        <div class="arrow">➔</div>
-        <div class="diagram-step" style="border-color:#dc2626;">FALSE: Output 2</div>
-      </div>
-
-      <div class="notes-grid">
-        <!-- IF -->
-        <div class="card" data-search="if conditional">
-          <div class="card-header">
-            <span class="func-name">1. IF Function</span>
-            <span class="category-tag">Logical</span>
-          </div>
-          <div>कन्डिशन तपासून TRUE किंवा FALSE आऊटपुट देण्यासाठी.</div>
-          <div class="syntax-box">&#61;IF(logical_test, value_if_true, value_if_false)</div>
-          <div class="formula-example">&#61;IF(Salary&gt;&#61;15000, "Eligible", "Not-Eligible")</div>
-          <div class="formula-example">&#61;IF(E5&gt;&#61;15000, E5*5%, 0)</div>
-          <div class="explanation-mr">💡 <b>मराठीत:</b> जर Salary १५,००० पेक्षा जास्त असेल तर ५% बोनस द्या, नाहीतर ० द्या.</div>
-        </div>
-
-        <!-- IFS -->
-        <div class="card" data-search="ifs nested multiple">
-          <div class="card-header">
-            <span class="func-name">2. IFS Function</span>
-            <span class="category-tag">Logical (Excel 2019+)</span>
-          </div>
-          <div>अनेक अटी (Multiple Conditions) एकाच फॉर्म्युल्यात मांडण्यासाठी.</div>
-          <div class="syntax-box">&#61;IFS(condition1, val1, condition2, val2, ...)</div>
-          <div class="formula-example">&#61;IFS(C3&gt;&#61;1000000, "30%", C3&gt;&#61;500000, "20%", C3&gt;&#61;250000, "5%", C3&lt;250000, "NO TAX")</div>
-          <div class="explanation-mr">💡 <b>मराठीत:</b> इन्कम टॅक्स स्लॅब कॅल्क्युलेशनसाठी अतिशय सोपा फॉर्म्युला! एकापेक्षा जास्त Nested IF लिहिण्याऐवजी IFS वापरावा.</div>
-        </div>
-
-        <!-- AND & OR -->
-        <div class="card" data-search="and or logical combined">
-          <div class="card-header">
-            <span class="func-name">3. AND & OR Functions</span>
-            <span class="category-tag">Logical</span>
-          </div>
-          <div>अनेक अटी एकत्र जोडण्यासाठी.</div>
-          <div class="syntax-box">&#61;IF(AND(C5&#61;"Borivali", E5&gt;35000), 1000, 0)</div>
-          <div class="syntax-box">&#61;IF(OR(Branch&#61;"Borivali", Salary&gt;&#61;15000), "Yes", "No")</div>
-          <div class="explanation-mr">💡 <b>AND:</b> सर्व अटी पूर्ण झाल्या तरच TRUE.<br>💡 <b>OR:</b> कोणतीही एक अट पूर्ण झाली तरी TRUE.</div>
-        </div>
-
-        <!-- NESTED IF -->
-        <div class="card" data-search="nested if priority risk">
-          <div class="card-header">
-            <span class="func-name">4. NESTED IF</span>
-            <span class="category-tag">Logical</span>
-          </div>
-          <div>एका IF मध्ये दुसरा IF वापरणे.</div>
-          <div class="syntax-box">&#61;IF(C7&#61;"High", D7-5, IF(C7&#61;"Medium", D7-3, IF(C7&#61;"Low", D7-1, "")))</div>
-          <div class="explanation-mr">💡 <b>उदा (SMS Matrix):</b> Risk Flag जर "High" असेल तर EMI तारखेच्या ५ दिवस आधी SMS पाठवा, "Medium" असेल तर ३ दिवस आधी पाठवा.</div>
-        </div>
-      </div>
-
-      <!-- Sticky Note Tip -->
-      <div class="sticky-note">
-        <div class="tape"></div>
-        <div class="sticky-title">📌 Teacher's Logical Pro Tip:</div>
-        <div>१. Text व्हॅल्यू नेहमी double quotes <code>" "</code> मध्ये लिहा (उदा: <code>"Borivali"</code>). पण नंबर किंवा सेल रेफरन्स <code>" "</code> मध्ये लिहू नका!<br>
-        २. <code>IFS</code> वापरताना मोठ्या संख्येकडून लहान संख्येकडे ऑर्डर ठेवावी (उदा: १० लाख ➔ ५ लाख ➔ २.५ लाख).</div>
-      </div>
-    </div>
-
-    <!-- Section 2: Aggregation Functions -->
-    <div class="note-section" id="sec-agg">
-      <div class="section-title">📊 Module 2: Conditional Aggregation (SUMIF, COUNTIF & SUBTOTAL)</div>
-
-      <div class="notes-grid">
-        <!-- SUMIF & SUMIFS -->
-        <div class="card" data-search="sumif sumifs addition criteria">
-          <div class="card-header">
-            <span class="func-name">1. SUMIF & SUMIFS</span>
-            <span class="category-tag">Math & Trig</span>
-          </div>
-          <div>अटीवर आधारित बेरीज (Conditional Total) करण्यासाठी.</div>
-          <div class="syntax-box">&#61;SUMIF(range, criteria, [sum_range])</div>
-          <div class="syntax-box">&#61;SUMIFS(sum_range, criteria_range1, criteria1, criteria_range2, criteria2)</div>
-          <div class="formula-example">&#61;SUMIF(Designation, "Manager", Salary)</div>
-          <div class="formula-example">&#61;SUMIFS(Amount, Transaction_Type, "Online", Debit_Credit, "Credit")</div>
-          <div class="explanation-mr">💡 <b>महत्त्वाचा फरक:</b> <code>SUMIF</code> मध्ये sum_range शेवटी असतो, तर <code>SUMIFS</code> मध्ये sum_range सर्वात आधी लिहावा लागतो!</div>
-        </div>
-
-        <!-- COUNT, COUNTA, COUNTBLANK, COUNTIF, COUNTIFS -->
-        <div class="card" data-search="count counta countblank countif countifs">
-          <div class="card-header">
-            <span class="func-name">2. COUNT Family</span>
-            <span class="category-tag">Statistical</span>
-          </div>
-          <div>सेल्स मोजण्यासाठी (Counting Cells).</div>
-          <div class="syntax-box">&#61;COUNT(range) ➔ फक्त Numbers मोजते</div>
-          <div class="syntax-box">&#61;COUNTA(range) ➔ भरलेले सर्व सेल्स (Text + Numbers)</div>
-          <div class="syntax-box">&#61;COUNTBLANK(range) ➔ रिकामे सेल्स (Empty Cells)</div>
-          <div class="formula-example">&#61;COUNTIF(Transaction_Type, "UPI")</div>
-          <div class="formula-example">&#61;COUNTIFS(Transaction_Type, "UPI", Debit_Credit, "Debit")</div>
-        </div>
-
-        <!-- AVERAGEIF & AVERAGEIFS -->
-        <div class="card" data-search="averageif averageifs average">
-          <div class="card-header">
-            <span class="func-name">3. AVERAGEIF & AVERAGEIFS</span>
-            <span class="category-tag">Statistical</span>
-          </div>
-          <div>अटीवर आधारित सरासरी (Average) काढण्यासाठी.</div>
-          <div class="syntax-box">&#61;AVERAGEIF(range, criteria, [average_range])</div>
-          <div class="formula-example">&#61;AVERAGEIFS(Amount, Transaction_Type, "Card", Debit_Credit, "Credit")</div>
-        </div>
-
-        <!-- SUBTOTAL & SUMPRODUCT -->
-        <div class="card" data-search="subtotal sumproduct filter dynamic median">
-          <div class="card-header">
-            <span class="func-name">4. SUBTOTAL, MEDIAN & SUMPRODUCT</span>
-            <span class="category-tag">Advanced Math</span>
-          </div>
-          <div>फिल्टर डेटावर गणना करणे, मधली संख्या (Median) व गुणाकारांची बेरीज.</div>
-          <div class="syntax-box">&#61;MEDIAN(range) ➔ दिलेल्या नंबर मालिकेतील मध्यक संख्या</div>
-          <div class="syntax-box">&#61;SUBTOTAL(9, C2:C100) ➔ Filter केल्यावर visible cells ची SUM</div>
-          <div class="syntax-box">&#61;SUBTOTAL(109, C2:C100) ➔ Manually Hidden + Filtered सोडून SUM</div>
-          <div class="syntax-box">&#61;SUMPRODUCT(Qty_Range, Rate_Range)</div>
-          <div class="formula-example">&#61;MEDIAN(J7:J44) ➔ पगार/किंमतींचा मध्यक (Median)</div>
-          <div class="formula-example">&#61;SUMPRODUCT(C2:C10, D2:D10) ➔ (Qty * Rate) ची Total</div>
-          <div class="explanation-mr">💡 <b>SUBTOTAL Code 9 vs 109:</b> Code <code>9</code> हा फक्त फिल्टर केलेल्या डेटाची बेरीज करतो. पण Code <code>109</code> हा मॅन्युअली लपवलेले (Hidden) रो देखील वगळून बेरीज करतो!</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 3: Text & String Functions -->
-    <div class="note-section" id="sec-text">
-      <div class="section-title">🔤 Module 3: Text Manipulation Functions (टेक्स्ट फॉर्म्युले)</div>
-
-      <div class="notes-grid">
-        <!-- LEFT, MID, RIGHT -->
-        <div class="card" data-search="left mid right text substring extract">
-          <div class="card-header">
-            <span class="func-name">1. LEFT, MID, RIGHT</span>
-            <span class="category-tag">Text</span>
-          </div>
-          <div>टेक्स्ट मधील शब्द किंवा अंक वेगळे (Extract) करण्यासाठी.</div>
-          <div class="syntax-box">&#61;LEFT(text, num_chars) ➔ डावीकडून</div>
-          <div class="syntax-box">&#61;RIGHT(text, num_chars) ➔ उजवीकडून</div>
-          <div class="syntax-box">&#61;MID(text, start_num, num_chars) ➔ मधून</div>
-          <div class="formula-example">&#61;LEFT("Mumbai - 400086", 6) ➔ "Mumbai"</div>
-          <div class="formula-example">&#61;RIGHT("Mumbai - 400086", 6) ➔ "400086"</div>
-          <div class="formula-example">&#61;MID("IV-RAHUL-986", 4, 5) ➔ "RAHUL"</div>
-        </div>
-
-        <!-- FIND, SUBSTITUTE & Flash Fill -->
-        <div class="card" data-search="find substitute flash fill replace text">
-          <div class="card-header">
-            <span class="func-name">2. FIND & SUBSTITUTE</span>
-            <span class="category-tag">Text</span>
-          </div>
-          <div>अक्षर शोधणे आणि बदलणे.</div>
-          <div class="syntax-box">&#61;FIND(find_text, within_text)</div>
-          <div class="syntax-box">&#61;SUBSTITUTE(text, old_text, new_text)</div>
-          <div class="formula-example">&#61;SUBSTITUTE("9812-34-56-78", "-", "") ➔ "9812345678"</div>
-          <div class="explanation-mr">⚡ <b>Flash Fill (Ctrl + E):</b> फॉर्म्युला न वापरता नमुना टाईप करून ऑटोमॅटिक डेटा वेगळा करण्यासाठी Ctrl + E वापरा!</div>
-        </div>
-
-        <!-- PROPER, UPPER, LOWER -->
-        <div class="card" data-search="proper upper lower capitalization">
-          <div class="card-header">
-            <span class="func-name">3. PROPER, UPPER, LOWER</span>
-            <span class="category-tag">Text</span>
-          </div>
-          <div>अक्षरांचा आकार (Case) बदलण्यासाठी.</div>
-          <div class="syntax-box">&#61;PROPER("barack hussein") ➔ "Barack Hussein"</div>
-          <div class="syntax-box">&#61;UPPER("mumbai") ➔ "MUMBAI"</div>
-          <div class="syntax-box">&#61;LOWER("EXCEL") ➔ "excel"</div>
-        </div>
-
-        <!-- TRIM, LEN, SEARCH, CONCAT -->
-        <div class="card" data-search="trim len search concat text length spaces dynamic code generation">
-          <div class="card-header">
-            <span class="func-name">4. TRIM, LEN, CONCAT & Code Gen</span>
-            <span class="category-tag">Text Utility</span>
-          </div>
-          <div>टेक्स्ट मधील स्पेस काढणे, लांबी मोजणे व युनिक कोड जनरेट करणे.</div>
-          <div class="syntax-box">&#61;TRIM(text) ➔ अतिरिक्त मोकळ्या जागा (Extra Spaces) काढण्यासाठी</div>
-          <div class="syntax-box">&#61;LEN(text) ➔ अक्षरांची एकूण संख्या मोजण्यासाठी</div>
-          <div class="syntax-box">&#61;CONCAT(text1, text2, ...) ➔ दोन किंवा अधिक शब्द जोडणे</div>
-          <div class="formula-example">&#61;UPPER(CONCAT("VI", LEFT(FirstName,1), RIGHT(LastName,3), EmpCode))</div>
-          <div class="formula-example">&#61;TRIM("  Rahul   Dravid  ") ➔ "Rahul Dravid"</div>
-          <div class="explanation-mr">💡 <b>Dynamic Code Generation:</b> कंपनीमध्ये कर्मचाऱ्यांचा VAN ID किंवा Unique Passcode बनवण्यासाठी <code>CONCAT</code> सोबत <code>LEFT</code>, <code>RIGHT</code> आणि <code>UPPER</code> वापरला जातो! (उदा: <code>MIS Test Paper - Test 2</code>).</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 4: Date & Time Functions -->
-    <div class="note-section" id="sec-date">
-      <div class="section-title">📅 Module 4: Date & Time Functions (तारीख व वेळ फॉर्म्युले)</div>
-
-      <div class="notes-grid">
-        <!-- TODAY, NOW, DATE, YEAR, MONTH, DAY -->
-        <div class="card" data-search="today now date year month day datepart">
-          <div class="card-header">
-            <span class="func-name">1. Basic Date Functions</span>
-            <span class="category-tag">Date & Time</span>
-          </div>
-          <div>आजची तारीख व वेळेवर काम करणे.</div>
-          <div class="syntax-box">&#61;TODAY() ➔ आजची तारीख</div>
-          <div class="syntax-box">&#61;NOW() ➔ तारीख + वेळ</div>
-          <div class="syntax-box">&#61;YEAR(A6), &#61;MONTH(A6), &#61;DAY(A6)</div>
-          <div class="syntax-box">&#61;TEXT(A6, "dddd") ➔ वार (Day Name e.g. "Monday")</div>
-          <div class="syntax-box">&#61;TEXT(A6, "mmmm") ➔ महिन्याचे नाव (e.g. "August")</div>
-        </div>
-
-        <!-- DATEDIF, EDATE, EOMONTH, WORKDAY -->
-        <div class="card" data-search="datedif edate eomonth workday networkdays duration age">
-          <div class="card-header">
-            <span class="func-name">2. Advanced Date Calculations</span>
-            <span class="category-tag">Date & Time</span>
-          </div>
-          <div>वय (Age), मॅच्युरिटी डेट व कामाचे दिवस मोजणे.</div>
-          <div class="syntax-box">&#61;DATEDIF(BirthDate, TODAY(), "Y") & " Years"</div>
-          <div class="syntax-box">&#61;EDATE(StartDate, 6) ➔ ६ महिन्यांनंतरची तारीख</div>
-          <div class="syntax-box">&#61;EOMONTH(StartDate, 0) ➔ चालू महिन्याचा शेवटचा दिवस</div>
-          <div class="syntax-box">&#61;NETWORKDAYS(StartDate, EndDate, Holidays)</div>
-          <div class="explanation-mr">💡 <b>NETWORKDAYS:</b> शनिवार, रविवार आणि सुट्ट्या सोडून शुद्ध कामाचे दिवस मोजते!</div>
-        </div>
-
-        <!-- NETWORKDAYS.INTL, DAYS, WEEKDAY -->
-        <div class="card" data-search="networkdays intl days weekday holiday custom weekend">
-          <div class="card-header">
-            <span class="func-name">3. NETWORKDAYS.INTL & DAYS</span>
-            <span class="category-tag">Custom Dates</span>
-          </div>
-          <div>कस्टम सुट्ट्या व तारखांमधील एकूण दिवस.</div>
-          <div class="syntax-box">&#61;NETWORKDAYS.INTL(start_date, end_date, [weekend], [holidays])</div>
-          <div class="syntax-box">&#61;DAYS(end_date, start_date)</div>
-          <div class="syntax-box">&#61;WEEKDAY(serial_number, [return_type])</div>
-          <div class="formula-example">&#61;NETWORKDAYS.INTL(A11, B11, 11, A14:A17)</div>
-          <div class="explanation-mr">💡 <b>INTL काय करतो?:</b> जर सुट्टी फक्त रविवारीच असेल (Weekend = 11), तर <code>NETWORKDAYS.INTL</code> वापरून काम मोजता येते!</div>
-        </div>
-      </div>
-
-      <div class="sticky-note green">
-        <div class="tape"></div>
-        <div class="sticky-title">📅 Date Cheat Sheet:</div>
-        <div>- <code>=TEXT(A1, "dd-mmm-yyyy")</code> ➔ 03-Aug-2026<br>
-        - <code>=DATEDIF(A1, B1, "M")</code> ➔ दोन तारखांमधील एकूण महिने<br>
-        - <code>=WORKDAY(TODAY(), 10, Holiday_Range)</code> ➔ १० काम करण्याच्या दिवसांनंतर येणारी तारीख.</div>
-      </div>
-    </div>
-
-    <!-- Section 5: Database Functions -->
-    <div class="note-section" id="sec-db">
-      <div class="section-title">🗄️ Module 5: Database Functions (DSUM, DAVERAGE, DCOUNT)</div>
-
-      <div class="notes-grid">
-        <div class="card" data-search="dsum daverage dcount dmax dmin dget database query">
-          <div class="card-header">
-            <span class="func-name">DSUM, DAVERAGE, DCOUNT, DMAX, DMIN</span>
-            <span class="category-tag">Database</span>
-          </div>
-          <div>टेबलवर स्ट्रक्चरल क्रायटेरिया (Criteria Range) लावून गणना करणे.</div>
-          <div class="syntax-box">&#61;DSUM(database, field, criteria)</div>
-          <div class="syntax-box">&#61;DAVERAGE(database, field, criteria)</div>
-          <div class="syntax-box">&#61;DCOUNT(database, field, criteria)</div>
-          <div class="formula-example">&#61;DSUM(A1:F100, "Salary", H1:I2)</div>
-          <div class="explanation-mr">💡 <b>फायदा:</b> यात Criteria चे वेगळे मिनी-टेबल तयार करून हवा तसा मल्टी-कॉलम डेटा फिल्टर करून टोटल काढता येते!</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 6: Financial Functions -->
-    <div class="note-section" id="sec-fin">
-      <div class="section-title">💰 Module 6: Financial Functions (EMI, PMT, IPMT, PPMT, PV)</div>
-
-      <div class="notes-grid">
-        <div class="card" data-search="pmt ipmt ppmt pv fv emi loan interest principal">
-          <div class="card-header">
-            <span class="func-name">PMT, IPMT, PPMT & PV</span>
-            <span class="category-tag">Financial</span>
-          </div>
-          <div>कर्जाचे हप्ते (EMI), व्याज (Interest), मुद्दल (Principal) व प्रेझेंट व्हॅल्यू (PV) काढण्यासाठी.</div>
-          <div class="syntax-box">&#61;PMT(rate/12, nper, -pv) ➔ महिन्याचा एकूण EMI</div>
-          <div class="syntax-box">&#61;IPMT(rate/12, per, nper, -pv) ➔ ठराविक हप्त्याचे व्याज</div>
-          <div class="syntax-box">&#61;PPMT(rate/12, per, nper, -pv) ➔ ठराविक हप्त्याची मुद्दल</div>
-          <div class="syntax-box">&#61;PV(rate/12, nper, -pmt) ➔ हप्त्यावरून एकूण कर्जाची रक्कम</div>
-          <div class="formula-example">&#61;PMT(13.5%/12, 3*12, -28790)</div>
-          <div class="formula-example">&#61;PV(13.5%/12, 3*12, -864)</div>
-          <div class="explanation-mr">💡 <b>महत्त्वाची टीप:</b> वार्षिक व्याजाला १२ ने भागा (Rate/12) आणि वर्षाचे महिने करा (Years * 12). कर्जाची रक्कम माइनस (-) मध्ये टाकावी लागते!</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 7: Conditional Formatting -->
-    <div class="note-section" id="sec-cf">
-      <div class="section-title">🎨 Module 7: Conditional Formatting & Data Visualization (कन्डिशनल फॉरमॅटिंग)</div>
-
-      <div class="notes-grid">
-        <div class="card" data-search="conditional formatting highlight data bars icon sets color scales">
-          <div class="card-header">
-            <span class="func-name">Conditional Formatting Rules</span>
-            <span class="category-tag">Visualization</span>
-          </div>
-          <div>अटीनुसार डेटाला रंग देणे आणि व्हिज्युअल हायलाईट करणे.</div>
-          <div class="syntax-box">Home Tab ➔ Conditional Formatting ➔ Highlight Cells Rules</div>
-          <div class="syntax-box">1. Greater Than / Less Than / Between (उदा. Sales &gt; 50,000)</div>
-          <div class="syntax-box">2. Text that Contains / Duplicate Values (डुप्लिकेट डेटा हायलाईट करणे)</div>
-          <div class="syntax-box">3. Data Bars, Color Scales & Icon Sets (ट्रेंड्स दाखवण्यासाठी)</div>
-          <div class="syntax-box">4. Custom Formula Rule: &#61;AND($E2&#61;"South", $F2&gt;100)</div>
-          <div class="explanation-mr">💡 <b>फायदा:</b> डेटा एंट्री करताना चुका लगेच ओळखण्यासाठी आणि सेल्स ट्रेंड हायलाईट करण्यासाठी <code>Conditional Formatting Set 1 & Set 2</code> शीट्स वापरा!</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 8: Superstore Big Data Analytics -->
-    <div class="note-section" id="sec-store">
-      <div class="section-title">🏢 Module 8: Superstore Enterprise Data Analytics (Pivot Tables & MIS)</div>
-
-      <div class="notes-grid">
-        <div class="card" data-search="superstore pivot table mis dashboard big data store.xlsx">
-          <div class="card-header">
-            <span class="func-name">Superstore Big Data Analytics</span>
-            <span class="category-tag">MIS & Big Data</span>
-          </div>
-          <div>९,९९५ रो च्या मोठ्या डेटावर समरी रिपोर्ट्स आणि पिव्होट टेबल्स बनवणे.</div>
-          <div class="syntax-box">Insert Tab ➔ Pivot Table ➔ Select Table Range (Sample - Superstore)</div>
-          <div class="formula-example">1. Regional Sales Total: Drag 'Region' to Rows, 'Sales' to Values</div>
-          <div class="formula-example">2. Category Profit Analysis: Drag 'Category' to Rows, 'Profit' to Values</div>
-          <div class="formula-example">3. Segment Discounts: Drag 'Segment' to Rows, 'Discount' to Values</div>
-          <div class="explanation-mr">💡 <b>`store.xlsx` सराव:</b> हा रिअल-वर्ल्ड कंपनी डेटाबेस आहे. यावर Pivot Tables, VLOOKUP आणि Dynamic Chart Dashboards बनवण्याचा सराव करावा!</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 9: Practice Quiz -->
-    <div class="note-section" id="sec-quiz">
-      <div class="section-title">✍️ Interactive Self-Assessment Quiz (MIS Test Paper व नवनवीन फाईल्सवर आधारित)</div>
-      
-      <div class="quiz-card">
-        <div class="quiz-q">प्र. १) जर एखाद्या कर्मचाऱ्याचा पगार ₹३५,००० पेक्षा जास्त असेल आणि ब्रांच "Borivali" असेल तर १००० बोनस देण्याचा फॉर्म्युला काय येईल?</div>
-        <button class="toggle-ans-btn" onclick="toggleAns('q1')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q1">&#61;IF(AND(Branch&#61;"Borivali", Salary&gt;35000), 1000, 0)</div>
-      </div>
-
-      <div class="quiz-card">
-        <div class="quiz-q">प्र. २) "Mumbai -400086" या टेक्स्ट मधून पिनकोड (400086) वेगळा करण्यासाठी कोणता फॉर्म्युला वापराल?</div>
-        <button class="toggle-ans-btn" onclick="toggleAns('q2')">&#61;RIGHT("Mumbai -400086", 6)</button>
-        <div class="quiz-ans" id="q2">&#61;RIGHT("Mumbai -400086", 6)</div>
-      </div>
-
-      <div class="quiz-card">
-        <div class="quiz-q">प्र. ३) फिल्टर (Filter) केलेल्या डेटावर फक्त visible असणाऱ्या संख्यांची बेरीज करण्यासाठी कोणता फॉर्म्युला वापरला जातो?</div>
-        <button class="toggle-ans-btn" onclick="toggleAns('q3')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q3">&#61;SUBTOTAL(9, Range) (9 हा SUM चा कोड आहे)</div>
-      </div>
-
-      <div class="quiz-card">
-        <div class="quiz-q">प्र. ४) ₹५,००,००० कर्जावर १०% वार्षिक व्याजाने ५ वर्षांसाठी (६० महिने) दरमहा भरवा लागणारा EMI काढण्याचे सूत्र काय आहे?</div>
-        <button class="toggle-ans-btn" onclick="toggleAns('q4')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q4">&#61;PMT(10%/12, 60, -500000)</div>
-      </div>
-
-      <div class="quiz-card">
-        <div class="quiz-q">प्र. ५) नावांमधील अतिरिक्त मोकळ्या जागा (Extra Spaces) काढून टाकण्यासाठी कोणता फॉर्म्युला वापरला जातो?</div>
-        <button class="toggle-ans-btn" onclick="toggleAns('q5')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q5">&#61;TRIM(Cell)</div>
-      </div>
-
-      <div class="quiz-card">
-        <div class="quiz-q">प्र. ६) हप्त्याची रक्कम (EMI &#61; ₹864) आणि कालावधी (३ वर्षे) माहीत असताना मूळ कर्जाची रक्कम काढण्यासाठी कोणता फॉर्म्युला वापरला जातो?</div>
-        <button class="toggle-ans-btn" onclick="toggleAns('q6')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q6">&#61;PV(13.5%/12, 3*12, -864)</div>
-      </div>
-
-      <div class="quiz-card">
-        <div class="quiz-q">प्र. ७) एक्सेल मधील डुप्लिकेट डेटा (Duplicate Values) हायलाईट करण्यासाठी कोणते टूल वापरले जाते?</div>
-        <button class="toggle-ans-btn" onclick="toggleAns('q7')">उत्तर पहा</button>
-        <div class="quiz-ans" id="q7">Home Tab ➔ Conditional Formatting ➔ Highlight Cells Rules ➔ Duplicate Values</div>
-      </div>
-    </div>
-
-    <!-- Notebook Footer -->
-    <div class="notebook-footer">
-      <div>📘 Advance Excel Master Study Notes • Created for Revision</div>
-      <div style="font-size:0.9rem; margin-top:5px;">Handwritten Theme • Antigravity Coding Assistant</div>
-    </div>
-
-  </div>
-
-  <script>
-    function setTheme(themeName) {
-      document.body.className = 'theme-' + themeName;
-    }
-
-    function filterNotes() {
-      let input = document.getElementById('searchInput').value.toLowerCase();
-      let cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        let text = card.textContent.toLowerCase();
-        let searchTag = card.getAttribute('data-search') || '';
-        if (text.includes(input) || searchTag.toLowerCase().includes(input)) {
-          card.style.display = 'block';
+    szHTML+="<td id=tdTab height=1 nowrap class=\"clBorder\"><a id=aTab>&nbsp;</a></td><td width=100%></td>";
+   } else if (iRow==2) {
+    for (i=0;i<c_lTabs;i++)
+     szHTML+="<td height=1></td><td height=1 class=\"clBorder\"></td>";
+    szHTML+="<td height=1></td><td height=1></td>";
+   } else if (iRow==3) {
+    for (i=0;i<iCellCount;i++)
+     szHTML+="<td height=1></td>";
+   } else if (iRow==4) {
+    for (i=0;i<c_lTabs;i++)
+     szHTML+="<td height=1 width=1></td><td height=1></td>";
+    szHTML+="<td height=1 width=1></td><td></td>";
+   }
+  }
+  szHTML+="</tr>";
+ }
+
+ szHTML+="</table></body></html>";
+ with (frames['frTabs'].document) {
+  open("text/html","replace");
+  charset=document.charset;
+  write(szHTML);
+  close();
+ }
+}
+
+function fnInit()
+{
+ g_rglTabX[0]=0;
+ var i;
+ for (i=1;i<=c_lTabs;i++)
+  with (frames['frTabs'].document.all.tbTabs.rows[1].cells[fnTabToCol(i-1)])
+   g_rglTabX[i]=offsetLeft+offsetWidth-6;
+}
+
+function fnTabToCol(iTab)
+{
+ return 2*iTab+1;
+}
+
+function fnNextTab(fDir)
+{
+ var iNextTab=-1;
+ var i;
+
+ with (frames['frTabs'].document.body) {
+  if (fDir==0) {
+   if (scrollLeft>0) {
+    for (i=0;i<c_lTabs&&g_rglTabX[i]<scrollLeft;i++);
+    if (i<c_lTabs)
+     iNextTab=i-1;
+   }
+  } else {
+   if (g_rglTabX[c_lTabs]+6>offsetWidth+scrollLeft) {
+    for (i=0;i<c_lTabs&&g_rglTabX[i]<=scrollLeft;i++);
+    if (i<c_lTabs)
+     iNextTab=i;
+   }
+  }
+ }
+ return iNextTab;
+}
+
+function fnScrollTabs(fDir)
+{
+ var iNextTab=fnNextTab(fDir);
+
+ if (iNextTab>=0) {
+  frames['frTabs'].scroll(g_rglTabX[iNextTab],0);
+  return true;
+ } else
+  return false;
+}
+
+function fnFastScrollTabs(fDir)
+{
+ if (c_lTabs>16)
+  frames['frTabs'].scroll(g_rglTabX[fDir?c_lTabs-1:0],0);
+ else
+  if (fnScrollTabs(fDir)>0) window.setTimeout("fnFastScrollTabs("+fDir+");",5);
+}
+
+function fnSetTabProps(iTab,fActive)
+{
+ var iCol=fnTabToCol(iTab);
+ var i;
+
+ if (iTab>=0) {
+  with (frames['frTabs'].document.all) {
+   with (tbTabs) {
+    for (i=0;i<=4;i++) {
+     with (rows[i]) {
+      if (i==0)
+       cells[iCol].style.background=c_rgszClr[fActive?0:2];
+      else if (i>0 && i<4) {
+       if (fActive) {
+        cells[iCol-1].style.background=c_rgszClr[2];
+        cells[iCol].style.background=c_rgszClr[0];
+        cells[iCol+1].style.background=c_rgszClr[2];
+       } else {
+        if (i==1) {
+         cells[iCol-1].style.background=c_rgszClr[2];
+         cells[iCol].style.background=c_rgszClr[1];
+         cells[iCol+1].style.background=c_rgszClr[2];
         } else {
-          card.style.display = 'none';
+         cells[iCol-1].style.background=c_rgszClr[4];
+         cells[iCol].style.background=c_rgszClr[(i==2)?2:4];
+         cells[iCol+1].style.background=c_rgszClr[4];
         }
-      });
+       }
+      } else
+       cells[iCol].style.background=c_rgszClr[fActive?2:4];
+     }
     }
+   }
+   with (aTab[iTab].style) {
+    cursor=(fActive?"default":"hand");
+    color=c_rgszClr[3];
+   }
+  }
+ }
+}
 
-    function toggleAns(id) {
-      let ansDiv = document.getElementById(id);
-      if (ansDiv.style.display === 'block') {
-        ansDiv.style.display = 'none';
-      } else {
-        ansDiv.style.display = 'block';
-      }
+function fnMouseOverScroll(iCtl)
+{
+ frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[7];
+}
+
+function fnMouseOutScroll(iCtl)
+{
+ frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[6];
+}
+
+function fnMouseOverTab(iTab)
+{
+ if (iTab!=g_iShCur) {
+  var iCol=fnTabToCol(iTab);
+  with (frames['frTabs'].document.all) {
+   tdTab[iTab].style.background=c_rgszClr[5];
+  }
+ }
+}
+
+function fnMouseOutTab(iTab)
+{
+ if (iTab>=0) {
+  var elFrom=frames['frTabs'].event.srcElement;
+  var elTo=frames['frTabs'].event.toElement;
+
+  if ((!elTo) ||
+   (elFrom.tagName==elTo.tagName) ||
+   (elTo.tagName=="A" && elTo.parentElement!=elFrom) ||
+   (elFrom.tagName=="A" && elFrom.parentElement!=elTo)) {
+
+   if (iTab!=g_iShCur) {
+    with (frames['frTabs'].document.all) {
+     tdTab[iTab].style.background=c_rgszClr[1];
     }
-  </script>
-</body>
+   }
+  }
+ }
+}
+
+function fnSetActiveSheet(iSh)
+{
+ if (iSh!=g_iShCur) {
+  fnSetTabProps(g_iShCur,false);
+  fnSetTabProps(iSh,true);
+  g_iShCur=iSh;
+ }
+}
+
+ window.g_iIEVer=fnGetIEVer();
+ if (window.g_iIEVer>=4)
+  fnBuildFrameset();
+//-->
+</script>
+<![endif]><!--[if gte mso 9]><xml>
+ <x:ExcelWorkbook>
+  <x:ExcelWorksheets>
+   <x:ExcelWorksheet>
+    <x:Name>index</x:Name>
+    <x:WorksheetSource HRef="index_files/sheet001.html"/>
+   </x:ExcelWorksheet>
+  </x:ExcelWorksheets>
+  <x:Stylesheet HRef="index_files/stylesheet.css"/>
+  <x:WindowHeight>13500</x:WindowHeight>
+  <x:WindowWidth>28800</x:WindowWidth>
+  <x:WindowTopX>32767</x:WindowTopX>
+  <x:WindowTopY>32767</x:WindowTopY>
+  <x:ProtectStructure>False</x:ProtectStructure>
+  <x:ProtectWindows>False</x:ProtectWindows>
+ </x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+
+<frameset rows="*,39" border=0 width=0 frameborder=no framespacing=0>
+ <frame src="index_files/sheet001.html" name="frSheet">
+ <frame src="index_files/tabstrip.html" name="frTabs" marginwidth=0 marginheight=0>
+ <noframes>
+  <body>
+   <p>This page uses frames, but your browser doesn't support them.</p>
+  </body>
+ </noframes>
+</frameset>
 </html>

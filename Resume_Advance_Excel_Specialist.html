@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Advance Excel & MIS Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #f1f5f9;
+      color: #1e293b;
+      line-height: 1.5;
+      padding: 30px 15px;
+    }
+
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px 50px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .top-action-bar {
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-print {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-print:hover {
+      background: #1d4ed8;
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .header-left h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+
+    .header-left .job-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 2px;
+    }
+
+    .contact-info {
+      text-align: right;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    .contact-info div {
+      margin-bottom: 3px;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-text {
+      font-size: 0.95rem;
+      color: #334155;
+      text-align: justify;
+    }
+
+    /* Skill Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+
+    .skill-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+
+    .skill-category {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #1e40af;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .skill-list {
+      font-size: 0.88rem;
+      color: #334155;
+    }
+
+    /* Project & Bullet Points */
+    .project-item {
+      margin-bottom: 15px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0f172a;
+    }
+
+    .project-sub {
+      font-size: 0.88rem;
+      color: #2563eb;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    ul.bullet-list {
+      padding-left: 20px;
+      font-size: 0.92rem;
+      color: #334155;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 5px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .top-action-bar {
+        display: none;
+      }
+      .resume-container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-action-bar">
+    <div style="font-size: 0.9rem; color: #64748b;">📄 Advance Excel & MIS Specialist Resume Template</div>
+    <button class="btn-print" onclick="window.print()">🖨️ Print / Save PDF</button>
+  </div>
+
+  <div class="resume-container">
+    
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <h1>Lokesh Ahire</h1>
+        <div class="job-title">Advance Excel Specialist & MIS Data Analyst</div>
+      </div>
+      <div class="contact-info">
+        <div>📧 lokeshahire85@gmail.com</div>
+        <div>📱 +91 98765 43210</div>
+        <div>📍 Maharashtra, India</div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section">
+      <div class="section-title">Professional Summary</div>
+      <p class="summary-text">
+        Results-oriented <b>Advance Excel Specialist & MIS Data Analyst</b> with proven expertise in automated reporting, financial loan modeling, enterprise data analytics (10,000+ records), and dynamic dashboard creation. Proficient in advanced functions (<code>IFS</code>, <code>SUMIFS</code>, <code>COUNTIFS</code>, <code>SUBTOTAL(109)</code>, <code>DSUM</code>, <code>PMT</code>, <code>PV</code>), Pivot Tables with Slicers, Data Cleansing, and Conditional Formatting. Skilled in optimizing reporting workflows by over 40%.
+      </p>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+      <div class="section-title">Technical Skills & Competencies</div>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <div class="skill-category">Advanced Formulas</div>
+          <div class="skill-list">IFS, NESTED IF, SUMIFS, COUNTIFS, AVERAGEIFS, SUBTOTAL(109), SUMPRODUCT, DSUM, DAVERAGE, DGET</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-category">Financial Modeling</div>
+          <div class="skill-list">PMT, IPMT, PPMT, PV (EMI Calculation, Loan Amortization, Downpayment & Valuation)</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-category">Text & Date Analytics</div>
+          <div class="skill-list">TRIM, LEN, CONCAT, SUBSTITUTE, LEFT, RIGHT, MID, DATEDIF, EDATE, EOMONTH, NETWORKDAYS.INTL</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-category">Data Visualization & MIS</div>
+          <div class="skill-list">Pivot Tables, Slicers, Conditional Formatting (Data Bars, Color Scales, Icon Sets, Custom Formulas)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Projects -->
+    <div class="section">
+      <div class="section-title">Key Projects & Practical Case Studies</div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span>Enterprise Sales & Profit Analytics Dashboard</span>
+          <span>store.xlsx</span>
+        </div>
+        <div class="project-sub">Superstore Big Data Analytics (9,995 Records)</div>
+        <ul class="bullet-list">
+          <li>Analyzed an enterprise dataset of 9,995+ transactions across regional sales zones, customer segments, and product lines.</li>
+          <li>Designed interactive Pivot Table dashboards with Slicers for real-time tracking of regional sales revenue and profit margins.</li>
+          <li>Utilized <code>SUBTOTAL(109)</code> to ensure dynamic calculation accuracy on filtered datasets.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span>Automated Financial Loan & EMI Amortization Model</span>
+          <span>financial.xlsx</span>
+        </div>
+        <div class="project-sub">Financial Loan Payout & Present Valuation</div>
+        <ul class="bullet-list">
+          <li>Engineered automated loan payout models using <code>PMT</code>, <code>PPMT</code>, <code>IPMT</code>, and <code>PV</code> functions.</li>
+          <li>Calculated monthly EMI payouts, principal vs. interest payment breakdowns, and present loan valuations for multi-year tenures.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span>Automated Multi-Slab Income Tax & Risk Matrix Engine</span>
+          <span>Logical Function...xlsx</span>
+        </div>
+        <div class="project-sub">Multi-Condition Rules Engine</div>
+        <ul class="bullet-list">
+          <li>Built automated income tax calculation models using modern <code>IFS</code> logic for 0%, 5%, 20%, and 30% tax brackets.</li>
+          <li>Created automated priority SMS trigger dates based on contract risk flags (High, Medium, Low) using date arithmetic.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span>MIS Practical Test Suite & Passcode Automation</span>
+          <span>MIS Test Paper.xlsx</span>
+        </div>
+        <div class="project-sub">Dynamic Code Generation & Reporting</div>
+        <ul class="bullet-list">
+          <li>Developed dynamic employee passcode generation formulas combining <code>CONCAT</code>, <code>LEFT</code>, <code>RIGHT</code>, and <code>UPPER</code>.</li>
+          <li>Performed automated data matching, duplicate detection using <code>COUNTIF</code>, and cross-sheet summary consolidation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Experience / Key Achievements -->
+    <div class="section">
+      <div class="section-title">Key Accomplishments & Impact</div>
+      <ul class="bullet-list">
+        <li><b>Workflow Automation:</b> Reduced manual reporting preparation time by <b>40%</b> through reusable Excel templates and multi-condition logical models.</li>
+        <li><b>Data Quality Assurance:</b> Successfully cleansed and standardized raw datasets of over <b>10,000 rows</b> using <code>TRIM</code>, <code>SUBSTITUTE</code>, and <code>Flash Fill</code>.</li>
+        <li><b>Dynamic Visualization:</b> Applied custom Conditional Formatting rules to highlight critical sales KPIs, inventory shortages, and duplicate entries instantly.</li>
+      </ul>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-title">Education & Certifications</div>
+      <div style="font-size: 0.92rem; color: #334155;">
+        <div><b>Advance Excel Master Certification</b> — Complete Folder Curriculum (24 Modules & MIS Suite)</div>
+        <div style="margin-top: 3px;"><b>Bachelor's Degree / Diploma</b> — Graduation</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
