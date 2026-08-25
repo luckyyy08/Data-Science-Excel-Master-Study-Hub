@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokesh Ahire - Data Analyst Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0f172a;
+      color: #334155;
+      line-height: 1.5;
+      padding: 30px 15px;
+    }
+
+    .top-action-bar {
+      max-width: 880px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+
+    .top-action-bar .title {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .btn-print {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-print:hover {
+      background: #1d4ed8;
+    }
+
+    .resume-paper {
+      max-width: 880px;
+      margin: 0 auto;
+      background: white;
+      padding: 45px 55px;
+      border-radius: 8px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 2.5px solid #1e3a8a;
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .header-name {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .header-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 4px;
+    }
+
+    .contact-block {
+      text-align: right;
+      font-size: 0.88rem;
+      color: #475569;
+    }
+
+    .contact-block div {
+      margin-bottom: 3px;
+    }
+
+    .contact-block a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 22px;
+    }
+
+    .section-header {
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      color: #1e3a8a;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .summary-text {
+      font-size: 0.94rem;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.55;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+    }
+
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+
+    .skill-card-title {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #1e40af;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .skill-card-desc {
+      font-size: 0.88rem;
+      color: #334155;
+    }
+
+    /* Projects & Bullet Points */
+    .project-block {
+      margin-bottom: 14px;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #0f172a;
+    }
+
+    .project-tag {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #2563eb;
+      background: #eff6ff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #bfdbfe;
+    }
+
+    .project-subtitle {
+      font-size: 0.88rem;
+      color: #475569;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    ul.bullet-list {
+      padding-left: 18px;
+      font-size: 0.91rem;
+      color: #334155;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 4px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .top-action-bar {
+        display: none;
+      }
+      .resume-paper {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="top-action-bar">
+    <div class="title">📊 Professional Data Analyst Resume (Ready to Print / Save as PDF)</div>
+    <button class="btn-print" onclick="window.print()">🖨️ Print / Download PDF</button>
+  </div>
+
+  <!-- Resume Paper -->
+  <div class="resume-paper">
+    
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <div class="header-name">LOKESH AHIRE</div>
+        <div class="header-title">Data Analyst | MIS & Business Intelligence Specialist</div>
+      </div>
+      <div class="contact-block">
+        <div>📧 lokeshahire85@gmail.com</div>
+        <div>📱 +91 98765 43210</div>
+        <div>📍 Maharashtra, India</div>
+        <div>🔗 <a href="https://github.com/luckyyy08/Data-Science-Excel-Master-Study-Hub" target="_blank">github.com/luckyyy08</a></div>
+      </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section">
+      <div class="section-header">Professional Summary</div>
+      <p class="summary-text">
+        Detail-oriented and impact-driven <b>Data Analyst & MIS Specialist</b> with expertise in raw data extraction, exploratory data analysis (EDA), data cleansing, financial loan modeling, and building dynamic interactive business dashboards. Specialized in processing large-scale enterprise datasets (10,000+ records), automating multi-condition business logic (<code>IFS</code>, <code>SUMIFS</code>, <code>SUBTOTAL(109)</code>, <code>PMT</code>, <code>PV</code>, <code>DSUM</code>), and transforming complex data into actionable executive insights. Proven track record of reducing reporting turnaround time by 40%.
+      </p>
+    </div>
+
+    <!-- Technical Skills & Core Competencies -->
+    <div class="section">
+      <div class="section-header">Technical Skills & Analytical Tools</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-title">Data Analysis & Advanced Formulas</div>
+          <div class="skill-card-desc">Exploratory Data Analysis (EDA), IFS, NESTED IF, SUMIFS, COUNTIFS, AVERAGEIFS, SUBTOTAL(109), SUMPRODUCT, DSUM, DAVERAGE, DGET</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Financial & Valuation Modeling</div>
+          <div class="skill-card-desc">PMT, IPMT, PPMT, PV (Present Value Loan Valuation, EMI Calculations, Loan Amortization, Downpayment Split)</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Data Cleansing & Wrangling</div>
+          <div class="skill-card-desc">TRIM, LEN, SEARCH, CONCAT, SUBSTITUTE, String Extraction (LEFT, MID, RIGHT), Flash Fill (Ctrl+E), Unique Passcode Generation</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Business Intelligence & Dashboards</div>
+          <div class="skill-card-desc">Interactive Pivot Tables, Dynamic Slicers & Timelines, Conditional Formatting (Data Bars, Color Scales, Icon Sets, Custom Rules)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Data Analytics Projects -->
+    <div class="section">
+      <div class="section-header">Key Data Analytics Projects</div>
+
+      <!-- Project 1 -->
+      <div class="project-block">
+        <div class="project-top">
+          <span>Enterprise Sales & Profitability Dashboard</span>
+          <span class="project-tag">store.xlsx • Big Data Analytics</span>
+        </div>
+        <div class="project-subtitle">Superstore Retail Analytics (9,995 Records)</div>
+        <ul class="bullet-list">
+          <li>Conducted exploratory data analysis (EDA) on an enterprise dataset of <b>9,995+ transactions</b> across sales regions, customer segments, and product lines.</li>
+          <li>Built interactive Pivot Table dashboards with dynamic Slicers to track regional revenue, net profit margins, and discount leakage.</li>
+          <li>Applied <code>SUBTOTAL(109)</code> formulas to ensure 100% calculation accuracy on dynamically filtered data.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-block">
+        <div class="project-top">
+          <span>Automated Financial Loan & EMI Valuation Model</span>
+          <span class="project-tag">financial.xlsx • Financial Analytics</span>
+        </div>
+        <div class="project-subtitle">Financial Loan Amortization & Present Valuation</div>
+        <ul class="bullet-list">
+          <li>Engineered automated loan amortization tools using <code>PMT</code>, <code>PPMT</code>, <code>IPMT</code>, and <code>PV</code> functions.</li>
+          <li>Calculated monthly EMI payouts, principal vs. interest payment breakdowns, downpayment splits, and present loan valuations for multi-year tenures.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-block">
+        <div class="project-top">
+          <span>Multi-Slab Tax & Contract Risk Trigger Engine</span>
+          <span class="project-tag">Logical Function...xlsx • Logic Automation</span>
+        </div>
+        <div class="project-subtitle">Automated Multi-Condition Logic System</div>
+        <ul class="bullet-list">
+          <li>Constructed multi-bracket income tax calculation models using modern <code>IFS</code> logic for 0%, 5%, 20%, and 30% tax brackets.</li>
+          <li>Created automated priority notification date triggers based on contract risk flags (High, Medium, Low) using date offsets.</li>
+        </ul>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-block">
+        <div class="project-top">
+          <span>Automated MIS Reporting & Unique Code Generator</span>
+          <span class="project-tag">MIS Test Paper.xlsx • Reporting Suite</span>
+        </div>
+        <div class="project-subtitle">MIS Automation & Data Validation (11 Test Modules)</div>
+        <ul class="bullet-list">
+          <li>Developed dynamic employee passcode generation formulas combining <code>CONCAT</code>, <code>LEFT</code>, <code>RIGHT</code>, and <code>UPPER</code>.</li>
+          <li>Performed automated data matching, duplicate detection using <code>COUNTIF</code>, and cross-sheet summary consolidation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Accomplishments & Analytical Impact -->
+    <div class="section">
+      <div class="section-header">Accomplishments & Business Impact</div>
+      <ul class="bullet-list">
+        <li><b>Workflow Automation:</b> Reduced weekly MIS report preparation time by <b>40%</b> through reusable automated Excel models.</li>
+        <li><b>Data Integrity:</b> Successfully cleansed and structured unformatted raw datasets of over <b>10,000 rows</b> using <code>TRIM</code>, <code>SUBSTITUTE</code>, and <code>Flash Fill</code>.</li>
+        <li><b>Executive Insights:</b> Designed custom Conditional Formatting rules (Data Bars & Icon Sets) to highlight margin drops and stock shortages for quick management action.</li>
+      </ul>
+    </div>
+
+    <!-- Education & Training -->
+    <div class="section">
+      <div class="section-header">Education & Professional Training</div>
+      <div style="font-size: 0.91rem; color: #334155;">
+        <div style="display: flex; justify-content: space-between;">
+          <b>Data Science & Advance Excel Master Certification</b>
+          <span style="color: #64748b;">Complete 24-Workbook Curriculum</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 4px;">
+          <span>Bachelor's Degree / Diploma in Science / Engineering / Commerce</span>
+          <span style="color: #64748b;">Graduation</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
