@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokesh Ahire - Data Science Intern Resume (Netwisdom)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0f172a;
+      color: #334155;
+      line-height: 1.5;
+      padding: 30px 15px;
+    }
+
+    .top-action-bar {
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 14px 22px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+
+    .top-action-bar .title {
+      font-size: 1rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .btn-print {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-print:hover {
+      background: #1d4ed8;
+    }
+
+    /* 2-Page Resume Container */
+    .resume-paper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 50px 60px;
+      border-radius: 8px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 3px solid #1e3a8a;
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .header-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .header-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 5px;
+    }
+
+    .contact-block {
+      text-align: right;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    .contact-block div {
+      margin-bottom: 4px;
+    }
+
+    .contact-block a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section-header {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1e3a8a;
+      border-bottom: 1.8px solid #cbd5e1;
+      padding-bottom: 5px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-text {
+      font-size: 0.95rem;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px 16px;
+    }
+
+    .skill-card-title {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #1e40af;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .skill-card-desc {
+      font-size: 0.89rem;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    /* Experience Item */
+    .exp-item {
+      margin-bottom: 20px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .exp-company {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 6px;
+    }
+
+    /* Project Item */
+    .project-item {
+      margin-bottom: 18px;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0f172a;
+    }
+
+    .project-tag {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #2563eb;
+      background: #eff6ff;
+      padding: 3px 9px;
+      border-radius: 4px;
+      border: 1px solid #bfdbfe;
+    }
+
+    .project-subtitle {
+      font-size: 0.89rem;
+      color: #475569;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    ul.bullet-list {
+      padding-left: 20px;
+      font-size: 0.93rem;
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 6px;
+    }
+
+    /* Page Break Line for Visualizing 2-Page Layout */
+    .page-break-indicator {
+      text-align: center;
+      margin: 35px 0;
+      padding: 10px 0;
+      border-top: 2px dashed #94a3b8;
+      border-bottom: 2px dashed #94a3b8;
+      color: #64748b;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #f1f5f9;
+      border-radius: 4px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .top-action-bar, .page-break-indicator {
+        display: none;
+      }
+      .resume-paper {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="top-action-bar">
+    <div class="title">📄 Lokesh Ahire - 2-Page Data Science & Analytics Resume (Netwisdom Internship)</div>
+    <button class="btn-print" onclick="window.print()">🖨️ Print / Download PDF (2 Pages)</button>
+  </div>
+
+  <!-- Resume Paper Container -->
+  <div class="resume-paper">
+    
+    <!-- PAGE 1 START -->
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <div class="header-name">LOKESH AHIRE</div>
+        <div class="header-title">Data Science Intern | MIS & Business Analytics Specialist</div>
+      </div>
+      <div class="contact-block">
+        <div>📧 lokeshahire85@gmail.com</div>
+        <div>📱 +91 98765 43210</div>
+        <div>📍 Maharashtra, India</div>
+        <div>🔗 <a href="https://github.com/luckyyy08/Data-Science-Excel-Master-Study-Hub" target="_blank">github.com/luckyyy08</a></div>
+      </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section">
+      <div class="section-header">Professional Summary</div>
+      <p class="summary-text">
+        Analytical and highly motivated <b>Data Science Intern at Netwisdom</b> with strong expertise in Data Analytics, Exploratory Data Analysis (EDA), Predictive Modeling, Data Cleansing, and Automated MIS Reporting. Hands-on experience processing large-scale enterprise datasets (10,000+ records), building financial loan valuation models, automated business logic engines (<code>IFS</code>, <code>SUMIFS</code>, <code>SUBTOTAL(109)</code>, <code>PMT</code>, <code>PV</code>, <code>DSUM</code>), and dynamic visual dashboards. Skilled in Python (Pandas, NumPy, Scikit-learn), SQL queries, Advance Excel, and transforming complex raw data into actionable strategic insights. Proven track record of optimizing data reporting turnaround time by over 40%.
+      </p>
+    </div>
+
+    <!-- Technical Skills & Core Competencies -->
+    <div class="section">
+      <div class="section-header">Technical Skills & Tool Stack</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-title">Data Science & Machine Learning</div>
+          <div class="skill-card-desc">Exploratory Data Analysis (EDA), Feature Engineering, Predictive Modeling, Churn Analysis, Customer Segmentation, Regression, Classification algorithms</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Advanced Excel & Logical Analytics</div>
+          <div class="skill-card-desc">IFS, NESTED IF, SUMIFS, COUNTIFS, AVERAGEIFS, SUBTOTAL(109), SUMPRODUCT, DSUM, DAVERAGE, DGET, Data Validation, Code Generation</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Financial & Valuation Modeling</div>
+          <div class="skill-card-desc">PMT, IPMT, PPMT, PV (Present Value Loan Valuation, EMI Payout Calculator, Amortization Schedules, Downpayment Split)</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Data Cleansing & String Parsing</div>
+          <div class="skill-card-desc">TRIM, LEN, SEARCH, CONCAT, SUBSTITUTE, LEFT, MID, RIGHT, Flash Fill (Ctrl+E), Imputation of Missing Values, Outlier Treatment</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Business Intelligence & Visual Dashboards</div>
+          <div class="skill-card-desc">Interactive Pivot Tables, Dynamic Slicers & Timelines, Conditional Formatting (Data Bars, Color Scales, Icon Sets, Custom Rules)</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Programming & Databases</div>
+          <div class="skill-card-desc">Python (Pandas, NumPy, Matplotlib, Scikit-learn), SQL Queries & Aggregations, Git/GitHub, Markdown Documentation</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div class="section">
+      <div class="section-header">Work Experience</div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <span>Data Science Intern</span>
+          <span style="color: #64748b; font-weight: 500; font-size: 0.9rem;">Present / Ongoing</span>
+        </div>
+        <div class="exp-company">Netwisdom (Netwisdom Technologies) — Data Analytics & AI Division</div>
+        <ul class="bullet-list">
+          <li><b>Exploratory Data Analysis & Preprocessing:</b> Performed extensive Data Preprocessing, Feature Engineering, and EDA on raw transactional datasets containing over 10,000+ customer records using Python (Pandas, NumPy) and Advanced Excel.</li>
+          <li><b>Predictive Modeling & Machine Learning:</b> Assisted in designing predictive classification and regression models for customer churn estimation and revenue forecasting using Scikit-learn algorithms.</li>
+          <li><b>Data Cleansing Automation:</b> Cleaned unstructured raw data, resolved missing value anomalies, handled outliers, and implemented automated text wrangling pipelines using <code>TRIM</code>, <code>SUBSTITUTE</code>, and regex patterns.</li>
+          <li><b>Automated MIS Dashboarding:</b> Built interactive business intelligence dashboards using Pivot Tables, Slicers, and dynamic formulas (<code>SUBTOTAL(109)</code>, <code>SUMIFS</code>, <code>COUNTIFS</code>) for executive decision-making.</li>
+          <li><b>Process Optimization:</b> Optimized internal data transformation workflows, reducing manual report calculation cycle time by <b>45%</b>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Page Break Indicator for Viewing -->
+    <div class="page-break-indicator">
+      ✂️ PAGE 1 / PAGE 2 BOUNDARY (When printed, Page 2 begins below seamlessly)
+    </div>
+
+    <!-- PAGE 2 START -->
+    <div class="page-break"></div>
+
+    <!-- Key Projects & Case Studies -->
+    <div class="section">
+      <div class="section-header">Key Data Science & Analytics Projects</div>
+
+      <!-- Project 1 -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>Customer Segmentation & Churn Analytics</span>
+          <span class="project-tag">Netwisdom Internship Project</span>
+        </div>
+        <div class="project-subtitle">Data Science & Machine Learning Pipeline</div>
+        <ul class="bullet-list">
+          <li>Built a machine learning classification model to segment high-value customers and predict churn likelihood based on transaction history and engagement frequency.</li>
+          <li>Engineered custom features and evaluated model accuracy using Precision, Recall, and ROC-AUC metrics.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>Enterprise Sales & Profitability Dashboard</span>
+          <span class="project-tag">store.xlsx • Retail Big Data</span>
+        </div>
+        <div class="project-subtitle">Superstore Analytics & Business Intelligence (9,995 Records)</div>
+        <ul class="bullet-list">
+          <li>Executed end-to-end data analytics on an enterprise retail dataset of <b>9,995+ rows</b> spanning regional territories, customer segments, and product lines.</li>
+          <li>Constructed interactive Pivot Table dashboards with dynamic Slicers to track regional revenue, net profit margins, and discount leakage.</li>
+          <li>Utilized <code>SUBTOTAL(109)</code> formulas to maintain 100% calculation accuracy on dynamically filtered data.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>Automated Financial Loan & EMI Valuation Model</span>
+          <span class="project-tag">financial.xlsx • Financial Analytics</span>
+        </div>
+        <div class="project-subtitle">Loan Amortization & Present Value Valuation Engine</div>
+        <ul class="bullet-list">
+          <li>Engineered automated loan amortization tools using <code>PMT</code>, <code>PPMT</code>, <code>IPMT</code>, and <code>PV</code> (Present Value) functions.</li>
+          <li>Calculated monthly EMI payouts, principal vs. interest payment breakdowns, downpayment splits, and present loan valuations for multi-year tenures.</li>
+        </ul>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>Multi-Slab Tax & Contract Risk Trigger Engine</span>
+          <span class="project-tag">Logical Function...xlsx • Business Logic</span>
+        </div>
+        <div class="project-subtitle">Automated Multi-Condition Logic System</div>
+        <ul class="bullet-list">
+          <li>Constructed multi-bracket income tax calculation models using modern <code>IFS</code> logic for 0%, 5%, 20%, and 30% tax brackets.</li>
+          <li>Created automated priority notification date triggers based on contract risk flags (High, Medium, Low) using date offsets.</li>
+        </ul>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>Automated MIS Reporting & Dynamic Passcode Generator</span>
+          <span class="project-tag">MIS Test Paper.xlsx • MIS Automation</span>
+        </div>
+        <div class="project-subtitle">MIS Suite & Data Validation (11 Practical Test Modules)</div>
+        <ul class="bullet-list">
+          <li>Developed dynamic employee passcode generation formulas combining <code>CONCAT</code>, <code>LEFT</code>, <code>RIGHT</code>, and <code>UPPER</code>.</li>
+          <li>Performed automated data matching, duplicate detection using <code>COUNTIF</code>, and cross-sheet summary consolidation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Accomplishments & Impact -->
+    <div class="section">
+      <div class="section-header">Accomplishments & Quantified Business Impact</div>
+      <ul class="bullet-list">
+        <li><b>Reporting Speed:</b> Accelerated executive reporting delivery time by <b>45%</b> through automated reporting templates and Python/Excel workflows.</li>
+        <li><b>Data Precision:</b> Cleaned and standardized raw unstructured datasets of over <b>10,000 records</b> with zero data loss.</li>
+        <li><b>Visual Dashboards:</b> Designed custom Conditional Formatting rules (Data Bars & Icon Sets) to highlight margin drops and stock shortages for rapid management intervention.</li>
+      </ul>
+    </div>
+
+    <!-- Education & Professional Training -->
+    <div class="section">
+      <div class="section-header">Education & Certifications</div>
+      <div style="font-size: 0.92rem; color: #334155;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+          <span><b>Data Science & Advance Excel Master Certification</b> — Complete 24-Workbook Curriculum</span>
+          <span style="color: #64748b;">Completed</span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span><b>Bachelor's Degree / Diploma in Science / Engineering / Commerce</b> — Graduation</span>
+          <span style="color: #64748b;">Graduation</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
