@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOKESH DIPAK AHIRE - Data Science & Software Developer Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0f172a;
+      color: #1e293b;
+      line-height: 1.5;
+      padding: 30px 15px;
+    }
+
+    .top-action-bar {
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 14px 22px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+
+    .top-action-bar .title {
+      font-size: 1rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .btn-print {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-print:hover {
+      background: #1d4ed8;
+    }
+
+    /* 2-Page Resume Container */
+    .resume-paper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 45px 55px;
+      border-radius: 8px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 2.5px solid #1e3a8a;
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+
+    .header-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+
+    .contact-line {
+      font-size: 0.9rem;
+      color: #475569;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-line a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 22px;
+    }
+
+    .section-header {
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1e3a8a;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    .summary-text {
+      font-size: 0.94rem;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.55;
+    }
+
+    /* Education Item */
+    .edu-item {
+      margin-bottom: 10px;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .edu-sub {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.89rem;
+      color: #475569;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    /* Experience Item */
+    .exp-item {
+      margin-bottom: 16px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .exp-company {
+      font-size: 0.89rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 5px;
+    }
+
+    /* Project Item */
+    .project-item {
+      margin-bottom: 16px;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #0f172a;
+    }
+
+    .project-tech {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    ul.bullet-list {
+      padding-left: 18px;
+      font-size: 0.91rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 4px;
+    }
+
+    .skills-block {
+      font-size: 0.91rem;
+      line-height: 1.6;
+    }
+
+    .skills-block b {
+      color: #0f172a;
+    }
+
+    /* Page Break Indicator for Viewing */
+    .page-break-indicator {
+      text-align: center;
+      margin: 30px 0;
+      padding: 10px 0;
+      border-top: 2px dashed #94a3b8;
+      border-bottom: 2px dashed #94a3b8;
+      color: #64748b;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #f1f5f9;
+      border-radius: 4px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .top-action-bar, .page-break-indicator {
+        display: none;
+      }
+      .resume-paper {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="top-action-bar">
+    <div class="title">📄 LOKESH DIPAK AHIRE - 2-Page Resume (KTHM College, Netwisdom Internship & Advance Excel)</div>
+    <button class="btn-print" onclick="window.print()">🖨️ Print / Download PDF (2 Pages)</button>
+  </div>
+
+  <!-- Resume Paper Container -->
+  <div class="resume-paper">
+    
+    <!-- PAGE 1 START -->
+    <!-- Header -->
+    <div class="header">
+      <div class="header-name">LOKESH DIPAK AHIRE</div>
+      <div class="header-title">Data Science Intern & Software Developer | Nashik, Maharashtra, India 422001</div>
+      <div class="contact-line">
+        <span>📱 +91 9579329098</span> |
+        <span>📧 <a href="mailto:lokeshahire85@gmail.com">lokeshahire85@gmail.com</a></span> |
+        <span>🔗 <a href="https://linkedin.com/in/lokesh-ahire" target="_blank">linkedin.com/in/lokesh-ahire</a></span> |
+        <span>💻 <a href="https://github.com/luckyyy08" target="_blank">github.com/luckyyy08</a></span>
+      </div>
+    </div>
+
+    <!-- Profile Summary -->
+    <div class="section">
+      <div class="section-header">Profile Summary</div>
+      <p class="summary-text">
+        Computer Science undergraduate with hands-on experience in <b>Data Science, Data Analytics, Machine Learning, and Full-Stack Software Development</b>. Currently working as a <b>Data Science Intern at Netwisdom</b>, performing Exploratory Data Analysis (EDA), Data Cleansing, Feature Engineering, and Predictive Modeling on enterprise datasets (10,000+ records). Proficient in Python (Pandas, NumPy, Scikit-learn), Advance Excel (`IFS`, `SUMIFS`, `SUBTOTAL(109)`, `PMT`, `PV`), SQL, JavaScript, and Web Technologies. Completed software engineering virtual experiences at <b>JPMorgan Chase & Co.</b> and <b>Deloitte</b>. Seeking an entry-level Data Science / Data Analyst / Software Developer role to apply strong analytical and technical skills.
+      </p>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-header">Education</div>
+      <div class="edu-item">
+        <div class="edu-header">
+          <span>KTHM College, Nashik (Savitribai Phule Pune University)</span>
+          <span>2023 – 2026</span>
+        </div>
+        <div class="edu-sub">
+          <span>Bachelor of Science in Computer Science</span>
+          <span>Nashik, India</span>
+        </div>
+        <ul class="bullet-list">
+          <li><b>Relevant Coursework:</b> Data Structures, DBMS, Data Science & EDA, OOP, Software Engineering, Web Technologies.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <div class="section-header">Experience</div>
+
+      <!-- Netwisdom -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span>Data Science Intern</span>
+          <span>Present / Ongoing</span>
+        </div>
+        <div class="exp-company">Netwisdom (Netwisdom Technologies) — Data Analytics & AI Division | Nashik / Remote</div>
+        <ul class="bullet-list">
+          <li><b>Exploratory Data Analysis & Preprocessing:</b> Conducted data cleansing, outlier treatment, and feature engineering on transactional datasets containing 10,000+ customer records using Python (Pandas, NumPy) and Advance Excel.</li>
+          <li><b>Predictive Modeling & Machine Learning:</b> Assisted in training classification and regression models using Scikit-learn algorithms for customer churn prediction and revenue forecasting.</li>
+          <li><b>Automated Reporting Dashboards:</b> Built dynamic business dashboards using Advance Excel (`SUBTOTAL(109)`, `SUMIFS`, `COUNTIFS`) and Pivot Tables with Slicers, reducing reporting cycle time by 45%.</li>
+        </ul>
+      </div>
+
+      <!-- JPMorgan Chase -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span>Software Engineering Virtual Experience Program</span>
+          <span>May 2026</span>
+        </div>
+        <div class="exp-company">JPMorgan Chase & Co. (via Forage) | Remote</div>
+        <ul class="bullet-list">
+          <li>Completed hands-on software development tasks simulating real-world engineering workflows at JPMorgan Chase.</li>
+          <li>Implemented project setup and developed REST API controllers for backend integration.</li>
+          <li>Gained practical experience in real-time data streaming and database management using Kafka and H2 database.</li>
+        </ul>
+      </div>
+
+      <!-- Deloitte -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <span>Technology Job Simulation Intern</span>
+          <span>May 2026</span>
+        </div>
+        <div class="exp-company">Deloitte (via Forage) | Remote</div>
+        <ul class="bullet-list">
+          <li>Completed a virtual job simulation focused on technology consulting and development tasks.</li>
+          <li>Analyzed technical requirements and proposed architectural solutions for enterprise systems.</li>
+          <li>Simulated real-world developer workflows including code reviews, documentation, and system design.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Page Break Indicator for Viewing -->
+    <div class="page-break-indicator">
+      ✂️ PAGE 1 / PAGE 2 BOUNDARY (When printed, Page 2 begins below seamlessly)
+    </div>
+
+    <!-- PAGE 2 START -->
+    <div class="page-break"></div>
+
+    <!-- Technical Skills -->
+    <div class="section">
+      <div class="section-header">Technical Skills & Tool Stack</div>
+      <div class="skills-block">
+        <div><b>Languages:</b> Python, C, C++, Java, JavaScript (ES6+), PHP, SQL</div>
+        <div><b>Data Science & Analytics:</b> Exploratory Data Analysis (EDA), Feature Engineering, Predictive Modeling, Scikit-learn, Pandas, NumPy, Matplotlib, Data Cleansing & Imputation</div>
+        <div><b>Advance Excel & MIS Modeling:</b> IFS, NESTED IF, SUMIFS, COUNTIFS, AVERAGEIFS, SUBTOTAL(109), SUMPRODUCT, DSUM, DAVERAGE, DGET, Financial Modeling (PMT, IPMT, PPMT, PV), Interactive Pivot Tables & Slicers, Conditional Formatting</div>
+        <div><b>Web Technologies & Frontend:</b> HTML5, CSS3, Bootstrap, Tailwind CSS, REST APIs</div>
+        <div><b>Databases & Tools:</b> MySQL, DBMS, Git, GitHub, VS Code, Markdown</div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <div class="section-header">Projects</div>
+
+      <!-- Customer Churn Netwisdom -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>Customer Segmentation & Churn Analytics</span>
+          <span>Netwisdom Internship Project</span>
+        </div>
+        <div class="project-tech">Python, Pandas, Scikit-learn, Machine Learning</div>
+        <ul class="bullet-list">
+          <li>Built a classification model to segment high-value customers and predict churn risk based on engagement metrics.</li>
+          <li>Engineered custom features and evaluated performance using Precision, Recall, and ROC-AUC metrics.</li>
+        </ul>
+      </div>
+
+      <!-- Superstore Analytics -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>Enterprise Sales & Profit Analytics Dashboard</span>
+          <span>store.xlsx</span>
+        </div>
+        <div class="project-tech">Advance Excel, Pivot Tables, Slicers, SUBTOTAL(109)</div>
+        <ul class="bullet-list">
+          <li>Conducted EDA on 9,995+ enterprise transactions across regional territories, customer segments, and product lines.</li>
+          <li>Created interactive Pivot Table dashboards with dynamic Slicers tracking regional revenue and profit margins.</li>
+        </ul>
+      </div>
+
+      <!-- Financial EMI Model -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>Automated Financial Loan & EMI Valuation Model</span>
+          <span>financial.xlsx</span>
+        </div>
+        <div class="project-tech">Advance Excel Financial Modeling, PMT, PPMT, IPMT, PV</div>
+        <ul class="bullet-list">
+          <li>Engineered loan amortization models using `PMT`, `PPMT`, `IPMT`, and `PV` to automate EMI calculation and interest breakdown.</li>
+        </ul>
+      </div>
+
+      <!-- GramSetu -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>GramSetu Rural-Tech Platform</span>
+          <span>Jan 2026</span>
+        </div>
+        <div class="project-tech">PHP OOP, MySQL, JavaScript, Bootstrap</div>
+        <ul class="bullet-list">
+          <li>Built a rural governance platform using PHP, MySQL, and Bootstrap.</li>
+          <li>Designed citizen/admin dashboards improving request tracking workflow.</li>
+          <li>Implemented database modules for complaints, certificates, and services.</li>
+        </ul>
+      </div>
+
+      <!-- CleanBox AI -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>CleanBox AI — Inbox Decluttering System</span>
+          <span>Mar 2026</span>
+        </div>
+        <div class="project-tech">PHP OOP, MySQL, Gmail API, Google OAuth, Chart.js</div>
+        <ul class="bullet-list">
+          <li>Developed an inbox-decluttering system using the Gmail API to automate deletion of promotional and expired emails.</li>
+          <li>Implemented OAuth 2.0 for secure login and built a space-recovery dashboard using Chart.js.</li>
+        </ul>
+      </div>
+
+      <!-- CakeCraft -->
+      <div class="project-item">
+        <div class="project-top">
+          <span>CakeCraft E-commerce Platform</span>
+          <span>Nov 2025</span>
+        </div>
+        <div class="project-tech">PHP, MySQL, Bootstrap</div>
+        <ul class="bullet-list">
+          <li>Created a full-stack e-commerce catalog with filters, cart, checkout, and an admin statistics dashboard.</li>
+          <li>Automated order status records and database logs to streamline shop tracking operations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Certifications & Achievements -->
+    <div class="section">
+      <div class="section-header">Certifications & Achievements</div>
+      <ul class="bullet-list">
+        <li><b>Data Science & Advance Excel Master Certification:</b> Comprehensive 24-workbook curriculum covering EDA, financial loan modeling, and MIS reporting.</li>
+        <li><b>Full Stack Web Development:</b> Comprehensive certification covering modern web standards (Udemy).</li>
+        <li><b>PHP & MySQL Mastery:</b> Specialized training in backend architecture and database security.</li>
+        <li><b>Final Year Project Excellence:</b> Recognized for architectural design of the GramSetu platform.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
