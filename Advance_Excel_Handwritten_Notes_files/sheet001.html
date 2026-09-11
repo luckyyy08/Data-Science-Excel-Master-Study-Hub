@@ -1,1438 +1,837 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:x="urn:schemas-microsoft-com:office:excel"
-xmlns="http://www.w3.org/TR/REC-html40" lang=mr>
-
+<!DOCTYPE html>
+<html lang="mr">
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=ProgId content=Excel.Sheet>
-<meta name=Generator content="Microsoft Excel 15">
-<link id=Main-File rel=Main-File href="../Advance_Excel_Handwritten_Notes.html">
-<link rel=File-List href=filelist.xml>
-<!--[if !mso]>
-<style>
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-x\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style>
-<![endif]-->
-<title>Advance Excel - Handwritten Master Notes &amp; Study Hub</title>
-<link rel=Stylesheet href=stylesheet.css>
-<style>
-<!--
-@media (max-width: 768px) {
-      .notebook {
-        padding: 30px 20px 40px 45px;
-      }
-      .spiral-holes {
-        left: 10px;
-      }
-      .notes-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-:root {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance Excel - Master Handwritten Notes & Study Hub</title>
+  <!-- Google Fonts for Authentic Handwritten Aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fira+Code:wght@400;600&family=Kalam:wght@400;700&family=Outfit:wght@400;600;700&family=Shantell+Sans:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
       --paper-bg: #faf7eb;
       --line-color: #d1d5db;
       --margin-color: #ef5350;
       --ink-blue: #1e3a8a;
       --ink-black: #1f2937;
+      --ink-red: #b91c1c;
       --highlighter-yellow: #fef08a;
       --highlighter-green: #bbf7d0;
       --highlighter-pink: #fbcfe8;
       --sticky-yellow: #fef9c3;
       --sticky-pink: #ffe4e6;
       --sticky-green: #dcfce7;
-      --font-hand: 'Kalam', 'Caveat', cursive;
-      --font-title: 'Caveat', cursive;
+      --font-hand: 'Kalam', 'Caveat', 'Shantell Sans', cursive;
+      --font-title: 'Caveat', 'Kalam', cursive;
       --font-code: 'Fira Code', monospace;
       --font-sans: 'Outfit', sans-serif;
     }
-body.THEME-RULED
-	{--paper-bg: #faf7eb;
-	--line-color: #d1d5db;
-	background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 27px, var(--line-color) 28px);}
-body.THEME-YELLOW
-	{--paper-bg: #fff9c4;
-	--line-color: #e6ee9c;
-	--margin-color: #ef5350;
-	background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 27px, var(--line-color) 28px);}
-body.THEME-GRID
-	{--paper-bg: #ffffff;
-	background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
-	background-size: 20px 20px;}
-body.THEME-DARK
-	{--paper-bg: #1e293b;
-	--line-color: #334155;
-	--margin-color: #f43f5e;
-	--ink-blue: #93c5fd;
-	--ink-black: #f8fafc;
-	background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 27px, var(--line-color) 28px);}
-* {
+
+    body.theme-ruled {
+      --paper-bg: #faf7eb;
+      --line-color: #d1d5db;
+      --margin-color: #ef5350;
+      --ink-blue: #1e3a8a;
+      --ink-black: #1f2937;
+      background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 31px, var(--line-color) 32px);
+    }
+
+    body.theme-yellow {
+      --paper-bg: #fff9c4;
+      --line-color: #e6ee9c;
+      --margin-color: #ef5350;
+      --ink-blue: #1e3a8a;
+      --ink-black: #1f2937;
+      background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 31px, var(--line-color) 32px);
+    }
+
+    body.theme-grid {
+      --paper-bg: #ffffff;
+      --line-color: #e5e7eb;
+      --margin-color: #3b82f6;
+      --ink-blue: #1e3a8a;
+      --ink-black: #1f2937;
+      background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    body.theme-dark {
+      --paper-bg: #1e293b;
+      --line-color: #334155;
+      --margin-color: #f43f5e;
+      --ink-blue: #93c5fd;
+      --ink-black: #f8fafc;
+      --sticky-yellow: #334155;
+      --sticky-pink: #475569;
+      --sticky-green: #334155;
+      background-image: repeating-linear-gradient(var(--paper-bg) 0px, var(--paper-bg) 31px, var(--line-color) 32px);
+    }
+
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-body
-	{color: var(--ink-black);
-	font-size: 1.25rem;
-	transition: all 0.3s ease;}
-.TOP-BAR h1
-	{font-size: 1.25rem;
-	display: flex;
-	align-items: center;
-	gap: 8px;}
-.THEME-BTN:hover
-	{transform: translateY(-1px);}
-.SEARCH-BOX input
-	{border-radius: 20px;
-	font-size: 0.9rem;
-	outline: none;}
-.search-box svg {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #64748b;
+
+    body {
+      background-color: var(--paper-bg);
+      color: var(--ink-black);
+      font-family: var(--font-hand);
+      font-size: 1.2rem;
+      line-height: 1.6;
+      padding: 20px;
+      transition: all 0.3s ease;
     }
-:after {
-      content: '';
+
+    /* Container / Notebook Sheet */
+    .notebook {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: var(--paper-bg);
+      border-left: 3px double var(--margin-color);
+      padding: 30px 40px 60px 65px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      border-radius: 8px;
+    }
+
+    /* Spiral Binder Holes */
+    .spiral-holes {
+      position: absolute;
+      left: 15px;
+      top: 40px;
+      bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .spiral-hole {
+      width: 16px;
+      height: 16px;
+      background: #475569;
+      border-radius: 50%;
+      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.6);
+      position: relative;
+    }
+    .spiral-ring {
       position: absolute;
       left: -22px;
       top: 4px;
-      width: 26px;
+      width: 30px;
       height: 8px;
-      background: linear-gradient(90deg, #475569, #94a3b8, #334155);
+      background: linear-gradient(90deg, #64748b, #cbd5e1, #475569);
       border-radius: 4px;
-      box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
-.sticky-note.pink {
-      background: var(--sticky-pink);
-      border-left-color: #f43f5e;
-      transform: rotate(1deg);
+
+    /* Top Bar & Navigation */
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 2px stroke var(--ink-blue);
     }
-.sticky-note.green {
-      background: var(--sticky-green);
+
+    h1.main-title {
+      font-family: var(--font-title);
+      font-size: 2.8rem;
+      color: var(--ink-blue);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .theme-controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .theme-btn {
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .theme-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-color: var(--ink-blue);
+    }
+
+    /* Search Box */
+    .search-container {
+      position: relative;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+    .search-input {
+      width: 100%;
+      padding: 12px 20px 12px 45px;
+      border-radius: 30px;
+      border: 2px dashed #94a3b8;
+      background: rgba(255,255,255,0.85);
+      font-family: var(--font-hand);
+      font-size: 1.1rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .search-input:focus {
+      border-style: solid;
+      border-color: var(--ink-blue);
+      background: #ffffff;
+      box-shadow: 0 0 10px rgba(30,58,138,0.15);
+    }
+    .search-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+    }
+
+    /* Module Navigation Chips */
+    .nav-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+    .chip {
+      background: var(--sticky-yellow);
+      border: 1px solid #fde047;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #854d0e;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .chip:hover {
+      background: #fef08a;
+      transform: scale(1.05);
+    }
+
+    /* Module Headers */
+    .module-header {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      color: var(--ink-blue);
+      border-bottom: 2px dashed var(--ink-blue);
+      padding-bottom: 6px;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    /* Card Styling */
+    .card {
+      background: rgba(255,255,255,0.75);
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--ink-blue);
+      border-radius: 8px;
+      padding: 18px 20px;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.04);
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 4px 8px 16px rgba(0,0,0,0.08);
+      background: #ffffff;
+    }
+
+    .card-title {
+      font-family: var(--font-hand);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink-blue);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-tag {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .card-desc {
+      font-size: 1.1rem;
+      color: var(--ink-black);
+      margin-bottom: 12px;
+    }
+
+    /* Code & Formula Blocks */
+    .formula-box {
+      background: #1e293b;
+      color: #38bdf8;
+      font-family: var(--font-code);
+      font-size: 0.95rem;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin: 8px 0;
+      overflow-x: auto;
+      border-left: 3px solid #0284c7;
+    }
+    .formula-box.result {
+      background: #f0fdf4;
+      color: #166534;
       border-left-color: #22c55e;
+      font-family: var(--font-sans);
+      font-weight: 600;
+    }
+
+    /* Sticky Notes */
+    .sticky-note {
+      padding: 15px;
+      border-radius: 4px;
+      margin: 15px 0;
+      font-size: 1.1rem;
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    .sticky-note.yellow {
+      background: var(--sticky-yellow);
+      border-left: 4px solid #eab308;
       transform: rotate(-0.5deg);
     }
-table
-	{mso-displayed-decimal-separator:"\.";
-	mso-displayed-thousand-separator:"\,";}
-@page
-	{margin:1.0in .75in 1.0in .75in;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;}
--->
-</style>
-<![if !supportTabStrip]><script language="JavaScript">
-<!--
-function fnUpdateTabs()
- {
-  if (parent.window.g_iIEVer>=4) {
-   if (parent.document.readyState=="complete"
-    && parent.frames['frTabs'].document.readyState=="complete")
-   parent.fnSetActiveSheet(0);
-  else
-   window.setTimeout("fnUpdateTabs();",150);
- }
-}
+    .sticky-note.pink {
+      background: var(--sticky-pink);
+      border-left: 4px solid #ec4899;
+      transform: rotate(0.8deg);
+    }
+    .sticky-note.green {
+      background: var(--sticky-green);
+      border-left: 4px solid #22c55e;
+      transform: rotate(-0.5deg);
+    }
 
-if (window.name!="frSheet")
- window.location.replace("../Advance_Excel_Handwritten_Notes.html");
-else
- fnUpdateTabs();
-//-->
-</script>
-<![endif]>
+    /* Tables in Notebook */
+    .notebook-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 1.05rem;
+      background: #ffffff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .notebook-table th {
+      background: var(--ink-blue);
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+    }
+    .notebook-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .notebook-table tr:hover {
+      background: #f8fafc;
+    }
+
+    /* Quiz Accordions */
+    .quiz-item {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .quiz-q {
+      font-weight: 700;
+      color: var(--ink-blue);
+      margin-bottom: 8px;
+    }
+    .quiz-ans-btn {
+      background: #e2e8f0;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 15px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 5px;
+      transition: all 0.2s;
+    }
+    .quiz-ans-btn:hover {
+      background: var(--ink-blue);
+      color: #ffffff;
+    }
+    .quiz-ans {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: #f0fdf4;
+      border-left: 3px solid #22c55e;
+      border-radius: 4px;
+      color: #166534;
+      font-weight: 600;
+    }
+
+    @media print {
+      body { background: #ffffff; }
+      .top-bar, .search-container, .nav-chips, .theme-controls { display: none; }
+      .notebook { box-shadow: none; border: none; padding: 0; }
+    }
+  </style>
 </head>
+<body class="theme-ruled">
 
-<body link="#0563C1" vlink="#954F72" class=xl65>
-<!-- Top Control Bar -->
+<div class="notebook">
+  <!-- Spiral Holes Effect -->
+  <div class="spiral-holes">
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+    <div class="spiral-hole"><div class="spiral-ring"></div></div>
+  </div>
 
-<table border=0 cellpadding=0 cellspacing=0 width=1819 style='border-collapse:
- collapse;table-layout:fixed;width:1365pt'>
- <col class=xl65 width=698 style='mso-width-source:userset;mso-width-alt:25526;
- width:524pt'>
- <col class=xl65 width=422 style='mso-width-source:userset;mso-width-alt:15433;
- width:317pt'>
- <col class=xl65 width=699 style='mso-width-source:userset;mso-width-alt:25563;
- width:524pt'>
- <tr height=41 style='height:30.75pt'>
-  <td height=41 class=xl67 colspan=2 width=1120 style='height:30.75pt;
-  mso-ignore:colspan;width:841pt'>&#128218; Advance Excel - Master Handwritten
-  Notes</td>
-  <td class=xl65 width=699 style='width:524pt'>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl68 style='height:15.0pt'>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt' align=left valign=top><!--[if gte vml 1]><v:shapetype
-   id="_x0000_t201" coordsize="21600,21600" o:spt="201" path="m,l,21600r21600,l21600,xe">
-   <v:stroke joinstyle="miter"/>
-   <v:path shadowok="f" o:extrusionok="f" strokeok="f" fillok="f"
-    o:connecttype="rect"/>
-   <o:lock v:ext="edit" shapetype="t"/>
-  </v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t201" style='position:absolute;
-   direction:LTR;text-align:left;margin-left:0;margin-top:0;width:1in;height:18pt;
-   z-index:2' strokecolor="windowText [64]" o:insetmode="auto">
-   <v:imagedata src="image001.emz" o:title=""/>
-   <x:ClientData ObjectType="Pict">
-    <x:SizeWithCells/>
-    <x:CF>Pict</x:CF>
-    <x:AutoPict/>
-   </x:ClientData>
-  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
-  position:absolute;z-index:2;margin-left:0px;margin-top:0px;width:96px;
-  height:24px'><![endif]><![if !vml]><img width=96 height=24 src=image002.png
-  v:shapes="_x0000_s1025"></span><![endif]><span style='mso-ignore:vglayout2'>
-  <table cellpadding=0 cellspacing=0>
-   <tr>
-    <td height=20 class=xl68 width=698 style='height:15.0pt;border-top:none;
-    width:524pt'>&nbsp;</td>
-   </tr>
-  </table>
-  </span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl68 style='height:15.0pt;border-top:none'>
-  <button class=theme-btn onclick="setTheme('ruled')">&#128221; Ruled Paper
-  &#128993; Legal Pad &#128208; Grid Paper &#127769; Blackboard &#128424;️
-  Print PDF</button>
-  <button class=theme-btn onclick="setTheme('yellow')"></button>
-  <button class=theme-btn onclick="setTheme('grid')"></button>
-  <button class=theme-btn onclick="setTheme('dark')"></button>
-  <button class=theme-btn onclick="window.print()"></button>
-  </td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='mso-height-source:userset;height:15.0pt'>
-  <td colspan=3 height=20 class=xl93 width=1819 style='height:15.0pt;
-  width:1365pt'><!-- Main Notebook --><!-- Spiral Rings --><!-- Notebook Header -->Advance
-  Excel Master Study Notes</td>
- </tr>
- <tr height=19 style='height:14.25pt'>
-  <td colspan=3 height=19 class=xl94 width=1819 style='height:14.25pt;
-  width:1365pt'>हँडरिटन नोट्स व फॉर्म्युला मास्टर गाइड (Analyzed Workspace
-  Inventory: 24 Files)</td>
- </tr>
- <tr height=20 style='mso-height-source:userset;height:15.0pt'>
-  <td colspan=3 height=20 class=xl95 width=1819 style='height:15.0pt;
-  width:1365pt'>✨ Complete Folder Analysis &amp; Step-by-Step Study Roadmap</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl69 style='height:15.0pt'><!-- Section 0: Analyzed Files Breakdown -->&#128193;
-  Analyzed Excel Files Breakdown (तुमच्या फोल्डर मधील सर्व २६ फाईल्स)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl70 style='height:15.75pt'>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl71 colspan=2 style='height:15.75pt;mso-ignore:colspan'>खालील
-  सर्व Excel फाईल्सचे संपूर्ण सखोल ॲनालिसिस करून या मास्टर स्टडी नोट्स तयार
-  करण्यात आल्या आहेत:</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=22 style='height:16.5pt'>
-  <td height=22 class=xl73 width=698 style='height:16.5pt;width:524pt'>File
-  Name</td>
-  <td class=xl74 width=422 style='width:317pt'>Sheets</td>
-  <td class=xl75 width=699 style='width:524pt'>Key Formulas &amp; Topics
-  Analyzed</td>
- </tr>
- <tr height=40 style='height:30.0pt'>
-  <td height=40 class=xl76 width=698 style='height:30.0pt;width:524pt'>Assignment
-  3 - Text, Logical, Date...</td>
-  <td class=xl72 width=422 style='width:317pt'>15 Sheets</td>
-  <td class=xl77 width=699 style='width:524pt'>IF, NESTED IF, SUMIF, SUMIFS,
-  COUNTIF, COUNTIFS, AVERAGEIFS, Text, Date, Financial (PMT/IPMT)</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl76 width=698 style='height:15.75pt;width:524pt'>Logical
-  Function - If, And, Or, Tax...</td>
-  <td class=xl72 width=422 style='width:317pt'>6 Sheets</td>
-  <td class=xl77 width=699 style='width:524pt'>Logical IF/AND/OR, Multi-slab
-  Income Tax calculations, Risk Flags, Nested IF Matrices</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl76 width=698 style='height:15.75pt;width:524pt'>Conditional
-  Formatting Set 1 &amp; Set 2</td>
-  <td class=xl72 width=422 style='width:317pt'>6 Sheets</td>
-  <td class=xl77 width=699 style='width:524pt'>Highlight Rules, Data Bars,
-  Color Scales, Icon Sets, Custom Formula formatting</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl76 width=698 style='height:15.75pt;width:524pt'>financial.xlsx</td>
-  <td class=xl72 width=422 style='width:317pt'>3 Sheets</td>
-  <td class=xl77 width=699 style='width:524pt'>PV (Present Value), PMT, PPMT,
-  IPMT, Downpayment calculations, Loan Tenure modeling</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl76 width=698 style='height:15.75pt;width:524pt'>store.xlsx
-  (Superstore Big Data)</td>
-  <td class=xl72 width=422 style='width:317pt'>1 Sheet (9,995 rows)</td>
-  <td class=xl77 width=699 style='width:524pt'>Real-world Enterprise Dataset,
-  Pivot Tables, Regional Sales, Profit/Discount Analytics</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl76 width=698 style='height:15.75pt;width:524pt'>TEXT
-  FUNCTION.xlsx</td>
-  <td class=xl72 width=422 style='width:317pt'>1 Sheet</td>
-  <td class=xl77 width=699 style='width:524pt'>UPPER, LOWER, PROPER, TRIM, LEN,
-  SEARCH, CONCAT, LEFT, RIGHT, MID</td>
- </tr>
- <tr height=40 style='height:30.0pt'>
-  <td height=40 class=xl76 width=698 style='height:30.0pt;width:524pt'>DATE
-  FUNCTION.xlsx</td>
-  <td class=xl72 width=422 style='width:317pt'>1 Sheet</td>
-  <td class=xl77 width=699 style='width:524pt'>TODAY, NOW, YEAR, MONTH, DAY,
-  DATE, DATEDIF, EDATE, EOMONTH, NETWORKDAYS, NETWORKDAYS.INTL, DAYS</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl76 width=698 style='height:15.75pt;width:524pt'>Database
-  Function.xlsx</td>
-  <td class=xl72 width=422 style='width:317pt'>1 Sheet</td>
-  <td class=xl77 width=699 style='width:524pt'>DSUM, DAVERAGE, DCOUNT, DCOUNTA,
-  DMAX, DMIN, DGET (Structured DB Queries)</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl78 width=698 style='height:15.75pt;width:524pt'>MIS
-  Test Paper.xlsx</td>
-  <td class=xl79 width=422 style='width:317pt'>17 Sheets</td>
-  <td class=xl80 width=699 style='width:524pt'>11 Practical Test Modules (Text
-  extraction, Pivot Tables, SUMIF, VLOOKUP, Cross-sheet references)</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl69 style='height:15.75pt'><!-- Section 1: Logical Functions -->&#129504;
-  Module 1: Logical Functions (लॉजिकल फॉर्म्युले)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl96 width=698 style='height:15.0pt;width:524pt'>Logical
-  Condition</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl97 width=698 style='height:15.75pt;border-top:none;
-  width:524pt'>➔</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl98 width=698 style='height:15.0pt;width:524pt'>TRUE:
-  Output 1</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl97 width=698 style='height:15.75pt;width:524pt'>➔</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl99 width=698 style='height:15.0pt;width:524pt'>FALSE:
-  Output 2</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt'><!-- IF -->
-  <div data-search="if conditional">1. IF Function<font class="font5"> </font><font
-  class="font16">Logical</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>कन्डिशन तपासून TRUE किंवा
-  FALSE आऊटपुट देण्यासाठी.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>0</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">मराठीत:</font><font class="font19"> जर Salary १५,००० पेक्षा
-  जास्त असेल तर ५% बोनस द्या, नाहीतर ० द्या.</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- IFS -->
-  <div data-search="ifs nested multiple">2. IFS Function<font class="font5"> </font><font
-  class="font16">Logical (Excel 2019+)</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>अनेक अटी (Multiple Conditions)
-  एकाच फॉर्म्युल्यात मांडण्यासाठी.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=IFS(condition1, val1,
-  condition2, val2, ...)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>NO TAX</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">मराठीत:</font><font class="font19"> इन्कम टॅक्स स्लॅब
-  कॅल्क्युलेशनसाठी अतिशय सोपा फॉर्म्युला! एकापेक्षा जास्त Nested IF
-  लिहिण्याऐवजी IFS व</font><span style='display:none'><font class="font19">ापरावा.</font></span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- AND & OR -->
-  <div data-search="and or logical combined">3. AND &amp; OR Functions<font
-  class="font5"> </font><font class="font16">Logical</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>अनेक अटी एकत्र जोडण्यासाठी.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>0</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">AND:</font><font class="font19"> सर्व अटी पूर्ण झाल्या तरच
-  TRUE.</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">OR:</font><font class="font19"> कोणतीही एक अट पूर्ण झाली तरी
-  TRUE.</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- NESTED IF -->
-  <div data-search="nested if priority risk">4. NESTED IF<font class="font5"> </font><font
-  class="font16">Logical</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>एका IF मध्ये दुसरा IF वापरणे.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">उदा (SMS Matrix):</font><font class="font19"> Risk Flag जर
-  &quot;High&quot; असेल तर EMI तारखेच्या ५ दिवस आधी SMS पाठवा,
-  &quot;Medium&quot; असेल त</font><span style='display:none'><font
-  class="font19">र ३ दिवस आधी पाठवा.</font></span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl85 style='height:15.0pt'></div>
-<!-- Sticky Note Tip -->&#128204; Teacher's Logical Pro Tip:</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=19 style='height:14.25pt'>
-  <td height=19 class=xl66 style='height:14.25pt'>१. Text व्हॅल्यू नेहमी double
-  quotes <font class="font21">&quot; &quot;</font><font class="font5"> मध्ये
-  लिहा (उदा: </font><font class="font21">&quot;Borivali&quot;</font><font
-  class="font5">). पण नंबर किंवा सेल रेफरन्स </font><font class="font21">&quot;
-  &quot;</font><font class="font5"> मध्ये लिहू नका!</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=19 style='height:14.25pt'>
-  <td height=19 class=xl66 style='height:14.25pt'>२. <font class="font21">IFS</font><font
-  class="font5"> वापरताना मोठ्या संख्येकडून लहान संख्येकडे ऑर्डर ठेवावी (उदा:
-  १० लाख ➔ ५ लाख ➔ २.५ लाख).</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl69 style='height:15.0pt'><!-- Section 2: Aggregation Functions -->&#128202;
-  Module 2: Conditional Aggregation (SUMIF, COUNTIF &amp; SUBTOTAL)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt'><!-- SUMIF & SUMIFS -->
-  <div data-search="sumif sumifs addition criteria">1. SUMIF &amp; SUMIFS<font
-  class="font5"> </font><font class="font16">Math &amp; Trig</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>अटीवर आधारित बेरीज
-  (Conditional Total) करण्यासाठी.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=SUMIF(range, criteria,
-  [sum_range])</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">महत्त्वाचा फरक:</font><font class="font19"> </font><font
-  class="font22">SUMIF</font><font class="font19"> मध्ये sum_range शेवटी असतो,
-  तर </font><font class="font22">SUMIFS</font><font class="font19"> मध्ये
-  sum_range सर्वात आधी लिहावा लागतो</font><span style='display:none'><font
-  class="font19">!</font></span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- COUNT, COUNTA, COUNTBLANK, COUNTIF, COUNTIFS -->
-  <div data-search="count counta countblank countif countifs">2. COUNT Family<font
-  class="font5"> </font><font class="font16">Statistical</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>सेल्स मोजण्यासाठी (Counting
-  Cells).</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=COUNT(range) ➔ फक्त Numbers
-  मोजते</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=COUNTA(range)
-  ➔ भरलेले सर्व सेल्स (Text + Numbers)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=COUNTBLANK(range)
-  ➔ रिकामे सेल्स (Empty Cells)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- AVERAGEIF & AVERAGEIFS -->
-  <div data-search="averageif averageifs average">3. AVERAGEIF &amp; AVERAGEIFS<font
-  class="font5"> </font><font class="font16">Statistical</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>अटीवर आधारित सरासरी (Average)
-  काढण्यासाठी.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=AVERAGEIF(range, criteria,
-  [average_range])</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- SUBTOTAL & SUMPRODUCT -->
-  <div data-search="subtotal sumproduct filter dynamic median">4. SUBTOTAL,
-  MEDIAN &amp; SUMPRODUCT<font class="font5"> </font><font class="font16">Advanced
-  Math</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>फिल्टर डेटावर गणना करणे, मधली
-  संख्या (Median) व गुणाकारांची बेरीज.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=MEDIAN(range) ➔ दिलेल्या नंबर
-  मालिकेतील मध्यक संख्या</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=SUBTOTAL(9,
-  C2:C100) ➔ Filter केल्यावर visible cells ची SUM</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=SUBTOTAL(109,
-  C2:C100) ➔ Manually Hidden + Filtered सोडून SUM</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>=MEDIAN(J7:J44)
-  ➔ पगार/किंमतींचा मध्यक (Median)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>=SUMPRODUCT(C2:C10,
-  D2:D10) ➔ (Qty * Rate) ची Total</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">SUBTOTAL Code 9 vs 109:</font><font class="font19"> Code </font><font
-  class="font22">9</font><font class="font19"> हा फक्त फिल्टर केलेल्या डेटाची
-  बेरीज करतो. पण Code </font><font class="font22">109</font><font class="font19">
-  हा मॅन्युअली ल</font><span style='display:none'><font class="font19">पवलेले
-  (Hidden) रो देखील वगळून बेरीज करतो!</font></span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl69 style='height:15.0pt'></div>
-<!-- Section 3: Text & String Functions -->&#128292; Module 3: Text
-  Manipulation Functions (टेक्स्ट फॉर्म्युले)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt'><!-- LEFT, MID, RIGHT -->
-  <div data-search="left mid right text substring extract">1. LEFT, MID, RIGHT<font
-  class="font5"> </font><font class="font16">Text</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>टेक्स्ट मधील शब्द किंवा अंक
-  वेगळे (Extract) करण्यासाठी.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=LEFT(text, num_chars) ➔
-  डावीकडून</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=RIGHT(text,
-  num_chars) ➔ उजवीकडून</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=MID(text,
-  start_num, num_chars) ➔ मधून</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>=LEFT(&quot;Mumbai
-  - 400086&quot;, 6) ➔ &quot;Mumbai&quot;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>=RIGHT(&quot;Mumbai
-  - 400086&quot;, 6) ➔ &quot;400086&quot;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>=MID(&quot;IV-RAHUL-986&quot;,
-  4, 5) ➔ &quot;RAHUL&quot;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- FIND, SUBSTITUTE & Flash Fill -->
-  <div data-search="find substitute flash fill replace text">2. FIND &amp;
-  SUBSTITUTE<font class="font5"> </font><font class="font16">Text</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>अक्षर शोधणे आणि बदलणे.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>=SUBSTITUTE(&quot;9812-34-56-78&quot;,
-  &quot;-&quot;, &quot;&quot;) ➔ &quot;9812345678&quot;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>⚡ <font
-  class="font20">Flash Fill (Ctrl + E):</font><font class="font19"> फॉर्म्युला
-  न वापरता नमुना टाईप करून ऑटोमॅटिक डेटा वेगळा करण्यासाठी Ctrl + E वापरा!</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- PROPER, UPPER, LOWER -->
-  <div data-search="proper upper lower capitalization">3. PROPER, UPPER, LOWER<font
-  class="font5"> </font><font class="font16">Text</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>अक्षरांचा आकार (Case)
-  बदलण्यासाठी.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=PROPER(&quot;barack
-  hussein&quot;) ➔ &quot;Barack Hussein&quot;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=UPPER(&quot;mumbai&quot;)
-  ➔ &quot;MUMBAI&quot;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=LOWER(&quot;EXCEL&quot;)
-  ➔ &quot;excel&quot;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- TRIM, LEN, SEARCH, CONCAT -->
-  <div data-search="trim len search concat text length spaces dynamic code generation">4.
-  TRIM, LEN, CONCAT &amp; Code Gen<font class="font5"> </font><font
-  class="font16">Text Utility</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>टेक्स्ट मधील स्पेस काढणे,
-  लांबी मोजणे व युनिक कोड जनरेट करणे.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=TRIM(text) ➔ अतिरिक्त मोकळ्या
-  जागा (Extra Spaces) काढण्यासाठी</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=LEN(text) ➔
-  अक्षरांची एकूण संख्या मोजण्यासाठी</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=CONCAT(text1,
-  text2, ...) ➔ दोन किंवा अधिक शब्द जोडणे</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>=TRIM(&quot;
-  Rahul Dravid &quot;) ➔ &quot;Rahul Dravid&quot;</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">Dynamic Code Generation:</font><font class="font19">
-  कंपनीमध्ये कर्मचाऱ्यांचा VAN ID किंवा Unique Passcode बनवण्यासाठी </font><font
-  class="font22">CONCAT</font><font class="font19"> </font><span
-  style='display:none'><font class="font19">सोबत </font><font class="font22">LEFT</font><font
-  class="font19">, </font><font class="font22">RIGHT</font><font class="font19">
-  आणि </font><font class="font22">UPPER</font><font class="font19"> वापरला
-  जातो! (उदा: </font><font class="font22">MIS Test Paper - Test 2</font><font
-  class="font19">).</font></span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl69 style='height:15.0pt'></div>
-<!-- Section 4: Date & Time Functions -->&#128197; Module 4: Date &amp; Time
-  Functions (तारीख व वेळ फॉर्म्युले)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt'><!-- TODAY, NOW, DATE, YEAR, MONTH, DAY -->
-  <div data-search="today now date year month day datepart">1. Basic Date
-  Functions<font class="font5"> </font><font class="font16">Date &amp; Time</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>आजची तारीख व वेळेवर काम करणे.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=TODAY() ➔ आजची तारीख</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=NOW() ➔ तारीख
-  + वेळ</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=YEAR(A6),
-  =MONTH(A6), =DAY(A6)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=TEXT(A6,
-  &quot;dddd&quot;) ➔ वार (Day Name e.g. &quot;Monday&quot;)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=TEXT(A6,
-  &quot;mmmm&quot;) ➔ महिन्याचे नाव (e.g. &quot;August&quot;)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- DATEDIF, EDATE, EOMONTH, WORKDAY -->
-  <div data-search="datedif edate eomonth workday networkdays duration age">2.
-  Advanced Date Calculations<font class="font5"> </font><font class="font16">Date
-  &amp; Time</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>वय (Age), मॅच्युरिटी डेट व
-  कामाचे दिवस मोजणे.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=EDATE(StartDate,
-  6) ➔ ६ महिन्यांनंतरची तारीख</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=EOMONTH(StartDate,
-  0) ➔ चालू महिन्याचा शेवटचा दिवस</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">NETWORKDAYS:</font><font class="font19"> शनिवार, रविवार आणि
-  सुट्ट्या सोडून शुद्ध कामाचे दिवस मोजते!</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt;border-top:none'></div>
-<!-- NETWORKDAYS.INTL, DAYS, WEEKDAY -->
-  <div data-search="networkdays intl days weekday holiday custom weekend">3.
-  NETWORKDAYS.INTL &amp; DAYS<font class="font5"> </font><font class="font16">Custom
-  Dates</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>कस्टम सुट्ट्या व तारखांमधील
-  एकूण दिवस.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=NETWORKDAYS.INTL(start_date,
-  end_date, [weekend], [holidays])</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=WEEKDAY(serial_number,
-  [return_type])</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>#VALUE!</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">INTL काय करतो?:</font><font class="font19"> जर सुट्टी फक्त
-  रविवारीच असेल (Weekend = 11), तर </font><font class="font22">NETWORKDAYS.INTL</font><font
-  class="font19"> वापरून काम म</font><span style='display:none'><font
-  class="font19">ोजता येते!</font></span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl87 style='height:15.0pt'></div>
-  &#128197; Date Cheat Sheet:</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=19 style='height:14.25pt'>
-  <td height=19 class=xl86 style='height:14.25pt'>- <font class="font21">=TEXT(A1,
-  &quot;dd-mmm-yyyy&quot;)</font><font class="font5"> ➔ 03-Aug-2026</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=19 style='height:14.25pt'>
-  <td height=19 class=xl86 style='height:14.25pt'>- <font class="font21">=DATEDIF(A1,
-  B1, &quot;M&quot;)</font><font class="font5"> ➔ दोन तारखांमधील एकूण महिने</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=19 style='height:14.25pt'>
-  <td height=19 class=xl86 style='height:14.25pt'>- <font class="font21">=WORKDAY(TODAY(),
-  10, Holiday_Range)</font><font class="font5"> ➔ १० काम करण्याच्या दिवसांनंतर
-  येणारी तारीख.</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl69 style='height:15.0pt'><!-- Section 5: Database Functions -->&#128452;️
-  Module 5: Database Functions (DSUM, DAVERAGE, DCOUNT)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt'>
-  <div data-search="dsum daverage dcount dmax dmin dget database query">DSUM,
-  DAVERAGE, DCOUNT, DMAX, DMIN<font class="font5"> </font><font class="font16">Database</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>टेबलवर स्ट्रक्चरल क्रायटेरिया
-  (Criteria Range) लावून गणना करणे.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>#VALUE!</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">फायदा:</font><font class="font19"> यात Criteria चे वेगळे
-  मिनी-टेबल तयार करून हवा तसा मल्टी-कॉलम डेटा फिल्टर करून टोटल काढता येते!</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl69 style='height:15.0pt'></div>
-<!-- Section 6: Financial Functions -->&#128176; Module 6: Financial Functions
-  (EMI, PMT, IPMT, PPMT, PV)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt'>
-  <div data-search="pmt ipmt ppmt pv fv emi loan interest principal">PMT, IPMT,
-  PPMT &amp; PV<font class="font5"> </font><font class="font16">Financial</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>कर्जाचे हप्ते (EMI), व्याज
-  (Interest), मुद्दल (Principal) व प्रेझेंट व्हॅल्यू (PV) काढण्यासाठी.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>=PMT(rate/12, nper, -pv) ➔
-  महिन्याचा एकूण EMI</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=IPMT(rate/12,
-  per, nper, -pv) ➔ ठराविक हप्त्याचे व्याज</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=PPMT(rate/12,
-  per, nper, -pv) ➔ ठराविक हप्त्याची मुद्दल</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>=PV(rate/12,
-  nper, -pmt) ➔ हप्त्यावरून एकूण कर्जाची रक्कम</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl88 style='height:15.0pt;border-top:none'>₹ 977.00</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl88 style='height:15.0pt;border-top:none'>₹ 25,460.22</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">महत्त्वाची टीप:</font><font class="font19"> वार्षिक व्याजाला
-  १२ ने भागा (Rate/12) आणि वर्षाचे महिने करा (Years * 12). कर्जाची रक्कम माइनस
-  (</font><span style='display:none'><font class="font19">-) मध्ये टाकावी
-  लागते!</font></span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl69 style='height:15.0pt'></div>
-<!-- Section 7: Conditional Formatting -->&#127912; Module 7: Conditional
-  Formatting &amp; Data Visualization (कन्डिशनल फॉरमॅटिंग)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt'>
-  <div data-search="conditional formatting highlight data bars icon sets color scales">Conditional
-  Formatting Rules<font class="font5"> </font><font class="font16">Visualization</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>अटीनुसार डेटाला रंग देणे आणि
-  व्हिज्युअल हायलाईट करणे.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>Home Tab ➔ Conditional
-  Formatting ➔ Highlight Cells Rules</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>1. Greater
-  Than / Less Than / Between (उदा. Sales &gt; 50,000)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>2. Text that
-  Contains / Duplicate Values (डुप्लिकेट डेटा हायलाईट करणे)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>3. Data Bars,
-  Color Scales &amp; Icon Sets (ट्रेंड्स दाखवण्यासाठी)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt;border-top:none'>4. Custom
-  Formula Rule: =AND($E2=&quot;South&quot;, $F2&gt;100)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">फायदा:</font><font class="font19"> डेटा एंट्री करताना चुका
-  लगेच ओळखण्यासाठी आणि सेल्स ट्रेंड हायलाईट करण्यासाठी </font><font
-  class="font22">Conditional Formatti</font><span style='display:none'><font
-  class="font22">ng Set 1 &amp; Set 2</font><font class="font19"> शीट्स वापरा!</font></span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl69 style='height:15.0pt'></div>
-<!-- Section 8: Superstore Big Data Analytics -->&#127970; Module 8: Superstore
-  Enterprise Data Analytics (Pivot Tables &amp; MIS)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl81 style='height:15.75pt'>
-  <div data-search="superstore pivot table mis dashboard big data store.xlsx">Superstore
-  Big Data Analytics<font class="font5"> </font><font class="font16">MIS &amp;
-  Big Data</font></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt'>९,९९५ रो च्या मोठ्या डेटावर
-  समरी रिपोर्ट्स आणि पिव्होट टेबल्स बनवणे.</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl82 style='height:15.0pt'>Insert Tab ➔ Pivot Table ➔
-  Select Table Range (Sample - Superstore)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>1. Regional
-  Sales Total: Drag 'Region' to Rows, 'Sales' to Values</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>2. Category
-  Profit Analysis: Drag 'Category' to Rows, 'Profit' to Values</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl83 style='height:15.0pt;border-top:none'>3. Segment
-  Discounts: Drag 'Segment' to Rows, 'Discount' to Values</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl84 style='height:15.75pt;border-top:none'>&#128161; <font
-  class="font20">`store.xlsx` सराव:</font><font class="font19"> हा रिअल-वर्ल्ड
-  कंपनी डेटाबेस आहे. यावर Pivot Tables, VLOOKUP आणि Dynamic Chart D</font><span
-  style='display:none'><font class="font19">ashboards बनवण्याचा सराव करावा!</font></span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl69 style='height:15.0pt'></div>
-<!-- Section 9: Practice Quiz -->✍️ Interactive Self-Assessment Quiz (MIS Test
-  Paper व नवनवीन फाईल्सवर आधारित)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl89 style='height:15.75pt'>प्र. १) जर एखाद्या
-  कर्मचाऱ्याचा पगार ₹३५,००० पेक्षा जास्त असेल आणि ब्रांच &quot;Borivali&quot;
-  असेल तर १००० बोनस<span style='display:none'> देण्याचा फॉर्म्युला काय येईल?</span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl90 style='height:15.75pt;border-top:none'>
-  <button class=toggle-ans-btn onclick="toggleAns('q1')">उत्तर पहा</button>
-  </td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl91 style='height:15.75pt'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl89 style='height:15.75pt'>प्र. २) &quot;Mumbai
-  -400086&quot; या टेक्स्ट मधून पिनकोड (400086) वेगळा करण्यासाठी कोणता
-  फॉर्म्युला वापराल<span style='display:none'>?</span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl90 style='height:15.75pt;border-top:none'>
-  <button class=toggle-ans-btn onclick="toggleAns('q2')">400086</button>
-  </td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl91 style='height:15.75pt'>400086</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl89 style='height:15.75pt'>प्र. ३) फिल्टर (Filter)
-  केलेल्या डेटावर फक्त visible असणाऱ्या संख्यांची बेरीज करण्यासाठी कोणता
-  फॉर्म्युला <span style='display:none'>वापरला जातो?</span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl90 style='height:15.75pt;border-top:none'>
-  <button class=toggle-ans-btn onclick="toggleAns('q3')">उत्तर पहा</button>
-  </td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl91 style='height:15.75pt'>=SUBTOTAL(9, Range) (9 हा SUM
-  चा कोड आहे)</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl89 style='height:15.75pt'>प्र. ४) ₹५,००,००० कर्जावर १०%
-  वार्षिक व्याजाने ५ वर्षांसाठी (६० महिने) दरमहा भरवा लागणारा EMI काढण्<span
-  style='display:none'>याचे सूत्र काय आहे?</span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl90 style='height:15.75pt;border-top:none'>
-  <button class=toggle-ans-btn onclick="toggleAns('q4')">उत्तर पहा</button>
-  </td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl92 style='height:15.75pt'>₹ 10,623.52</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl89 style='height:15.75pt'>प्र. ५) नावांमधील अतिरिक्त
-  मोकळ्या जागा (Extra Spaces) काढून टाकण्यासाठी कोणता फॉर्म्युला वापरला <span
-  style='display:none'>जातो?</span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl90 style='height:15.75pt;border-top:none'>
-  <button class=toggle-ans-btn onclick="toggleAns('q5')">उत्तर पहा</button>
-  </td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl91 style='height:15.75pt'>#NAME?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl89 style='height:15.75pt'>प्र. ६) हप्त्याची रक्कम (EMI
-  = ₹864) आणि कालावधी (३ वर्षे) माहीत असताना मूळ कर्जाची रक्कम काढण्या<span
-  style='display:none'>साठी कोणता फॉर्म्युला वापरला जातो?</span></td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl90 style='height:15.75pt;border-top:none'>
-  <button class=toggle-ans-btn onclick="toggleAns('q6')">उत्तर पहा</button>
-  </td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl92 style='height:15.75pt'>₹ 25,460.22</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl89 style='height:15.75pt'>प्र. ७) एक्सेल मधील डुप्लिकेट
-  डेटा (Duplicate Values) हायलाईट करण्यासाठी कोणते टूल वापरले जाते?</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl90 style='height:15.75pt;border-top:none'>
-  <button class=toggle-ans-btn onclick="toggleAns('q7')">उत्तर पहा</button>
-  </td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl91 style='height:15.75pt'>Home Tab ➔ Conditional
-  Formatting ➔ Highlight Cells Rules ➔ Duplicate Values</td>
-  <td class=xl65>&nbsp;</td>
-  <td class=xl65>&nbsp;</td>
- </tr>
- <tr height=19 style='height:14.25pt'>
-  <td colspan=3 height=19 class=xl100 width=1819 style='height:14.25pt;
-  width:1365pt'><!-- Notebook Footer -->&#128216; Advance Excel Master Study
-  Notes • Created for Revision</td>
- </tr>
- <tr height=19 style='height:14.25pt'>
-  <td colspan=3 height=19 class=xl100 width=1819 style='height:14.25pt;
-  width:1365pt'>
-  <div style='font-size:0.9rem'><script>
-    function setTheme(themeName) {
-      document.body.className = 'theme-' + themeName;
-    }
+  <!-- Top Header & Controls -->
+  <div class="top-bar">
+    <h1 class="main-title">📚 Advance Excel Master Notes</h1>
+    <div class="theme-controls">
+      <button class="theme-btn" onclick="setTheme('ruled')">📝 Ruled Paper</button>
+      <button class="theme-btn" onclick="setTheme('yellow')">🟨 Legal Pad</button>
+      <button class="theme-btn" onclick="setTheme('grid')">📐 Grid Paper</button>
+      <button class="theme-btn" onclick="setTheme('dark')">🌙 Blackboard</button>
+      <button class="theme-btn" onclick="window.print()">🖨️ Print PDF</button>
+    </div>
+  </div>
 
-    function filterNotes() {
-      let input = document.getElementById('searchInput').value.toLowerCase();
-      let cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        let text = card.textContent.toLowerCase();
-        let searchTag = card.getAttribute('data-search') || '';
-        if (text.includes(input) || searchTag.toLowerCase().includes(input)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
+  <p style="font-family: var(--font-sans); font-size: 1rem; color: #475569; margin-bottom: 15px;">
+    ✨ <b>हँडरिटन नोट्स व फॉर्म्युला मास्टर गाइड</b> (Analyzed Workspace Inventory: <b>26 Excel Files</b>)
+  </p>
 
-    function toggleAns(id) {
-      let ansDiv = document.getElementById(id);
-      if (ansDiv.style.display === 'block') {
-        ansDiv.style.display = 'none';
+  <!-- Live Search Bar -->
+  <div class="search-container">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" class="search-input" onkeyup="filterNotes()" placeholder="शोधा: फॉर्म्युला (e.g. XLOOKUP, SUMIF), संकल्पना किंवा मराठी अर्थ...">
+  </div>
+
+  <!-- Quick Jump Nav Chips -->
+  <div class="nav-chips">
+    <a href="#inventory" class="chip">📁 Files Inventory (26)</a>
+    <a href="#mod1" class="chip">🧠 Mod 1: Logical</a>
+    <a href="#mod2" class="chip">📊 Mod 2: Aggregations</a>
+    <a href="#mod3" class="chip">🔤 Mod 3: Text</a>
+    <a href="#mod4" class="chip">📅 Mod 4: Date & Time</a>
+    <a href="#mod5" class="chip">💰 Mod 5: Financial</a>
+    <a href="#mod6" class="chip">🎨 Mod 6: Conditional Format</a>
+    <a href="#mod7" class="chip">🗄️ Mod 7: Database</a>
+    <a href="#mod8" class="chip">🔍 Mod 8: XLOOKUP & Index-Match</a>
+    <a href="#mod9" class="chip">⚡ Mod 9: Dynamic Arrays</a>
+    <a href="#mod10" class="chip">🧹 Mod 10: Data Cleaning</a>
+    <a href="#mod11" class="chip">📊 Mod 11: Pivot & Dashboard</a>
+    <a href="#mod12" class="chip">🎯 Mod 12: What-If Analysis</a>
+    <a href="#mod13" class="chip">💼 Mod 13: Interview Q&A</a>
+    <a href="#quiz" class="chip">✍️ Quiz</a>
+  </div>
+
+  <!-- SECTION 0: Inventory Breakdown -->
+  <div id="inventory">
+    <h2 class="module-header">📁 Analyzed Excel Files Breakdown (२६ वर्कबुक्स)</h2>
+    <p style="margin-bottom: 10px;">तुमच्या फोल्डरमधील सर्व २६ Excel फाईल्सचे सखोल ॲनालिसिस करून या मास्टर नोट्स तयार केल्या आहेत:</p>
+    <table class="notebook-table">
+      <thead>
+        <tr>
+          <th>File Name</th>
+          <th>Sheets Count</th>
+          <th>Key Topics &amp; Analyzed Formulas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Advanced_Excel_DETAILED_Job_Practice.xlsx</b></td>
+          <td>10 Sheets</td>
+          <td>Sales Data (500 records), HR Data (100 records), Data Scrubbing, Goal Seek, Scenario Manager, MIS Dashboard KPIs</td>
+        </tr>
+        <tr>
+          <td><b>Advanced_Excel_Job_Oriented_Practice_Workbook.xlsx</b></td>
+          <td>10 Sheets</td>
+          <td>50 Job Practice Tasks, XLOOKUP, INDEX-MATCH, UNIQUE, FILTER, SORTBY, 10 Pivot Scenarios, Interview Problems</td>
+        </tr>
+        <tr>
+          <td><b>Assignment 3 - Text , Logical, Date...xlsx</b></td>
+          <td>15 Sheets</td>
+          <td>IF, NESTED IF, SUMIF, SUMIFS, COUNTIF, COUNTIFS, AVERAGEIFS, Text, Date, Financial (PMT/IPMT)</td>
+        </tr>
+        <tr>
+          <td><b>Logical Function - If , And , Or...xlsx</b></td>
+          <td>6 Sheets</td>
+          <td>Multi-slab Tax Calculations (IFS), Employee Eligibility (AND/OR), Risk matrices</td>
+        </tr>
+        <tr>
+          <td><b>Conditional Formatting Set 1 &amp; Set 2</b></td>
+          <td>6 Sheets</td>
+          <td>Highlight Rules, Data Bars, Color Scales, Icon Sets, Custom Formula formatting</td>
+        </tr>
+        <tr>
+          <td><b>financial.xlsx</b></td>
+          <td>3 Sheets</td>
+          <td>PV (Present Value), PMT, PPMT, IPMT, Downpayment calculations, Loan Tenure modeling</td>
+        </tr>
+        <tr>
+          <td><b>store.xlsx (Superstore Big Data)</b></td>
+          <td>1 Sheet (9,995 rows)</td>
+          <td>Real-world Enterprise Dataset, Pivot Tables, Regional Sales, Profitability Analytics</td>
+        </tr>
+        <tr>
+          <td><b>TEXT FUNCTION.xlsx</b></td>
+          <td>1 Sheet</td>
+          <td>UPPER, LOWER, PROPER, TRIM, LEN, SEARCH, CONCAT, LEFT, RIGHT, MID</td>
+        </tr>
+        <tr>
+          <td><b>DATE FUNCTION.xlsx</b></td>
+          <td>1 Sheet</td>
+          <td>TODAY, NOW, YEAR, MONTH, DAY, DATE, DATEDIF, EDATE, EOMONTH, NETWORKDAYS, DAYS</td>
+        </tr>
+        <tr>
+          <td><b>Database Function.xlsx</b></td>
+          <td>1 Sheet</td>
+          <td>DSUM, DAVERAGE, DCOUNT, DCOUNTA, DMAX, DMIN, DGET (Structured DB Queries)</td>
+        </tr>
+        <tr>
+          <td><b>MIS Test Paper.xlsx</b></td>
+          <td>17 Sheets</td>
+          <td>11 Practical MIS Test Modules (Text extraction, Pivot Tables, SUMIF, VLOOKUP)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MODULE 1: LOGICAL FUNCTIONS -->
+  <div id="mod1">
+    <h2 class="module-header">🧠 Module 1: Logical Functions (लॉजिकल फॉर्म्युले)</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="if conditional logic">
+        <div class="card-title">1. IF Function <span class="card-tag">Logical</span></div>
+        <div class="card-desc">कन्डिशन तपासून TRUE किंवा FALSE आऊटपुट देण्यासाठी.</div>
+        <div class="formula-box">=IF(Salary>=15000, "Eligible", "Not-Eligible")</div>
+        <div class="formula-box">=IF(E5>=15000, E5*5%, 0)</div>
+        <div class="sticky-note yellow">💡 <b>मराठीत:</b> जर कर्मचाऱ्याचा पगार ₹१५,००० किंवा त्यापेक्षा जास्त असेल तर त्याला ५% बोनस द्या, नाहीतर ० द्या.</div>
+      </div>
+
+      <div class="card" data-search="ifs nested tax slab multiple">
+        <div class="card-title">2. IFS Function <span class="card-tag">Excel 2019+</span></div>
+        <div class="card-desc">अनेक अटी (Multiple Conditions) एकाच फॉर्म्युल्यात मांडण्यासाठी.</div>
+        <div class="formula-box">=IFS(C3>=1000000, "30%", C3>=500000, "20%", C3>=250000, "5%", C3<250000, "NO TAX")</div>
+        <div class="sticky-note pink">💡 <b>Income Tax Calculation:</b> १० लाखांपेक्षा जास्त उत्पन्नावर ३०% टॅक्स, ५ ते १० लाखांवर २०%, आणि २.५ लाखांपेक्षा कमी उत्पन्नावर नो टॅक्स.</div>
+      </div>
+
+      <div class="card" data-search="and or multi condition">
+        <div class="card-title">3. AND &amp; OR Functions <span class="card-tag">Multi-Condition</span></div>
+        <div class="card-desc">अनेक अटी एकत्र जोडण्यासाठी.</div>
+        <div class="formula-box">=IF(AND(Branch="Borivali", Salary>=15000), Employee_Name, "")</div>
+        <div class="formula-box">=IF(OR(Branch="Borivali", Salary>=15000), "Eligible", "Not Eligible")</div>
+        <div class="sticky-note green">💡 <b>AND:</b> सर्व अटी पूर्ण झाल्या तरच TRUE.<br><b>OR:</b> कोणत्याही एका अट पूर्ण झाल्यास TRUE.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 2: CONDITIONAL AGGREGATION -->
+  <div id="mod2">
+    <h2 class="module-header">📊 Module 2: Conditional Aggregation (SUMIF, COUNTIF &amp; SUBTOTAL)</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="sumif sumifs conditional sum">
+        <div class="card-title">1. SUMIF vs SUMIFS <span class="card-tag">Aggregation</span></div>
+        <div class="card-desc">अटीनुसार बेरीज करणे.</div>
+        <div class="formula-box">=SUMIF(Designation, "Manager", Salary)</div>
+        <div class="formula-box">=SUMIFS(Amount, Transaction_Type, "Online", Debit_Credit, "Credit")</div>
+        <div class="sticky-note yellow">💡 SUMIFS मध्ये पहिला आर्ग्युमेंट <b>sum_range</b> (बेरीज करायचा कॉलम) असतो!</div>
+      </div>
+
+      <div class="card" data-search="count counta countblank countif countifs median">
+        <div class="card-title">2. COUNT &amp; Statistical Family <span class="card-tag">Statistics</span></div>
+        <div class="card-desc">सेल्स मोजण्यासाठी व आकडेवारी काढण्यासाठी.</div>
+        <div class="formula-box">=COUNT(C3:T15) ➔ फक्त numbers असणारे सेल्स</div>
+        <div class="formula-box">=COUNTA(C3:U15) ➔ भरलेले सर्व सेल्स (Text+Num)</div>
+        <div class="formula-box">=COUNTIF(Trans_Type, "Debit") ➔ अटीनुसार मोजणे</div>
+        <div class="formula-box">=MEDIAN(J7:J44) ➔ मध्यक संख्या काढणे</div>
+      </div>
+
+      <div class="card" data-search="subtotal filter subtotal">
+        <div class="card-title">3. SUBTOTAL Function <span class="card-tag">Filtered Sum</span></div>
+        <div class="card-desc">फिल्टर केलेल्या डेटावर अचूक बेरीज व सरासरी काढणे.</div>
+        <div class="formula-box">=SUBTOTAL(9, C3:C100) ➔ Filtered Visible Cells Total</div>
+        <div class="formula-box">=SUBTOTAL(109, C3:C100) ➔ Manually Hidden + Filtered Total</div>
+        <div class="sticky-note pink">💡 <b>कोड ९:</b> SUM ची बेरीज करण्यासाठी वापरतात.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 3: TEXT FUNCTIONS -->
+  <div id="mod3">
+    <h2 class="module-header">🔤 Module 3: Text Functions (टेक्स्ट हाताळणी)</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="trim upper lower proper len text">
+        <div class="card-title">1. Text Cleaning &amp; Formatting <span class="card-tag">Text</span></div>
+        <div class="formula-box">=TRIM("  Rahul   Dravid  ") ➔ "Rahul Dravid"</div>
+        <div class="formula-box">=LEN("Mumbai") ➔ 6</div>
+        <div class="formula-box">=UPPER("mumbai") ➔ "MUMBAI"</div>
+        <div class="formula-box">=PROPER("rahul patil") ➔ "Rahul Patil"</div>
+      </div>
+
+      <div class="card" data-search="left right mid search concat substitute flash fill">
+        <div class="card-title">2. Text Extraction &amp; Join <span class="card-tag">Text Extraction</span></div>
+        <div class="formula-box">=LEFT("Mumbai -400086", 6) ➔ "Mumbai"</div>
+        <div class="formula-box">=RIGHT("Mumbai -400086", 6) ➔ "400086"</div>
+        <div class="formula-box">=MID("IV-RAHUL-986", 4, 5) ➔ "RAHUL"</div>
+        <div class="formula-box">=SUBSTITUTE("98765-44444", "-", "") ➔ "9876544444"</div>
+        <div class="sticky-note green">⚡ <b>Shortcut:</b> <code>Ctrl + E</code> (Flash Fill) वापरून नमुना टाईप करून डेटा सेपरेट करा!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 4: DATE & TIME -->
+  <div id="mod4">
+    <h2 class="module-header">📅 Module 4: Date &amp; Time Functions</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="today now text datedif edate eomonth networkdays">
+        <div class="card-title">1. Essential Date Functions <span class="card-tag">Date</span></div>
+        <div class="formula-box">=TODAY() ➔ आजची तारीख</div>
+        <div class="formula-box">=TEXT(TODAY(), "dddd") ➔ "Monday"</div>
+        <div class="formula-box">=DATEDIF(BirthDate, TODAY(), "Y") ➔ वय (Years)</div>
+        <div class="formula-box">=NETWORKDAYS(StartDate, EndDate) ➔ सुट्ट्या सोडून दिवस</div>
+        <div class="formula-box">=NETWORKDAYS.INTL(Start, End, 11) ➔ Sunday only holiday</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 5: FINANCIAL -->
+  <div id="mod5">
+    <h2 class="module-header">💰 Module 5: Financial Functions (EMI &amp; Loan Modeling)</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="pmt ipmt ppmt pv emi loan">
+        <div class="card-title">1. EMI &amp; Present Value <span class="card-tag">Finance</span></div>
+        <div class="card-desc">कर्जाचा EMI व व्याजाची गणना करणे.</div>
+        <div class="formula-box">=PMT(rate/12, nper, -pv) ➔ महिन्याचा EMI</div>
+        <div class="formula-box">=IPMT(rate/12, per, nper, -pv) ➔ व्याजाचा भाग</div>
+        <div class="formula-box">=PPMT(rate/12, per, nper, -pv) ➔ मुद्दलाचा भाग</div>
+        <div class="formula-box">=PV(13.5%/12, 3*12, -864) ➔ EMI वरून कर्जाची मूळ रक्कम</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 8: XLOOKUP & INDEX-MATCH -->
+  <div id="mod8">
+    <h2 class="module-header">🔍 Module 8: Lookup &amp; Reference Masterclass (XLOOKUP, INDEX+MATCH)</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="xlookup lookup modern left lookup">
+        <div class="card-title">1. XLOOKUP Function <span class="card-tag">Excel 365/2021+</span></div>
+        <div class="card-desc">VLOOKUP चा आधुनिक पर्याय. डावीकडील (Left Side) डेटा सहज शोधतो.</div>
+        <div class="formula-box">=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found])</div>
+        <div class="formula-box">=XLOOKUP("Laptop", Lookup_Master!A2:A17, Lookup_Master!C2:C17, "Not Found")</div>
+        <div class="sticky-note yellow">💡 Column index मोजावा लागत नाही आणि अचूक मॅच (Exact Match) बाय-डिफॉल्ट करतो!</div>
+      </div>
+
+      <div class="card" data-search="index match 2d lookup reverse">
+        <div class="card-title">2. INDEX + MATCH Combination <span class="card-tag">2D Dynamic</span></div>
+        <div class="card-desc">डायनामिक रिव्हर्स लूकअपसाठी सर्वोत्तम कॉम्बिनेशन.</div>
+        <div class="formula-box">=INDEX(return_column, MATCH(lookup_value, lookup_column, 0))</div>
+        <div class="formula-box">=INDEX(Lookup_Master!D2:D17, MATCH(G2, Lookup_Master!A2:A17, 0))</div>
+      </div>
+
+      <div class="card" data-search="iferror error handling">
+        <div class="card-title">3. IFERROR Function <span class="card-tag">Error Handling</span></div>
+        <div class="card-desc">#N/A किंवा #VALUE! चुका लपवून स्वच्छ आऊटपुट दाखवण्यासाठी.</div>
+        <div class="formula-box">=IFERROR(VLOOKUP(A2, Master!A:C, 3, FALSE), "Check Product Name")</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 9: DYNAMIC ARRAYS -->
+  <div id="mod9">
+    <h2 class="module-header">⚡ Module 9: Dynamic Array Formulas (UNIQUE, FILTER, SORTBY)</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="unique dynamic array">
+        <div class="card-title">1. UNIQUE Function <span class="card-tag">Dynamic Array</span></div>
+        <div class="card-desc">मोठ्या डेटामधून डुप्लिकेट्स वगळून युनिक नावांची लिस्ट काढणे.</div>
+        <div class="formula-box">=UNIQUE(Raw_Sales_Data!E2:E501)</div>
+      </div>
+
+      <div class="card" data-search="filter dynamic filter">
+        <div class="card-title">2. FILTER Function <span class="card-tag">Dynamic Filter</span></div>
+        <div class="card-desc">अटीनुसार संपूर्ण टेबलचा डेटा ऑटोमॅटिकली फिल्टर करणे.</div>
+        <div class="formula-box">=FILTER(Raw_Sales_Data!A2:M501, Raw_Sales_Data!F2:F501="Electronics", "No Records")</div>
+      </div>
+
+      <div class="card" data-search="sortby sort dynamic">
+        <div class="card-title">3. SORTBY Function <span class="card-tag">Dynamic Sort</span></div>
+        <div class="card-desc">दुसऱ्या कॉलमच्या आधारे संपूर्ण टेबल सॉर्ट करणे.</div>
+        <div class="formula-box">=SORTBY(Lookup_Master!A2:C17, Lookup_Master!C2:C17, -1)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 10: DATA CLEANING -->
+  <div id="mod10">
+    <h2 class="module-header">🧹 Module 10: Data Cleaning &amp; Scrubbing (डेटा शुद्धीकरण)</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="data cleaning trim proper substitute remove duplicates">
+        <div class="card-title">Data Cleaning Checklist <span class="card-tag">Data Scrubbing</span></div>
+        <div class="formula-box">=TRIM("  Rahul Patil  ") ➔ "Rahul Patil"</div>
+        <div class="formula-box">=PROPER(City), =LOWER(Email) ➔ Text Normalization</div>
+        <div class="formula-box">=SUBSTITUTE("98765-44444", "-", "") ➔ Clean Phone</div>
+        <div class="formula-box">=VALUE("55000") ➔ Convert Text Number to Real Number</div>
+        <div class="sticky-note pink">💡 <b>Remove Duplicates:</b> <code>Data Tab ➔ Remove Duplicates</code> किंवा <code>=COUNTIF($A$2:$A$500, A2)>1</code> हे डुप्लिकेट फ्लॅग फॉर्म्युला वापरा.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 11: PIVOT & DASHBOARD -->
+  <div id="mod11">
+    <h2 class="module-header">📊 Module 11: PivotTable Masterclass &amp; MIS Dashboard</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="pivot table dashboard kpi">
+        <div class="card-title">1. 10 Essential Pivot Scenarios <span class="card-tag">Pivot Table</span></div>
+        <div class="card-desc">Revenue by Region, Profit by Category, Monthly Trend (Date Grouping), Top 10 Products, 2D Matrix Crosstab.</div>
+      </div>
+      <div class="card" data-search="dashboard kpi total revenue profit margin aov">
+        <div class="card-title">2. Executive Dashboard KPIs <span class="card-tag">MIS Dashboard</span></div>
+        <div class="formula-box">Total Revenue = SUM(Revenue)</div>
+        <div class="formula-box">Total Profit = SUM(Profit)</div>
+        <div class="formula-box">Profit Margin % = Total Profit / Total Revenue</div>
+        <div class="formula-box">Average Order Value (AOV) = Total Revenue / Total Orders</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 12: WHAT-IF ANALYSIS -->
+  <div id="mod12">
+    <h2 class="module-header">🎯 Module 12: What-If Analysis &amp; Decision Modeling</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="goal seek scenario manager what if">
+        <div class="card-title">1. Goal Seek <span class="card-tag">Target Finding</span></div>
+        <div class="card-desc">₹२५,००० प्रॉफिट मिळवण्यासाठी किती युनिट्स विकावे लागतील शोधणे.</div>
+        <div class="formula-box">Data Tab ➔ What-If Analysis ➔ Goal Seek</div>
+      </div>
+      <div class="card" data-search="scenario manager best worst case">
+        <div class="card-title">2. Scenario Manager <span class="card-tag">Sensitivity</span></div>
+        <div class="card-desc">Base Case, Best Case (Price +10%, Units +20%), Worst Case (Cost +8%) ची तुलना करणे.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 13: INTERVIEW QUESTIONS -->
+  <div id="mod13">
+    <h2 class="module-header">💼 Module 13: Job Interview Questions &amp; Master Solutions</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="interview question top salesperson contribution variance">
+        <div class="card-title">Top MIS Interview Problems <span class="card-tag">Interview Q&amp;A</span></div>
+        <div class="formula-box">1. Contribution % = Revenue / SUM(Total_Revenue)</div>
+        <div class="formula-box">2. Target Variance = Actual_Sales - Target_Sales</div>
+        <div class="formula-box">3. Duplicate Order Flag = IF(COUNTIF(Order_Range, A2)>1, "Duplicate", "Unique")</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SELF ASSESSMENT QUIZ -->
+  <div id="quiz">
+    <h2 class="module-header">✍️ Self-Assessment Quiz (नवनवीन वर्कबुक्सवर आधारित)</h2>
+    <div class="quiz-item">
+      <div class="quiz-q">प्र. १) VLOOKUP ऐवजी डावीकडील (Left Side) डेटा शोधण्यासाठी कोणता अत्याधुनिक फॉर्म्युला वापरला जातो?</div>
+      <button class="quiz-ans-btn" onclick="toggleQuiz('q1')">उत्तर पहा</button>
+      <div id="q1" class="quiz-ans">=XLOOKUP() किंवा =INDEX(Return_Range, MATCH(Lookup_Val, Lookup_Range, 0))</div>
+    </div>
+
+    <div class="quiz-item">
+      <div class="quiz-q">प्र. २) सेल्स टीममधील फक्त "West" प्रदेशातील युनिक सेल्सपर्सनची डायनामिक लिस्ट तयार करण्याचा फॉर्म्युला सांगा.</div>
+      <button class="quiz-ans-btn" onclick="toggleQuiz('q2')">उत्तर पहा</button>
+      <div id="q2" class="quiz-ans">=UNIQUE(FILTER(Salesperson_Range, Region_Range="West"))</div>
+    </div>
+
+    <div class="quiz-item">
+      <div class="quiz-q">प्र. ३) टेक्सट फॉरमॅटमधील फोन नंबरमधील हायफन (-) काढून टाकण्यासाठी कोणता फॉर्म्युला वापरतात?</div>
+      <button class="quiz-ans-btn" onclick="toggleQuiz('q3')">उत्तर पहा</button>
+      <div id="q3" class="quiz-ans">=SUBSTITUTE(Cell, "-", "")</div>
+    </div>
+
+    <div class="quiz-item">
+      <div class="quiz-q">प्र. ४) पिव्होट टेबलमध्ये टॉप ५ बेस्ट सेलिंग प्रोडक्ट्स कसे फिल्टर करतात?</div>
+      <button class="quiz-ans-btn" onclick="toggleQuiz('q4')">उत्तर पहा</button>
+      <div id="q4" class="quiz-ans">Product Row Dropdown ➔ Value Filters ➔ Top 10 ➔ Change 10 to 5 Items by Revenue.</div>
+    </div>
+
+    <div class="quiz-item">
+      <div class="quiz-q">प्र. ५) ₹२५,००० प्रॉफिट मिळवण्यासाठी आवश्यक युनिट्सची संख्या शोधण्यासाठी कोणते What-If टूल वापरतात?</div>
+      <button class="quiz-ans-btn" onclick="toggleQuiz('q5')">उत्तर पहा</button>
+      <div id="q5" class="quiz-ans">Data Tab ➔ What-If Analysis ➔ Goal Seek</div>
+    </div>
+  </div>
+
+  <footer style="margin-top: 50px; text-align: center; font-family: var(--font-sans); font-size: 0.9rem; color: #64748b;">
+    📘 Advance Excel Master Study Notes • Created with Google Antigravity AI Assistant
+  </footer>
+</div>
+
+<script>
+  function setTheme(themeName) {
+    document.body.className = 'theme-' + themeName;
+  }
+
+  function filterNotes() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      let text = card.textContent.toLowerCase();
+      let searchTag = card.getAttribute('data-search') || '';
+      if (text.includes(input) || searchTag.toLowerCase().includes(input)) {
+        card.style.display = 'block';
       } else {
-        ansDiv.style.display = 'block';
+        card.style.display = 'none';
       }
+    });
+  }
+
+  function toggleQuiz(id) {
+    let ansDiv = document.getElementById(id);
+    if (ansDiv.style.display === 'block') {
+      ansDiv.style.display = 'none';
+    } else {
+      ansDiv.style.display = 'block';
     }
-  
-  </script>Handwritten Theme • Antigravity Coding Assistant</div>
-  </td>
- </tr>
- <![if supportMisalignedColumns]>
- <tr height=0 style='display:none'>
-  <td width=698 style='width:524pt'></td>
-  <td width=422 style='width:317pt'></td>
-  <td width=699 style='width:524pt'></td>
- </tr>
- <![endif]>
-</table>
+  }
+</script>
 
 </body>
-
 </html>
