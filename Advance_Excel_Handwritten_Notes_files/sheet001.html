@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advance Excel - Deep Master Handwritten Notes & Study Hub</title>
+  <title>Advance Excel - Ultimate Master Handwritten Notes & Study Hub</title>
   <!-- Google Fonts for Authentic Handwritten Aesthetic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,7 +82,7 @@
     }
 
     .notebook {
-      max-width: 1250px;
+      max-width: 1280px;
       margin: 0 auto;
       background-color: var(--paper-bg);
       border-left: 3px double var(--margin-color);
@@ -211,7 +211,7 @@
 
   <!-- Top Header & Controls -->
   <div class="top-bar">
-    <h1 class="main-title">📚 Deep Master Handwritten Notes &amp; Study Hub</h1>
+    <h1 class="main-title">📚 Ultimate Excel Master Textbook &amp; Handwritten Hub</h1>
     <div class="theme-controls">
       <button class="theme-btn" onclick="setTheme('ruled')">📝 Ruled Paper</button>
       <button class="theme-btn" onclick="setTheme('yellow')">🟨 Legal Pad</button>
@@ -222,40 +222,44 @@
   </div>
 
   <p style="font-family: var(--font-sans); font-size: 1rem; color: #475569; margin-bottom: 15px;">
-    ✨ <b>संपूर्ण २६ वर्कबुक्सचे सखोल हँडरिटन नोट्स व फॉर्म्युला मास्टर टेक्स्टबुक</b> (Analyzed Inventory: <b>26 Files</b>)
+    ✨ <b>सर्व २६ वर्कबुक्सचे १००% परिपूर्ण व सखोल हँडरिटन टेक्स्टबुक (२० प्रगत मॉड्युल्स)</b> (Analyzed Inventory: <b>26 Files</b>)
   </p>
 
   <!-- Live Search Bar -->
   <div class="search-container">
     <span class="search-icon">🔍</span>
-    <input type="text" id="searchInput" class="search-input" onkeyup="filterNotes()" placeholder="शोधा: फॉर्म्युला (e.g. XLOOKUP, SUMIF, INDEX), संकल्पना किंवा मराठी अर्थ...">
+    <input type="text" id="searchInput" class="search-input" onkeyup="filterNotes()" placeholder="शोधा: कोणत्याही फॉर्म्युला (e.g. XLOOKUP, HLOOKUP, ROUNDUP, ROW, INDEX, Pivot), संकल्पना किंवा मराठी अर्थ...">
   </div>
 
   <!-- Quick Jump Nav Chips -->
   <div class="nav-chips">
-    <a href="#inventory" class="chip">📁 Files Inventory (26)</a>
+    <a href="#inventory" class="chip">📁 Inventory (26)</a>
     <a href="#mod1" class="chip">🧠 Mod 1: Logical</a>
-    <a href="#mod2" class="chip">📊 Mod 2: Aggregations</a>
-    <a href="#mod3" class="chip">🔤 Mod 3: Text</a>
-    <a href="#mod4" class="chip">📅 Mod 4: Date &amp; Time</a>
-    <a href="#mod5" class="chip">💰 Mod 5: Financial</a>
-    <a href="#mod6" class="chip">🎨 Mod 6: Conditional Format</a>
-    <a href="#mod7" class="chip">🗄️ Mod 7: Database</a>
-    <a href="#mod8" class="chip">🔍 Mod 8: Lookups (XLOOKUP)</a>
+    <a href="#mod2" class="chip">📊 Mod 2: Math &amp; Rounding</a>
+    <a href="#mod3" class="chip">📈 Mod 3: Stats &amp; Counting</a>
+    <a href="#mod4" class="chip">🔤 Mod 4: Text Wrangling</a>
+    <a href="#mod5" class="chip">📅 Mod 5: Dates &amp; Days360</a>
+    <a href="#mod6" class="chip">💰 Mod 6: Financial EMI</a>
+    <a href="#mod7" class="chip">🗄️ Mod 7: Database Queries</a>
+    <a href="#mod8" class="chip">🔍 Mod 8: Lookups (V/H/XLOOKUP)</a>
     <a href="#mod9" class="chip">⚡ Mod 9: Dynamic Arrays</a>
-    <a href="#mod10" class="chip">🧹 Mod 10: Data Cleaning</a>
-    <a href="#mod11" class="chip">📊 Mod 11: Pivot &amp; Dashboard</a>
-    <a href="#mod12" class="chip">🎯 Mod 12: What-If Analysis</a>
-    <a href="#mod13" class="chip">⚠️ Mod 13: Excel Errors</a>
-    <a href="#mod14" class="chip">⌨️ Mod 14: Shortcuts</a>
-    <a href="#mod15" class="chip">💼 Mod 15: 50 Interview Q&amp;A</a>
-    <a href="#quiz" class="chip">✍️ Master Quiz</a>
+    <a href="#mod10" class="chip">🧹 Mod 10: Data Scrubbing</a>
+    <a href="#mod11" class="chip">🔒 Mod 11: Data Validation</a>
+    <a href="#mod12" class="chip">📋 Mod 12: Excel Tables</a>
+    <a href="#mod13" class="chip">🎨 Mod 13: Conditional Format</a>
+    <a href="#mod14" class="chip">📊 Mod 14: Pivot &amp; Charts</a>
+    <a href="#mod15" class="chip">💻 Mod 15: MIS Dashboard</a>
+    <a href="#mod16" class="chip">🎯 Mod 16: What-If Analysis</a>
+    <a href="#mod17" class="chip">🔗 Mod 17: 3D Multi-Sheet</a>
+    <a href="#mod18" class="chip">⚠️ Mod 18: Errors Troubleshooting</a>
+    <a href="#mod19" class="chip">⌨️ Mod 19: Shortcuts</a>
+    <a href="#mod20" class="chip">💼 Mod 20: 50 Interview Q&amp;A</a>
+    <a href="#quiz" class="chip">✍️ Master Quiz (20)</a>
   </div>
 
   <!-- SECTION 0: Inventory Breakdown -->
   <div id="inventory">
     <h2 class="module-header">📁 Analyzed Excel Files Breakdown (२६ वर्कबुक्स)</h2>
-    <p style="margin-bottom: 10px;">तुमच्या फोल्डरमधील सर्व २६ Excel फाईल्सचे सखोल ॲनालिसिस करून या मास्टर स्टडी नोट्स तयार केल्या आहेत:</p>
     <table class="notebook-table">
       <thead>
         <tr>
@@ -308,7 +312,7 @@
         <tr>
           <td><b>DATE FUNCTION.xlsx</b></td>
           <td>1 Sheet</td>
-          <td>TODAY, NOW, YEAR, MONTH, DAY, DATE, DATEDIF, EDATE, EOMONTH, NETWORKDAYS, DAYS</td>
+          <td>TODAY, NOW, YEAR, MONTH, DAY, DATE, DATEDIF, EDATE, EOMONTH, NETWORKDAYS, DAYS, DAYS360, WEEKDAY</td>
         </tr>
         <tr>
           <td><b>Database Function.xlsx</b></td>
@@ -318,7 +322,7 @@
         <tr>
           <td><b>MIS Test Paper.xlsx</b></td>
           <td>17 Sheets</td>
-          <td>11 Practical MIS Test Modules (Text extraction, Pivot Tables, SUMIF, VLOOKUP)</td>
+          <td>11 Practical MIS Test Modules (Text extraction, Pivot Tables, SUMIF, VLOOKUP, 3D Link)</td>
         </tr>
       </tbody>
     </table>
@@ -326,7 +330,7 @@
 
   <!-- MODULE 1: LOGICAL FUNCTIONS -->
   <div id="mod1">
-    <h2 class="module-header">🧠 Module 1: Logical Functions Masterclass (सखोल लॉजिकल फॉर्म्युले)</h2>
+    <h2 class="module-header">🧠 Module 1: Logical Functions Masterclass (IF, IFS, AND, OR, NOT, SWITCH)</h2>
     <div class="cards-grid">
       <div class="card" data-search="if conditional logic bonus commission">
         <div class="card-title">1. IF Function Syntax &amp; Deep Rules <span class="card-tag">Logical</span></div>
@@ -351,12 +355,12 @@
         </div>
       </div>
 
-      <div class="card" data-search="and or not combined logic eligibility">
-        <div class="card-title">3. AND &amp; OR Truth Tables <span class="card-tag">Multi-Condition</span></div>
-        <div class="card-desc">अनेक अटी एकत्र लॉजिकली जोडण्यासाठी.</div>
+      <div class="card" data-search="and or not combined logic eligibility switch">
+        <div class="card-title">3. AND, OR, NOT &amp; SWITCH Functions <span class="card-tag">Multi-Condition</span></div>
+        <div class="card-desc">अनेक अटी एकत्र लॉजिकली जोडण्यासाठी व व्हॅल्यू मॅच करण्यासाठी.</div>
         <div class="formula-box">=IF(AND(Branch="Borivali", Salary>=15000), "Eligible", "Not Eligible")</div>
         <div class="formula-box">=IF(OR(Department="Sales", Department="Marketing"), "Sales Team", "Other")</div>
-        <div class="formula-box">=IF(AND(OR(Region="West", Region="South"), Revenue>50000), "Top Performers", "Regular")</div>
+        <div class="formula-box">=SWITCH(Region, "West", "Mumbai HQ", "South", "Chennai HQ", "Delhi HQ")</div>
         <div class="sticky-note green">
           💡 <b>AND:</b> सर्व अटी एकत्र पूर्ण झाल्या तरच TRUE आऊटपुट.<br>
           💡 <b>OR:</b> कोणतीही १ अट पूर्ण झाल्यास TRUE आऊटपुट.
@@ -365,31 +369,29 @@
     </div>
   </div>
 
-  <!-- MODULE 2: AGGREGATION & MATH/STATS -->
+  <!-- MODULE 2: MATH & AGGREGATION & ROUNDING -->
   <div id="mod2">
-    <h2 class="module-header">📊 Module 2: Aggregations &amp; Conditional Math/Stats</h2>
+    <h2 class="module-header">📊 Module 2: Math, Aggregations &amp; Rounding Masterclass</h2>
     <div class="cards-grid">
-      <div class="card" data-search="sumif sumifs conditional sum date range">
-        <div class="card-title">1. SUMIF vs SUMIFS Deep Breakdown <span class="card-tag">Aggregation</span></div>
-        <div class="card-desc">अटीनुसार डेटाची अचूक बेरीज करणे.</div>
-        <div class="formula-box">=SUMIF(range, criteria, [sum_range])</div>
+      <div class="card" data-search="sumif sumifs conditional sum date range sumproduct">
+        <div class="card-title">1. SUMIF, SUMIFS &amp; SUMPRODUCT <span class="card-tag">Math &amp; Aggregation</span></div>
+        <div class="card-desc">अटीनुसार बेरीज व Weighted Average काढणे.</div>
         <div class="formula-box">=SUMIF(Designation, "Manager", Salary)</div>
         <div class="formula-box">=SUMIFS(Amount, Transaction_Type, "Online", Debit_Credit, "Credit")</div>
-        <div class="formula-box">=SUMIFS(Revenue, Order_Date, ">=2025-01-01", Order_Date, "<=2025-12-31")</div>
+        <div class="formula-box">=SUMPRODUCT(Qty_Range, Rate_Range) ➔ Weighted Total Sales</div>
         <div class="sticky-note yellow">
-          📌 <b>काल्पनिक चूक टाळा:</b> SUMIFS मध्ये पहिला पॅरामीटर <b>sum_range</b> (ज्या कॉलमची बेरीज करायची आहे) असतो, तर SUMIF मध्ये तो शेवटी असतो!
+          📌 <b>काल्पनिक चूक टाळा:</b> SUMIFS मध्ये पहिला पॅरामीटर <b>sum_range</b> (बेरीज करायचा कॉलम) असतो, तर SUMIF मध्ये तो शेवटी असतो!
         </div>
       </div>
 
-      <div class="card" data-search="count counta countblank countif countifs median mode large small">
-        <div class="card-title">2. COUNT Family &amp; Statistical Formulas <span class="card-tag">Statistics</span></div>
-        <div class="card-desc">सेल्स मोजणी व नमुना स्टॅटिस्टिक्स.</div>
-        <div class="formula-box">=COUNT(Range) ➔ फक्त Numerical सेल्स मोजते</div>
-        <div class="formula-box">=COUNTA(Range) ➔ भरलेले सर्व सेल्स (Text + Number) मोजते</div>
-        <div class="formula-box">=COUNTBLANK(Range) ➔ रिकामे (Empty) सेल्स मोजते</div>
-        <div class="formula-box">=COUNTIF(Attendance_Range, "P") ➔ हजेरी मोजणे</div>
-        <div class="formula-box">=COUNTIFS(Dept, "IT", Location, "Pune") ➔ IT मधील पुण्याचे कर्मचारी</div>
-        <div class="formula-box">=LARGE(Salary_Range, 2) ➔ २ र्या क्रमांकाचा सर्वोच्च पगार</div>
+      <div class="card" data-search="round roundup rounddown int trunc">
+        <div class="card-title">2. Rounding &amp; Truncation Functions <span class="card-tag">Rounding</span></div>
+        <div class="card-desc">पैशांचे व आकडेवारीचे अचूक राउंडिंग करणे.</div>
+        <div class="formula-box">=ROUND(123.456, 2) ➔ 123.46</div>
+        <div class="formula-box">=ROUNDUP(123.11, 0) ➔ 124 (वरच्या पूर्णांकात वाढवणे)</div>
+        <div class="formula-box">=ROUNDUP(MONTH(Order_Date)/3, 0) ➔ Quarter 1 ते 4 काढणे</div>
+        <div class="formula-box">=ROUNDDOWN(123.99, 0) ➔ 123</div>
+        <div class="formula-box">=INT(123.85) ➔ 123 (पूर्णांक भाग)</div>
       </div>
 
       <div class="card" data-search="subtotal code 9 code 109 filtered sum">
@@ -404,52 +406,74 @@
     </div>
   </div>
 
-  <!-- MODULE 3: TEXT FUNCTIONS -->
+  <!-- MODULE 3: STATISTICAL & COUNTING -->
   <div id="mod3">
-    <h2 class="module-header">🔤 Module 3: Text Manipulation &amp; Data Wrangling</h2>
+    <h2 class="module-header">📈 Module 3: Statistical &amp; Counting Functions</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="count counta countblank countif countifs median mode large small randbetween">
+        <div class="card-title">COUNT Family &amp; Statistical Formulas <span class="card-tag">Statistics</span></div>
+        <div class="card-desc">सेल्स मोजणी, सर्वोच्च/कनिष्ठ मूल्ये व डमी डेटा.</div>
+        <div class="formula-box">=COUNT(Range) ➔ फक्त Numerical सेल्स मोजते</div>
+        <div class="formula-box">=COUNTA(Range) ➔ भरलेले सर्व सेल्स (Text + Number) मोजते</div>
+        <div class="formula-box">=COUNTBLANK(Range) ➔ रिकामे (Empty) सेल्स मोजते</div>
+        <div class="formula-box">=COUNTIF(Attendance_Range, "P") ➔ हजेरी मोजणे</div>
+        <div class="formula-box">=COUNTIFS(Dept, "IT", Location, "Pune") ➔ IT मधील पुण्याचे कर्मचारी</div>
+        <div class="formula-box">=LARGE(Salary_Range, 2) ➔ २ र्या क्रमांकाचा सर्वोच्च पगार</div>
+        <div class="formula-box">=SMALL(Salary_Range, 1) ➔ सर्वात कमी पगार</div>
+        <div class="formula-box">=RANDBETWEEN(100, 999) ➔ डमी डेटासाठी रँडम नंबर</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 4: TEXT MANIPULATION -->
+  <div id="mod4">
+    <h2 class="module-header">🔤 Module 4: Text Manipulation &amp; String Wrangling</h2>
     <div class="cards-grid">
       <div class="card" data-search="trim clean upper lower proper len search find">
-        <div class="card-title">1. Text Cleaning &amp; Length Inspection <span class="card-tag">Text Wrangling</span></div>
+        <div class="card-title">1. Text Cleaning &amp; Search <span class="card-tag">Text Wrangling</span></div>
         <div class="formula-box">=TRIM("  Rahul   Patil  ") ➔ "Rahul Patil" (अतिरिक्त स्पेसेस काढणे)</div>
         <div class="formula-box">=CLEAN(Text) ➔ नॉन-प्रिंटिंग कॅरेक्टर्स काढणे</div>
         <div class="formula-box">=LEN("Mumbai") ➔ 6 (अक्षरांची संख्या)</div>
-        <div class="formula-box">=SEARCH("a", "Mumbai", 1) ➔ 5 (अक्षराचा इंडेक्स शोधणे)</div>
+        <div class="formula-box">=SEARCH("a", "Mumbai", 1) ➔ 5 (Case-insensitive शोध)</div>
+        <div class="formula-box">=FIND("A", "Mumbai", 1) ➔ Case-sensitive शोध</div>
       </div>
 
       <div class="card" data-search="left right mid substitute replace textjoin flash fill">
-        <div class="card-title">2. Text Extraction &amp; Concatenation <span class="card-tag">Text Extraction</span></div>
+        <div class="card-title">2. Text Extraction, Replace &amp; Join <span class="card-tag">Text Extraction</span></div>
         <div class="formula-box">=LEFT("Mumbai -400086", 6) ➔ "Mumbai"</div>
         <div class="formula-box">=RIGHT("Mumbai -400086", 6) ➔ "400086"</div>
         <div class="formula-box">=MID("IV-RAHUL-986", 4, 5) ➔ "RAHUL"</div>
         <div class="formula-box">=SUBSTITUTE("98765-44444", "-", "") ➔ "9876544444"</div>
+        <div class="formula-box">=REPLACE("INV-2025-01", 5, 4, "2026") ➔ "INV-2026-01"</div>
         <div class="formula-box">=TEXTJOIN(", ", TRUE, A2:A10) ➔ कॉमा देऊन नावे जोडणे</div>
         <div class="sticky-note green">⚡ <b>Pro Tip:</b> <code>Ctrl + E</code> (Flash Fill) वापरून कोणताही फॉर्म्युला न लिहिता नमुन्यावरून टेक्स्ट ऑटो-सेपरेट करा!</div>
       </div>
     </div>
   </div>
 
-  <!-- MODULE 4: DATE & TIME -->
-  <div id="mod4">
-    <h2 class="module-header">📅 Module 4: Date &amp; Time Calculations</h2>
+  <!-- MODULE 5: DATE & TIME -->
+  <div id="mod5">
+    <h2 class="module-header">📅 Module 5: Date &amp; Time Masterclass (DAYS360, WEEKDAY, NETWORKDAYS)</h2>
     <div class="cards-grid">
-      <div class="card" data-search="today now text datedif edate eomonth networkdays workday">
-        <div class="card-title">1. Complete Date Functions Guide <span class="card-tag">Date &amp; Time</span></div>
+      <div class="card" data-search="today now text datedif edate eomonth networkdays workday days360 weekday">
+        <div class="card-title">Complete Date Functions Guide <span class="card-tag">Date &amp; Time</span></div>
         <div class="formula-box">=TODAY() ➔ आजची तारीख</div>
         <div class="formula-box">=NOW() ➔ आजची तारीख + चालू वेळ</div>
         <div class="formula-box">=TEXT(TODAY(), "dddd") ➔ वार (e.g. "Monday")</div>
-        <div class="formula-box">=TEXT(TODAY(), "mmmm-yyyy") ➔ "September-2026"</div>
+        <div class="formula-box">=WEEKDAY(TODAY(), 2) ➔ वाराचा क्रमांक (1=Mon, 7=Sun)</div>
         <div class="formula-box">=DATEDIF(BirthDate, TODAY(), "Y") ➔ पूर्ण झालेले वय (वर्षे)</div>
         <div class="formula-box">=EDATE(StartDate, 6) ➔ ६ महिन्यांनंतरची फ्युचर तारीख</div>
         <div class="formula-box">=EOMONTH(StartDate, 0) ➔ चालू महिन्याची शेवटची तारीख</div>
         <div class="formula-box">=NETWORKDAYS(StartDate, EndDate, Holidays) ➔ सुट्ट्या सोडून कामाचे दिवस</div>
         <div class="formula-box">=NETWORKDAYS.INTL(Start, End, 11) ➔ फक्त रविवारीच (Sunday=11) सुट्टी असताना दिवस</div>
+        <div class="formula-box">=DAYS360(Start, End) ➔ ३६० दिवसांच्या फायनान्शियल कॅलेंडरनुसार दिवस</div>
       </div>
     </div>
   </div>
 
-  <!-- MODULE 5: FINANCIAL -->
-  <div id="mod5">
-    <h2 class="module-header">💰 Module 5: Financial Functions &amp; Loan Amortization</h2>
+  <!-- MODULE 6: FINANCIAL -->
+  <div id="mod6">
+    <h2 class="module-header">💰 Module 6: Financial Engineering &amp; Loan Amortization</h2>
     <div class="cards-grid">
       <div class="card" data-search="pmt ipmt ppmt pv emi loan amortization">
         <div class="card-title">1. Loan EMI &amp; Interest Split <span class="card-tag">Financial</span></div>
@@ -465,17 +489,32 @@
     </div>
   </div>
 
-  <!-- MODULE 8: XLOOKUP & INDEX-MATCH -->
+  <!-- MODULE 7: DATABASE FUNCTIONS -->
+  <div id="mod7">
+    <h2 class="module-header">🗄️ Module 7: Database Functions (DSUM, DAVERAGE, DCOUNT, DGET)</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="dsum daverage dcount dmax dmin dget database">
+        <div class="card-title">Structured Database Queries <span class="card-tag">Database</span></div>
+        <div class="card-desc">टेबल डेटाबेसवर क्रायटेरिया देऊन फिल्टर गणना करणे.</div>
+        <div class="formula-box">=DSUM(A1:F100, "Salary", H1:I2) ➔ अटीनुसार डेटाबेस बेरीज</div>
+        <div class="formula-box">=DAVERAGE(A1:F100, "Salary", H1:I2) ➔ डेटाबेस सरासरी</div>
+        <div class="formula-box">=DCOUNT(A1:F100, "Emp_ID", H1:I2) ➔ संख्या मोजणे</div>
+        <div class="formula-box">=DGET(A1:F100, "Salary", H1:I2) ➔ युनिक सेलमधील व्हॅल्यू काढणे</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 8: LOOKUPS -->
   <div id="mod8">
-    <h2 class="module-header">🔍 Module 8: Lookup &amp; Reference Masterclass (VLOOKUP, XLOOKUP, INDEX+MATCH)</h2>
+    <h2 class="module-header">🔍 Module 8: Master Lookup &amp; Reference (VLOOKUP, HLOOKUP, XLOOKUP, INDEX+MATCH)</h2>
     <div class="cards-grid">
       <div class="card" data-search="vlookup hlookup lookup exact match">
-        <div class="card-title">1. VLOOKUP Syntax &amp; Limitations <span class="card-tag">Traditional Lookup</span></div>
-        <div class="card-desc">उभ्या (Vertical) टेबलमधून डेटा शोधण्यासाठी.</div>
+        <div class="card-title">1. VLOOKUP &amp; HLOOKUP <span class="card-tag">Traditional Lookup</span></div>
+        <div class="card-desc">उभ्या (Vertical) व आडव्या (Horizontal) टेबलमधून डेटा शोधणे.</div>
         <div class="formula-box">=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</div>
-        <div class="formula-box">=VLOOKUP(A2, Lookup_Master!A:E, 3, FALSE)</div>
+        <div class="formula-box">=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</div>
         <div class="sticky-note pink">
-          ⚠️ <b>VLOOKUP च्या मर्यादा:</b> डावीकडील (Left Side) डेटा शोधता येत नाही, आणि मध्ये नवीन कॉलम इन्सर्ट केल्यास फॉर्म्युला ब्लॉक होतो.
+          ⚠️ <b>VLOOKUP च्या मर्यादा:</b> डावीकडील (Left Side) डेटा शोधता येत नाही.
         </div>
       </div>
 
@@ -485,25 +524,17 @@
         <div class="formula-box">=XLOOKUP(lookup_val, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</div>
         <div class="formula-box">=XLOOKUP("Laptop", Lookup_Master!A2:A17, Lookup_Master!C2:C17, "Not Found")</div>
         <div class="sticky-note yellow">
-          ✨ <b>XLOOKUP चे फायदे:</b><br>
-          १) डाव्या बाजूचा (Left Lookup) डेटा सहजरित्या शोधतो.<br>
-          २) Column index मोजावा लागत नाही.<br>
-          ३) Exact Match बाय-डिफॉल्ट करतो.<br>
-          ४) न सापडल्यास संदेश देण्याची सोय <code>[if_not_found]</code> मध्ये उपलब्ध!
+          ✨ <b>XLOOKUP चे फायदे:</b> Left Lookup समर्थित, Exact Match बाय-डिफॉल्ट, <code>[if_not_found]</code> मध्ये मेसेज.
         </div>
       </div>
 
-      <div class="card" data-search="index match 2d lookup reverse dynamic">
-        <div class="card-title">3. INDEX + MATCH (2D Dynamic Matrix) <span class="card-tag">Dynamic Reference</span></div>
-        <div class="card-desc">रिव्हर्स लूकअप आणि २-वे टेबल मॅट्रिक्स शोधण्यासाठी.</div>
+      <div class="card" data-search="index match 2d lookup reverse dynamic row column indirect offset">
+        <div class="card-title">3. INDEX+MATCH, ROW, COLUMN, INDIRECT, OFFSET <span class="card-tag">Dynamic Reference</span></div>
+        <div class="card-desc">२-वे डायनामिक लूकअप व डायनामिक रेंजेस.</div>
         <div class="formula-box">=INDEX(return_column, MATCH(lookup_val, lookup_column, 0))</div>
-        <div class="formula-box">=INDEX(Lookup_Master!D2:D17, MATCH(G2, Lookup_Master!A2:A17, 0))</div>
-      </div>
-
-      <div class="card" data-search="iferror error handling fallback">
-        <div class="card-title">4. IFERROR &amp; IFNA Error Handling <span class="card-tag">Error Handling</span></div>
-        <div class="card-desc">#N/A किंवा #VALUE! चुका लपवून रिपोर्ट नीट ठेवणे.</div>
-        <div class="formula-box">=IFERROR(VLOOKUP(A2, Master!A:C, 3, FALSE), "Check Product Name")</div>
+        <div class="formula-box">=ROW(A1) ➔ 1 | =COLUMN(B1) ➔ 2</div>
+        <div class="formula-box">=INDIRECT("'Sheet" &amp; A1 &amp; "'!B5") ➔ डायनामिक शीट लिंक</div>
+        <div class="formula-box">=OFFSET(A1, 2, 3, 5, 1) ➔ डायनामिक रेंज तयार करणे</div>
       </div>
     </div>
   </div>
@@ -522,7 +553,6 @@
         <div class="card-title">2. FILTER Function <span class="card-tag">Dynamic Filter</span></div>
         <div class="card-desc">अटीनुसार संपूर्ण टेबलचा डेटा ऑटोमॅटिकली सेपरेट करणे.</div>
         <div class="formula-box">=FILTER(Raw_Sales_Data!A2:M501, Raw_Sales_Data!F2:F501="Electronics", "No Records")</div>
-        <div class="formula-box">=FILTER(Raw_Sales_Data!A2:M501, (Raw_Sales_Data!C2:C501="West") * (Raw_Sales_Data!K2:K501>50000))</div>
       </div>
 
       <div class="card" data-search="sort sortby sequence dynamic">
@@ -534,119 +564,154 @@
     </div>
   </div>
 
-  <!-- MODULE 10: DATA CLEANING -->
+  <!-- MODULE 10: DATA SCRUBBING -->
   <div id="mod10">
-    <h2 class="module-header">🧹 Module 10: Data Cleaning &amp; Scrubbing (डेटा शुद्धीकरण)</h2>
+    <h2 class="module-header">🧹 Module 10: Data Scrubbing &amp; Data Preparation</h2>
     <div class="cards-grid">
-      <div class="card" data-search="data cleaning trim proper substitute remove duplicates data validation">
-        <div class="card-title">Data Cleaning Checklist &amp; Validation <span class="card-tag">Data Scrubbing</span></div>
+      <div class="card" data-search="data cleaning trim proper substitute remove duplicates text to columns">
+        <div class="card-title">Data Cleaning Techniques <span class="card-tag">Data Preparation</span></div>
         <div class="formula-box">=TRIM("  Rahul Patil  ") ➔ "Rahul Patil"</div>
-        <div class="formula-box">=PROPER(City), =LOWER(Email) ➔ Text Normalization</div>
-        <div class="formula-box">=SUBSTITUTE("98765-44444", "-", "") ➔ Clean Phone</div>
-        <div class="formula-box">=VALUE("55000") किंवा --"55000" ➔ Convert String to Number</div>
-        <div class="sticky-note pink">
-          💡 <b>Data Validation Dropdown:</b> <code>Data Tab ➔ Data Validation ➔ Allow: List ➔ Source: Region_List</code><br>
-          💡 <b>Remove Duplicates:</b> <code>Data Tab ➔ Remove Duplicates</code> किंवा <code>=COUNTIF($A$2:$A$500, A2)>1</code> हे डुप्लिकेट फ्लॅग फॉर्म्युला वापरा.
+        <div class="formula-box">=PROPER(City), =LOWER(Email) ➔ Case Normalization</div>
+        <div class="formula-box">=SUBSTITUTE("98765-44444", "-", "") ➔ Clean Phone Numbers</div>
+        <div class="formula-box">=VALUE("55000") किंवा --"55000" ➔ String to Number</div>
+        <div class="formula-box">Text-to-Columns: Data Tab ➔ Text-to-Columns (Delimited by Comma / Space)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 11: DATA VALIDATION -->
+  <div id="mod11">
+    <h2 class="module-header">🔒 Module 11: Data Validation &amp; Input Restrictions</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="data validation dropdown list input message error alert">
+        <div class="card-title">Data Validation Rules <span class="card-tag">Data Integrity</span></div>
+        <div class="card-desc">चुकीचा डेटा सेलमधील टाईपिंगमध्ये रोखणे.</div>
+        <div class="formula-box">Data Tab ➔ Data Validation ➔ Allow: List ➔ Source: West, East, North, South</div>
+        <div class="formula-box">Text Length Restriction: Allow: Text Length ➔ Equal to 10 (Mobile Number)</div>
+        <div class="formula-box">Custom Formula Validation: =ISNUMBER(SEARCH("@", A2)) (Valid Email)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 12: EXCEL TABLES -->
+  <div id="mod12">
+    <h2 class="module-header">📋 Module 12: Excel Tables &amp; Structured Referencing</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="excel table ctrl t structured reference total row">
+        <div class="card-title">Excel Tables (Ctrl + T) <span class="card-tag">Automation</span></div>
+        <div class="card-desc">डेटाला ऑटो-एक्स्पँडिंग टेबलमध्ये कन्व्हर्ट करणे.</div>
+        <div class="formula-box">Shortcut: Ctrl + T ➔ Create Table</div>
+        <div class="formula-box">Structured Reference: =SUM(SalesTable[Revenue])</div>
+        <div class="formula-box">Current Row Reference: =SalesTable[@Price] * SalesTable[@Units]</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 13: CONDITIONAL FORMATTING DEEP RULES -->
+  <div id="mod13">
+    <h2 class="module-header">🎨 Module 13: Conditional Formatting Deep Rules &amp; Row Highlighting</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="conditional formatting whole row highlight weekend expiry date">
+        <div class="card-title">Custom Formula Formatting Rules <span class="card-tag">Formatting</span></div>
+        <div class="formula-box">Highlight Whole Row: =$E2="West" (Absolute column $E, relative row 2)</div>
+        <div class="formula-box">Highlight Weekends: =WEEKDAY($A2, 2)>5 (Saturday &amp; Sunday)</div>
+        <div class="formula-box">Highlight Due/Expired Dates: =$A2<TODAY()</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 14: PIVOT & CHARTS -->
+  <div id="mod14">
+    <h2 class="module-header">📊 Module 14: PivotTable &amp; Pivot Chart Masterclass</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="pivot table date grouping calculated field slicer timeline report connection">
+        <div class="card-title">Advanced PivotTable Features <span class="card-tag">Pivot Analytics</span></div>
+        <div class="card-desc">
+          १) Date Grouping (Years, Quarters, Months)<br>
+          २) Value Display: <code>% of Grand Total</code>, <code>% Difference From</code><br>
+          ३) Calculated Field: <code>=Profit / Revenue</code><br>
+          ४) Slicers &amp; Timelines: Report Connections द्वारे अनेक पिव्होट टेबल जोडणे!
         </div>
       </div>
     </div>
   </div>
 
-  <!-- MODULE 11: PIVOT & DASHBOARD -->
-  <div id="mod11">
-    <h2 class="module-header">📊 Module 11: PivotTable Masterclass &amp; MIS Dashboard Architecture</h2>
+  <!-- MODULE 15: MIS DASHBOARD -->
+  <div id="mod15">
+    <h2 class="module-header">💻 Module 15: MIS Dashboard Architecture &amp; Executive KPIs</h2>
     <div class="cards-grid">
-      <div class="card" data-search="pivot table date grouping calculated field slicer">
-        <div class="card-title">1. 10 Essential Pivot Scenarios <span class="card-tag">Pivot Table</span></div>
-        <div class="card-desc">
-          १) Revenue by Region<br>
-          २) Profit by Category<br>
-          ३) Monthly Trend (Order_Date Grouped by Months)<br>
-          ४) Salesperson Performance (Revenue + Profit)<br>
-          <ctrl42> Customer Type Breakdown<br>
-          ६) Payment Mode Split<br>
-          ७) Top 10 Products (Value Filter ➔ Top 10)<br>
-          ८) Region x Category Crosstab Matrix<br>
-          ९) Monthly Region Trend (2D Pivot)<br>
-          १०) Profit Margin % by Category (Calculated Field: <code>=Profit / Revenue</code>)
-        </div>
-      </div>
-
-      <div class="card" data-search="dashboard kpi total revenue profit margin aov slicer visual">
-        <div class="card-title">2. Executive MIS Dashboard KPIs <span class="card-tag">MIS Dashboard</span></div>
+      <div class="card" data-search="dashboard kpi total revenue profit margin aov slicer visual chart">
+        <div class="card-title">Executive MIS Dashboard Layout <span class="card-tag">Dashboard</span></div>
         <div class="formula-box">Total Revenue = SUM(Revenue)</div>
-        <div class="formula-box">Total Cost = SUM(Cost)</div>
         <div class="formula-box">Total Profit = SUM(Profit)</div>
         <div class="formula-box">Profit Margin % = Total Profit / Total Revenue</div>
         <div class="formula-box">Average Order Value (AOV) = Total Revenue / Total Orders</div>
-        <div class="sticky-note green">
-          📊 <b>Visual Charts:</b> Regional Revenue Column Chart, Category Profit Pie Chart, Monthly Trend Line Chart, Top 5 Products Bar Chart, व Dynamic Region Slicer Dropdown!
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- MODULE 12: WHAT-IF ANALYSIS -->
-  <div id="mod12">
-    <h2 class="module-header">🎯 Module 12: What-If Analysis &amp; Decision Modeling</h2>
+  <!-- MODULE 16: WHAT-IF ANALYSIS -->
+  <div id="mod16">
+    <h2 class="module-header">🎯 Module 16: What-If Analysis &amp; Financial Sensitivity Modeling</h2>
     <div class="cards-grid">
       <div class="card" data-search="goal seek scenario manager data table sensitivity">
-        <div class="card-title">1. Goal Seek <span class="card-tag">Target Finding</span></div>
-        <div class="card-desc">₹२५,००० प्रॉफिट मिळवण्यासाठी किती युनिट्स विकावे लागतील शोधणे.</div>
-        <div class="formula-box">Data Tab ➔ What-If Analysis ➔ Goal Seek</div>
-        <div class="formula-box">Set Cell: Profit_Cell | To Value: 25000 | By Changing: Units_Cell</div>
-      </div>
-
-      <div class="card" data-search="scenario manager best worst case">
-        <div class="card-title">2. Scenario Manager <span class="card-tag">Sensitivity Analysis</span></div>
-        <div class="card-desc">व्यवसायातील Base Case, Best Case व Worst Case ची तुलना करणे.</div>
-        <div class="formula-box">Best Case: Price +10%, Units +20%</div>
-        <div class="formula-box">Worst Case: Cost +8%, Price -5%</div>
-        <div class="sticky-note yellow">
-          💡 Scenario Summary Report जनरेट करून एकाच क्लिकवर सर्व परिस्थितींचा तक्ता मिळवता येतो!
-        </div>
+        <div class="card-title">Goal Seek &amp; Scenario Manager <span class="card-tag">Decision Modeling</span></div>
+        <div class="formula-box">Goal Seek: Data Tab ➔ What-If ➔ Goal Seek (Set Cell Profit = 25000)</div>
+        <div class="formula-box">Scenario Manager: Base, Best (+10% Price, +20% Qty), Worst (+8% Cost)</div>
       </div>
     </div>
   </div>
 
-  <!-- MODULE 13: EXCEL ERRORS -->
-  <div id="mod13">
-    <h2 class="module-header">⚠️ Module 13: Excel Errors &amp; Diagnostic Troubleshooting Guide</h2>
+  <!-- MODULE 17: 3D FORMULAS -->
+  <div id="mod17">
+    <h2 class="module-header">🔗 Module 17: 3D Formulas &amp; Multi-Sheet Linking</h2>
     <div class="cards-grid">
-      <div class="card" data-search="error na value ref div name spill">
-        <div class="card-title">Excel Common Errors &amp; Solutions <span class="card-tag">Troubleshooting</span></div>
-        <div class="formula-box">#N/A ➔ Value Not Available (VLOOKUP key न सापडणे). IFERROR वापरा किंवा TRIM करा.</div>
-        <div class="formula-box">#VALUE! ➔ Wrong Data Type (नंबर ऐवजी टेक्स्टची बेरीज करणे). VALUE() वापरा.</div>
-        <div class="formula-box">#REF! ➔ Invalid Cell Reference (रो किंवा कॉलम डिलीट झाल्याने तुटलेली लिंक).</div>
-        <div class="formula-box">#DIV/0! ➔ Division by Zero (शून्याने भागणे). IF(B2=0, 0, A2/B2) लिहा.</div>
-        <div class="formula-box">#NAME? ➔ Formula Spelling Typo (फॉर्म्युला नाव चुकीचे असणे किंवा unquoted text).</div>
-        <div class="formula-box">##### ➔ Column Width Small (कॉलमची रुंदी कमी पडणे). बॉर्डरवर डबल क्लिक करा.</div>
-        <div class="formula-box">#SPILL! ➔ Dynamic Array Spill Blocked (खालील सेल्समध्ये डेटा असल्याने जागा अडकणे).</div>
+      <div class="card" data-search="3d formula multi sheet indirect linking">
+        <div class="card-title">Cross-Sheet Linking <span class="card-tag">Multi-Sheet</span></div>
+        <div class="formula-box">3D Sum across 12 months: =SUM('Jan:Dec'!B5)</div>
+        <div class="formula-box">Dynamic Sheet Lookup: =INDIRECT("'" &amp; A2 &amp; "'!C10")</div>
       </div>
     </div>
   </div>
 
-  <!-- MODULE 14: KEYBOARD SHORTCUTS -->
-  <div id="mod14">
-    <h2 class="module-header">⌨️ Module 14: Keyboard Shortcuts &amp; Enterprise Efficiency Hacks</h2>
+  <!-- MODULE 18: ERROR TROUBLESHOOTING -->
+  <div id="mod18">
+    <h2 class="module-header">⚠️ Module 18: Excel Errors Diagnostic &amp; Troubleshooting Guide</h2>
+    <div class="cards-grid">
+      <div class="card" data-search="error na value ref div name spill num null">
+        <div class="card-title">Excel Error Solutions <span class="card-tag">Troubleshooting</span></div>
+        <div class="formula-box">#N/A ➔ Value Not Available (VLOOKUP key न सापडणे). IFERROR वापरा.</div>
+        <div class="formula-box">#VALUE! ➔ Wrong Data Type (टेक्स्टची बेरीज करणे). VALUE() वापरा.</div>
+        <div class="formula-box">#REF! ➔ Invalid Cell Reference (रो डिलीट झाल्याने तुटलेली लिंक).</div>
+        <div class="formula-box">#DIV/0! ➔ Division by Zero. IF(Denom=0, 0, Num/Denom) लिहा.</div>
+        <div class="formula-box">#NAME? ➔ Formula Spelling Typo. फॉर्म्युला स्पेलिंग तपासा.</div>
+        <div class="formula-box">##### ➔ Column Width Small. कॉलम बॉर्डरवर डबल क्लिक करा.</div>
+        <div class="formula-box">#SPILL! ➔ Dynamic Array Spill Blocked. खालील सेल्स रिकामे करा.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 19: KEYBOARD SHORTCUTS -->
+  <div id="mod19">
+    <h2 class="module-header">⌨️ Module 19: Keyboard Shortcuts &amp; Efficiency Hacks</h2>
     <div class="cards-grid">
       <div class="card" data-search="keyboard shortcuts navigation formatting table flash fill">
-        <div class="card-title">Master Excel Keyboard Shortcuts <span class="card-tag">Efficiency</span></div>
-        <div class="formula-box">Ctrl + Arrow Keys ➔ डेटाच्या शेवटच्या रो/कॉलमवर त्वरित जाणे</div>
+        <div class="card-title">Master Keyboard Shortcuts <span class="card-tag">Efficiency</span></div>
+        <div class="formula-box">Ctrl + Arrow Keys ➔ डेटाच्या शेवटच्या रो/कॉलमवर जाणे</div>
         <div class="formula-box">Ctrl + Shift + Arrow Keys ➔ संपूर्ण डेटा रेंज सिलेक्ट करणे</div>
-        <div class="formula-box">F4 ➔ Absolute Reference ($A$1) टॉगल करणे किंवा शेवटची क्रिया रीपीट करणे</div>
+        <div class="formula-box">F4 ➔ Absolute Reference ($A$1) टॉगल करणे</div>
         <div class="formula-box">Alt + = ➔ Instant AutoSum</div>
-        <div class="formula-box">Ctrl + E ➔ Flash Fill (डेटा ऑटो-फिल्टर/सेपरेट)</div>
-        <div class="formula-box">Ctrl + T ➔ Selected Range ला Excel Table मध्ये कन्व्हर्ट करणे</div>
-        <div class="formula-box">Alt + H + O + I ➔ Auto-fit Column Width (कॉलमची रुंदी स्वयंचलित जुळवणे)</div>
+        <div class="formula-box">Ctrl + E ➔ Flash Fill (डेटा सेपरेट)</div>
+        <div class="formula-box">Ctrl + T ➔ Create Table</div>
+        <div class="formula-box">Alt + H + O + I ➔ Auto-fit Column Width</div>
         <div class="formula-box">Ctrl + Shift + L ➔ Toggle AutoFilter</div>
       </div>
     </div>
   </div>
 
-  <!-- MODULE 15: 50 INTERVIEW QUESTIONS -->
-  <div id="mod15">
-    <h2 class="module-header">💼 Module 15: 50 Real MIS &amp; Data Analyst Interview Questions</h2>
+  <!-- MODULE 20: 50 INTERVIEW QUESTIONS -->
+  <div id="mod20">
+    <h2 class="module-header">💼 Module 20: 50 MIS &amp; Data Analyst Interview Problems</h2>
     <div class="cards-grid">
       <div class="card" data-search="interview questions top salesperson contribution variance duplicate flag dashboard">
         <div class="card-title">Top MIS &amp; Data Analyst Interview Problems <span class="card-tag">Interview Q&amp;A</span></div>
@@ -664,7 +729,7 @@
 
   <!-- SELF ASSESSMENT QUIZ -->
   <div id="quiz">
-    <h2 class="module-header">✍️ Master Self-Assessment Quiz (१५ सखोल सराव प्रश्न)</h2>
+    <h2 class="module-header">✍️ Master Self-Assessment Quiz (२० सखोल सराव प्रश्न)</h2>
     
     <div class="quiz-item">
       <div class="quiz-q">प्र. १) VLOOKUP ऐवजी डावीकडील (Left Side) डेटा शोधण्यासाठी कोणता अत्याधुनिक फॉर्म्युला वापरला जातो?</div>
@@ -728,7 +793,7 @@
   </div>
 
   <footer style="margin-top: 50px; text-align: center; font-family: var(--font-sans); font-size: 0.9rem; color: #64748b;">
-    📘 Advance Excel Deep Master Study Notes • Created with Google Antigravity AI Assistant
+    📘 Advance Excel Ultimate Master Study Textbook • Created with Google Antigravity AI Assistant
   </footer>
 </div>
 
