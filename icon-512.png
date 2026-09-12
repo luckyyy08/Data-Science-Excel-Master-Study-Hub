@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="url(#bg)" />
+  <rect x="80" y="80" width="352" height="352" rx="30" fill="#faf7eb" stroke="#ef5350" stroke-width="6" />
+  <line x1="140" y1="80" x2="140" y2="432" stroke="#ef5350" stroke-width="4" />
+  <!-- Spiral Rings -->
+  <circle cx="100" cy="140" r="14" fill="#64748b" />
+  <circle cx="100" cy="210" r="14" fill="#64748b" />
+  <circle cx="100" cy="280" r="14" fill="#64748b" />
+  <circle cx="100" cy="350" r="14" fill="#64748b" />
+  <!-- Excel Logo / Text -->
+  <rect x="180" y="140" width="210" height="150" rx="15" fill="#166534" />
+  <text x="285" y="245" font-family="sans-serif" font-weight="bold" font-size="110" fill="#ffffff" text-anchor="middle">X</text>
+  <!-- Lines -->
+  <line x1="180" y1="330" x2="390" y2="330" stroke="#1e3a8a" stroke-width="12" stroke-linecap="round" />
+  <line x1="180" y1="370" x2="340" y2="370" stroke="#1e3a8a" stroke-width="12" stroke-linecap="round" />
+</svg>
