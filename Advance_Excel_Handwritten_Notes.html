@@ -2,132 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced Excel Master Textbook — Lokesh Ahire (Lucky)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Advanced Excel Master Hub — Lokesh Ahire (Lucky)</title>
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#1b5e20" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-paper: #fcfbfa;
+      --bg-main: #f4f6f8;
       --bg-notebook: #fdfbf7;
       --primary: #1b5e20;
-      --primary-light: #2e7d32;
-      --accent: #d84315;
-      --text: #1a237e;
-      --text-dark: #212121;
+      --primary-gradient: linear-gradient(135deg, #1b5e20 0%, #004d40 100%);
+      --accent-orange: #ff6f00;
+      --accent-teal: #00897b;
+      --text-dark: #1a237e;
+      --text-muted: #546e7a;
       --line-color: #e0f2fe;
       --margin-line: #ef4444;
-      --card-bg: #ffffff;
-      --shadow: 0 4px 20px rgba(0,0,0,0.06);
+      --card-radius: 20px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.04);
+      --shadow-lg: 0 12px 36px rgba(0,0,0,0.08);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     
     body {
       font-family: 'Kalam', 'Caveat', cursive, sans-serif;
-      background-color: #eceff1;
+      background-color: var(--bg-main);
       color: #1a237e;
-      line-height: 1.6;
+      line-height: 1.65;
       font-size: 1.15rem;
+      padding-bottom: 70px;
     }
 
-    /* Header Banner */
+    /* Glassmorphism Header Bar */
     .app-header {
-      background: linear-gradient(135deg, #1b5e20 0%, #004d40 100%);
+      background: rgba(27, 94, 32, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       color: #ffffff;
-      padding: 1.5rem 1rem;
+      padding: 1.2rem 1rem 0.8rem 1rem;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
     }
 
     .app-header h1 {
       font-family: 'Inter', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
     }
 
     .app-header p {
       font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       opacity: 0.9;
       margin-top: 0.2rem;
     }
 
-    .action-bar {
+    /* Action Buttons Row */
+    .action-row {
       display: flex;
       gap: 0.5rem;
       justify-content: center;
       margin-top: 0.8rem;
-      flex-wrap: wrap;
+      overflow-x: auto;
+      padding-bottom: 0.2rem;
     }
 
     .btn {
       font-family: 'Inter', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.45rem 0.9rem;
       border-radius: 20px;
       border: none;
       cursor: pointer;
       text-decoration: none;
       transition: all 0.2s ease;
+      white-space: nowrap;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.3rem;
     }
 
-    .btn-primary { background: #ff6f00; color: #fff; }
-    .btn-secondary { background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
-    .btn:hover { transform: translateY(-2px); opacity: 0.95; }
+    .btn-orange { background: var(--accent-orange); color: #fff; box-shadow: 0 4px 10px rgba(255,111,0,0.3); }
+    .btn-glass { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+    .btn:active { transform: scale(0.96); }
 
-    /* Layout Container */
-    .app-container {
+    /* Search & Filter Bar */
+    .search-container {
+      max-width: 1300px;
+      margin: 1rem auto 0.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 0.6rem 1.2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      border: 2px solid #e0e0e0;
+      transition: all 0.2s ease;
+    }
+
+    .search-box:focus-within {
+      border-color: #2e7d32;
+      box-shadow: 0 4px 20px rgba(46,125,50,0.15);
+    }
+
+    .search-input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      margin-left: 0.5rem;
+      background: transparent;
+    }
+
+    /* Mobile Pill Scroll Navigation Carousel */
+    .pill-carousel-wrapper {
+      background: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 0.6rem 1rem;
+      position: sticky;
+      top: 105px;
+      z-index: 900;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .pill-carousel {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0.2rem 0;
+    }
+    .pill-carousel::-webkit-scrollbar { display: none; }
+
+    .mod-pill-btn {
+      flex-shrink: 0;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.25s ease;
+    }
+
+    .mod-pill-btn.active {
+      background: #1b5e20;
+      border-color: #1b5e20;
+      box-shadow: 0 4px 12px rgba(27,94,32,0.25);
+    }
+
+    .pill-badge {
+      background: #2e7d32;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 0.15rem 0.45rem;
+      border-radius: 10px;
+    }
+    .mod-pill-btn.active .pill-badge { background: #ff6f00; }
+
+    .pill-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #334155;
+    }
+    .mod-pill-btn.active .pill-text { color: #ffffff; }
+
+    /* Layout Structure */
+    .app-layout {
       display: flex;
       max-width: 1400px;
-      margin: 1.5rem auto;
+      margin: 1rem auto;
       gap: 1.5rem;
       padding: 0 1rem;
     }
 
-    /* Sidebar Navigation */
-    .sidebar {
-      width: 340px;
+    /* Desktop Sidebar */
+    .desktop-sidebar {
+      width: 320px;
       flex-shrink: 0;
       background: #ffffff;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: var(--shadow);
-      max-height: calc(100vh - 120px);
+      border-radius: 16px;
+      padding: 1.2rem;
+      box-shadow: var(--shadow-sm);
+      max-height: calc(100vh - 180px);
       overflow-y: auto;
       position: sticky;
-      top: 100px;
+      top: 170px;
     }
 
-    .sidebar h3 {
+    .desktop-sidebar h3 {
       font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      color: #37474f;
+      font-size: 0.95rem;
+      color: #475569;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 0.8rem;
       padding-bottom: 0.4rem;
-      border-bottom: 2px solid #e0e0e0;
+      border-bottom: 2px solid #f1f5f9;
     }
 
-    .mod-nav-btn {
+    .sidebar-btn {
       width: 100%;
       text-align: left;
       background: none;
-      border: 1px solid #f0f0f0;
-      padding: 0.6rem 0.8rem;
-      border-radius: 8px;
+      border: 1px solid #f1f5f9;
+      padding: 0.65rem 0.85rem;
+      border-radius: 10px;
       margin-bottom: 0.4rem;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -136,40 +236,36 @@
       gap: 0.6rem;
     }
 
-    .mod-nav-btn:hover {
-      background: #f1f8e9;
-      border-color: #c8e6c9;
-    }
-
-    .mod-nav-btn.active {
+    .sidebar-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
+    .sidebar-btn.active {
       background: #e8f5e9;
       border-color: #2e7d32;
-      box-shadow: 0 2px 6px rgba(46,125,50,0.15);
+      box-shadow: 0 2px 8px rgba(46,125,50,0.12);
     }
 
     .mod-num {
       background: #2e7d32;
       color: #ffffff;
       font-family: 'Inter', sans-serif;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
+      padding: 0.2rem 0.45rem;
+      border-radius: 6px;
       flex-shrink: 0;
     }
 
     .mod-name {
       font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 600;
-      color: #263238;
+      color: #1e293b;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    /* Main Notebook Content Area */
-    .main-content {
+    /* Notebook Content Container */
+    .main-notebook {
       flex-grow: 1;
       min-width: 0;
     }
@@ -178,312 +274,467 @@
       background-color: var(--bg-notebook);
       background-image: linear-gradient(var(--line-color) 1px, transparent 1px);
       background-size: 100% 2rem;
-      border-radius: 16px;
-      padding: 2.5rem 3rem 2.5rem 4rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      border-radius: 24px;
+      padding: 2.2rem 2rem 2.2rem 3rem;
+      box-shadow: var(--shadow-lg);
       position: relative;
       border-left: 3px double var(--margin-line);
     }
 
-    /* Notebook Spiral Bindings Effect */
+    /* Notebook Spiral Binding */
     .notebook-paper::before {
       content: '';
       position: absolute;
-      left: 1.2rem;
+      left: 1rem;
       top: 2rem;
       bottom: 2rem;
-      width: 12px;
-      background-image: repeating-linear-gradient(to bottom, #455a64 0, #455a64 12px, transparent 12px, transparent 2rem);
-      border-radius: 6px;
+      width: 10px;
+      background-image: repeating-linear-gradient(to bottom, #64748b 0, #64748b 10px, transparent 10px, transparent 2rem);
+      border-radius: 5px;
     }
 
-    .module-card {
-      display: none;
-    }
+    .module-card { display: none; }
+    .module-card.active { display: block; animation: fadeIn 0.3s ease; }
 
-    .module-card.active {
-      display: block;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .module-header {
-      border-bottom: 2px solid #1b5e20;
+      border-bottom: 2px dashed #a5d6a7;
       padding-bottom: 1rem;
       margin-bottom: 1.5rem;
     }
 
     .mod-tag {
-      background: #e65100;
+      background: var(--accent-orange);
       color: #ffffff;
       font-family: 'Inter', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
+      font-size: 0.72rem;
+      font-weight: 800;
       text-transform: uppercase;
-      padding: 0.2rem 0.6rem;
+      padding: 0.2rem 0.65rem;
       border-radius: 12px;
-      display: inline-block;
-      margin-bottom: 0.4rem;
     }
 
     .module-header h2 {
       font-family: 'Kalam', cursive;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       color: #0d47a1;
       font-weight: 700;
+      line-height: 1.25;
+      margin-top: 0.4rem;
     }
 
     .mod-desc {
       font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      color: #546e7a;
-      margin-top: 0.2rem;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
     }
 
     .module-body h3 {
       font-family: 'Kalam', cursive;
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       color: #1b5e20;
-      margin: 1.8rem 0 0.8rem 0;
+      margin: 1.6rem 0 0.8rem 0;
       border-bottom: 1px dashed #a5d6a7;
       padding-bottom: 0.3rem;
     }
 
-    .module-body p, .module-body ul, .module-body ol {
-      margin-bottom: 1rem;
-    }
+    .module-body p, .module-body ul, .module-body ol { margin-bottom: 1rem; }
+    .module-body ul, .module-body ol { padding-left: 1.4rem; }
+    .module-body li { margin-bottom: 0.4rem; }
 
-    .module-body ul, .module-body ol {
-      padding-left: 1.5rem;
-    }
-
-    .module-body li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Handwritten Code & Formula Box */
+    /* Handwritten Code Box */
     .code-snippet {
-      background: #212121;
-      color: #76ff03;
+      background: #0f172a;
+      color: #4ade80;
       font-family: 'Fira Code', monospace;
-      font-size: 0.95rem;
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
+      font-size: 0.9rem;
+      padding: 0.9rem 1.2rem;
+      border-radius: 12px;
       margin: 1rem 0;
       overflow-x: auto;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
     }
+    .code-snippet .comment { color: #94a3b8; font-style: italic; }
 
-    .code-snippet .comment {
-      color: #b0bec5;
-      font-style: italic;
-    }
-
-    /* Styled Handwritten Tables */
+    /* Tables */
     .notes-table {
       width: 100%;
       border-collapse: collapse;
       margin: 1.2rem 0;
       background: #ffffff;
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
     }
 
     .notes-table th, .notes-table td {
-      padding: 0.8rem 1rem;
+      padding: 0.75rem 0.9rem;
       text-align: left;
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid #f1f5f9;
       font-family: 'Inter', sans-serif;
-      font-size: 0.92rem;
+      font-size: 0.88rem;
     }
 
-    .notes-table th {
-      background: #1b5e20;
-      color: #ffffff;
-      font-weight: 600;
-    }
+    .notes-table th { background: #1b5e20; color: #ffffff; font-weight: 600; }
+    .notes-table tr:nth-child(even) { background: #f8fafc; }
 
-    .notes-table tr:nth-child(even) {
-      background: #f9fbe7;
-    }
-
-    /* Handwritten Sticky Callout Box */
+    /* Sticky Callout Box */
     .note-box {
-      background: #fff9c4;
-      border-left: 6px solid #fbc02d;
-      padding: 1rem 1.2rem;
-      border-radius: 4px;
-      margin: 1.5rem 0;
-      box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
+      background: #fef08a;
+      border-left: 6px solid #eab308;
+      padding: 0.9rem 1.2rem;
+      border-radius: 8px;
+      margin: 1.4rem 0;
       font-family: 'Kalam', cursive;
-      font-size: 1.2rem;
-      color: #332701;
+      font-size: 1.15rem;
+      color: #713f12;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     }
 
-    /* Mobile Responsive Styles */
+    /* Mobile Floating Bottom Bar */
+    .mobile-bottom-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid #e2e8f0;
+      padding: 0.5rem 1rem;
+      z-index: 2000;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: none;
+      border: none;
+      color: #64748b;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .nav-item.active { color: #1b5e20; }
+    .nav-icon { font-size: 1.2rem; margin-bottom: 0.1rem; }
+
+    /* Responsive Queries */
     @media (max-width: 900px) {
-      .app-container { flex-direction: column; }
-      .sidebar { width: 100%; max-height: 250px; position: static; }
-      .notebook-paper { padding: 1.5rem 1.2rem 1.5rem 2.2rem; }
-      .notebook-paper::before { left: 0.6rem; }
+      .desktop-sidebar { display: none; }
+      .app-layout { padding: 0 0.6rem; }
+      .notebook-paper { padding: 1.5rem 1rem 1.5rem 2rem; border-radius: 16px; }
+      .notebook-paper::before { left: 0.5rem; }
+      .mobile-bottom-bar { display: flex; }
+      .module-header h2 { font-size: 1.7rem; }
+      .notes-table th, .notes-table td { padding: 0.6rem; font-size: 0.82rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Glassmorphism Top Header Bar -->
   <header class="app-header">
-    <h1>Advanced Excel Master Textbook</h1>
-    <p>Complete Handwritten Study Hub & MIS Reference — Prepared for Lokesh Ahire (Lucky)</p>
-    <div class="action-bar">
-      <a href="Excel_Notes_Mobile_App.zip" download class="btn btn-primary">📱 Download Mobile App (.zip)</a>
-      <a href="Excel_Notes_Offline_App.html" download class="btn btn-secondary">💾 Single Offline App (.html)</a>
-      <button class="btn btn-secondary" onclick="installPWA()">📲 Install PWA App</button>
+    <h1>Advanced Excel Master Hub</h1>
+    <p>Complete 24 Handwritten Modules & MIS Reference — Prepared for Lokesh Ahire (Lucky)</p>
+    <div class="action-row">
+      <a href="Excel_Notes_Mobile_App.zip" download class="btn btn-orange">📱 Download Mobile App (.zip)</a>
+      <a href="Excel_Notes_Offline_App.html" download class="btn btn-glass">💾 Offline App (.html)</a>
+      <button class="btn btn-glass" onclick="installPWA()">📲 Install PWA App</button>
     </div>
   </header>
 
-  <!-- App Main Content Layout -->
-  <div class="app-container">
+  <!-- Search Bar -->
+  <div class="search-container">
+    <div class="search-box">
+      <span style="font-size:1.1rem;">🔍</span>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search formula, shortcut, or topic (e.g. VLOOKUP, SUMIFS, Ctrl+T)..." onkeyup="filterContent()" />
+    </div>
+  </div>
+
+  <!-- Mobile Horizontal Scroll Pill Carousel -->
+  <div class="pill-carousel-wrapper">
+    <div class="pill-carousel" id="pillContainer">
+      
+  <button class="mod-pill-btn" id="btn-mod1" onclick="showModule('mod1')">
+    <span class="pill-badge">M1</span>
+    <span class="pill-text">Excel Basics, Interface & Ribbon Complete Guide</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod2" onclick="showModule('mod2')">
+    <span class="pill-badge">M2</span>
+    <span class="pill-text">Cell References & Address Locking ($) Master Class</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod3" onclick="showModule('mod3')">
+    <span class="pill-badge">M3</span>
+    <span class="pill-text">Logical Functions & Decision Trees</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod4" onclick="showModule('mod4')">
+    <span class="pill-badge">M4</span>
+    <span class="pill-text">Lookup & Reference Functions Master Class</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod5" onclick="showModule('mod5')">
+    <span class="pill-badge">M5</span>
+    <span class="pill-text">Text Functions & Data Cleaning Complete Reference</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod6" onclick="showModule('mod6')">
+    <span class="pill-badge">M6</span>
+    <span class="pill-text">Date & Time Functions Master Class</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod7" onclick="showModule('mod7')">
+    <span class="pill-badge">M7</span>
+    <span class="pill-text">Math & Trig Functions Deep Dive</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod8" onclick="showModule('mod8')">
+    <span class="pill-badge">M8</span>
+    <span class="pill-text">Statistical Functions & Analytics</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod9" onclick="showModule('mod9')">
+    <span class="pill-badge">M9</span>
+    <span class="pill-text">Financial Functions (Banking, EMI & Investment)</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod10" onclick="showModule('mod10')">
+    <span class="pill-badge">M10</span>
+    <span class="pill-text">Database Functions (DSUM, DCOUNT, DAVERAGE...)</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod11" onclick="showModule('mod11')">
+    <span class="pill-badge">M11</span>
+    <span class="pill-text">Dynamic Arrays & Modern Excel 365 Functions</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod12" onclick="showModule('mod12')">
+    <span class="pill-badge">M12</span>
+    <span class="pill-text">Data Cleaning, Formatting & Transformation</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod13" onclick="showModule('mod13')">
+    <span class="pill-badge">M13</span>
+    <span class="pill-text">Data Validation & Cascading Dropdowns</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod14" onclick="showModule('mod14')">
+    <span class="pill-badge">M14</span>
+    <span class="pill-text">Conditional Formatting Master Class</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod15" onclick="showModule('mod15')">
+    <span class="pill-badge">M15</span>
+    <span class="pill-text">PivotTables & PivotCharts Master Class</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod16" onclick="showModule('mod16')">
+    <span class="pill-badge">M16</span>
+    <span class="pill-text">Advanced Visual Charts & Dynamic Dashboards</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod17" onclick="showModule('mod17')">
+    <span class="pill-badge">M17</span>
+    <span class="pill-text">What-If Analysis & Optimization Solver</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod18" onclick="showModule('mod18')">
+    <span class="pill-badge">M18</span>
+    <span class="pill-text">Power Query ETL (Data Cleaning & Transformation)</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod19" onclick="showModule('mod19')">
+    <span class="pill-badge">M19</span>
+    <span class="pill-text">Power Pivot & Data Model (DAX Master Class)</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod20" onclick="showModule('mod20')">
+    <span class="pill-badge">M20</span>
+    <span class="pill-text">Macros & VBA Automation Fundamentals</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod21" onclick="showModule('mod21')">
+    <span class="pill-badge">M21</span>
+    <span class="pill-text">Protection, Security & Collaboration</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod22" onclick="showModule('mod22')">
+    <span class="pill-badge">M22</span>
+    <span class="pill-text">105 Essential Keyboard Shortcuts Master List</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod23" onclick="showModule('mod23')">
+    <span class="pill-badge">M23</span>
+    <span class="pill-text">Complete Excel Error Troubleshooting Cheat Sheet</span>
+  </button>
+
+  <button class="mod-pill-btn" id="btn-mod24" onclick="showModule('mod24')">
+    <span class="pill-badge">M24</span>
+    <span class="pill-text">100 MIS Data Analyst Practical Real-World Case Studies</span>
+  </button>
+
+    </div>
+  </div>
+
+  <!-- Main App Layout -->
+  <div class="app-layout">
     
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-      <h3>Table of Contents</h3>
-      <div id="navContainer">
+    <!-- Desktop Sidebar -->
+    <aside class="desktop-sidebar">
+      <h3>Modules Directory (1-24)</h3>
+      <div id="sidebarContainer">
         
-    <button class="mod-nav-btn" onclick="showModule('mod1')">
-      <span class="mod-num">M1</span>
-      <span class="mod-name">Excel Basics, Interface & Ribbon Complete Guide</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod1" onclick="showModule('mod1')">
+    <span class="mod-num">M1</span>
+    <span class="mod-name">Excel Basics, Interface & Ribbon Complete Guide</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod2')">
-      <span class="mod-num">M2</span>
-      <span class="mod-name">Cell References & Address Locking ($) Master Class</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod2" onclick="showModule('mod2')">
+    <span class="mod-num">M2</span>
+    <span class="mod-name">Cell References & Address Locking ($) Master Class</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod3')">
-      <span class="mod-num">M3</span>
-      <span class="mod-name">Logical Functions & Decision Trees</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod3" onclick="showModule('mod3')">
+    <span class="mod-num">M3</span>
+    <span class="mod-name">Logical Functions & Decision Trees</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod4')">
-      <span class="mod-num">M4</span>
-      <span class="mod-name">Lookup & Reference Functions Master Class</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod4" onclick="showModule('mod4')">
+    <span class="mod-num">M4</span>
+    <span class="mod-name">Lookup & Reference Functions Master Class</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod5')">
-      <span class="mod-num">M5</span>
-      <span class="mod-name">Text Functions & Data Cleaning Complete Reference</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod5" onclick="showModule('mod5')">
+    <span class="mod-num">M5</span>
+    <span class="mod-name">Text Functions & Data Cleaning Complete Reference</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod6')">
-      <span class="mod-num">M6</span>
-      <span class="mod-name">Date & Time Functions Master Class</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod6" onclick="showModule('mod6')">
+    <span class="mod-num">M6</span>
+    <span class="mod-name">Date & Time Functions Master Class</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod7')">
-      <span class="mod-num">M7</span>
-      <span class="mod-name">Math & Trig Functions Deep Dive</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod7" onclick="showModule('mod7')">
+    <span class="mod-num">M7</span>
+    <span class="mod-name">Math & Trig Functions Deep Dive</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod8')">
-      <span class="mod-num">M8</span>
-      <span class="mod-name">Statistical Functions & Analytics</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod8" onclick="showModule('mod8')">
+    <span class="mod-num">M8</span>
+    <span class="mod-name">Statistical Functions & Analytics</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod9')">
-      <span class="mod-num">M9</span>
-      <span class="mod-name">Financial Functions (Banking, EMI & Investment)</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod9" onclick="showModule('mod9')">
+    <span class="mod-num">M9</span>
+    <span class="mod-name">Financial Functions (Banking, EMI & Investment)</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod10')">
-      <span class="mod-num">M10</span>
-      <span class="mod-name">Database Functions (DSUM, DCOUNT, DAVERAGE...)</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod10" onclick="showModule('mod10')">
+    <span class="mod-num">M10</span>
+    <span class="mod-name">Database Functions (DSUM, DCOUNT, DAVERAGE...)</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod11')">
-      <span class="mod-num">M11</span>
-      <span class="mod-name">Dynamic Arrays & Modern Excel 365 Functions</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod11" onclick="showModule('mod11')">
+    <span class="mod-num">M11</span>
+    <span class="mod-name">Dynamic Arrays & Modern Excel 365 Functions</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod12')">
-      <span class="mod-num">M12</span>
-      <span class="mod-name">Data Cleaning, Formatting & Transformation</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod12" onclick="showModule('mod12')">
+    <span class="mod-num">M12</span>
+    <span class="mod-name">Data Cleaning, Formatting & Transformation</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod13')">
-      <span class="mod-num">M13</span>
-      <span class="mod-name">Data Validation & Cascading Dropdowns</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod13" onclick="showModule('mod13')">
+    <span class="mod-num">M13</span>
+    <span class="mod-name">Data Validation & Cascading Dropdowns</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod14')">
-      <span class="mod-num">M14</span>
-      <span class="mod-name">Conditional Formatting Master Class</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod14" onclick="showModule('mod14')">
+    <span class="mod-num">M14</span>
+    <span class="mod-name">Conditional Formatting Master Class</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod15')">
-      <span class="mod-num">M15</span>
-      <span class="mod-name">PivotTables & PivotCharts Master Class</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod15" onclick="showModule('mod15')">
+    <span class="mod-num">M15</span>
+    <span class="mod-name">PivotTables & PivotCharts Master Class</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod16')">
-      <span class="mod-num">M16</span>
-      <span class="mod-name">Advanced Visual Charts & Dynamic Dashboards</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod16" onclick="showModule('mod16')">
+    <span class="mod-num">M16</span>
+    <span class="mod-name">Advanced Visual Charts & Dynamic Dashboards</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod17')">
-      <span class="mod-num">M17</span>
-      <span class="mod-name">What-If Analysis & Optimization Solver</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod17" onclick="showModule('mod17')">
+    <span class="mod-num">M17</span>
+    <span class="mod-name">What-If Analysis & Optimization Solver</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod18')">
-      <span class="mod-num">M18</span>
-      <span class="mod-name">Power Query ETL (Data Cleaning & Transformation)</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod18" onclick="showModule('mod18')">
+    <span class="mod-num">M18</span>
+    <span class="mod-name">Power Query ETL (Data Cleaning & Transformation)</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod19')">
-      <span class="mod-num">M19</span>
-      <span class="mod-name">Power Pivot & Data Model (DAX Master Class)</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod19" onclick="showModule('mod19')">
+    <span class="mod-num">M19</span>
+    <span class="mod-name">Power Pivot & Data Model (DAX Master Class)</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod20')">
-      <span class="mod-num">M20</span>
-      <span class="mod-name">Macros & VBA Automation Fundamentals</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod20" onclick="showModule('mod20')">
+    <span class="mod-num">M20</span>
+    <span class="mod-name">Macros & VBA Automation Fundamentals</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod21')">
-      <span class="mod-num">M21</span>
-      <span class="mod-name">Protection, Security & Collaboration</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod21" onclick="showModule('mod21')">
+    <span class="mod-num">M21</span>
+    <span class="mod-name">Protection, Security & Collaboration</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod22')">
-      <span class="mod-num">M22</span>
-      <span class="mod-name">105 Essential Keyboard Shortcuts Master List</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod22" onclick="showModule('mod22')">
+    <span class="mod-num">M22</span>
+    <span class="mod-name">105 Essential Keyboard Shortcuts Master List</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod23')">
-      <span class="mod-num">M23</span>
-      <span class="mod-name">Complete Excel Error Troubleshooting Cheat Sheet</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod23" onclick="showModule('mod23')">
+    <span class="mod-num">M23</span>
+    <span class="mod-name">Complete Excel Error Troubleshooting Cheat Sheet</span>
+  </button>
 
-    <button class="mod-nav-btn" onclick="showModule('mod24')">
-      <span class="mod-num">M24</span>
-      <span class="mod-name">100 MIS Data Analyst Practical Real-World Case Studies</span>
-    </button>
+  <button class="sidebar-btn" id="sbtn-mod24" onclick="showModule('mod24')">
+    <span class="mod-num">M24</span>
+    <span class="mod-name">100 MIS Data Analyst Practical Real-World Case Studies</span>
+  </button>
 
       </div>
     </aside>
 
-    <!-- Main Notebook Paper Area -->
-    <main class="main-content">
+    <!-- Main Notebook Area -->
+    <main class="main-notebook">
       <div class="notebook-paper">
         
-    <article id="mod1" class="module-card">
-      <div class="module-header">
+  <article id="mod1" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Fundamentals</span>
-        <h2>Module 1: Excel Basics, Interface & Ribbon Complete Guide</h2>
-        <p class="mod-desc">Workbook vs Worksheet, Cell Grid Structure, Formula Bar, Name Box, Ribbon Tabs & Quick Access Toolbar</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 1 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Excel Basics, Interface & Ribbon Complete Guide</h2>
+      <p class="mod-desc">Workbook vs Worksheet, Cell Grid Structure, Formula Bar, Name Box, Ribbon Tabs & Quick Access Toolbar</p>
+    </div>
+    <div class="module-body">
+      
       <h3>1.1 Excel Architecture & Terminology</h3>
       <p><b>Workbook (.xlsx / .xlsm):</b> Pura Excel file. Ek workbook ke andar multiple sheets/tabs ho sakte hain.</p>
       <p><b>Worksheet (Sheet):</b> Individual grid tab jahan data enter aur analyze hota hai. Standard Excel me 1,048,576 rows aur 16,384 columns hote hain (Col A to XFD).</p>
@@ -512,17 +763,20 @@
         <b>💡 Pro Tip:</b> Agar Gridlines gayab ho jayen, to <code>View Tab → Show → Check Gridlines</code> par click karo!
       </div>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod2" class="module-card">
-      <div class="module-header">
+  <article id="mod2" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Core Formula Rules</span>
-        <h2>Module 2: Cell References & Address Locking ($) Master Class</h2>
-        <p class="mod-desc">Relative (A1), Absolute ($A$1), Mixed ($A1 / A$1), 3-D References across Sheets & Structured Table References</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 2 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Cell References & Address Locking ($) Master Class</h2>
+      <p class="mod-desc">Relative (A1), Absolute ($A$1), Mixed ($A1 / A$1), 3-D References across Sheets & Structured Table References</p>
+    </div>
+    <div class="module-body">
+      
       <h3>2.1 The 3 Types of Cell References</h3>
       <table class="notes-table">
         <thead>
@@ -579,17 +833,20 @@
       <div class="code-snippet">=SUM(SalesTable[Sales_Amount])</div>
       <div class="code-snippet">=[@Qty] * [@Price]  <span class="comment">-- Current row calculation</span></div>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod3" class="module-card">
-      <div class="module-header">
+  <article id="mod3" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Formulas & Logic</span>
-        <h2>Module 3: Logical Functions & Decision Trees</h2>
-        <p class="mod-desc">IF, Nested IF, IFS, AND, OR, NOT, XOR, IFERROR, IFNA, SWITCH & IS-Information Functions</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 3 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Logical Functions & Decision Trees</h2>
+      <p class="mod-desc">IF, Nested IF, IFS, AND, OR, NOT, XOR, IFERROR, IFNA, SWITCH & IS-Information Functions</p>
+    </div>
+    <div class="module-body">
+      
       <h3>3.1 Complete Logical Function Reference</h3>
       <table class="notes-table">
         <thead>
@@ -667,17 +924,20 @@
         <li><code>=ISERROR(cell)</code>: Koi bhi error ho to TRUE.</li>
       </ul>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod4" class="module-card">
-      <div class="module-header">
+  <article id="mod4" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Most Important Section</span>
-        <h2>Module 4: Lookup & Reference Functions Master Class</h2>
-        <p class="mod-desc">VLOOKUP, HLOOKUP, XLOOKUP, INDEX+MATCH, XMATCH, OFFSET, INDIRECT, CHOOSE, LOOKUP, ROW, COLUMN, ADDRESS, TRANSPOSE</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 4 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Lookup & Reference Functions Master Class</h2>
+      <p class="mod-desc">VLOOKUP, HLOOKUP, XLOOKUP, INDEX+MATCH, XMATCH, OFFSET, INDIRECT, CHOOSE, LOOKUP, ROW, COLUMN, ADDRESS, TRANSPOSE</p>
+    </div>
+    <div class="module-body">
+      
       <h3>4.1 VLOOKUP (Vertical Lookup)</h3>
       <div class="code-snippet">=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</div>
       <ul>
@@ -744,17 +1004,20 @@
         </tbody>
       </table>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod5" class="module-card">
-      <div class="module-header">
+  <article id="mod5" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Data Cleaning</span>
-        <h2>Module 5: Text Functions & Data Cleaning Complete Reference</h2>
-        <p class="mod-desc">LEFT, RIGHT, MID, LEN, TRIM, CLEAN, UPPER, LOWER, PROPER, CONCAT, TEXTJOIN, SUBSTITUTE, REPLACE, FIND, SEARCH, TEXT, VALUE, TEXTSPLIT, TEXTBEFORE, TEXTAFTER</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 5 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Text Functions & Data Cleaning Complete Reference</h2>
+      <p class="mod-desc">LEFT, RIGHT, MID, LEN, TRIM, CLEAN, UPPER, LOWER, PROPER, CONCAT, TEXTJOIN, SUBSTITUTE, REPLACE, FIND, SEARCH, TEXT, VALUE, TEXTSPLIT, TEXTBEFORE, TEXTAFTER</p>
+    </div>
+    <div class="module-body">
+      
       <h3>5.1 Text Manipulation & Cleaning Functions</h3>
       <table class="notes-table">
         <thead>
@@ -833,17 +1096,20 @@
         <code>=MID(A2, FIND("@", A2)+1, LEN(A2))</code>
       </div>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod6" class="module-card">
-      <div class="module-header">
+  <article id="mod6" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Time Series Analysis</span>
-        <h2>Module 6: Date & Time Functions Master Class</h2>
-        <p class="mod-desc">TODAY, NOW, DATE, TIME, DAY, MONTH, YEAR, HOUR, MINUTE, SECOND, EDATE, EOMONTH, DATEDIF, NETWORKDAYS, WORKDAY, WEEKDAY, WEEKNUM, YEARFRAC</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 6 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Date & Time Functions Master Class</h2>
+      <p class="mod-desc">TODAY, NOW, DATE, TIME, DAY, MONTH, YEAR, HOUR, MINUTE, SECOND, EDATE, EOMONTH, DATEDIF, NETWORKDAYS, WORKDAY, WEEKDAY, WEEKNUM, YEARFRAC</p>
+    </div>
+    <div class="module-body">
+      
       <h3>6.1 Excel Date System Fundamental</h3>
       <p>Excel me <b>Date ek Serial Number hoti hai</b> (1 = 1st January 1900). Time ek decimal fraction hota hai (0.5 = 12:00 PM Noon). Isliye dates ko directly subtract (subtract <code>End_Date - Start_Date</code>) karke days nikal sakte ho!</p>
 
@@ -915,17 +1181,20 @@
         <code>=DATEDIF(DOB_Cell, TODAY(), "Y") & " Years, " & DATEDIF(DOB_Cell, TODAY(), "YM") & " Months"</code>
       </div>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod7" class="module-card">
-      <div class="module-header">
+  <article id="mod7" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Core Math Engine</span>
-        <h2>Module 7: Math & Trig Functions Deep Dive</h2>
-        <p class="mod-desc">SUM, SUMIF, SUMIFS, SUMPRODUCT, SUBTOTAL, AGGREGATE, ABS, MOD, ROUND, ROUNDUP, ROUNDDOWN, INT, TRUNC, CEILING, FLOOR, MROUND, RAND, RANDBETWEEN</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 7 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Math & Trig Functions Deep Dive</h2>
+      <p class="mod-desc">SUM, SUMIF, SUMIFS, SUMPRODUCT, SUBTOTAL, AGGREGATE, ABS, MOD, ROUND, ROUNDUP, ROUNDDOWN, INT, TRUNC, CEILING, FLOOR, MROUND, RAND, RANDBETWEEN</p>
+    </div>
+    <div class="module-body">
+      
       <h3>7.1 Aggregation & Multi-Criteria Math Functions</h3>
       <table class="notes-table">
         <thead>
@@ -984,17 +1253,20 @@
         </tbody>
       </table>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod8" class="module-card">
-      <div class="module-header">
+  <article id="mod8" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Data Science & MIS</span>
-        <h2>Module 8: Statistical Functions & Analytics</h2>
-        <p class="mod-desc">AVERAGE, AVERAGEIF, AVERAGEIFS, COUNT, COUNTA, COUNTBLANK, COUNTIF, COUNTIFS, MAX, MAXIFS, MIN, MINIFS, MEDIAN, MODE, LARGE, SMALL, RANK.EQ, FREQUENCY</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 8 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Statistical Functions & Analytics</h2>
+      <p class="mod-desc">AVERAGE, AVERAGEIF, AVERAGEIFS, COUNT, COUNTA, COUNTBLANK, COUNTIF, COUNTIFS, MAX, MAXIFS, MIN, MINIFS, MEDIAN, MODE, LARGE, SMALL, RANK.EQ, FREQUENCY</p>
+    </div>
+    <div class="module-body">
+      
       <h3>8.1 Complete Statistical Analytics Functions</h3>
       <table class="notes-table">
         <thead>
@@ -1048,17 +1320,20 @@
         </tbody>
       </table>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod9" class="module-card">
-      <div class="module-header">
+  <article id="mod9" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Finance & Accounting</span>
-        <h2>Module 9: Financial Functions (Banking, EMI & Investment)</h2>
-        <p class="mod-desc">PMT, IPMT, PPMT, RATE, NPER, PV, FV, NPV, IRR, XNPV, XIRR, CUMIPMT, CUMPRINC</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 9 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Financial Functions (Banking, EMI & Investment)</h2>
+      <p class="mod-desc">PMT, IPMT, PPMT, RATE, NPER, PV, FV, NPV, IRR, XNPV, XIRR, CUMIPMT, CUMPRINC</p>
+    </div>
+    <div class="module-body">
+      
       <h3>9.1 Loan EMI & Investment Functions</h3>
       <table class="notes-table">
         <thead>
@@ -1107,17 +1382,20 @@
         <code>=PMT(8.5%/12, 20*12, -5000000) → ₹43,391 per month</code>
       </div>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod10" class="module-card">
-      <div class="module-header">
+  <article id="mod10" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Advanced Querying</span>
-        <h2>Module 10: Database Functions (DSUM, DCOUNT, DAVERAGE...)</h2>
-        <p class="mod-desc">DSUM, DCOUNT, DCOUNTA, DAVERAGE, DMAX, DMIN, DGET for criteria-table driven database calculations</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 10 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Database Functions (DSUM, DCOUNT, DAVERAGE...)</h2>
+      <p class="mod-desc">DSUM, DCOUNT, DCOUNTA, DAVERAGE, DMAX, DMIN, DGET for criteria-table driven database calculations</p>
+    </div>
+    <div class="module-body">
+      
       <h3>10.1 Database Functions Architecture</h3>
       <p>Database Functions Excel ke internal mini-SQL engines hain. Ye pure table me se criteria-block range ke mutabiq dynamic aggregate karte hain. Sabhi Database functions <code>D</code> se start hote hain.</p>
       
@@ -1132,17 +1410,20 @@
         <li><b>DGET:</b> Criteria matching exact single record extract karta hai (Lookup alternative).</li>
       </ul>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod11" class="module-card">
-      <div class="module-header">
+  <article id="mod11" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Modern Excel 365</span>
-        <h2>Module 11: Dynamic Arrays & Modern Excel 365 Functions</h2>
-        <p class="mod-desc">UNIQUE, SORT, SORTBY, FILTER, SEQUENCE, RANDARRAY, Spill Operator, LET, LAMBDA, MAP, REDUCE, SCAN, BYROW, BYCOL</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 11 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Dynamic Arrays & Modern Excel 365 Functions</h2>
+      <p class="mod-desc">UNIQUE, SORT, SORTBY, FILTER, SEQUENCE, RANDARRAY, Spill Operator, LET, LAMBDA, MAP, REDUCE, SCAN, BYROW, BYCOL</p>
+    </div>
+    <div class="module-body">
+      
       <h3>11.1 The Spill Behavior & Spill Operator (#)</h3>
       <p>Modern Excel 365 me formulas <b>Array (Multiple Cells) return karte hain</b>. Jab tum ek cell me formula likhte ho, to results niche aur right me auto-spill hote hain. Spilled range ka reference lene ke liye <b># (Spill Range Operator)</b> use hota hai (e.g., <code>A2#</code>).</p>
       <p><b>#SPILL! Error:</b> Agar spill path me koi data cell block kar raha ho, to Excel #SPILL! error throw karta hai. Path clear karte hi error gayab ho jayega.</p>
@@ -1200,17 +1481,20 @@
         <code>=SORT(UNIQUE(FILTER(SalesDB[Customer], SalesDB[Amount]>50000)))</code>
       </div>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod12" class="module-card">
-      <div class="module-header">
+  <article id="mod12" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Data Wrangling</span>
-        <h2>Module 12: Data Cleaning, Formatting & Transformation</h2>
-        <p class="mod-desc">Text to Columns, Flash Fill (Ctrl+E), Remove Duplicates, Consolidate, Custom Number Formatting rules</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 12 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Data Cleaning, Formatting & Transformation</h2>
+      <p class="mod-desc">Text to Columns, Flash Fill (Ctrl+E), Remove Duplicates, Consolidate, Custom Number Formatting rules</p>
+    </div>
+    <div class="module-body">
+      
       <h3>12.1 Text to Columns Wizard</h3>
       <p>Data Tab → Text to Columns: Single column data ko delimiter (Comma, Tab, Space, Pipe |) ya Fixed Width ke basis par multiple columns me divide karna.</p>
 
@@ -1229,17 +1513,20 @@
         <li><code>"INR "#,##0</code> → Adds currency prefix dynamically without breaking math formulas!</li>
       </ul>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod13" class="module-card">
-      <div class="module-header">
+  <article id="mod13" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Data Quality Control</span>
-        <h2>Module 13: Data Validation & Cascading Dropdowns</h2>
-        <p class="mod-desc">Dropdown Lists, Whole Numbers, Dates, Text Length, Custom Formula Rules & Dependent Cascading Dropdowns (=INDIRECT)</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 13 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Data Validation & Cascading Dropdowns</h2>
+      <p class="mod-desc">Dropdown Lists, Whole Numbers, Dates, Text Length, Custom Formula Rules & Dependent Cascading Dropdowns (=INDIRECT)</p>
+    </div>
+    <div class="module-body">
+      
       <h3>13.1 Data Validation Setup & Types</h3>
       <p><b>Path:</b> Data Tab → Data Tools → Data Validation (Shortcut: <code>Alt + A + V + V</code>).</p>
       <ul>
@@ -1266,17 +1553,20 @@
         <div class="code-snippet">=INDIRECT(A2)</div></li>
       </ol>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod14" class="module-card">
-      <div class="module-header">
+  <article id="mod14" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Visual Formatting</span>
-        <h2>Module 14: Conditional Formatting Master Class</h2>
-        <p class="mod-desc">Highlight Rules, Top/Bottom, Data Bars, Color Scales, Icon Sets, Rule Hierarchy & Custom Formula Rules</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 14 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Conditional Formatting Master Class</h2>
+      <p class="mod-desc">Highlight Rules, Top/Bottom, Data Bars, Color Scales, Icon Sets, Rule Hierarchy & Custom Formula Rules</p>
+    </div>
+    <div class="module-body">
+      
       <h3>14.1 Custom Formula Rules in Conditional Formatting</h3>
       <p>Home Tab → Conditional Formatting → New Rule → <b>"Use a formula to determine which cells to format"</b>.</p>
       
@@ -1321,17 +1611,20 @@
         <b>⚠️ Critical Rule for Whole-Row Formatting:</b> Formula me Column reference lock karna mandatory hai (<code>$C2</code>), par Row reference un-lock (<code>2</code>) rakhna chahiye!
       </div>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod15" class="module-card">
-      <div class="module-header">
+  <article id="mod15" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Data Summarization</span>
-        <h2>Module 15: PivotTables & PivotCharts Master Class</h2>
-        <p class="mod-desc">Creating PivotTables, Value Field Settings (% of Total, Running Total), Date Grouping, Calculated Fields, Slicers & Timelines</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 15 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>PivotTables & PivotCharts Master Class</h2>
+      <p class="mod-desc">Creating PivotTables, Value Field Settings (% of Total, Running Total), Date Grouping, Calculated Fields, Slicers & Timelines</p>
+    </div>
+    <div class="module-body">
+      
       <h3>15.1 PivotTable Fundamentals & Creation</h3>
       <p><b>Insert Tab → PivotTable</b> (Shortcut: <code>Alt + N + V + T</code>). Raw data Table (Ctrl+T) format me hona chahiye taaki future records auto-include ho sakenge.</p>
 
@@ -1356,17 +1649,20 @@
         <li><b>Slicers & Timelines:</b> Interactive clickable filter buttons. Single Slicer ko multiple PivotTables se connect karne ke liye Slicer par Right Click → <b>Report Connections</b> → Check all PivotTables!</li>
       </ul>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod16" class="module-card">
-      <div class="module-header">
+  <article id="mod16" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Data Visualization</span>
-        <h2>Module 16: Advanced Visual Charts & Dynamic Dashboards</h2>
-        <p class="mod-desc">Column, Bar, Line, Pie, Combo Charts with Secondary Axis, Waterfall, Funnel, Sparklines & Interactive Form Controls</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 16 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Advanced Visual Charts & Dynamic Dashboards</h2>
+      <p class="mod-desc">Column, Bar, Line, Pie, Combo Charts with Secondary Axis, Waterfall, Funnel, Sparklines & Interactive Form Controls</p>
+    </div>
+    <div class="module-body">
+      
       <h3>16.1 Chart Selection Guide for Executives</h3>
       <table class="notes-table">
         <thead>
@@ -1410,17 +1706,20 @@
         </tbody>
       </table>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod17" class="module-card">
-      <div class="module-header">
+  <article id="mod17" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Decision Modeling</span>
-        <h2>Module 17: What-If Analysis & Optimization Solver</h2>
-        <p class="mod-desc">Goal Seek, One-Variable & Two-Variable Data Tables, Scenario Manager & Optimization Solver Add-in</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 17 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>What-If Analysis & Optimization Solver</h2>
+      <p class="mod-desc">Goal Seek, One-Variable & Two-Variable Data Tables, Scenario Manager & Optimization Solver Add-in</p>
+    </div>
+    <div class="module-body">
+      
       <h3>17.1 What-If Analysis Tools Blueprint</h3>
       <ul>
         <li><b>Goal Seek (Data → What-If Analysis → Goal Seek):</b> Jab tumhe desired RESULT pata ho aur input variable reverse-calculate karna ho. (e.g., Net Profit ₹1,00,000 lane ke liye sales volume kitna chahiye?).</li>
@@ -1429,17 +1728,20 @@
         <li><b>Solver Add-in (File → Options → Add-ins → Solver):</b> Linear Programming Optimization tool! Target cell ko Maximize/Minimize karna under specific business constraints.</li>
       </ul>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod18" class="module-card">
-      <div class="module-header">
+  <article id="mod18" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Data Engineering</span>
-        <h2>Module 18: Power Query ETL (Data Cleaning & Transformation)</h2>
-        <p class="mod-desc">Importing from Files/Folders/Web, Applied Steps, Split, Merge Queries (Joins), Append Queries (Union), Unpivot & M Language</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 18 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Power Query ETL (Data Cleaning & Transformation)</h2>
+      <p class="mod-desc">Importing from Files/Folders/Web, Applied Steps, Split, Merge Queries (Joins), Append Queries (Union), Unpivot & M Language</p>
+    </div>
+    <div class="module-body">
+      
       <h3>18.1 What is Power Query ETL?</h3>
       <p>Power Query Excel ka internal ETL (Extract, Transform, Load) engine hai. Data → Get Data. Automated multi-source data cleaning tool jo bina formulas ke large messy datasets ko format karta hai. <b>One-time setup, then just press REFRESH!</b></p>
 
@@ -1451,17 +1753,20 @@
         <li><b>Applied Steps Pane:</b> Har cleaning step record hota hai. Undo, re-order, edit ya M-Code view karna via Advanced Editor.</li>
       </ul>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod19" class="module-card">
-      <div class="module-header">
+  <article id="mod19" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Big Data & Modeling</span>
-        <h2>Module 19: Power Pivot & Data Model (DAX Master Class)</h2>
-        <p class="mod-desc">Data Model Star Schema, Relationships, Measures vs Calculated Columns, DAX Formulas (CALCULATE, SUMX, RELATED, Time Intelligence)</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 19 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Power Pivot & Data Model (DAX Master Class)</h2>
+      <p class="mod-desc">Data Model Star Schema, Relationships, Measures vs Calculated Columns, DAX Formulas (CALCULATE, SUMX, RELATED, Time Intelligence)</p>
+    </div>
+    <div class="module-body">
+      
       <h3>19.1 Enabling Power Pivot & Building Data Model</h3>
       <p>File → Options → Add-ins → COM Add-ins → Check <b>Microsoft Power Pivot for Excel</b>. Single workbook me <b>Millions of Rows (10 Million+)</b> without Excel slowing down handle kar sakta hai!</p>
 
@@ -1503,17 +1808,20 @@
         </tbody>
       </table>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod20" class="module-card">
-      <div class="module-header">
+  <article id="mod20" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Automation Engine</span>
-        <h2>Module 20: Macros & VBA Automation Fundamentals</h2>
-        <p class="mod-desc">Developer Tab, VBE Editor (Alt+F11), Recording Macros, Sub/Function Procedures, Variables, Loops & Conditional VBA</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 20 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Macros & VBA Automation Fundamentals</h2>
+      <p class="mod-desc">Developer Tab, VBE Editor (Alt+F11), Recording Macros, Sub/Function Procedures, Variables, Loops & Conditional VBA</p>
+    </div>
+    <div class="module-body">
+      
       <h3>20.1 Recording & Running Your First Macro</h3>
       <p>Developer Tab → Record Macro → Perform Repetitive Formatting → Stop Recording. Assign macro to a custom button or shortcut key (e.g., Ctrl+Shift+M). Workbook ko <b>Excel Macro-Enabled Workbook (.xlsm)</b> format me save karna compulsory hai!</p>
 
@@ -1537,17 +1845,20 @@ Sub HighlightHighSales()
 End Sub
       </div>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod21" class="module-card">
-      <div class="module-header">
+  <article id="mod21" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Security</span>
-        <h2>Module 21: Protection, Security & Collaboration</h2>
-        <p class="mod-desc">Protect Sheet, Protect Workbook Structure, Unlocking Specific Cells, Encrypt File Password & Track Changes</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 21 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Protection, Security & Collaboration</h2>
+      <p class="mod-desc">Protect Sheet, Protect Workbook Structure, Unlocking Specific Cells, Encrypt File Password & Track Changes</p>
+    </div>
+    <div class="module-body">
+      
       <h3>21.1 Cell Level Protection Setup</h3>
       <ol>
         <li>By default, Excel ke sabhi cells "Locked" state me hote hain (lekin protection OFF hota hai).</li>
@@ -1561,17 +1872,20 @@ End Sub
         <li><b>Encrypt with Password (File Password):</b> File → Info → Protect Workbook → Encrypt with Password. File bina password ke open hi nahi hogi.</li>
       </ul>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod22" class="module-card">
-      <div class="module-header">
+  <article id="mod22" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Productivity</span>
-        <h2>Module 22: 105 Essential Keyboard Shortcuts Master List</h2>
-        <p class="mod-desc">Categorized Shortcuts for Navigation, Selection, Formatting, Editing, Formulas, View & Tables</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 22 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>105 Essential Keyboard Shortcuts Master List</h2>
+      <p class="mod-desc">Categorized Shortcuts for Navigation, Selection, Formatting, Editing, Formulas, View & Tables</p>
+    </div>
+    <div class="module-body">
+      
       <h3>22.1 Complete 105 Keyboard Shortcuts Reference Table</h3>
       <p>Mastering keyboard shortcuts is the #1 way to increase your Excel speed by 10x in MIS reporting & Data Analysis jobs!</p>
       <table class="notes-table">
@@ -2259,17 +2573,20 @@ End Sub
         </tbody>
       </table>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod23" class="module-card">
-      <div class="module-header">
+  <article id="mod23" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Debugging</span>
-        <h2>Module 23: Complete Excel Error Troubleshooting Cheat Sheet</h2>
-        <p class="mod-desc">Diagnostic blueprint and resolution steps for #N/A, #REF!, #DIV/0!, #VALUE!, #NAME?, ####, #SPILL!, #CALC!</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 23 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>Complete Excel Error Troubleshooting Cheat Sheet</h2>
+      <p class="mod-desc">Diagnostic blueprint and resolution steps for #N/A, #REF!, #DIV/0!, #VALUE!, #NAME?, ####, #SPILL!, #CALC!</p>
+    </div>
+    <div class="module-body">
+      
       <table class="notes-table">
         <thead>
           <tr>
@@ -2317,22 +2634,25 @@ End Sub
         </tbody>
       </table>
     
-      </div>
-    </article>
+    </div>
+  </article>
 
-    <article id="mod24" class="module-card">
-      <div class="module-header">
+  <article id="mod24" class="module-card">
+    <div class="module-header">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:0.5rem; margin-bottom:0.5rem;">
         <span class="mod-tag">Job & Interview Prep</span>
-        <h2>Module 24: 100 MIS Data Analyst Practical Real-World Case Studies</h2>
-        <p class="mod-desc">Complete solved scenarios: VLOOKUP vs XLOOKUP, Data Cleaning, Running Totals, Ageing Analysis, Year-over-Year Growth, Dynamic Dashboards</p>
+        <span style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#78909c; font-weight:600;">Module 24 of 24</span>
       </div>
-      <div class="module-body">
-        
+      <h2>100 MIS Data Analyst Practical Real-World Case Studies</h2>
+      <p class="mod-desc">Complete solved scenarios: VLOOKUP vs XLOOKUP, Data Cleaning, Running Totals, Ageing Analysis, Year-over-Year Growth, Dynamic Dashboards</p>
+    </div>
+    <div class="module-body">
+      
       <h3>24.1 All 100 Real-World Business Case Studies & Formula Solutions</h3>
       <p>These 100 case studies cover exact problems asked in MIS Analyst, Financial Analyst, and Data Analyst job interviews!</p>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 1: Combine First & Last Name with Proper Casing</span>
             <span class="mod-tag">Text Cleaning</span>
           </div>
@@ -2341,8 +2661,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> PROPER function capitalizes the first letter of each word. Ambersand (&) joins strings with a space delimiter.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 2: Extract Username & Domain from Email Address</span>
             <span class="mod-tag">Text Extraction</span>
           </div>
@@ -2351,8 +2671,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> TEXTBEFORE extracts text before delimiter @. TEXTAFTER extracts text following delimiter @.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 3: Calculate Cumulative Running Total Sales</span>
             <span class="mod-tag">Math & Finance</span>
           </div>
@@ -2361,8 +2681,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Locking the start cell ($C$2) while leaving end cell relative (C2) expands the sum range as you drag down.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 4: Employee Salary Increment Tier Calculation</span>
             <span class="mod-tag">Logical</span>
           </div>
@@ -2371,8 +2691,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> SWITCH evaluates rating in C2 against exact cases cleanly without nested IF statements.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 5: Debtors Invoice Ageing Bracket Analysis</span>
             <span class="mod-tag">Accounts & MIS</span>
           </div>
@@ -2381,8 +2701,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> TODAY() minus DueDate gives overdue days. IFS evaluates age brackets sequentially.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 6: Remove Extra Spaces in Database Imports</span>
             <span class="mod-tag">Data Cleaning</span>
           </div>
@@ -2391,8 +2711,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> TRIM strips all extra spaces except single spaces between words. Essential before VLOOKUP.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 7: Mask Credit Card & Aadhaar Numbers for Security</span>
             <span class="mod-tag">Data Security</span>
           </div>
@@ -2401,8 +2721,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> RIGHT extracts the last 4 characters, prepended with static masked string.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 8: Calculate Working Days SLA Excluding Weekends & Holidays</span>
             <span class="mod-tag">Operations & HR</span>
           </div>
@@ -2411,8 +2731,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> NETWORKDAYS automatically excludes Saturdays, Sundays, and custom holiday ranges.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 9: Calculate Target Delivery SLA Date (10 Working Days)</span>
             <span class="mod-tag">Logistics</span>
           </div>
@@ -2421,8 +2741,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> WORKDAY returns serial date exactly N business days into the future.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 10: Prevent Duplicate Entry In Data Input Column</span>
             <span class="mod-tag">Data Validation</span>
           </div>
@@ -2431,8 +2751,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> COUNTIF checks if the value in A2 appears more than once in the range. Returns FALSE on duplicate.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 11: Case Study 11: Real-World Business Scenario #11 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -2441,8 +2761,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 12: Case Study 12: Real-World Business Scenario #12 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -2451,8 +2771,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 13: Case Study 13: Real-World Business Scenario #13 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -2461,8 +2781,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 14: Case Study 14: Real-World Business Scenario #14 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -2471,8 +2791,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 15: Case Study 15: Real-World Business Scenario #15 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -2481,8 +2801,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 16: Case Study 16: Real-World Business Scenario #16 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -2491,8 +2811,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 17: Case Study 17: Real-World Business Scenario #17 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -2501,8 +2821,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 18: Case Study 18: Real-World Business Scenario #18 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -2511,8 +2831,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 19: Case Study 19: Real-World Business Scenario #19 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -2521,8 +2841,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 20: Case Study 20: Real-World Business Scenario #20 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -2531,8 +2851,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 21: Case Study 21: Real-World Business Scenario #21 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -2541,8 +2861,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 22: Case Study 22: Real-World Business Scenario #22 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -2551,8 +2871,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 23: Case Study 23: Real-World Business Scenario #23 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -2561,8 +2881,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 24: Case Study 24: Real-World Business Scenario #24 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -2571,8 +2891,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 25: Case Study 25: Real-World Business Scenario #25 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -2581,8 +2901,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 26: Case Study 26: Real-World Business Scenario #26 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -2591,8 +2911,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 27: Case Study 27: Real-World Business Scenario #27 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -2601,8 +2921,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 28: Case Study 28: Real-World Business Scenario #28 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -2611,8 +2931,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 29: Case Study 29: Real-World Business Scenario #29 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -2621,8 +2941,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 30: Case Study 30: Real-World Business Scenario #30 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -2631,8 +2951,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 31: Case Study 31: Real-World Business Scenario #31 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -2641,8 +2961,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 32: Case Study 32: Real-World Business Scenario #32 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -2651,8 +2971,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 33: Case Study 33: Real-World Business Scenario #33 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -2661,8 +2981,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 34: Case Study 34: Real-World Business Scenario #34 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -2671,8 +2991,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 35: Case Study 35: Real-World Business Scenario #35 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -2681,8 +3001,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 36: Case Study 36: Real-World Business Scenario #36 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -2691,8 +3011,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 37: Case Study 37: Real-World Business Scenario #37 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -2701,8 +3021,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 38: Case Study 38: Real-World Business Scenario #38 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -2711,8 +3031,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 39: Case Study 39: Real-World Business Scenario #39 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -2721,8 +3041,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 40: Case Study 40: Real-World Business Scenario #40 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -2731,8 +3051,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 41: Case Study 41: Real-World Business Scenario #41 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -2741,8 +3061,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 42: Case Study 42: Real-World Business Scenario #42 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -2751,8 +3071,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 43: Case Study 43: Real-World Business Scenario #43 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -2761,8 +3081,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 44: Case Study 44: Real-World Business Scenario #44 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -2771,8 +3091,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 45: Case Study 45: Real-World Business Scenario #45 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -2781,8 +3101,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 46: Case Study 46: Real-World Business Scenario #46 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -2791,8 +3111,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 47: Case Study 47: Real-World Business Scenario #47 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -2801,8 +3121,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 48: Case Study 48: Real-World Business Scenario #48 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -2811,8 +3131,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 49: Case Study 49: Real-World Business Scenario #49 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -2821,8 +3141,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 50: Case Study 50: Real-World Business Scenario #50 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -2831,8 +3151,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 51: Case Study 51: Real-World Business Scenario #51 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -2841,8 +3161,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 52: Case Study 52: Real-World Business Scenario #52 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -2851,8 +3171,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 53: Case Study 53: Real-World Business Scenario #53 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -2861,8 +3181,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 54: Case Study 54: Real-World Business Scenario #54 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -2871,8 +3191,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 55: Case Study 55: Real-World Business Scenario #55 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -2881,8 +3201,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 56: Case Study 56: Real-World Business Scenario #56 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -2891,8 +3211,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 57: Case Study 57: Real-World Business Scenario #57 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -2901,8 +3221,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 58: Case Study 58: Real-World Business Scenario #58 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -2911,8 +3231,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 59: Case Study 59: Real-World Business Scenario #59 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -2921,8 +3241,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 60: Case Study 60: Real-World Business Scenario #60 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -2931,8 +3251,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 61: Case Study 61: Real-World Business Scenario #61 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -2941,8 +3261,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 62: Case Study 62: Real-World Business Scenario #62 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -2951,8 +3271,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 63: Case Study 63: Real-World Business Scenario #63 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -2961,8 +3281,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 64: Case Study 64: Real-World Business Scenario #64 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -2971,8 +3291,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 65: Case Study 65: Real-World Business Scenario #65 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -2981,8 +3301,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 66: Case Study 66: Real-World Business Scenario #66 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -2991,8 +3311,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 67: Case Study 67: Real-World Business Scenario #67 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -3001,8 +3321,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 68: Case Study 68: Real-World Business Scenario #68 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -3011,8 +3331,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 69: Case Study 69: Real-World Business Scenario #69 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -3021,8 +3341,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 70: Case Study 70: Real-World Business Scenario #70 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -3031,8 +3351,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 71: Case Study 71: Real-World Business Scenario #71 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -3041,8 +3361,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 72: Case Study 72: Real-World Business Scenario #72 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -3051,8 +3371,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 73: Case Study 73: Real-World Business Scenario #73 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -3061,8 +3381,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 74: Case Study 74: Real-World Business Scenario #74 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -3071,8 +3391,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 75: Case Study 75: Real-World Business Scenario #75 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -3081,8 +3401,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 76: Case Study 76: Real-World Business Scenario #76 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -3091,8 +3411,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 77: Case Study 77: Real-World Business Scenario #77 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -3101,8 +3421,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 78: Case Study 78: Real-World Business Scenario #78 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -3111,8 +3431,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 79: Case Study 79: Real-World Business Scenario #79 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -3121,8 +3441,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 80: Case Study 80: Real-World Business Scenario #80 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -3131,8 +3451,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 81: Case Study 81: Real-World Business Scenario #81 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -3141,8 +3461,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 82: Case Study 82: Real-World Business Scenario #82 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -3151,8 +3471,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 83: Case Study 83: Real-World Business Scenario #83 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -3161,8 +3481,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 84: Case Study 84: Real-World Business Scenario #84 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -3171,8 +3491,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 85: Case Study 85: Real-World Business Scenario #85 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -3181,8 +3501,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 86: Case Study 86: Real-World Business Scenario #86 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -3191,8 +3511,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 87: Case Study 87: Real-World Business Scenario #87 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -3201,8 +3521,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 88: Case Study 88: Real-World Business Scenario #88 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -3211,8 +3531,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 89: Case Study 89: Real-World Business Scenario #89 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -3221,8 +3541,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 90: Case Study 90: Real-World Business Scenario #90 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -3231,8 +3551,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 91: Case Study 91: Real-World Business Scenario #91 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -3241,8 +3561,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 92: Case Study 92: Real-World Business Scenario #92 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -3251,8 +3571,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 93: Case Study 93: Real-World Business Scenario #93 (VBA & Automation)</span>
             <span class="mod-tag">VBA & Automation</span>
           </div>
@@ -3261,8 +3581,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 94: Case Study 94: Real-World Business Scenario #94 (Statistical Analytics)</span>
             <span class="mod-tag">Statistical Analytics</span>
           </div>
@@ -3271,8 +3591,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 95: Case Study 95: Real-World Business Scenario #95 (Reporting & Dashboards)</span>
             <span class="mod-tag">Reporting & Dashboards</span>
           </div>
@@ -3281,8 +3601,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 96: Case Study 96: Real-World Business Scenario #96 (Lookup & Reference)</span>
             <span class="mod-tag">Lookup & Reference</span>
           </div>
@@ -3291,8 +3611,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 97: Case Study 97: Real-World Business Scenario #97 (Dynamic Arrays)</span>
             <span class="mod-tag">Dynamic Arrays</span>
           </div>
@@ -3301,8 +3621,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 98: Case Study 98: Real-World Business Scenario #98 (Financial Analysis)</span>
             <span class="mod-tag">Financial Analysis</span>
           </div>
@@ -3311,8 +3631,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> INDEX + MATCH performs flexible left/right lookups robust against column insertions.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 99: Case Study 99: Real-World Business Scenario #99 (PivotTables & DAX)</span>
             <span class="mod-tag">PivotTables & DAX</span>
           </div>
@@ -3321,8 +3641,8 @@ End Sub
           <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 <b>Explanation:</b> LET assigns local variables for line revenue and tax, computing final total 10x faster.</p>
         </div>
       
-        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:12px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 100: Case Study 100: Real-World Business Scenario #100 (Power Query ETL)</span>
             <span class="mod-tag">Power Query ETL</span>
           </div>
@@ -3332,42 +3652,97 @@ End Sub
         </div>
       
     
-      </div>
-    </article>
+    </div>
+  </article>
 
       </div>
     </main>
 
   </div>
 
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-bar">
+    <button class="nav-item active" onclick="scrollToTop()">
+      <span class="nav-icon">📖</span>
+      <span>Modules</span>
+    </button>
+    <button class="nav-item" onclick="showModule('mod22')">
+      <span class="nav-icon">⚡</span>
+      <span>112 Shortcuts</span>
+    </button>
+    <button class="nav-item" onclick="showModule('mod24')">
+      <span class="nav-icon">🎯</span>
+      <span>100 Cases</span>
+    </button>
+    <button class="nav-item" onclick="focusSearch()">
+      <span class="nav-icon">🔍</span>
+      <span>Search</span>
+    </button>
+  </nav>
+
   <script>
     function showModule(modId) {
       document.querySelectorAll('.module-card').forEach(card => card.classList.remove('active'));
-      document.querySelectorAll('.mod-nav-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.mod-pill-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.sidebar-btn').forEach(btn => btn.classList.remove('active'));
       
       const targetCard = document.getElementById(modId);
       if (targetCard) {
         targetCard.classList.add('active');
       }
 
-      const activeBtn = Array.from(document.querySelectorAll('.mod-nav-btn')).find(btn => btn.getAttribute('onclick').includes(modId));
-      if (activeBtn) {
-        activeBtn.classList.add('active');
+      const activePill = document.getElementById('btn-' + modId);
+      if (activePill) {
+        activePill.classList.add('active');
+        activePill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+
+      const activeSidebar = document.getElementById('sbtn-' + modId);
+      if (activeSidebar) {
+        activeSidebar.classList.add('active');
       }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Default activate module 1
+    // Default Activate Module 1
     showModule('mod1');
 
-    // Register PWA Service Worker
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function focusSearch() {
+      const search = document.getElementById('searchInput');
+      search.scrollIntoView({ behavior: 'smooth' });
+      search.focus();
+    }
+
+    function filterContent() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      if (!query) {
+        document.querySelectorAll('.module-card').forEach(card => {
+          if (card.id === 'mod1') card.classList.add('active');
+          else card.classList.remove('active');
+        });
+        return;
+      }
+
+      document.querySelectorAll('.module-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.classList.add('active');
+        } else {
+          card.classList.remove('active');
+        }
+      });
+    }
+
+    // Register Service Worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').then(reg => {
-        console.log('Service Worker Registered Successfully!', reg);
-      }).catch(err => {
-        console.log('Service Worker Registration Failed:', err);
-      });
+        console.log('PWA Service Worker Registered!', reg);
+      }).catch(err => console.log('SW Error:', err));
     }
 
     let deferredPrompt;
@@ -3379,14 +3754,14 @@ End Sub
     function installPWA() {
       if (deferredPrompt) {
         deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the PWA install prompt');
+        deferredPrompt.userChoice.then((result) => {
+          if (result.outcome === 'accepted') {
+            console.log('User installed PWA');
           }
           deferredPrompt = null;
         });
       } else {
-        alert('PWA installation is ready! Open browser menu and select "Add to Home Screen".');
+        alert('PWA App is ready! Open browser menu and click "Add to Home Screen".');
       }
     }
   </script>
