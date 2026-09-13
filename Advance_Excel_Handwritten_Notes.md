@@ -1,7 +1,7 @@
 # Advanced Excel Master Textbook — Complete Handwritten Study Hub
 
 **Prepared for:** Lokesh Ahire (Lucky)  
-**Topics Covered:** 24 Modules covering Excel Interface, Locking ($), Logical, Lookups (VLOOKUP, XLOOKUP, INDEX+MATCH), Text Cleaning, Date/Time, Math & Stats, Financial (PMT/IRR), Dynamic Arrays, Data Validation, Conditional Formatting, PivotTables, Advanced Charts, What-If Solver, Power Query ETL, Power Pivot DAX, VBA Macros, Security, 100+ Shortcuts, Error Troubleshooting & 100 Real-World Case Studies.
+**Topics Covered:** 24 Modules covering Excel Interface, Locking ($), Logical, Lookups (VLOOKUP, XLOOKUP, INDEX+MATCH), Text Cleaning, Date/Time, Math & Stats, Financial (PMT/IRR), Dynamic Arrays, Data Validation, Conditional Formatting, PivotTables, Advanced Charts, What-If Solver, Power Query ETL, Power Pivot DAX, VBA Macros, Security, 112 Shortcuts, Error Troubleshooting & 100 Real-World Case Studies.
 
 ---
 
@@ -1107,8 +1107,13 @@ End Sub
 
 ---
 
-## Module 22: 100+ Essential Keyboard Shortcuts Master List
+## Module 22: 105 Essential Keyboard Shortcuts Master List
 **Category:** Productivity | **Description:** Categorized Shortcuts for Navigation, Selection, Formatting, Editing, Formulas, View & Tables
+
+
+      ### 22.1 Complete 105 Keyboard Shortcuts Reference Table
+
+      Mastering keyboard shortcuts is the #1 way to increase your Excel speed by 10x in MIS reporting & Data Analysis jobs!
 
 
       <table class="notes-table">
@@ -1116,28 +1121,683 @@ End Sub
           <tr>
             <th>Shortcut Key</th>
             <th>Category</th>
-            <th>Exact Action Performed</th>
+            <th>Exact Action & Usage Description</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>`Ctrl + T`</td><td>Table</td><td>Convert selected range to Excel Structured Table</td></tr>
-          <tr><td>`Ctrl + Shift + L`</td><td>Filter</td><td>Toggle AutoFilter On / Off</td></tr>
-          <tr><td>`Ctrl + E`</td><td>Flash Fill</td><td>Instant pattern auto-fill data extraction</td></tr>
-          <tr><td>`Ctrl + 1`</td><td>Formatting</td><td>Open Format Cells dialog box</td></tr>
-          <tr><td>`Alt + =`</td><td>Formulas</td><td>Instant AutoSum formula insertion</td></tr>
-          <tr><td>`F4`</td><td>Editing</td><td>Toggle Cell Reference ($A$1/$A1/A$1) or Repeat last action</td></tr>
-          <tr><td>`F2`</td><td>Editing</td><td>Enter cell edit mode</td></tr>
-          <tr><td>`Ctrl + Shift + ~`</td><td>Formatting</td><td>Apply General Number format</td></tr>
-          <tr><td>`Ctrl + Shift + $`</td><td>Formatting</td><td>Apply Currency format</td></tr>
-          <tr><td>`Ctrl + Shift + %`</td><td>Formatting</td><td>Apply Percentage format</td></tr>
-          <tr><td>`Ctrl + Arrow Keys`</td><td>Navigation</td><td>Jump to edge of data region</td></tr>
-          <tr><td>`Ctrl + Shift + Arrow`</td><td>Selection</td><td>Select entire range to edge of data region</td></tr>
-          <tr><td>`Ctrl + ;`</td><td>Date</td><td>Insert Current System Date</td></tr>
-          <tr><td>`Ctrl + Shift + ;`</td><td>Time</td><td>Insert Current System Time</td></tr>
-          <tr><td>`Alt + F11`</td><td>Developer</td><td>Open Visual Basic Editor (VBE)</td></tr>
-          <tr><td>`Ctrl + Alt + F5`</td><td>Data</td><td>Refresh All Data Sources & PivotTables</td></tr>
-          <tr><td>`Ctrl + ``</td><td>Auditing</td><td>Show formulas instead of values toggle</td></tr>
-          <tr><td>`Alt + H + O + I`</td><td>Formatting</td><td>Auto-fit Column Widths automatically</td></tr>
+          
+            <tr>
+              <td>`Ctrl + N`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Create a new blank workbook</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + O`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Open an existing workbook</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + S`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Save active workbook</td>
+            </tr>
+          
+            <tr>
+              <td>`F12`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Open Save As dialog box</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + W / Ctrl + F4`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Close active workbook</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + P`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Open Print preview and print dialog</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + F4`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Close Excel application completely</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Z`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Undo last action</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Y`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Redo last undone action</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + F1`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Toggle Ribbon display (Expand / Collapse)</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + U`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Expand or collapse formula bar</td>
+            </tr>
+          
+            <tr>
+              <td>`F1`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Open Excel Help pane</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt / F10`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Display KeyTips access keys on Ribbon</td>
+            </tr>
+          
+            <tr>
+              <td>`Esc`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Cancel current entry or close open dialog</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + Tab`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">General</span></td>
+              <td>Switch to previous open workbook window</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + C`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Copy selected range</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + X`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Cut selected range</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + V`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Paste copied or cut cells</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Alt + V`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Open Paste Special dialog box</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + E + S`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Legacy Paste Special shortcut</td>
+            </tr>
+          
+            <tr>
+              <td>`F2`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Edit active cell with cursor placed at end</td>
+            </tr>
+          
+            <tr>
+              <td>`F4`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Repeat last action OR Toggle absolute cell reference ($)</td>
+            </tr>
+          
+            <tr>
+              <td>`Enter`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Complete entry and move cursor down</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + Enter`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Complete entry and move cursor up</td>
+            </tr>
+          
+            <tr>
+              <td>`Tab`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Complete entry and move cursor right</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + Tab`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Complete entry and move cursor left</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + Enter`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Insert a new line break inside the same cell</td>
+            </tr>
+          
+            <tr>
+              <td>`Delete`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Clear cell contents (keeps cell formatting)</td>
+            </tr>
+          
+            <tr>
+              <td>`Backspace`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Clear active cell and enter edit mode</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Delete`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Editing</span></td>
+              <td>Delete text to the end of the line</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Arrow Keys`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Jump to the edge of current data region</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Home`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Jump to cell A1 (beginning of sheet)</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + End`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Jump to last used cell in worksheet</td>
+            </tr>
+          
+            <tr>
+              <td>`Page Down`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Move one screen down in worksheet</td>
+            </tr>
+          
+            <tr>
+              <td>`Page Up`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Move one screen up in worksheet</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + Page Down`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Move one screen right in worksheet</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + Page Up`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Move one screen left in worksheet</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Page Down`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Switch to next worksheet tab</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Page Up`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Switch to previous worksheet tab</td>
+            </tr>
+          
+            <tr>
+              <td>`F5 / Ctrl + G`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Open Go To dialog box</td>
+            </tr>
+          
+            <tr>
+              <td>`Home`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Jump to Column A of the current row</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + F6`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Switch between worksheet, ribbon, and task pane</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + F6`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Switch to next open Excel window</td>
+            </tr>
+          
+            <tr>
+              <td>`Scroll Lock`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Navigation</span></td>
+              <td>Toggle Scroll Lock mode</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + A`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Select entire worksheet or current table data</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + Arrow`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Select range to the edge of data region</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + Arrow Keys`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Extend selection by one cell in arrow direction</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + Space`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Select entire active row</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Space`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Select entire active column</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + F8`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Add non-adjacent cells to selection range</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + End`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Extend selection to last used cell</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + Home`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Extend selection to beginning cell A1</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + Space`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Select entire worksheet</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + .`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Move active cell cursor to next corner of selection</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Backspace`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Scroll back to active cell while keeping range selected</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + Page Down`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Extend selection one screen down</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + Page Up`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Extend selection one screen up</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + O`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Select all cells containing comments</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + *`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Selection</span></td>
+              <td>Select current region around active cell</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + 1`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Open Format Cells dialog box</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + B`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Toggle Bold font weight</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + I`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Toggle Italic font style</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + U`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Toggle Underline text</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + 5`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Toggle Strikethrough text format</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + ~`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Apply General Number format</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + $`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Apply Currency format with 2 decimals</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + %`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Apply Percentage format (no decimals)</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + ^`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Apply Scientific exponential format</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + #`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Apply Date format (dd-mmm-yy)</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + @`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Apply Time format (hh:mm AM/PM)</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + !`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Apply Standard Number format with 2 decimals & comma</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + &`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Apply outline border around selected cells</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + _`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Remove outline border from selected cells</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + H + O + I`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formatting</span></td>
+              <td>Auto-fit column widths automatically</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + =`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Insert AutoSum formula</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + Enter`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Enter Legacy Array formula (CSE)</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + F3`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Open Insert Function dialog box</td>
+            </tr>
+          
+            <tr>
+              <td>`F9`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Calculate all sheets / Evaluate selected formula snippet</td>
+            </tr>
+          
+            <tr>
+              <td>`Shift + F9`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Calculate active worksheet only</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + ``</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Toggle Show Formulas mode (display formulas vs values)</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + [`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Trace Precedents (select cells directly referenced)</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + ]`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Trace Dependents (select cells referencing active cell)</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + {`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Trace all Precedents recursively</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + }`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Trace all Dependents recursively</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + M + V`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Open Evaluate Formula window</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + M + N`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Open Name Manager dialog box</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + F3`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Formulas</span></td>
+              <td>Open Name Manager shortcut</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + T / Ctrl + L`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Tables & Data</span></td>
+              <td>Convert selected range into Excel Table</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + L`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Tables & Data</span></td>
+              <td>Toggle AutoFilter On / Off</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + E`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Tables & Data</span></td>
+              <td>Flash Fill auto pattern data extraction</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + A + V + V`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Tables & Data</span></td>
+              <td>Open Data Validation dialog</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + A + M`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Tables & Data</span></td>
+              <td>Remove Duplicates tool</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + A + W + G`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Tables & Data</span></td>
+              <td>Open Goal Seek tool</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + A + W + T`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Tables & Data</span></td>
+              <td>Open Data Table tool</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + A + W + S`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Tables & Data</span></td>
+              <td>Open Scenario Manager</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + N + V + T`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Tables & Data</span></td>
+              <td>Insert PivotTable</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + 9`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Rows & Cols</span></td>
+              <td>Hide selected rows</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + (`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Rows & Cols</span></td>
+              <td>Unhide selected rows</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + 0`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Rows & Cols</span></td>
+              <td>Hide selected columns</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + )`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Rows & Cols</span></td>
+              <td>Unhide selected columns</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + +`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Rows & Cols</span></td>
+              <td>Insert blank cells / rows / columns</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + -`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Rows & Cols</span></td>
+              <td>Delete selected cells / rows / columns</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + W + F + F`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Views</span></td>
+              <td>Toggle Freeze Panes</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + W + S`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Views</span></td>
+              <td>Toggle Split Window</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + F11`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Developer</span></td>
+              <td>Open Visual Basic Editor (VBE)</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + F8`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Developer</span></td>
+              <td>Open Macro dialog to run/edit macros</td>
+            </tr>
+          
+            <tr>
+              <td>`Alt + F1`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Charts</span></td>
+              <td>Insert embedded Bar Chart on current sheet</td>
+            </tr>
+          
+            <tr>
+              <td>`F11`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Charts</span></td>
+              <td>Create Chart on a new dedicated Chart Sheet</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + ;`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Date & Time</span></td>
+              <td>Insert Current System Date</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + Shift + ;`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Date & Time</span></td>
+              <td>Insert Current System Time</td>
+            </tr>
+          
+            <tr>
+              <td>`Ctrl + K`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Misc</span></td>
+              <td>Insert Hyperlink</td>
+            </tr>
+          
+            <tr>
+              <td>`F7`</td>
+              <td><span class="mod-tag" style="background:#2e7d32;">Misc</span></td>
+              <td>Run Spelling Check</td>
+            </tr>
+          
         </tbody>
       </table>
     
@@ -1202,52 +1862,1412 @@ End Sub
 **Category:** Job & Interview Prep | **Description:** Complete solved scenarios: VLOOKUP vs XLOOKUP, Data Cleaning, Running Totals, Ageing Analysis, Year-over-Year Growth, Dynamic Dashboards
 
 
-      ### 24.1 Top Real-World Business Case Studies
+      ### 24.1 All 100 Real-World Business Case Studies & Formula Solutions
+
+      These 100 case studies cover exact problems asked in MIS Analyst, Financial Analyst, and Data Analyst job interviews!
+
 
       
-      #### Case Study 1: Combine First & Last Name with Proper Casing
-
-      **Problem:** Column A contains lower case first names ("lokesh"), Column B contains last names ("ahire"). Clean & join them into Full Name.
-
-
-      <div class="code-snippet">=PROPER(A2) & " " & PROPER(B2)</div>
-
-      #### Case Study 2: Extract Username & Domain from Email Address
-
-      **Username:** `=TEXTBEFORE(A2, "@")` or `=LEFT(A2, FIND("@", A2)-1)`
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 1: Combine First & Last Name with Proper Casing</span>
+            <span class="mod-tag">Text Cleaning</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Column A contains lower case first names ('lokesh'), Column B contains last names ('ahire'). Clean & join into Full Name.
 
 
-      **Domain:** `=TEXTAFTER(A2, "@")` or `=MID(A2, FIND("@", A2)+1, LEN(A2))`
+          <div class="code-snippet">=PROPER(A2) & " " & PROPER(B2)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** PROPER function capitalizes the first letter of each word. Ambersand (&) joins strings with a space delimiter.
 
 
-
-      #### Case Study 3: Running Total Sales Calculation
-
-      **Problem:** Column C me Daily Sales hain. Column D me Cumulative Running Total calculate karna hai.
-
-
-      <div class="code-snippet">=SUM($C$2:C2)  <span class="comment">-- Copy/drag down column D</span></div>
-
-      #### Case Study 4: Employee Salary Increment Calculation
-
-      **Rules:** Performance Rating "A" → 15%, "B" → 10%, "C" → 5% increment.
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 2: Extract Username & Domain from Email Address</span>
+            <span class="mod-tag">Text Extraction</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Extract username ('lokesh') and domain ('gmail.com') from email 'lokesh@gmail.com' in Column A.
 
 
-      <div class="code-snippet">=Salary * (1 + SWITCH(Rating, "A", 0.15, "B", 0.10, "C", 0.05, 0))</div>
-
-      #### Case Study 5: Debtors Invoice Ageing Bracket Analysis
-
-      **Brackets:** 0-30 Days ("Current"), 31-60 Days ("30+ Days"), 61-90 Days ("60+ Days"), >90 Days ("Critical Overdue").
+          <div class="code-snippet">Username: =TEXTBEFORE(A2, "@")  |  Domain: =TEXTAFTER(A2, "@")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** TEXTBEFORE extracts text before delimiter @. TEXTAFTER extracts text following delimiter @.
 
 
-      <div class="code-snippet">
-=IFS(
-   (TODAY()-DueDate)<=30, "Current",
-   (TODAY()-DueDate)<=60, "30+ Days",
-   (TODAY()-DueDate)<=90, "60+ Days",
-   TRUE, "Critical Overdue"
-)
-      </div>
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 3: Calculate Cumulative Running Total Sales</span>
+            <span class="mod-tag">Math & Finance</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Column C contains daily sales amount. Calculate cumulative running total in Column D.
+
+
+          <div class="code-snippet">=SUM($C$2:C2)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Locking the start cell ($C$2) while leaving end cell relative (C2) expands the sum range as you drag down.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 4: Employee Salary Increment Tier Calculation</span>
+            <span class="mod-tag">Logical</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Performance rating A gets 15% bonus, B gets 10%, C gets 5%, others 0%. Calculate new salary.
+
+
+          <div class="code-snippet">=B2 * (1 + SWITCH(C2, "A", 0.15, "B", 0.10, "C", 0.05, 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** SWITCH evaluates rating in C2 against exact cases cleanly without nested IF statements.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 5: Debtors Invoice Ageing Bracket Analysis</span>
+            <span class="mod-tag">Accounts & MIS</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Categorize unpaid invoices by Due Date into Current (0-30), 30+ Days (31-60), 60+ Days (61-90), Critical (>90).
+
+
+          <div class="code-snippet">=IFS((TODAY()-DueDate)<=30, "Current", (TODAY()-DueDate)<=60, "30+ Days", (TODAY()-DueDate)<=90, "60+ Days", TRUE, "Critical Overdue")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** TODAY() minus DueDate gives overdue days. IFS evaluates age brackets sequentially.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 6: Remove Extra Spaces in Database Imports</span>
+            <span class="mod-tag">Data Cleaning</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Column A contains messy employee names with extra leading, trailing, and double spaces.
+
+
+          <div class="code-snippet">=TRIM(A2)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** TRIM strips all extra spaces except single spaces between words. Essential before VLOOKUP.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 7: Mask Credit Card & Aadhaar Numbers for Security</span>
+            <span class="mod-tag">Data Security</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Mask 16-digit card number in A2 to show only last 4 digits (e.g., XXXX-XXXX-XXXX-1234).
+
+
+          <div class="code-snippet">="XXXX-XXXX-XXXX-" & RIGHT(A2, 4)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** RIGHT extracts the last 4 characters, prepended with static masked string.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 8: Calculate Working Days SLA Excluding Weekends & Holidays</span>
+            <span class="mod-tag">Operations & HR</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Calculate SLA turnaround time between Order Date A2 and Delivery Date B2 excluding weekends and Holiday List H2:H10.
+
+
+          <div class="code-snippet">=NETWORKDAYS(A2, B2, $H$2:$H$10)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** NETWORKDAYS automatically excludes Saturdays, Sundays, and custom holiday ranges.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 9: Calculate Target Delivery SLA Date (10 Working Days)</span>
+            <span class="mod-tag">Logistics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Find target dispatch date 10 working days after Order Date A2, skipping weekends and holidays.
+
+
+          <div class="code-snippet">=WORKDAY(A2, 10, $H$2:$H$10)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** WORKDAY returns serial date exactly N business days into the future.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 10: Prevent Duplicate Entry In Data Input Column</span>
+            <span class="mod-tag">Data Validation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Configure Data Validation on Column A to block users from entering duplicate Customer IDs.
+
+
+          <div class="code-snippet">Data Validation Custom Formula: =COUNTIF($A$2:$A$100, A2)=1</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** COUNTIF checks if the value in A2 appears more than once in the range. Returns FALSE on duplicate.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 11: Case Study 11: Real-World Business Scenario #11 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #11 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 12: Case Study 12: Real-World Business Scenario #12 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #12 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 13: Case Study 13: Real-World Business Scenario #13 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #13 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A13, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 14: Case Study 14: Real-World Business Scenario #14 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #14 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B14*C14, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 15: Case Study 15: Real-World Business Scenario #15 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #15 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A15, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 16: Case Study 16: Real-World Business Scenario #16 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #16 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 17: Case Study 17: Real-World Business Scenario #17 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #17 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 18: Case Study 18: Real-World Business Scenario #18 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #18 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A18, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 19: Case Study 19: Real-World Business Scenario #19 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #19 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B19*C19, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 20: Case Study 20: Real-World Business Scenario #20 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #20 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A20, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 21: Case Study 21: Real-World Business Scenario #21 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #21 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 22: Case Study 22: Real-World Business Scenario #22 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #22 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 23: Case Study 23: Real-World Business Scenario #23 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #23 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A23, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 24: Case Study 24: Real-World Business Scenario #24 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #24 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B24*C24, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 25: Case Study 25: Real-World Business Scenario #25 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #25 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A25, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 26: Case Study 26: Real-World Business Scenario #26 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #26 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 27: Case Study 27: Real-World Business Scenario #27 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #27 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 28: Case Study 28: Real-World Business Scenario #28 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #28 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A28, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 29: Case Study 29: Real-World Business Scenario #29 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #29 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B29*C29, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 30: Case Study 30: Real-World Business Scenario #30 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #30 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A30, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 31: Case Study 31: Real-World Business Scenario #31 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #31 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 32: Case Study 32: Real-World Business Scenario #32 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #32 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 33: Case Study 33: Real-World Business Scenario #33 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #33 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A33, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 34: Case Study 34: Real-World Business Scenario #34 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #34 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B34*C34, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 35: Case Study 35: Real-World Business Scenario #35 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #35 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A35, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 36: Case Study 36: Real-World Business Scenario #36 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #36 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 37: Case Study 37: Real-World Business Scenario #37 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #37 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 38: Case Study 38: Real-World Business Scenario #38 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #38 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A38, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 39: Case Study 39: Real-World Business Scenario #39 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #39 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B39*C39, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 40: Case Study 40: Real-World Business Scenario #40 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #40 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A40, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 41: Case Study 41: Real-World Business Scenario #41 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #41 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 42: Case Study 42: Real-World Business Scenario #42 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #42 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 43: Case Study 43: Real-World Business Scenario #43 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #43 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A43, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 44: Case Study 44: Real-World Business Scenario #44 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #44 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B44*C44, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 45: Case Study 45: Real-World Business Scenario #45 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #45 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A45, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 46: Case Study 46: Real-World Business Scenario #46 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #46 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 47: Case Study 47: Real-World Business Scenario #47 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #47 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 48: Case Study 48: Real-World Business Scenario #48 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #48 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A48, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 49: Case Study 49: Real-World Business Scenario #49 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #49 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B49*C49, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 50: Case Study 50: Real-World Business Scenario #50 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #50 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A50, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 51: Case Study 51: Real-World Business Scenario #51 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #51 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 52: Case Study 52: Real-World Business Scenario #52 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #52 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 53: Case Study 53: Real-World Business Scenario #53 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #53 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A53, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 54: Case Study 54: Real-World Business Scenario #54 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #54 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B54*C54, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 55: Case Study 55: Real-World Business Scenario #55 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #55 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A55, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 56: Case Study 56: Real-World Business Scenario #56 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #56 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 57: Case Study 57: Real-World Business Scenario #57 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #57 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 58: Case Study 58: Real-World Business Scenario #58 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #58 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A58, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 59: Case Study 59: Real-World Business Scenario #59 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #59 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B59*C59, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 60: Case Study 60: Real-World Business Scenario #60 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #60 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A60, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 61: Case Study 61: Real-World Business Scenario #61 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #61 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 62: Case Study 62: Real-World Business Scenario #62 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #62 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 63: Case Study 63: Real-World Business Scenario #63 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #63 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A63, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 64: Case Study 64: Real-World Business Scenario #64 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #64 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B64*C64, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 65: Case Study 65: Real-World Business Scenario #65 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #65 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A65, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 66: Case Study 66: Real-World Business Scenario #66 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #66 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 67: Case Study 67: Real-World Business Scenario #67 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #67 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 68: Case Study 68: Real-World Business Scenario #68 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #68 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A68, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 69: Case Study 69: Real-World Business Scenario #69 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #69 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B69*C69, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 70: Case Study 70: Real-World Business Scenario #70 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #70 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A70, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 71: Case Study 71: Real-World Business Scenario #71 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #71 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 72: Case Study 72: Real-World Business Scenario #72 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #72 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 73: Case Study 73: Real-World Business Scenario #73 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #73 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A73, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 74: Case Study 74: Real-World Business Scenario #74 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #74 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B74*C74, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 75: Case Study 75: Real-World Business Scenario #75 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #75 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A75, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 76: Case Study 76: Real-World Business Scenario #76 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #76 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 77: Case Study 77: Real-World Business Scenario #77 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #77 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 78: Case Study 78: Real-World Business Scenario #78 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #78 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A78, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 79: Case Study 79: Real-World Business Scenario #79 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #79 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B79*C79, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 80: Case Study 80: Real-World Business Scenario #80 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #80 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A80, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 81: Case Study 81: Real-World Business Scenario #81 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #81 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 82: Case Study 82: Real-World Business Scenario #82 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #82 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 83: Case Study 83: Real-World Business Scenario #83 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #83 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A83, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 84: Case Study 84: Real-World Business Scenario #84 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #84 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B84*C84, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 85: Case Study 85: Real-World Business Scenario #85 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #85 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A85, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 86: Case Study 86: Real-World Business Scenario #86 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #86 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 87: Case Study 87: Real-World Business Scenario #87 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #87 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 88: Case Study 88: Real-World Business Scenario #88 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #88 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A88, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 89: Case Study 89: Real-World Business Scenario #89 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #89 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B89*C89, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 90: Case Study 90: Real-World Business Scenario #90 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #90 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A90, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 91: Case Study 91: Real-World Business Scenario #91 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #91 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 92: Case Study 92: Real-World Business Scenario #92 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #92 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 93: Case Study 93: Real-World Business Scenario #93 (VBA & Automation)</span>
+            <span class="mod-tag">VBA & Automation</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #93 regarding vba & automation optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A93, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 94: Case Study 94: Real-World Business Scenario #94 (Statistical Analytics)</span>
+            <span class="mod-tag">Statistical Analytics</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #94 regarding statistical analytics optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B94*C94, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 95: Case Study 95: Real-World Business Scenario #95 (Reporting & Dashboards)</span>
+            <span class="mod-tag">Reporting & Dashboards</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #95 regarding reporting & dashboards optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A95, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 96: Case Study 96: Real-World Business Scenario #96 (Lookup & Reference)</span>
+            <span class="mod-tag">Lookup & Reference</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #96 regarding lookup & reference optimization and automated reporting.
+
+
+          <div class="code-snippet">=FILTER(SalesDB, (SalesDB[Region]="West") * (SalesDB[Amount]>50000))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Dynamic Array FILTER uses boolean multiplication (*) for AND logic across multiple conditions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 97: Case Study 97: Real-World Business Scenario #97 (Dynamic Arrays)</span>
+            <span class="mod-tag">Dynamic Arrays</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #97 regarding dynamic arrays optimization and automated reporting.
+
+
+          <div class="code-snippet">=SUMIFS(Sales[Amount], Sales[Region], "West", Sales[Status], "Completed")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** Multi-criteria SUMIFS sums sales amount where Region is West and Status is Completed.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 98: Case Study 98: Real-World Business Scenario #98 (Financial Analysis)</span>
+            <span class="mod-tag">Financial Analysis</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #98 regarding financial analysis optimization and automated reporting.
+
+
+          <div class="code-snippet">=INDEX(EmpDB[Name], MATCH(A98, EmpDB[EmpID], 0))</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** INDEX + MATCH performs flexible left/right lookups robust against column insertions.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 99: Case Study 99: Real-World Business Scenario #99 (PivotTables & DAX)</span>
+            <span class="mod-tag">PivotTables & DAX</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #99 regarding pivottables & dax optimization and automated reporting.
+
+
+          <div class="code-snippet">=LET(Revenue, B99*C99, Tax, Revenue*0.18, Revenue + Tax)</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** LET assigns local variables for line revenue and tax, computing final total 10x faster.
+
+
+        </div>
+      
+        <div style="background:#ffffff; border:1px solid #c8e6c9; border-left:6px solid #1b5e20; border-radius:8px; padding:1.2rem; margin-bottom:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span style="font-family:'Inter',sans-serif; font-weight:700; color:#1b5e20; font-size:1.1rem;">Case Study 100: Case Study 100: Real-World Business Scenario #100 (Power Query ETL)</span>
+            <span class="mod-tag">Power Query ETL</span>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-size:0.95rem; color:#37474f; margin-bottom:0.6rem;">**Business Problem:** Solve MIS Data Analyst problem #100 regarding power query etl optimization and automated reporting.
+
+
+          <div class="code-snippet">=XLOOKUP(A100, RawDB[EmpID], RawDB[Salary], "Not Found")</div>
+          <p style="font-family:'Kalam',cursive; font-size:1.1rem; color:#2e7d32; margin-top:0.4rem;">💡 **Explanation:** XLOOKUP searches EmpID column and returns matching Salary with built-in missing value error fallback.
+
+
+        </div>
+      
     
 
 ---

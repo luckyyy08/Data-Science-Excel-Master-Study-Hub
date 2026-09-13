@@ -1,10 +1,19 @@
 {
   "version": 2,
+  "name": "data-science-excel-master-hub",
   "cleanUrls": true,
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/index.html"
+    },
+    {
+      "src": "/notes",
+      "dest": "/Advance_Excel_Handwritten_Notes.html"
+    },
+    {
+      "src": "/offline",
+      "dest": "/Excel_Notes_Offline_App.html"
     }
   ]
 }
