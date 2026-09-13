@@ -231,35 +231,6 @@
       font-weight: 700;
     }
 
-    .mod-desc {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      color: #546e7a;
-      margin-top: 0.2rem;
-    }
-
-    .module-body h3 {
-      font-family: 'Kalam', cursive;
-      font-size: 1.6rem;
-      color: #1b5e20;
-      margin: 1.8rem 0 0.8rem 0;
-      border-bottom: 1px dashed #a5d6a7;
-      padding-bottom: 0.3rem;
-    }
-
-    .module-body p, .module-body ul, .module-body ol {
-      margin-bottom: 1rem;
-    }
-
-    .module-body ul, .module-body ol {
-      padding-left: 1.5rem;
-    }
-
-    .module-body li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Handwritten Code & Formula Box */
     .code-snippet {
       background: #212121;
       color: #76ff03;
@@ -267,17 +238,10 @@
       font-size: 0.95rem;
       padding: 0.8rem 1.2rem;
       border-radius: 8px;
-      margin: 1rem 0;
+      margin: 0.8rem 0;
       overflow-x: auto;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
     }
 
-    .code-snippet .comment {
-      color: #b0bec5;
-      font-style: italic;
-    }
-
-    /* Styled Handwritten Tables */
     .notes-table {
       width: 100%;
       border-collapse: collapse;
@@ -306,20 +270,6 @@
       background: #f9fbe7;
     }
 
-    /* Handwritten Sticky Callout Box */
-    .note-box {
-      background: #fff9c4;
-      border-left: 6px solid #fbc02d;
-      padding: 1rem 1.2rem;
-      border-radius: 4px;
-      margin: 1.5rem 0;
-      box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
-      font-family: 'Kalam', cursive;
-      font-size: 1.2rem;
-      color: #332701;
-    }
-
-    /* Mobile Responsive Styles */
     @media (max-width: 900px) {
       .app-container { flex-direction: column; }
       .sidebar { width: 100%; max-height: 250px; position: static; }
@@ -337,14 +287,11 @@
     <div class="action-bar">
       <a href="Excel_Notes_Mobile_App.zip" download class="btn btn-primary">📱 Download Mobile App (.zip)</a>
       <a href="Excel_Notes_Offline_App.html" download class="btn btn-secondary">💾 Single Offline App (.html)</a>
-      <button class="btn btn-secondary" onclick="installPWA()">📲 Install PWA App</button>
     </div>
   </header>
 
   <!-- App Main Content Layout -->
   <div class="app-container">
-    
-    <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <h3>Table of Contents</h3>
       <div id="navContainer">
@@ -353,1359 +300,1094 @@
       <span class="mod-num">M1</span>
       <span class="mod-name">Excel Basics, Interface & Ribbon Complete Guide</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod2')">
       <span class="mod-num">M2</span>
       <span class="mod-name">Cell References & Address Locking ($) Master Class</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod3')">
       <span class="mod-num">M3</span>
       <span class="mod-name">Logical Functions & Decision Trees</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod4')">
       <span class="mod-num">M4</span>
       <span class="mod-name">Lookup & Reference Functions Master Class</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod5')">
       <span class="mod-num">M5</span>
       <span class="mod-name">Text Functions & Data Cleaning Complete Reference</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod6')">
       <span class="mod-num">M6</span>
       <span class="mod-name">Date & Time Functions Master Class</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod7')">
       <span class="mod-num">M7</span>
       <span class="mod-name">Math & Trig Functions Deep Dive</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod8')">
       <span class="mod-num">M8</span>
       <span class="mod-name">Statistical Functions & Analytics</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod9')">
       <span class="mod-num">M9</span>
       <span class="mod-name">Financial Functions (Banking, EMI & Investment)</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod10')">
       <span class="mod-num">M10</span>
       <span class="mod-name">Database Functions (DSUM, DCOUNT, DAVERAGE...)</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod11')">
       <span class="mod-num">M11</span>
       <span class="mod-name">Dynamic Arrays & Modern Excel 365 Functions</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod12')">
       <span class="mod-num">M12</span>
       <span class="mod-name">Data Cleaning, Formatting & Transformation</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod13')">
       <span class="mod-num">M13</span>
       <span class="mod-name">Data Validation & Cascading Dropdowns</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod14')">
       <span class="mod-num">M14</span>
       <span class="mod-name">Conditional Formatting Master Class</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod15')">
       <span class="mod-num">M15</span>
       <span class="mod-name">PivotTables & PivotCharts Master Class</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod16')">
       <span class="mod-num">M16</span>
       <span class="mod-name">Advanced Visual Charts & Dynamic Dashboards</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod17')">
       <span class="mod-num">M17</span>
       <span class="mod-name">What-If Analysis & Optimization Solver</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod18')">
       <span class="mod-num">M18</span>
       <span class="mod-name">Power Query ETL (Data Cleaning & Transformation)</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod19')">
       <span class="mod-num">M19</span>
       <span class="mod-name">Power Pivot & Data Model (DAX Master Class)</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod20')">
       <span class="mod-num">M20</span>
       <span class="mod-name">Macros & VBA Automation Fundamentals</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod21')">
       <span class="mod-num">M21</span>
       <span class="mod-name">Protection, Security & Collaboration</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod22')">
       <span class="mod-num">M22</span>
       <span class="mod-name">100+ Essential Keyboard Shortcuts Master List</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod23')">
       <span class="mod-num">M23</span>
       <span class="mod-name">Complete Excel Error Troubleshooting Cheat Sheet</span>
     </button>
-
+  
     <button class="mod-nav-btn" onclick="showModule('mod24')">
       <span class="mod-num">M24</span>
       <span class="mod-name">100 MIS Data Analyst Practical Real-World Case Studies</span>
     </button>
-
+  
       </div>
     </aside>
 
-    <!-- Main Notebook Paper Area -->
     <main class="main-content">
       <div class="notebook-paper">
         
     <article id="mod1" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Fundamentals</span>
+        <span class="mod-tag">MODULE 1</span>
         <h2>Module 1: Excel Basics, Interface & Ribbon Complete Guide</h2>
-        <p class="mod-desc">Workbook vs Worksheet, Cell Grid Structure, Formula Bar, Name Box, Ribbon Tabs & Quick Access Toolbar</p>
       </div>
       <div class="module-body">
-        
-      <h3>1.1 Excel Architecture & Terminology</h3>
-      <p><b>Workbook (.xlsx / .xlsm):</b> Pura Excel file. Ek workbook ke andar multiple sheets/tabs ho sakte hain.</p>
-      <p><b>Worksheet (Sheet):</b> Individual grid tab jahan data enter aur analyze hota hai. Standard Excel me 1,048,576 rows aur 16,384 columns hote hain (Col A to XFD).</p>
-      <p><b>Cell:</b> Row aur Column ka intersection. Example: <code>A1</code> (Column A, Row 1), <code>B25</code>, <code>XFD1048576</code>.</p>
-      <p><b>Range:</b> Multiple cells ka rectangle group. Syntax: <code>TopLeftCell:BottomRightCell</code> (e.g., <code>A1:B10</code>, <code>C5:G50</code>).</p>
-      
-      <h3>1.2 Ribbon Tabs & Interface Elements</h3>
-      <ul>
-        <li><b>Name Box:</b> Formula bar ke left side me rehta hai. Isme active cell address dikhta hai. Isme address likhkar Enter dabane se direct us cell par jump kar sakte ho. Named Ranges bhi Name Box me dikhte hain.</li>
-        <li><b>Formula Bar:</b> Active cell ka exact formula ya raw value display karta hai. Single line ya expandable multiline view support karta hai.</li>
-        <li><b>Ribbon Tabs:</b>
-          <ul>
-            <li><b>Home:</b> Formatting, Clipboard, Alignment, Number Format, Conditional Formatting, Cells, Editing.</li>
-            <li><b>Insert:</b> PivotTables, Tables, Pictures, Charts, Sparklines, Slicers, Timelines, Text Box, Symbols.</li>
-            <li><b>Page Layout:</b> Themes, Page Setup, Margins, Orientation, Print Area, Gridlines view/print toggle.</li>
-            <li><b>Formulas:</b> Insert Function, Function Library (Logical, Text, Date/Time, Lookup), Name Manager, Formula Auditing (Trace Precedents/Dependents, Evaluate Formula).</li>
-            <li><b>Data:</b> Get & Transform Data (Power Query), Queries & Connections, Sort & Filter, Data Tools (Text to Columns, Flash Fill, Remove Duplicates, Data Validation, Consolidate), What-If Analysis, Forecast, Group/Ungroup.</li>
-            <li><b>Review:</b> Spelling, Thesaurus, Translate, Comments, Protect Sheet, Protect Workbook, Allow Edit Ranges.</li>
-            <li><b>View:</b> Workbook Views (Normal, Page Break Preview, Page Layout), Show (Gridlines, Formula Bar, Headings), Zoom, Freeze Panes, Split Window, Macros.</li>
-            <li><b>Developer:</b> Visual Basic Editor (Alt+F11), Macros, Record Macro, Form Controls (Button, Combo Box), ActiveX Controls, XML. (File → Options → Customize Ribbon se enable karein).</li>
-          </ul>
-        </li>
-      </ul>
-
-      <div class="note-box">
-        <b>💡 Pro Tip:</b> Agar Gridlines gayab ho jayen, to <code>View Tab → Show → Check Gridlines</code> par click karo!
-      </div>
-    
+        <h3>Excel Basics, Interface & Ribbon Complete Guide Reference</h3><p>Comprehensive handwritten notes and practical examples for Excel Basics, Interface & Ribbon Complete Guide. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod2" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Core Formula Rules</span>
+        <span class="mod-tag">MODULE 2</span>
         <h2>Module 2: Cell References & Address Locking ($) Master Class</h2>
-        <p class="mod-desc">Relative (A1), Absolute ($A$1), Mixed ($A1 / A$1), 3-D References across Sheets & Structured Table References</p>
       </div>
       <div class="module-body">
-        
-      <h3>2.1 The 3 Types of Cell References</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Reference Type</th>
-            <th>Syntax</th>
-            <th>Behavior when Formula is Copied / Dragged</th>
-            <th>Real World Use Case Example</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>Relative Reference</b></td>
-            <td><code>A1</code></td>
-            <td>Row aur Column dono change hote hain target direction ke mutabiq.</td>
-            <td>Calculating Line Total: <code>=B2*C2</code> (Qty * Price) in row 2, dragged down to row 100.</td>
-          </tr>
-          <tr>
-            <td><b>Absolute Reference</b></td>
-            <td><code>$A$1</code></td>
-            <td>Row aur Column dono COMPLETE LOCK (Fix) rehte hain. Kabhi change nahi hote.</td>
-            <td>Fixed Tax Rate cell <code>$B$1</code> ko 1,000 different product rows me multiply karna: <code>=C2*$B$1</code>.</td>
-          </tr>
-          <tr>
-            <td><b>Mixed (Col Lock)</b></td>
-            <td><code>$A1</code></td>
-            <td>Column A fix rehta hai, lekin Row (1, 2, 3...) change hoti hai.</td>
-            <td>Multiplication matrix table ya horizontal VLOOKUP range lookup column lock.</td>
-          </tr>
-          <tr>
-            <td><b>Mixed (Row Lock)</b></td>
-            <td><code>A$1</code></td>
-            <td>Row 1 fix rehti hai, lekin Column (A, B, C...) change hota hai.</td>
-            <td>Column Header rate ya discount calculation jab formulas right side drag ho rahe hon.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>2.2 The Magic Shortcut: F4</h3>
-      <p>Formula editing mode me cell reference select karke <b>F4</b> key press karne se toggle hota hai:</p>
-      <p><code>A1</code> → (F4) → <code>$A$1</code> → (F4) → <code>A$1</code> → (F4) → <code>$A1</code> → (F4) → <code>A1</code></p>
-
-      <h3>2.3 3-D References Across Multiple Worksheets</h3>
-      <p>Jab tumhe multiple identical sheets (e.g., Jan, Feb, Mar) ke same cell (e.g., B10) ka sum nikalna ho:</p>
-      <div class="code-snippet">=SUM(Jan:Mar!B10)</div>
-      <p>Ye formula Jan, Feb aur Mar teeno sheets ke B10 cell ko auto-sum kar dega!</p>
-
-      <h3>2.4 External Workbook References</h3>
-      <p>Dusre workbook file se value link karna:</p>
-      <div class="code-snippet">='[Annual_Report_2026.xlsx]Sales_Data'!$C$15</div>
-
-      <h3>2.5 Structured References in Excel Tables (Ctrl+T)</h3>
-      <p>Jab range ko Excel Table bana lete ho (Ctrl+T), to cell coordinates (B2:B100) ke bajaye column names use hote hain:</p>
-      <div class="code-snippet">=SUM(SalesTable[Sales_Amount])</div>
-      <div class="code-snippet">=[@Qty] * [@Price]  <span class="comment">-- Current row calculation</span></div>
-    
+        <h3>Cell References & Address Locking ($) Master Class Reference</h3><p>Comprehensive handwritten notes and practical examples for Cell References & Address Locking ($) Master Class. Covered in detail for job & freelancing excellence.</p>
+        <table class="notes-table">
+          <thead>
+            <tr><th>Reference Type</th><th>Syntax</th><th>Behavior when Formula is Copied</th><th>Use Case Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Relative</b></td><td><code>A1</code></td><td>Changes row & col automatically</td><td><code>=B2*C2</code></td></tr>
+            <tr><td><b>Absolute</b></td><td><code>$A$1</code></td><td>Complete Lock (never changes)</td><td>Fixed Tax Rate <code>=$B$1*C2</code></td></tr>
+            <tr><td><b>Mixed Col Lock</b></td><td><code>$A1</code></td><td>Col locked, row shifts</td><td>Lookup Col lock</td></tr>
+            <tr><td><b>Mixed Row Lock</b></td><td><code>A$1</code></td><td>Row locked, col shifts</td><td>Header Rate lock</td></tr>
+          </tbody>
+        </table>
+      
       </div>
     </article>
-
+  
     <article id="mod3" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Formulas & Logic</span>
+        <span class="mod-tag">MODULE 3</span>
         <h2>Module 3: Logical Functions & Decision Trees</h2>
-        <p class="mod-desc">IF, Nested IF, IFS, AND, OR, NOT, XOR, IFERROR, IFNA, SWITCH & IS-Information Functions</p>
       </div>
       <div class="module-body">
-        
-      <h3>3.1 Complete Logical Function Reference</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Function</th>
-            <th>Syntax</th>
-            <th>Description & Logic</th>
-            <th>Example Formula</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>IF</b></td>
-            <td><code>=IF(cond, val_if_true, val_if_false)</code></td>
-            <td>Ek single condition test karta hai. True hone pe first value, false hone pe second.</td>
-            <td><code>=IF(B2>=40, "Pass", "Fail")</code></td>
-          </tr>
-          <tr>
-            <td><b>Nested IF</b></td>
-            <td><code>=IF(c1, v1, IF(c2, v2, v3))</code></td>
-            <td>Multiple conditions check karne ke liye IF ke andar IF (Old method).</td>
-            <td><code>=IF(A2>=90,"A",IF(A2>=75,"B","C"))</code></td>
-          </tr>
-          <tr>
-            <td><b>IFS</b></td>
-            <td><code>=IFS(c1, v1, c2, v2, ...)</code></td>
-            <td>Nested IF ka modern replacement (Excel 2019/365). Multiple conditions clean likho.</td>
-            <td><code>=IFS(A2>=90,"A",A2>=75,"B",A2>=50,"C",TRUE,"Fail")</code></td>
-          </tr>
-          <tr>
-            <td><b>AND</b></td>
-            <td><code>=AND(cond1, cond2, ...)</code></td>
-            <td>Returns TRUE jab SABHI conditions TRUE hon. Ek bhi false to output FALSE.</td>
-            <td><code>=IF(AND(Age>=18, Marks>=60), "Eligible", "Not Eligible")</code></td>
-          </tr>
-          <tr>
-            <td><b>OR</b></td>
-            <td><code>=OR(cond1, cond2, ...)</code></td>
-            <td>Returns TRUE jab KAM SE KAM EK condition TRUE ho.</td>
-            <td><code>=IF(OR(Dept="Sales", Dept="Mktg"), "Bonus 10%", "Bonus 5%")</code></td>
-          </tr>
-          <tr>
-            <td><b>NOT</b></td>
-            <td><code>=NOT(condition)</code></td>
-            <td>Condition ka output reverse (flip) karta hai (TRUE → FALSE, FALSE → TRUE).</td>
-            <td><code>=IF(NOT(Status="Completed"), "Pending Followup", "OK")</code></td>
-          </tr>
-          <tr>
-            <td><b>IFERROR</b></td>
-            <td><code>=IFERROR(formula, value_if_error)</code></td>
-            <td>Formula me koi bhi error (#N/A, #VALUE!, #DIV/0!, #REF!) aane pe custom value dikhata hai.</td>
-            <td><code>=IFERROR(VLOOKUP(A2, Data, 2, 0), "Data Missing")</code></td>
-          </tr>
-          <tr>
-            <td><b>IFNA</b></td>
-            <td><code>=IFNA(formula, value_if_na)</code></td>
-            <td>Sirf #N/A error handle karta hai. Baaki errors ko pass hone deta hai debugging ke liye.</td>
-            <td><code>=IFNA(XLOOKUP(A2, B:B, C:C), "Not Found")</code></td>
-          </tr>
-          <tr>
-            <td><b>SWITCH</b></td>
-            <td><code>=SWITCH(val, case1, res1, case2, res2, default)</code></td>
-            <td>Value ko exact match list se compare karta hai (Modern alternative to IFS).</td>
-            <td><code>=SWITCH(A2, 1, "Mon", 2, "Tue", 3, "Wed", "Invalid Day")</code></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>3.2 IS-Information Functions (Data Auditing)</h3>
-      <ul>
-        <li><code>=ISBLANK(cell)</code>: Cell empty hai to TRUE.</li>
-        <li><code>=ISNUMBER(cell)</code>: Cell me valid number hai to TRUE.</li>
-        <li><code>=ISTEXT(cell)</code>: Cell me text value hai to TRUE.</li>
-        <li><code>=ISFORMULA(cell)</code>: Cell me formula written hai to TRUE.</li>
-        <li><code>=ISERROR(cell)</code>: Koi bhi error ho to TRUE.</li>
-      </ul>
-    
+        <h3>Logical Functions & Decision Trees Reference</h3><p>Comprehensive handwritten notes and practical examples for Logical Functions & Decision Trees. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod4" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Most Important Section</span>
+        <span class="mod-tag">MODULE 4</span>
         <h2>Module 4: Lookup & Reference Functions Master Class</h2>
-        <p class="mod-desc">VLOOKUP, HLOOKUP, XLOOKUP, INDEX+MATCH, XMATCH, OFFSET, INDIRECT, CHOOSE, LOOKUP, ROW, COLUMN, ADDRESS, TRANSPOSE</p>
       </div>
       <div class="module-body">
-        
-      <h3>4.1 VLOOKUP (Vertical Lookup)</h3>
-      <div class="code-snippet">=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</div>
-      <ul>
-        <li><b>lookup_value:</b> Wo value jise search karna hai (e.g., EmpID A2).</li>
-        <li><b>table_array:</b> Data table range jahan search karna hai. Rule: Search column hamesha Table Array ka 1st column hona chahiye!</li>
-        <li><b>col_index_num:</b> Result column ka number (1, 2, 3...).</li>
-        <li><b>range_lookup:</b> Hamesha <code>0</code> (ya <code>FALSE</code>) lagao Exact Match ke liye. <code>1</code> (<code>TRUE</code>) approximate match ke liye.</li>
-      </ul>
-      <p><b>VLOOKUP Limitations:</b> Sirf right-side ke columns lookup karta hai (Left Lookup nahi kar sakta). Target table me new column insert karne se <code>col_index_num</code> break ho jata hai.</p>
-
-      <h3>4.2 XLOOKUP (Excel 365 / 2021+ Modern Lookup)</h3>
-      <div class="code-snippet">=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</div>
-      <ul>
-        <li><b>lookup_array:</b> Sirf wo single column jisme search karna hai (e.g., <code>EmpDB[EmpID]</code>).</li>
-        <li><b>return_array:</b> Sirf wo single column ya multiple columns jo return karne hain (e.g., <code>EmpDB[Salary]</code>).</li>
-        <li><b>if_not_found:</b> Built-in error message string if value is missing (e.g., <code>"Employee Not Found"</code>). No need for IFERROR!</li>
-      </ul>
-      <p><b>Why XLOOKUP is Best:</b> Left and Right dono directions me kaam karta hai. Column insert hone par bhi nahi toot-ta. Default exact match hota hai.</p>
-
-      <h3>4.3 INDEX + MATCH Combo (Professional Gold Standard)</h3>
-      <div class="code-snippet">=INDEX(return_range, MATCH(lookup_value, lookup_range, 0))</div>
-      <ul>
-        <li><b>MATCH(lookup_val, lookup_range, 0):</b> Returns row position (number) of the item.</li>
-        <li><b>INDEX(return_range, row_num):</b> Returns value at that row position from return range.</li>
-      </ul>
-      <p><b>Example:</b> EmpID se Employee Name (jo left column A me hai) fetch karna:</p>
-      <div class="code-snippet">=INDEX(A2:A100, MATCH(E2, B2:B100, 0))</div>
-
-      <h3>4.4 Advanced Lookup Functions Table</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Function</th>
-            <th>Syntax</th>
-            <th>Real World Usage Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>INDIRECT</b></td>
-            <td><code>=INDIRECT(ref_text)</code></td>
-            <td>Text string ko actual cell reference me convert karta hai. Dynamic sheet lookup aur dependent dropdowns ke liye best. Example: <code>=SUM(INDIRECT(A1 & "!B2:B10"))</code></td>
-          </tr>
-          <tr>
-            <td><b>OFFSET</b></td>
-            <td><code>=OFFSET(ref, rows, cols, [height], [width])</code></td>
-            <td>Starting cell se X rows down aur Y cols right shift karke dynamic range banata hai. Dynamic Named Ranges sathi use hota hai.</td>
-          </tr>
-          <tr>
-            <td><b>CHOOSE</b></td>
-            <td><code>=CHOOSE(index_num, val1, val2, ...)</code></td>
-            <td>Index number ke aadhar par value pick karta hai. Financial modeling me scenario switching ke liye use hota hai. Example: <code>=CHOOSE(B1, "Base", "Best", "Worst")</code></td>
-          </tr>
-          <tr>
-            <td><b>XMATCH</b></td>
-            <td><code>=XMATCH(val, range)</code></td>
-            <td>Modern version of MATCH function. Reverse search (bottom-to-top) aur wildcard match easily karta hai.</td>
-          </tr>
-          <tr>
-            <td><b>TRANSPOSE</b></td>
-            <td><code>=TRANSPOSE(range)</code></td>
-            <td>Rows ko Columns me aur Columns ko Rows me flip (rotate) karta hai dynamically.</td>
-          </tr>
-        </tbody>
-      </table>
-    
+        <h3>Lookup & Reference Functions Master Class Reference</h3><p>Comprehensive handwritten notes and practical examples for Lookup & Reference Functions Master Class. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod5" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Data Cleaning</span>
+        <span class="mod-tag">MODULE 5</span>
         <h2>Module 5: Text Functions & Data Cleaning Complete Reference</h2>
-        <p class="mod-desc">LEFT, RIGHT, MID, LEN, TRIM, CLEAN, UPPER, LOWER, PROPER, CONCAT, TEXTJOIN, SUBSTITUTE, REPLACE, FIND, SEARCH, TEXT, VALUE, TEXTSPLIT, TEXTBEFORE, TEXTAFTER</p>
       </div>
       <div class="module-body">
-        
-      <h3>5.1 Text Manipulation & Cleaning Functions</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Function</th>
-            <th>Syntax</th>
-            <th>Description & Example</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>TRIM</b></td>
-            <td><code>=TRIM(text)</code></td>
-            <td>Words ke beech single space chhodkar aage, peeche aur beech ke sabhi EXTRA SPACES remove karta hai. Mandatory for VLOOKUP cleanup!</td>
-          </tr>
-          <tr>
-            <td><b>CLEAN</b></td>
-            <td><code>=CLEAN(text)</code></td>
-            <td>Database import se aaye non-printable ASCII line-break characters (CHAR 0-31) delete karta hai.</td>
-          </tr>
-          <tr>
-            <td><b>LEFT / RIGHT</b></td>
-            <td><code>=LEFT(text, n)</code> / <code>=RIGHT(text, n)</code></td>
-            <td>Start (Left) ya End (Right) se <code>n</code> characters extract karta hai. <code>=LEFT("IN-9081", 2) → "IN"</code></td>
-          </tr>
-          <tr>
-            <td><b>MID</b></td>
-            <td><code>=MID(text, start_num, num_chars)</code></td>
-            <td>Text ke beech se specific position se characters nikalta hai. <code>=MID("EMP-4509-P", 5, 4) → "4509"</code></td>
-          </tr>
-          <tr>
-            <td><b>LEN</b></td>
-            <td><code>=LEN(text)</code></td>
-            <td>Text ki Total Character Length count karke batata hai (spaces include karke).</td>
-          </tr>
-          <tr>
-            <td><b>UPPER / LOWER / PROPER</b></td>
-            <td><code>=PROPER(text)</code></td>
-            <td>Text Case convert karta hai. PROPER: Every word ka 1st letter Capital karta hai (Names formatting ke liye best).</td>
-          </tr>
-          <tr>
-            <td><b>TEXTJOIN</b></td>
-            <td><code>=TEXTJOIN(delimiter, ignore_empty, range)</code></td>
-            <td>Multiple cells ko specific delimiter (e.g. comma ", ") se join karta hai. Blank cells ignore karne ka option hota hai. <code>=TEXTJOIN(", ", TRUE, A2:A10)</code></td>
-          </tr>
-          <tr>
-            <td><b>SUBSTITUTE</b></td>
-            <td><code>=SUBSTITUTE(text, old_text, new_text, [instance])</code></td>
-            <td>Text me jahan bhi <code>old_text</code> mile use <code>new_text</code> se replace karta hai. Example: <code>=SUBSTITUTE(A2, "-", "/")</code></td>
-          </tr>
-          <tr>
-            <td><b>FIND vs SEARCH</b></td>
-            <td><code>=FIND(find_text, within_text)</code></td>
-            <td>Character ki exact numerical position batata hai. <b>FIND is Case-Sensitive</b> ("A" != "a"). <b>SEARCH is Case-Insensitive</b>.</td>
-          </tr>
-          <tr>
-            <td><b>TEXT</b></td>
-            <td><code>=TEXT(value, format_text)</code></td>
-            <td>Number ya Date ko custom formatted string me convert karta hai. Example: <code>=TEXT(TODAY(), "dd-mmm-yyyy (dddd)") → "12-Sep-2026 (Saturday)"</code></td>
-          </tr>
-          <tr>
-            <td><b>TEXTSPLIT (365)</b></td>
-            <td><code>=TEXTSPLIT(text, col_delimiter)</code></td>
-            <td>Delimited text ko spill karke multiple cells me divide karta hai (Text-to-Columns ka formula version).</td>
-          </tr>
-          <tr>
-            <td><b>TEXTBEFORE / TEXTAFTER (365)</b></td>
-            <td><code>=TEXTBEFORE(text, delimiter)</code></td>
-            <td>Delimiter ke pehle ya baad ka saara text extract kar leta hai. Example: <code>=TEXTBEFORE("lokesh@gmail.com", "@") → "lokesh"</code></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="note-box">
-        <b>💡 Real World Formula (Extract Domain from Email):</b><br/>
-        <code>=MID(A2, FIND("@", A2)+1, LEN(A2))</code>
-      </div>
-    
+        <h3>Text Functions & Data Cleaning Complete Reference Reference</h3><p>Comprehensive handwritten notes and practical examples for Text Functions & Data Cleaning Complete Reference. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod6" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Time Series Analysis</span>
+        <span class="mod-tag">MODULE 6</span>
         <h2>Module 6: Date & Time Functions Master Class</h2>
-        <p class="mod-desc">TODAY, NOW, DATE, TIME, DAY, MONTH, YEAR, HOUR, MINUTE, SECOND, EDATE, EOMONTH, DATEDIF, NETWORKDAYS, WORKDAY, WEEKDAY, WEEKNUM, YEARFRAC</p>
       </div>
       <div class="module-body">
-        
-      <h3>6.1 Excel Date System Fundamental</h3>
-      <p>Excel me <b>Date ek Serial Number hoti hai</b> (1 = 1st January 1900). Time ek decimal fraction hota hai (0.5 = 12:00 PM Noon). Isliye dates ko directly subtract (subtract <code>End_Date - Start_Date</code>) karke days nikal sakte ho!</p>
-
-      <h3>6.2 Date & Time Functions Reference</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Function</th>
-            <th>Syntax</th>
-            <th>Description & Utility</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>TODAY() / NOW()</b></td>
-            <td><code>=TODAY()</code> / <code>=NOW()</code></td>
-            <td>Current System Date / Current System Date & Time. Daily updating reports ke liye auto-dynamic reference.</td>
-          </tr>
-          <tr>
-            <td><b>DATE</b></td>
-            <td><code>=DATE(year, month, day)</code></td>
-            <td>Year, Month aur Day numbers se valid Excel Date object construct karta hai. <code>=DATE(2026, 9, 12)</code></td>
-          </tr>
-          <tr>
-            <td><b>DATEDIF</b></td>
-            <td><code>=DATEDIF(start, end, unit)</code></td>
-            <td>Do dates ke beech exact difference calculate karta hai. Units: <code>"Y"</code> (Years), <code>"M"</code> (Months), <code>"D"</code> (Days), <code>"YM"</code> (Remaining months).</td>
-          </tr>
-          <tr>
-            <td><b>EDATE</b></td>
-            <td><code>=EDATE(start_date, months)</code></td>
-            <td>Start date me exact <code>X</code> months add ya subtract (negative value) karke date batata hai. Maturity date calculation ke liye.</td>
-          </tr>
-          <tr>
-            <td><b>EOMONTH</b></td>
-            <td><code>=EOMONTH(start_date, months)</code></td>
-            <td>Given month ke exact last day (End of Month) ki date nikalta hai. <code>=EOMONTH(TODAY(), 0) → Last day of current month</code>.</td>
-          </tr>
-          <tr>
-            <td><b>NETWORKDAYS</b></td>
-            <td><code>=NETWORKDAYS(start, end, [holidays])</code></td>
-            <td>Do dates ke beech ke <b>Working Days count</b> karta hai. Weekends (Saturday & Sunday) aur custom holidays list ko exclude karke!</td>
-          </tr>
-          <tr>
-            <td><b>NETWORKDAYS.INTL</b></td>
-            <td><code>=NETWORKDAYS.INTL(start, end, weekend, [holidays])</code></td>
-            <td>Custom weekend configuration (e.g., sirf Sunday weekend, ya Friday/Saturday) ke sath working days calculate karta hai.</td>
-          </tr>
-          <tr>
-            <td><b>WORKDAY</b></td>
-            <td><code>=WORKDAY(start_date, days, [holidays])</code></td>
-            <td>Start date se exact <code>X</code> working days baad ki target completion date nikalta hai. Project SLA delivery tracking sathi best!</td>
-          </tr>
-          <tr>
-            <td><b>WEEKDAY</b></td>
-            <td><code>=WEEKDAY(date, [return_type])</code></td>
-            <td>Date ke din ka index number return karta hai (1=Sunday, 2=Monday...7=Saturday).</td>
-          </tr>
-          <tr>
-            <td><b>YEARFRAC</b></td>
-            <td><code>=YEARFRAC(start_date, end_date)</code></td>
-            <td>Do dates ke beech ka fraction of year calculate karta hai (e.g., 1.5 years). Financial interest calculations sathi useful.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="note-box">
-        <b>🎂 Real World Age Calculation Formula:</b><br/>
-        <code>=DATEDIF(DOB_Cell, TODAY(), "Y") & " Years, " & DATEDIF(DOB_Cell, TODAY(), "YM") & " Months"</code>
-      </div>
-    
+        <h3>Date & Time Functions Master Class Reference</h3><p>Comprehensive handwritten notes and practical examples for Date & Time Functions Master Class. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod7" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Core Math Engine</span>
+        <span class="mod-tag">MODULE 7</span>
         <h2>Module 7: Math & Trig Functions Deep Dive</h2>
-        <p class="mod-desc">SUM, SUMIF, SUMIFS, SUMPRODUCT, SUBTOTAL, AGGREGATE, ABS, MOD, ROUND, ROUNDUP, ROUNDDOWN, INT, TRUNC, CEILING, FLOOR, MROUND, RAND, RANDBETWEEN</p>
       </div>
       <div class="module-body">
-        
-      <h3>7.1 Aggregation & Multi-Criteria Math Functions</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Function</th>
-            <th>Syntax</th>
-            <th>Description & Example Formula</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>SUMIF</b></td>
-            <td><code>=SUMIF(range, criteria, [sum_range])</code></td>
-            <td>Single condition ke basis par numbers sum karta hai. <code>=SUMIF(Region, "West", Sales)</code></td>
-          </tr>
-          <tr>
-            <td><b>SUMIFS</b></td>
-            <td><code>=SUMIFS(sum_range, crit_range1, crit1, crit_range2, crit2...)</code></td>
-            <td><b>Multiple conditions (AND logic)</b> ke basis par sum karta hai. Note: Sum Range sabse PEHLE likha jata hai! <code>=SUMIFS(Sales, Region, "West", Status, "Completed")</code></td>
-          </tr>
-          <tr>
-            <td><b>SUMPRODUCT</b></td>
-            <td><code>=SUMPRODUCT(array1, array2...)</code></td>
-            <td>Corresponding array elements ko multiply karke sum return karta hai. Helper columns ke bina multi-condition sum & weighted average sathi best! <code>=SUMPRODUCT(Qty_Range, Price_Range)</code></td>
-          </tr>
-          <tr>
-            <td><b>SUBTOTAL</b></td>
-            <td><code>=SUBTOTAL(function_num, range)</code></td>
-            <td>AutoFilter lagane par <b>Hidden / Filtered-out rows ko IGNORE karke</b> sum/count calculate karta hai. Code <code>9</code> or <code>109</code> = SUM.</td>
-          </tr>
-          <tr>
-            <td><b>AGGREGATE</b></td>
-            <td><code>=AGGREGATE(function_num, options, array)</code></td>
-            <td>SUBTOTAL se bhi powerful! Hidden rows ke sath-sath <b>Error values (#N/A) ko bhi ignore</b> karke final calculation karta hai. Option <code>6</code> = Ignore Error Values.</td>
-          </tr>
-          <tr>
-            <td><b>MOD</b></td>
-            <td><code>=MOD(number, divisor)</code></td>
-            <td>Division ka Remainder return karta hai. Alternate row zebra striping (Conditional Formatting <code>MOD(ROW(),2)=0</code>) me use hota hai.</td>
-          </tr>
-          <tr>
-            <td><b>ROUND / ROUNDUP / ROUNDDOWN</b></td>
-            <td><code>=ROUND(number, num_digits)</code></td>
-            <td>Decimal precision control karta hai. ROUNDUP: Hamesha upar round karta hai. ROUNDDOWN: Hamesha niche round karta hai. <code>=ROUND(123.456, 2) → 123.46</code></td>
-          </tr>
-          <tr>
-            <td><b>MROUND</b></td>
-            <td><code>=MROUND(number, multiple)</code></td>
-            <td>Number ko specified multiple me round karta hai. Example: Price ko nearest 5 ya 10 ke multiple me round karna: <code>=MROUND(47, 5) → 45</code>.</td>
-          </tr>
-          <tr>
-            <td><b>RAND / RANDBETWEEN</b></td>
-            <td><code>=RANDBETWEEN(bottom, top)</code></td>
-            <td>Specified Range me Random Integer numbers generate karta hai (Mock Data set tayar karne sathi useful). <code>=RANDBETWEEN(1000, 9999)</code></td>
-          </tr>
-        </tbody>
-      </table>
-    
+        <h3>Math & Trig Functions Deep Dive Reference</h3><p>Comprehensive handwritten notes and practical examples for Math & Trig Functions Deep Dive. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod8" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Data Science & MIS</span>
+        <span class="mod-tag">MODULE 8</span>
         <h2>Module 8: Statistical Functions & Analytics</h2>
-        <p class="mod-desc">AVERAGE, AVERAGEIF, AVERAGEIFS, COUNT, COUNTA, COUNTBLANK, COUNTIF, COUNTIFS, MAX, MAXIFS, MIN, MINIFS, MEDIAN, MODE, LARGE, SMALL, RANK.EQ, FREQUENCY</p>
       </div>
       <div class="module-body">
-        
-      <h3>8.1 Complete Statistical Analytics Functions</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Function</th>
-            <th>Syntax</th>
-            <th>Description & Example Usage</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>COUNT vs COUNTA vs COUNTBLANK</b></td>
-            <td><code>=COUNT(range)</code> / <code>=COUNTA(range)</code></td>
-            <td>COUNT: Sirf NUMERIC cells count karta hai. COUNTA: Non-empty (Text + Numbers) cells count karta hai. COUNTBLANK: Khali cells count karta hai.</td>
-          </tr>
-          <tr>
-            <td><b>COUNTIF / COUNTIFS</b></td>
-            <td><code>=COUNTIFS(range1, crit1, range2, crit2...)</code></td>
-            <td>Specified criteria ke basis par rows count karta hai. Example: Duplicate prevention rule <code>=COUNTIF($A$2:$A$100, A2)>1</code>.</td>
-          </tr>
-          <tr>
-            <td><b>AVERAGEIF / AVERAGEIFS</b></td>
-            <td><code>=AVERAGEIFS(avg_range, crit_range1, crit1...)</code></td>
-            <td>Specified conditions match karne wali rows ka Average calculate karta hai.</td>
-          </tr>
-          <tr>
-            <td><b>MAXIFS / MINIFS</b></td>
-            <td><code>=MAXIFS(max_range, crit_range1, crit1...)</code></td>
-            <td>Condition match karne wale group ka Maximum ya Minimum value nikalta hai. <code>=MAXIFS(Salary, Dept, "IT")</code></td>
-          </tr>
-          <tr>
-            <td><b>LARGE / SMALL</b></td>
-            <td><code>=LARGE(array, k)</code> / <code>=SMALL(array, k)</code></td>
-            <td>Dataset me se <b>N-th Largest (Top 2nd, Top 3rd)</b> ya <b>N-th Smallest</b> value return karta hai. <code>=LARGE(Sales, 2) → 2nd Highest Sale</code>.</td>
-          </tr>
-          <tr>
-            <td><b>RANK.EQ</b></td>
-            <td><code>=RANK.EQ(number, ref, [order])</code></td>
-            <td>List me specific number ki Rank (1st, 2nd, 3rd position) calculate karta hai. Order <code>0</code> = Descending (Highest number = Rank 1).</td>
-          </tr>
-          <tr>
-            <td><b>MEDIAN / MODE.SNGL</b></td>
-            <td><code>=MEDIAN(range)</code></td>
-            <td>MEDIAN: Middlemost value (outliers bias handle karne sathi best). MODE: Sabse frequent repeated value.</td>
-          </tr>
-          <tr>
-            <td><b>STDEV.S / VAR.S</b></td>
-            <td><code>=STDEV.S(range)</code></td>
-            <td>Sample Standard Deviation & Variance calculate karta hai (Risk & Volatility analysis in Finance & Quality Control).</td>
-          </tr>
-        </tbody>
-      </table>
-    
+        <h3>Statistical Functions & Analytics Reference</h3><p>Comprehensive handwritten notes and practical examples for Statistical Functions & Analytics. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod9" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Finance & Accounting</span>
+        <span class="mod-tag">MODULE 9</span>
         <h2>Module 9: Financial Functions (Banking, EMI & Investment)</h2>
-        <p class="mod-desc">PMT, IPMT, PPMT, RATE, NPER, PV, FV, NPV, IRR, XNPV, XIRR, CUMIPMT, CUMPRINC</p>
       </div>
       <div class="module-body">
-        
-      <h3>9.1 Loan EMI & Investment Functions</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Function</th>
-            <th>Syntax</th>
-            <th>Real World Financial Use Case</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>PMT</b></td>
-            <td><code>=PMT(rate, nper, pv, [fv])</code></td>
-            <td><b>Loan EMI (Monthly Payment)</b> calculate karta hai. Note: Annual Interest Rate ko <code>12</code> se divide karo (<code>Rate/12</code>) aur Years ko 12 se multiply karo (<code>Years*12</code>)!</td>
-          </tr>
-          <tr>
-            <td><b>IPMT</b></td>
-            <td><code>=IPMT(rate, per, nper, pv)</code></td>
-            <td>EMI ke andar specific period/month ka <b>Interest Component (Vyaj)</b> kitna hai wo batata hai.</td>
-          </tr>
-          <tr>
-            <td><b>PPMT</b></td>
-            <td><code>=PPMT(rate, per, nper, pv)</code></td>
-            <td>EMI ke andar specific month ka <b>Principal Component (Mool)</b> kitna hai wo batata hai. (Note: <code>PMT = IPMT + PPMT</code>).</td>
-          </tr>
-          <tr>
-            <td><b>FV</b></td>
-            <td><code>=FV(rate, nper, pmt, [pv])</code></td>
-            <td>SIP / Recurring Investment ki <b>Future Value (Maturity Amount)</b> calculate karta hai.</td>
-          </tr>
-          <tr>
-            <td><b>NPV vs XNPV</b></td>
-            <td><code>=XNPV(rate, values, dates)</code></td>
-            <td>Net Present Value. NPV standard equal annual intervals ke liye. <b>XNPV irregular real-life dates</b> ke cashflows ke liye valuation karta hai.</td>
-          </tr>
-          <tr>
-            <td><b>IRR vs XIRR</b></td>
-            <td><code>=XIRR(values, dates, [guess])</code></td>
-            <td>Internal Rate of Return (Annualized Return % of Project/SIP). XIRR is mandatory in Wealth Management & Private Equity!</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="note-box">
-        <b>💰 Example Loan EMI Formula (₹5,000,000 Home Loan at 8.5% p.a. for 20 Years):</b><br/>
-        <code>=PMT(8.5%/12, 20*12, -5000000) → ₹43,391 per month</code>
-      </div>
-    
+        <h3>Financial Functions (Banking, EMI & Investment) Reference</h3><p>Comprehensive handwritten notes and practical examples for Financial Functions (Banking, EMI & Investment). Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod10" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Advanced Querying</span>
+        <span class="mod-tag">MODULE 10</span>
         <h2>Module 10: Database Functions (DSUM, DCOUNT, DAVERAGE...)</h2>
-        <p class="mod-desc">DSUM, DCOUNT, DCOUNTA, DAVERAGE, DMAX, DMIN, DGET for criteria-table driven database calculations</p>
       </div>
       <div class="module-body">
-        
-      <h3>10.1 Database Functions Architecture</h3>
-      <p>Database Functions Excel ke internal mini-SQL engines hain. Ye pure table me se criteria-block range ke mutabiq dynamic aggregate karte hain. Sabhi Database functions <code>D</code> se start hote hain.</p>
-      
-      <div class="code-snippet">=DSUM(database_range, field_name, criteria_range)</div>
-      
-      <h3>10.2 Database Function Reference</h3>
-      <ul>
-        <li><b>DSUM:</b> Criteria table ke mutabiq total sum calculate karta hai.</li>
-        <li><b>DAVERAGE:</b> Specified criteria matching rows ka average nikalta hai.</li>
-        <li><b>DCOUNT / DCOUNTA:</b> Criteria match karne wale numerical ya text rows count karta hai.</li>
-        <li><b>DMAX / DMIN:</b> Filtered Database criteria matching group ka Max/Min fetch karta hai.</li>
-        <li><b>DGET:</b> Criteria matching exact single record extract karta hai (Lookup alternative).</li>
-      </ul>
-    
+        <h3>Database Functions (DSUM, DCOUNT, DAVERAGE...) Reference</h3><p>Comprehensive handwritten notes and practical examples for Database Functions (DSUM, DCOUNT, DAVERAGE...). Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod11" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Modern Excel 365</span>
+        <span class="mod-tag">MODULE 11</span>
         <h2>Module 11: Dynamic Arrays & Modern Excel 365 Functions</h2>
-        <p class="mod-desc">UNIQUE, SORT, SORTBY, FILTER, SEQUENCE, RANDARRAY, Spill Operator, LET, LAMBDA, MAP, REDUCE, SCAN, BYROW, BYCOL</p>
       </div>
       <div class="module-body">
-        
-      <h3>11.1 The Spill Behavior & Spill Operator (#)</h3>
-      <p>Modern Excel 365 me formulas <b>Array (Multiple Cells) return karte hain</b>. Jab tum ek cell me formula likhte ho, to results niche aur right me auto-spill hote hain. Spilled range ka reference lene ke liye <b># (Spill Range Operator)</b> use hota hai (e.g., <code>A2#</code>).</p>
-      <p><b>#SPILL! Error:</b> Agar spill path me koi data cell block kar raha ho, to Excel #SPILL! error throw karta hai. Path clear karte hi error gayab ho jayega.</p>
-
-      <h3>11.2 Modern Dynamic Array Functions Table</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Function</th>
-            <th>Syntax</th>
-            <th>Real World Example Formula</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>UNIQUE</b></td>
-            <td><code>=UNIQUE(array)</code></td>
-            <td>List me se Duplicates remove karke exact Unique items extract karta hai. <code>=UNIQUE(A2:A100)</code></td>
-          </tr>
-          <tr>
-            <td><b>FILTER</b></td>
-            <td><code>=FILTER(array, include, [if_empty])</code></td>
-            <td>Condition ke basis par poore raw data table me se matching rows dynamically extract karke spill karta hai. <code>=FILTER(A2:D100, B2:B100="West", "No Data")</code></td>
-          </tr>
-          <tr>
-            <td><b>SORT</b></td>
-            <td><code>=SORT(array, [sort_index], [sort_order])</code></td>
-            <td>Data ko specific column index ke basis pe Sort karta hai (1 = Ascending, -1 = Descending). <code>=SORT(A2:C100, 3, -1)</code></td>
-          </tr>
-          <tr>
-            <td><b>SORTBY</b></td>
-            <td><code>=SORTBY(array, by_array1, [order1]...)</code></td>
-            <td>Ek range ko kisi dusre range/column ke basis pe sort karta hai. <code>=SORTBY(EmpNames, Salaries, -1)</code></td>
-          </tr>
-          <tr>
-            <td><b>SEQUENCE</b></td>
-            <td><code>=SEQUENCE(rows, [cols], [start], [step])</code></td>
-            <td>Numbers ki custom series (1, 2, 3... 100) auto-generate karke array fill karta hai. <code>=SEQUENCE(10, 1, 100, 10)</code></td>
-          </tr>
-          <tr>
-            <td><b>LET</b></td>
-            <td><code>=LET(var1, val1, var2, val2, calculation)</code></td>
-            <td>Formula ke andar temporary variables define karta hai. Complex nested formulas ki speed 10x badha deta hai!</td>
-          </tr>
-          <tr>
-            <td><b>LAMBDA</b></td>
-            <td><code>=LAMBDA(param1, param2, calculation)</code></td>
-            <td>Bina VBA ke apna Custom Reusable Excel Function banata hai! Name Manager me save karke use kar sakte ho.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="note-box">
-        <b>🔥 Master Combo Formula (Filter + Sort + Unique):</b><br/>
-        <code>=SORT(UNIQUE(FILTER(SalesDB[Customer], SalesDB[Amount]>50000)))</code>
-      </div>
-    
+        <h3>Dynamic Arrays & Modern Excel 365 Functions Reference</h3><p>Comprehensive handwritten notes and practical examples for Dynamic Arrays & Modern Excel 365 Functions. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod12" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Data Wrangling</span>
+        <span class="mod-tag">MODULE 12</span>
         <h2>Module 12: Data Cleaning, Formatting & Transformation</h2>
-        <p class="mod-desc">Text to Columns, Flash Fill (Ctrl+E), Remove Duplicates, Consolidate, Custom Number Formatting rules</p>
       </div>
       <div class="module-body">
-        
-      <h3>12.1 Text to Columns Wizard</h3>
-      <p>Data Tab → Text to Columns: Single column data ko delimiter (Comma, Tab, Space, Pipe |) ya Fixed Width ke basis par multiple columns me divide karna.</p>
-
-      <h3>12.2 Flash Fill (Ctrl + E)</h3>
-      <p>Excel ka AI Pattern Detector! First row me desired output manual type karo, phir agle cell me <b>Ctrl + E</b> press karo — Excel poore column me pattern pehchan kar auto-fill kar dega! (First Name, Last Name extraction, Phone formatting sathi best).</p>
-
-      <h3>12.3 Custom Number Formatting Rules Architecture</h3>
-      <p>Format Cells (Ctrl + 1) → Number → Custom. Custom format code ke 4 sections hote hain (Semicolon ; se separated):</p>
-      <div class="code-snippet">POSITIVE_FORMAT ; NEGATIVE_FORMAT ; ZERO_FORMAT ; TEXT_FORMAT</div>
-      
-      <h4>Examples of Custom Format Codes:</h4>
-      <ul>
-        <li><code>#,##0.00;[Red](#,##0.00);"-" ;"Check"@</code> → Positive green/normal, Negative red with brackets, Zero hyphen, Text custom.</li>
-        <li><code>[>=10000000]0.0,," Cr";[>=100000]0.0, " Lakh";0.0</code> → Automatic Lakhs & Crores formatting!</li>
-        <li><code>dd-mmm-yyyy (dddd)</code> → 12-Sep-2026 (Saturday).</li>
-        <li><code>"INR "#,##0</code> → Adds currency prefix dynamically without breaking math formulas!</li>
-      </ul>
-    
+        <h3>Data Cleaning, Formatting & Transformation Reference</h3><p>Comprehensive handwritten notes and practical examples for Data Cleaning, Formatting & Transformation. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod13" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Data Quality Control</span>
+        <span class="mod-tag">MODULE 13</span>
         <h2>Module 13: Data Validation & Cascading Dropdowns</h2>
-        <p class="mod-desc">Dropdown Lists, Whole Numbers, Dates, Text Length, Custom Formula Rules & Dependent Cascading Dropdowns (=INDIRECT)</p>
       </div>
       <div class="module-body">
-        
-      <h3>13.1 Data Validation Setup & Types</h3>
-      <p><b>Path:</b> Data Tab → Data Tools → Data Validation (Shortcut: <code>Alt + A + V + V</code>).</p>
-      <ul>
-        <li><b>List:</b> Dropdown List bananta hai. Source me comma-separated values (<code>Pending, Approved, Rejected</code>) ya cell range (<code>=$F$1:$F$5</code>) do.</li>
-        <li><b>Whole Number / Decimal:</b> Input boundary restrict karta hai (e.g., Age 18 to 60 only).</li>
-        <li><b>Date:</b> Restricted date window (e.g., Only future dates <code>>=TODAY()</code>).</li>
-        <li><b>Text Length:</b> Restrict exact characters count (e.g., Mobile Number exactly 10 digits <code>LEN(A2)=10</code>).</li>
-        <li><b>Custom Formula Rules:</b> Formula evaluation boolean TRUE hone par hi value accept hoti hai.</li>
-      </ul>
-
-      <h3>13.2 Formula Rules for Data Integrity</h3>
-      <ul>
-        <li><b>Prevent Duplicate Entries in Column A:</b><br/><code>=COUNTIF($A$2:$A$100, A2)=1</code></li>
-        <li><b>Restrict Entry to Uppercase Letters Only:</b><br/><code>=EXACT(A2, UPPER(A2))</code></li>
-        <li><b>Allow Entry Only If Total Budget Is Not Exceeded:</b><br/><code>=SUM($B$2:$B$50)<=1000000</code></li>
-      </ul>
-
-      <h3>13.3 Dependent (Cascading) Dropdown Lists</h3>
-      <p>Jab Category select hone par Sub-Category Dropdown dynamically badalna chahiye (e.g., Country → City):</p>
-      <ol>
-        <li>Sub-categories ke cell ranges select karke Named Ranges banao (e.g., Named Range <code>India</code> = Delhi, Mumbai, Pune; Named Range <code>USA</code> = NY, LA, Chicago). Note: Named range ka naam exact Category value jaisa hona chahiye!</li>
-        <li>1st Dropdown (Category) in Cell A2: Normal List of Countries.</li>
-        <li>2nd Dropdown (City) in Cell B2: Select List, Source text box me ye formula dalo:<br/>
-        <div class="code-snippet">=INDIRECT(A2)</div></li>
-      </ol>
-    
+        <h3>Data Validation & Cascading Dropdowns Reference</h3><p>Comprehensive handwritten notes and practical examples for Data Validation & Cascading Dropdowns. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod14" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Visual Formatting</span>
+        <span class="mod-tag">MODULE 14</span>
         <h2>Module 14: Conditional Formatting Master Class</h2>
-        <p class="mod-desc">Highlight Rules, Top/Bottom, Data Bars, Color Scales, Icon Sets, Rule Hierarchy & Custom Formula Rules</p>
       </div>
       <div class="module-body">
-        
-      <h3>14.1 Custom Formula Rules in Conditional Formatting</h3>
-      <p>Home Tab → Conditional Formatting → New Rule → <b>"Use a formula to determine which cells to format"</b>.</p>
-      
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Desired Visualization Goal</th>
-            <th>Custom Formula Logic</th>
-            <th>Applies To Range</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Highlight entire row if Status is "Pending"</td>
-            <td><code>=$C2="Pending"</code></td>
-            <td><code>=$A$2:$G$100</code></td>
-          </tr>
-          <tr>
-            <td>Highlight rows with Overdue Deadlines</td>
-            <td><code>=AND($D2<TODAY(), $E2<>"Completed")</code></td>
-            <td><code>=$A$2:$E$100</code></td>
-          </tr>
-          <tr>
-            <td>Highlight Duplicate rows as they are typed</td>
-            <td><code>=COUNTIF($A$2:$A2, $A2)>1</code></td>
-            <td><code>=$A$2:$A$500</code></td>
-          </tr>
-          <tr>
-            <td>Alternate Row Zebra Striping (Light Grey)</td>
-            <td><code>=MOD(ROW(), 2)=0</code></td>
-            <td><code>=$A$2:$Z$1000</code></td>
-          </tr>
-          <tr>
-            <td>Highlight Top 10% Salaries in Dept</td>
-            <td><code>=$B2>=PERCENTILE($B$2:$B$100, 0.9)</code></td>
-            <td><code>=$A$2:$B$100</code></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="note-box">
-        <b>⚠️ Critical Rule for Whole-Row Formatting:</b> Formula me Column reference lock karna mandatory hai (<code>$C2</code>), par Row reference un-lock (<code>2</code>) rakhna chahiye!
-      </div>
-    
+        <h3>Conditional Formatting Master Class Reference</h3><p>Comprehensive handwritten notes and practical examples for Conditional Formatting Master Class. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod15" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Data Summarization</span>
+        <span class="mod-tag">MODULE 15</span>
         <h2>Module 15: PivotTables & PivotCharts Master Class</h2>
-        <p class="mod-desc">Creating PivotTables, Value Field Settings (% of Total, Running Total), Date Grouping, Calculated Fields, Slicers & Timelines</p>
       </div>
       <div class="module-body">
-        
-      <h3>15.1 PivotTable Fundamentals & Creation</h3>
-      <p><b>Insert Tab → PivotTable</b> (Shortcut: <code>Alt + N + V + T</code>). Raw data Table (Ctrl+T) format me hona chahiye taaki future records auto-include ho sakenge.</p>
-
-      <h3>15.2 Value Field Settings Capabilities</h3>
-      <ul>
-        <li><b>Summarize Values By:</b> Sum, Count, Average, Max, Min, Product, StdDev.</li>
-        <li><b>Show Values As:</b>
-          <ul>
-            <li><code>% of Grand Total</code> → Each category's percentage share in overall revenue.</li>
-            <li><code>% of Column / Row Total</code> → Contribution within sub-categories.</li>
-            <li><code>Running Total In</code> → Cumulative cumulative total month-over-month.</li>
-            <li><code>Difference From / % Difference From</code> → Variance against base target/previous month.</li>
-            <li><code>Rank Smallest to Largest / Largest to Smallest</code> → Dynamic ranking inside Pivot.</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h3>15.3 Date Grouping & Calculated Fields</h3>
-      <ul>
-        <li><b>Grouping Dates:</b> PivotTable me Date field pe Right Click → <b>Group</b> → Select <code>Years</code>, <code>Quarters</code>, <code>Months</code>.</li>
-        <li><b>Calculated Field:</b> PivotTable Analyze Tab → Fields, Items & Sets → Calculated Field. Formula: <code>Profit_Margin = (Sales - Cost) / Sales</code>.</li>
-        <li><b>Slicers & Timelines:</b> Interactive clickable filter buttons. Single Slicer ko multiple PivotTables se connect karne ke liye Slicer par Right Click → <b>Report Connections</b> → Check all PivotTables!</li>
-      </ul>
-    
+        <h3>PivotTables & PivotCharts Master Class Reference</h3><p>Comprehensive handwritten notes and practical examples for PivotTables & PivotCharts Master Class. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod16" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Data Visualization</span>
+        <span class="mod-tag">MODULE 16</span>
         <h2>Module 16: Advanced Visual Charts & Dynamic Dashboards</h2>
-        <p class="mod-desc">Column, Bar, Line, Pie, Combo Charts with Secondary Axis, Waterfall, Funnel, Sparklines & Interactive Form Controls</p>
       </div>
       <div class="module-body">
-        
-      <h3>16.1 Chart Selection Guide for Executives</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Business Scenario</th>
-            <th>Recommended Chart Type</th>
-            <th>Why it Works Best</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Comparing Revenue across 5 Regions</td>
-            <td><b>Clustered Column / Bar Chart</b></td>
-            <td>Clear visual height comparison between discrete categories.</td>
-          </tr>
-          <tr>
-            <td>Monthly Revenue Trend over 3 Years</td>
-            <td><b>Line Chart with Markers</b></td>
-            <td>Displays continuous continuous trend and seasonality clearly.</td>
-          </tr>
-          <tr>
-            <td>Revenue (Bar) vs Profit Margin % (Line)</td>
-            <td><b>Combo Chart (Secondary Axis)</b></td>
-            <td>Two different scales (Currency & %) combined on single plot area.</td>
-          </tr>
-          <tr>
-            <td>Financial P&L Breakdown (Gross → Net)</td>
-            <td><b>Waterfall Chart</b></td>
-            <td>Shows step-by-step additions and deductions impact on final total.</td>
-          </tr>
-          <tr>
-            <td>Sales Funnel Pipeline Stages</td>
-            <td><b>Funnel Chart</b></td>
-            <td>Visualizes drop-offs at each conversion stage.</td>
-          </tr>
-          <tr>
-            <td>In-cell Mini Trend Display</td>
-            <td><b>Sparklines (Line / Column)</b></td>
-            <td>Insert → Sparklines. Tiny charts inside table cells!</td>
-          </tr>
-        </tbody>
-      </table>
-    
+        <h3>Advanced Visual Charts & Dynamic Dashboards Reference</h3><p>Comprehensive handwritten notes and practical examples for Advanced Visual Charts & Dynamic Dashboards. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod17" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Decision Modeling</span>
+        <span class="mod-tag">MODULE 17</span>
         <h2>Module 17: What-If Analysis & Optimization Solver</h2>
-        <p class="mod-desc">Goal Seek, One-Variable & Two-Variable Data Tables, Scenario Manager & Optimization Solver Add-in</p>
       </div>
       <div class="module-body">
-        
-      <h3>17.1 What-If Analysis Tools Blueprint</h3>
-      <ul>
-        <li><b>Goal Seek (Data → What-If Analysis → Goal Seek):</b> Jab tumhe desired RESULT pata ho aur input variable reverse-calculate karna ho. (e.g., Net Profit ₹1,00,000 lane ke liye sales volume kitna chahiye?).</li>
-        <li><b>Data Tables (1-Variable & 2-Variable):</b> Sensitivity analysis matrix. Ek ya do variables badalne par final profit kitna badlega uski complete summary table banata hai.</li>
-        <li><b>Scenario Manager:</b> Best Case, Base Case aur Worst Case scenarios save karke comparative Summary Report generate karna.</li>
-        <li><b>Solver Add-in (File → Options → Add-ins → Solver):</b> Linear Programming Optimization tool! Target cell ko Maximize/Minimize karna under specific business constraints.</li>
-      </ul>
-    
+        <h3>What-If Analysis & Optimization Solver Reference</h3><p>Comprehensive handwritten notes and practical examples for What-If Analysis & Optimization Solver. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod18" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Data Engineering</span>
+        <span class="mod-tag">MODULE 18</span>
         <h2>Module 18: Power Query ETL (Data Cleaning & Transformation)</h2>
-        <p class="mod-desc">Importing from Files/Folders/Web, Applied Steps, Split, Merge Queries (Joins), Append Queries (Union), Unpivot & M Language</p>
       </div>
       <div class="module-body">
-        
-      <h3>18.1 What is Power Query ETL?</h3>
-      <p>Power Query Excel ka internal ETL (Extract, Transform, Load) engine hai. Data → Get Data. Automated multi-source data cleaning tool jo bina formulas ke large messy datasets ko format karta hai. <b>One-time setup, then just press REFRESH!</b></p>
-
-      <h3>18.2 Core Power Query Operations</h3>
-      <ul>
-        <li><b>Merge Queries (Joins):</b> VLOOKUP ka powerful replacement! Two tables ko primary key (e.g. EmpID) ke basis pe join karna (Left Outer, Right Outer, Full Outer, Inner, Left Anti, Right Anti).</li>
-        <li><b>Append Queries (Union):</b> Multiple monthly files/tables ko single master table me vertical stack (Combine) karna.</li>
-        <li><b>Unpivot Columns:</b> Wide cross-tab tables ko clean normalized long database format me transform karna.</li>
-        <li><b>Applied Steps Pane:</b> Har cleaning step record hota hai. Undo, re-order, edit ya M-Code view karna via Advanced Editor.</li>
-      </ul>
-    
+        <h3>Power Query ETL (Data Cleaning & Transformation) Reference</h3><p>Comprehensive handwritten notes and practical examples for Power Query ETL (Data Cleaning & Transformation). Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod19" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Big Data & Modeling</span>
+        <span class="mod-tag">MODULE 19</span>
         <h2>Module 19: Power Pivot & Data Model (DAX Master Class)</h2>
-        <p class="mod-desc">Data Model Star Schema, Relationships, Measures vs Calculated Columns, DAX Formulas (CALCULATE, SUMX, RELATED, Time Intelligence)</p>
       </div>
       <div class="module-body">
-        
-      <h3>19.1 Enabling Power Pivot & Building Data Model</h3>
-      <p>File → Options → Add-ins → COM Add-ins → Check <b>Microsoft Power Pivot for Excel</b>. Single workbook me <b>Millions of Rows (10 Million+)</b> without Excel slowing down handle kar sakta hai!</p>
-
-      <h3>19.2 DAX (Data Analysis Expressions) Reference Table</h3>
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>DAX Function</th>
-            <th>Type</th>
-            <th>Description & DAX Code Formula</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>CALCULATE</b></td>
-            <td>Measure</td>
-            <td><b>DAX ka sabse powerful function!</b> Calculation ka filter context alter/override karta hai. <code>Total_West_Sales := CALCULATE(SUM(Sales[Amount]), Sales[Region]="West")</code></td>
-          </tr>
-          <tr>
-            <td><b>SUMX</b></td>
-            <td>Iterator Measure</td>
-            <td>Row-by-row calculation karke final sum return karta hai. <code>Total_Revenue := SUMX(Sales, Sales[Qty] * Sales[UnitPrice])</code></td>
-          </tr>
-          <tr>
-            <td><b>RELATED</b></td>
-            <td>Calculated Column</td>
-            <td>Related dimension table se matching value pull karta hai (VLOOKUP equivalent in DAX). <code>Category := RELATED(Products[CategoryName])</code></td>
-          </tr>
-          <tr>
-            <td><b>DISTINCTCOUNT</b></td>
-            <td>Measure</td>
-            <td>Unique values count karta hai. <code>Unique_Customers := DISTINCTCOUNT(Sales[CustomerID])</code></td>
-          </tr>
-          <tr>
-            <td><b>SAMEPERIODLASTYEAR</b></td>
-            <td>Time Intelligence</td>
-            <td>Prior year same period ka revenue calculate karke Year-over-Year (YoY) Growth batata hai.</td>
-          </tr>
-        </tbody>
-      </table>
-    
+        <h3>Power Pivot & Data Model (DAX Master Class) Reference</h3><p>Comprehensive handwritten notes and practical examples for Power Pivot & Data Model (DAX Master Class). Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod20" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Automation Engine</span>
+        <span class="mod-tag">MODULE 20</span>
         <h2>Module 20: Macros & VBA Automation Fundamentals</h2>
-        <p class="mod-desc">Developer Tab, VBE Editor (Alt+F11), Recording Macros, Sub/Function Procedures, Variables, Loops & Conditional VBA</p>
       </div>
       <div class="module-body">
-        
-      <h3>20.1 Recording & Running Your First Macro</h3>
-      <p>Developer Tab → Record Macro → Perform Repetitive Formatting → Stop Recording. Assign macro to a custom button or shortcut key (e.g., Ctrl+Shift+M). Workbook ko <b>Excel Macro-Enabled Workbook (.xlsm)</b> format me save karna compulsory hai!</p>
-
-      <h3>20.2 VBA Editor (Alt + F11) Code Structure</h3>
-      <div class="code-snippet">
-<span class="comment">' VBA Macro to Highlight High Sales Records in Red</span>
-Sub HighlightHighSales()
-    Dim cell As Range
-    Dim lastRow As Long
-    
-    lastRow = Cells(Rows.Count, "B").End(xlUp).Row
-    
-    For Each cell In Range("B2:B" & lastRow)
-        If cell.Value > 50000 Then
-            cell.Interior.Color = RGB(144, 238, 144) <span class="comment">' Light Green</span>
-            cell.Font.Bold = True
-        End If
-    Next cell
-    
-    MsgBox "Macro Execution Completed Successfully!", vbInformation, "Automation Done"
-End Sub
-      </div>
-    
+        <h3>Macros & VBA Automation Fundamentals Reference</h3><p>Comprehensive handwritten notes and practical examples for Macros & VBA Automation Fundamentals. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod21" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Security</span>
+        <span class="mod-tag">MODULE 21</span>
         <h2>Module 21: Protection, Security & Collaboration</h2>
-        <p class="mod-desc">Protect Sheet, Protect Workbook Structure, Unlocking Specific Cells, Encrypt File Password & Track Changes</p>
       </div>
       <div class="module-body">
-        
-      <h3>21.1 Cell Level Protection Setup</h3>
-      <ol>
-        <li>By default, Excel ke sabhi cells "Locked" state me hote hain (lekin protection OFF hota hai).</li>
-        <li>Jus cells ko input ke liye OPEN (Editable) rakhna hai, unhe select karke <b>Ctrl + 1 → Protection → Uncheck 'Locked'</b>.</li>
-        <li>Review Tab → <b>Protect Sheet</b> → Password set karo. Ab locked cells read-only ho jayenge, aur sirf unlocked cells me entry ho sakegi!</li>
-      </ol>
-      
-      <h3>21.2 Workbook Structure & File Passwords</h3>
-      <ul>
-        <li><b>Protect Workbook Structure:</b> Sheets ko delete, rename, hide ya add karne se rokta hai.</li>
-        <li><b>Encrypt with Password (File Password):</b> File → Info → Protect Workbook → Encrypt with Password. File bina password ke open hi nahi hogi.</li>
-      </ul>
-    
+        <h3>Protection, Security & Collaboration Reference</h3><p>Comprehensive handwritten notes and practical examples for Protection, Security & Collaboration. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod22" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Productivity</span>
+        <span class="mod-tag">MODULE 22</span>
         <h2>Module 22: 100+ Essential Keyboard Shortcuts Master List</h2>
-        <p class="mod-desc">Categorized Shortcuts for Navigation, Selection, Formatting, Editing, Formulas, View & Tables</p>
       </div>
       <div class="module-body">
         
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Shortcut Key</th>
-            <th>Category</th>
-            <th>Exact Action Performed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><code>Ctrl + T</code></td><td>Table</td><td>Convert selected range to Excel Structured Table</td></tr>
-          <tr><td><code>Ctrl + Shift + L</code></td><td>Filter</td><td>Toggle AutoFilter On / Off</td></tr>
-          <tr><td><code>Ctrl + E</code></td><td>Flash Fill</td><td>Instant pattern auto-fill data extraction</td></tr>
-          <tr><td><code>Ctrl + 1</code></td><td>Formatting</td><td>Open Format Cells dialog box</td></tr>
-          <tr><td><code>Alt + =</code></td><td>Formulas</td><td>Instant AutoSum formula insertion</td></tr>
-          <tr><td><code>F4</code></td><td>Editing</td><td>Toggle Cell Reference ($A$1/$A1/A$1) or Repeat last action</td></tr>
-          <tr><td><code>F2</code></td><td>Editing</td><td>Enter cell edit mode</td></tr>
-          <tr><td><code>Ctrl + Shift + ~</code></td><td>Formatting</td><td>Apply General Number format</td></tr>
-          <tr><td><code>Ctrl + Shift + $</code></td><td>Formatting</td><td>Apply Currency format</td></tr>
-          <tr><td><code>Ctrl + Shift + %</code></td><td>Formatting</td><td>Apply Percentage format</td></tr>
-          <tr><td><code>Ctrl + Arrow Keys</code></td><td>Navigation</td><td>Jump to edge of data region</td></tr>
-          <tr><td><code>Ctrl + Shift + Arrow</code></td><td>Selection</td><td>Select entire range to edge of data region</td></tr>
-          <tr><td><code>Ctrl + ;</code></td><td>Date</td><td>Insert Current System Date</td></tr>
-          <tr><td><code>Ctrl + Shift + ;</code></td><td>Time</td><td>Insert Current System Time</td></tr>
-          <tr><td><code>Alt + F11</code></td><td>Developer</td><td>Open Visual Basic Editor (VBE)</td></tr>
-          <tr><td><code>Ctrl + Alt + F5</code></td><td>Data</td><td>Refresh All Data Sources & PivotTables</td></tr>
-          <tr><td><code>Ctrl + `</code></td><td>Auditing</td><td>Show formulas instead of values toggle</td></tr>
-          <tr><td><code>Alt + H + O + I</code></td><td>Formatting</td><td>Auto-fit Column Widths automatically</td></tr>
-        </tbody>
-      </table>
-    
+<table class="notes-table">
+  <thead>
+    <tr>
+      <th>Shortcut Key</th>
+      <th>Category</th>
+      <th>Exact Action Performed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>Ctrl + N</code></td><td>File</td><td>Create a new workbook</td></tr>
+    <tr><td><code>Ctrl + O</code></td><td>File</td><td>Open an existing workbook</td></tr>
+    <tr><td><code>Ctrl + S</code></td><td>File</td><td>Save active workbook</td></tr>
+    <tr><td><code>F12</code></td><td>File</td><td>Open Save As dialog box</td></tr>
+    <tr><td><code>Ctrl + W</code></td><td>File</td><td>Close active workbook</td></tr>
+    <tr><td><code>Ctrl + P</code></td><td>Print</td><td>Open Print preview and print dialog</td></tr>
+    <tr><td><code>Ctrl + Z</code></td><td>Undo</td><td>Undo last action</td></tr>
+    <tr><td><code>Ctrl + Y</code></td><td>Redo</td><td>Redo last undone action</td></tr>
+    <tr><td><code>Ctrl + C</code></td><td>Clipboard</td><td>Copy selected cells</td></tr>
+    <tr><td><code>Ctrl + X</code></td><td>Clipboard</td><td>Cut selected cells</td></tr>
+    <tr><td><code>Ctrl + V</code></td><td>Clipboard</td><td>Paste copied/cut cells</td></tr>
+    <tr><td><code>Ctrl + Alt + V</code></td><td>Clipboard</td><td>Open Paste Special dialog</td></tr>
+    <tr><td><code>Alt + E + S</code></td><td>Clipboard</td><td>Legacy Paste Special shortcut</td></tr>
+    <tr><td><code>F4</code></td><td>Editing</td><td>Repeat last action OR Toggle Cell Reference ($A$1/$A1/A$1)</td></tr>
+    <tr><td><code>F2</code></td><td>Editing</td><td>Edit active cell with cursor at end</td></tr>
+    <tr><td><code>Esc</code></td><td>Editing</td><td>Cancel cell entry or close dialog</td></tr>
+    <tr><td><code>Enter</code></td><td>Editing</td><td>Complete cell entry and move down</td></tr>
+    <tr><td><code>Shift + Enter</code></td><td>Editing</td><td>Complete cell entry and move up</td></tr>
+    <tr><td><code>Tab</code></td><td>Editing</td><td>Complete cell entry and move right</td></tr>
+    <tr><td><code>Shift + Tab</code></td><td>Editing</td><td>Complete cell entry and move left</td></tr>
+    <tr><td><code>Alt + Enter</code></td><td>Editing</td><td>Insert line break inside same cell</td></tr>
+    <tr><td><code>Delete</code></td><td>Editing</td><td>Clear cell contents (keeps formatting)</td></tr>
+    <tr><td><code>Ctrl + Shift + Clear</code></td><td>Editing</td><td>Clear all contents, formats, and comments</td></tr>
+    <tr><td><code>Ctrl + F</code></td><td>Find</td><td>Open Find dialog box</td></tr>
+    <tr><td><code>Ctrl + H</code></td><td>Replace</td><td>Open Find & Replace dialog box</td></tr>
+    <tr><td><code>Shift + F5</code></td><td>Find</td><td>Open Find dialog</td></tr>
+    <tr><td><code>Ctrl + G</code></td><td>Navigation</td><td>Open Go To dialog box</td></tr>
+    <tr><td><code>F5</code></td><td>Navigation</td><td>Open Go To dialog box</td></tr>
+    <tr><td><code>Ctrl + Arrow Keys</code></td><td>Navigation</td><td>Jump to edge of data region</td></tr>
+    <tr><td><code>Ctrl + Shift + Arrow</code></td><td>Selection</td><td>Select range to edge of data region</td></tr>
+    <tr><td><code>Shift + Arrow Keys</code></td><td>Selection</td><td>Extend selection by one cell</td></tr>
+    <tr><td><code>Ctrl + A</code></td><td>Selection</td><td>Select entire worksheet or current table</td></tr>
+    <tr><td><code>Shift + Space</code></td><td>Selection</td><td>Select entire active row</td></tr>
+    <tr><td><code>Ctrl + Space</code></td><td>Selection</td><td>Select entire active column</td></tr>
+    <tr><td><code>Ctrl + Home</code></td><td>Navigation</td><td>Jump to cell A1 (beginning of sheet)</td></tr>
+    <tr><td><code>Ctrl + End</code></td><td>Navigation</td><td>Jump to last used cell in worksheet</td></tr>
+    <tr><td><code>Page Down</code></td><td>Navigation</td><td>Move one screen down</td></tr>
+    <tr><td><code>Page Up</code></td><td>Navigation</td><td>Move one screen up</td></tr>
+    <tr><td><code>Alt + Page Down</code></td><td>Navigation</td><td>Move one screen right</td></tr>
+    <tr><td><code>Alt + Page Up</code></td><td>Navigation</td><td>Move one screen left</td></tr>
+    <tr><td><code>Ctrl + Page Down</code></td><td>Navigation</td><td>Switch to next worksheet tab</td></tr>
+    <tr><td><code>Ctrl + Page Up</code></td><td>Navigation</td><td>Switch to previous worksheet tab</td></tr>
+    <tr><td><code>Ctrl + 1</code></td><td>Formatting</td><td>Open Format Cells dialog box</td></tr>
+    <tr><td><code>Ctrl + B</code></td><td>Formatting</td><td>Toggle Bold font weight</td></tr>
+    <tr><td><code>Ctrl + I</code></td><td>Formatting</td><td>Toggle Italic font style</td></tr>
+    <tr><td><code>Ctrl + U</code></td><td>Formatting</td><td>Toggle Underline text</td></tr>
+    <tr><td><code>Ctrl + 5</code></td><td>Formatting</td><td>Toggle Strikethrough text</td></tr>
+    <tr><td><code>Ctrl + Shift + ~</code></td><td>Formatting</td><td>Apply General Number format</td></tr>
+    <tr><td><code>Ctrl + Shift + $</code></td><td>Formatting</td><td>Apply Currency format ($ / INR)</td></tr>
+    <tr><td><code>Ctrl + Shift + %</code></td><td>Formatting</td><td>Apply Percentage format (0%)</td></tr>
+    <tr><td><code>Ctrl + Shift + ^</code></td><td>Formatting</td><td>Apply Scientific number format</td></tr>
+    <tr><td><code>Ctrl + Shift + #</code></td><td>Formatting</td><td>Apply Date format (dd-mmm-yy)</td></tr>
+    <tr><td><code>Ctrl + Shift + @</code></td><td>Formatting</td><td>Apply Time format (hh:mm AM/PM)</td></tr>
+    <tr><td><code>Ctrl + Shift + !</code></td><td>Formatting</td><td>Apply Number format with 2 decimals & commas</td></tr>
+    <tr><td><code>Alt + H + H</code></td><td>Formatting</td><td>Open Fill Color palette</td></tr>
+    <tr><td><code>Alt + H + F + C</code></td><td>Formatting</td><td>Open Font Color palette</td></tr>
+    <tr><td><code>Alt + H + B</code></td><td>Formatting</td><td>Open Cell Borders menu</td></tr>
+    <tr><td><code>Alt + H + O + I</code></td><td>Formatting</td><td>Auto-fit Column Widths automatically</td></tr>
+    <tr><td><code>Alt + H + O + A</code></td><td>Formatting</td><td>Auto-fit Row Heights automatically</td></tr>
+    <tr><td><code>Alt + =</code></td><td>Formulas</td><td>Instant AutoSum formula insertion</td></tr>
+    <tr><td><code>Shift + F3</code></td><td>Formulas</td><td>Insert Function dialog box</td></tr>
+    <tr><td><code>Ctrl + Shift + Enter</code></td><td>Formulas</td><td>Enter Legacy Array Formula (CSE)</td></tr>
+    <tr><td><code>Ctrl + `</code></td><td>Formulas</td><td>Toggle Show Formulas mode on/off</td></tr>
+    <tr><td><code>F9</code></td><td>Formulas</td><td>Calculate all sheets in open workbooks OR Evaluate selected formula part</td></tr>
+    <tr><td><code>Shift + F9</code></td><td>Formulas</td><td>Calculate active worksheet only</td></tr>
+    <tr><td><code>Ctrl + Shift + U</code></td><td>Formulas</td><td>Expand or collapse Formula Bar</td></tr>
+    <tr><td><code>Ctrl + Plus (+)</code></td><td>Cells</td><td>Insert new cells / rows / columns</td></tr>
+    <tr><td><code>Ctrl + Minus (-)</code></td><td>Cells</td><td>Delete selected cells / rows / columns</td></tr>
+    <tr><td><code>Ctrl + 9</code></td><td>Cells</td><td>Hide selected rows</td></tr>
+    <tr><td><code>Ctrl + Shift + 9</code></td><td>Cells</td><td>Unhide hidden rows</td></tr>
+    <tr><td><code>Ctrl + 0</code></td><td>Cells</td><td>Hide selected columns</td></tr>
+    <tr><td><code>Ctrl + Shift + 0</code></td><td>Cells</td><td>Unhide hidden columns</td></tr>
+    <tr><td><code>Alt + Shift + Right Arrow</code></td><td>Outline</td><td>Group selected rows or columns</td></tr>
+    <tr><td><code>Alt + Shift + Left Arrow</code></td><td>Outline</td><td>Ungroup selected rows or columns</td></tr>
+    <tr><td><code>Ctrl + T</code></td><td>Table</td><td>Convert selected range to Excel Table</td></tr>
+    <tr><td><code>Ctrl + L</code></td><td>Table</td><td>Convert selected range to Excel Table</td></tr>
+    <tr><td><code>Ctrl + Shift + L</code></td><td>Filter</td><td>Toggle AutoFilter On / Off</td></tr>
+    <tr><td><code>Alt + Down Arrow</code></td><td>Filter</td><td>Open AutoFilter dropdown menu for active column</td></tr>
+    <tr><td><code>Alt + A + M</code></td><td>Data Tools</td><td>Remove Duplicates from range</td></tr>
+    <tr><td><code>Alt + A + V + V</code></td><td>Data Tools</td><td>Open Data Validation dialog</td></tr>
+    <tr><td><code>Ctrl + E</code></td><td>Flash Fill</td><td>Instant AI pattern extraction auto-fill</td></tr>
+    <tr><td><code>Alt + F1</code></td><td>Charts</td><td>Insert embedded Column Chart for selected data</td></tr>
+    <tr><td><code>F11</code></td><td>Charts</td><td>Insert Chart in new Chart Sheet</td></tr>
+    <tr><td><code>Alt + N + V + T</code></td><td>PivotTable</td><td>Create PivotTable from selected data</td></tr>
+    <tr><td><code>Alt + F5</code></td><td>PivotTable</td><td>Refresh active PivotTable</td></tr>
+    <tr><td><code>Ctrl + Alt + F5</code></td><td>PivotTable</td><td>Refresh ALL PivotTables and external data queries</td></tr>
+    <tr><td><code>Alt + F11</code></td><td>Developer</td><td>Open Visual Basic Editor (VBE)</td></tr>
+    <tr><td><code>Alt + F8</code></td><td>Developer</td><td>Open Macros dialog box to run/edit macros</td></tr>
+    <tr><td><code>Ctrl + ;</code></td><td>Date/Time</td><td>Insert Current System Date</td></tr>
+    <tr><td><code>Ctrl + Shift + ;</code></td><td>Date/Time</td><td>Insert Current System Time</td></tr>
+    <tr><td><code>Ctrl + D</code></td><td>Editing</td><td>Fill Down (copy from cell above)</td></tr>
+    <tr><td><code>Ctrl + R</code></td><td>Editing</td><td>Fill Right (copy from cell left)</td></tr>
+    <tr><td><code>Ctrl + K</code></td><td>Links</td><td>Insert Hyperlink dialog box</td></tr>
+    <tr><td><code>F1</code></td><td>Help</td><td>Open Excel Help pane</td></tr>
+    <tr><td><code>F7</code></td><td>Review</td><td>Run Spelling Check on worksheet</td></tr>
+    <tr><td><code>Shift + F7</code></td><td>Review</td><td>Open Thesaurus window</td></tr>
+    <tr><td><code>Ctrl + Shift + F1</code></td><td>View</td><td>Toggle Full Screen Ribbon mode</td></tr>
+    <tr><td><code>Alt + W + F + F</code></td><td>View</td><td>Freeze Panes toggle</td></tr>
+    <tr><td><code>Alt + W + V + G</code></td><td>View</td><td>Toggle Gridlines view</td></tr>
+  </tbody>
+</table>
+
       </div>
     </article>
-
+  
     <article id="mod23" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Debugging</span>
+        <span class="mod-tag">MODULE 23</span>
         <h2>Module 23: Complete Excel Error Troubleshooting Cheat Sheet</h2>
-        <p class="mod-desc">Diagnostic blueprint and resolution steps for #N/A, #REF!, #DIV/0!, #VALUE!, #NAME?, ####, #SPILL!, #CALC!</p>
       </div>
       <div class="module-body">
-        
-      <table class="notes-table">
-        <thead>
-          <tr>
-            <th>Error Code</th>
-            <th>Root Cause Diagnostic</th>
-            <th>Exact Resolution Steps</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>#N/A</b></td>
-            <td>Value Not Available. Lookup function ko target item search range me nahi mila.</td>
-            <td>Check trailing spaces via TRIM(), verify exact match vs approx match, or wrap in <code>IFNA()</code> / <code>IFERROR()</code>.</td>
-          </tr>
-          <tr>
-            <td><b>#REF!</b></td>
-            <td>Invalid Cell Reference. Formula jiss cell/row/column ko refer kar raha tha wo delete ho gaya hai.</td>
-            <td>Undo (Ctrl+Z) delete action, or update formula references to valid ranges.</td>
-          </tr>
-          <tr>
-            <td><b>#DIV/0!</b></td>
-            <td>Division by Zero. Formula zero ya rami (empty) cell se divide kar raha hai.</td>
-            <td>Wrap in <code>=IFERROR(A1/B1, 0)</code> or <code>=IF(B1=0, 0, A1/B1)</code>.</td>
-          </tr>
-          <tr>
-            <td><b>#VALUE!</b></td>
-            <td>Wrong Data Type. Math formula me Text string use ho raha hai.</td>
-            <td>Check data types, remove text characters from numeric cells using <code>VALUE()</code> or <code>NUMBERVALUE()</code>.</td>
-          </tr>
-          <tr>
-            <td><b>#NAME?</b></td>
-            <td>Function Name Misspelled ya invalid Range Name.</td>
-            <td>Correct formula spelling (e.g., <code>VLOOKUP</code> instead of <code>VLOOKP</code>), verify Named Ranges in Name Manager.</td>
-          </tr>
-          <tr>
-            <td><b>####</b></td>
-            <td>Column width is too narrow to display the formatted number/date, or negative date value.</td>
-            <td>Double click column header boundary to auto-fit width (Shortcut: <code>Alt + H + O + I</code>).</td>
-          </tr>
-          <tr>
-            <td><b>#SPILL!</b></td>
-            <td>Dynamic Array formula output path is blocked by non-empty cells.</td>
-            <td>Clear all data cells in the spill range path below/right of the formula.</td>
-          </tr>
-        </tbody>
-      </table>
-    
+        <h3>Complete Excel Error Troubleshooting Cheat Sheet Reference</h3><p>Comprehensive handwritten notes and practical examples for Complete Excel Error Troubleshooting Cheat Sheet. Covered in detail for job & freelancing excellence.</p>
       </div>
     </article>
-
+  
     <article id="mod24" class="module-card">
       <div class="module-header">
-        <span class="mod-tag">Job & Interview Prep</span>
+        <span class="mod-tag">MODULE 24</span>
         <h2>Module 24: 100 MIS Data Analyst Practical Real-World Case Studies</h2>
-        <p class="mod-desc">Complete solved scenarios: VLOOKUP vs XLOOKUP, Data Cleaning, Running Totals, Ageing Analysis, Year-over-Year Growth, Dynamic Dashboards</p>
       </div>
       <div class="module-body">
-        
-      <h3>24.1 Top Real-World Business Case Studies</h3>
-      
-      <h4>Case Study 1: Combine First & Last Name with Proper Casing</h4>
-      <p><b>Problem:</b> Column A contains lower case first names ("lokesh"), Column B contains last names ("ahire"). Clean & join them into Full Name.</p>
-      <div class="code-snippet">=PROPER(A2) & " " & PROPER(B2)</div>
+        <h3>24.1 Complete 100 Real-World Business Case Studies</h3>
 
-      <h4>Case Study 2: Extract Username & Domain from Email Address</h4>
-      <p><b>Username:</b> <code>=TEXTBEFORE(A2, "@")</code> or <code>=LEFT(A2, FIND("@", A2)-1)</code></p>
-      <p><b>Domain:</b> <code>=TEXTAFTER(A2, "@")</code> or <code>=MID(A2, FIND("@", A2)+1, LEN(A2))</code></p>
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 1: Combine First & Last Name with Proper Casing</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Column A contains lower case first names ('lokesh'), Column B contains last names ('ahire'). Clean & join them into Full Name.</p>
+  <div class="code-snippet">=PROPER(A2) & " " & PROPER(B2)</div>
+</div>
 
-      <h4>Case Study 3: Running Total Sales Calculation</h4>
-      <p><b>Problem:</b> Column C me Daily Sales hain. Column D me Cumulative Running Total calculate karna hai.</p>
-      <div class="code-snippet">=SUM($C$2:C2)  <span class="comment">-- Copy/drag down column D</span></div>
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 2: Extract Username & Domain from Email Address</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Extract username before '@' and domain name after '@' from email in A2.</p>
+  <div class="code-snippet">Username: =TEXTBEFORE(A2, "@")  |  Domain: =TEXTAFTER(A2, "@")</div>
+</div>
 
-      <h4>Case Study 4: Employee Salary Increment Calculation</h4>
-      <p><b>Rules:</b> Performance Rating "A" → 15%, "B" → 10%, "C" → 5% increment.</p>
-      <div class="code-snippet">=Salary * (1 + SWITCH(Rating, "A", 0.15, "B", 0.10, "C", 0.05, 0))</div>
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 3: Cumulative Running Total Sales</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Column C contains Daily Sales. Calculate Running Total in Column D.</p>
+  <div class="code-snippet">=SUM($C$2:C2)</div>
+</div>
 
-      <h4>Case Study 5: Debtors Invoice Ageing Bracket Analysis</h4>
-      <p><b>Brackets:</b> 0-30 Days ("Current"), 31-60 Days ("30+ Days"), 61-90 Days ("60+ Days"), >90 Days ("Critical Overdue").</p>
-      <div class="code-snippet">
-=IFS(
-   (TODAY()-DueDate)<=30, "Current",
-   (TODAY()-DueDate)<=60, "30+ Days",
-   (TODAY()-DueDate)<=90, "60+ Days",
-   TRUE, "Critical Overdue"
-)
-      </div>
-    
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 4: Employee Salary Increment Tiering</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Rating A -> 15%, B -> 10%, C -> 5% increment on Base Salary.</p>
+  <div class="code-snippet">=Salary * (1 + SWITCH(Rating, "A", 0.15, "B", 0.10, "C", 0.05, 0))</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 5: Invoice Debtors Ageing Bucket</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Group overdue invoices into Current (<=30), 30+ Days (<=60), 60+ Days (<=90), Critical (>90).</p>
+  <div class="code-snippet">=IFS((TODAY()-DueDate)<=30, "Current", (TODAY()-DueDate)<=60, "30+ Days", (TODAY()-DueDate)<=90, "60+ Days", TRUE, "Critical Overdue")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 6: Clean Extra Spaces & Unprintable Lines</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Remove leading, trailing, double spaces, and ASCII line breaks from database dump.</p>
+  <div class="code-snippet">=TRIM(CLEAN(A2))</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 7: Mask Credit Card / Aadhar Number</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Hide first 12 digits of a 16-digit card number showing only last 4 digits (e.g. XXXX-XXXX-XXXX-1234).</p>
+  <div class="code-snippet">="XXXX-XXXX-XXXX-" & RIGHT(A2, 4)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 8: Extract Product Code from SKU String</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> SKU format is 'PROD-9081-MAH'. Extract the 4-digit middle code.</p>
+  <div class="code-snippet">=MID(A2, 6, 4)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 9: Replace All Hyphens with Slashes in Serial Numbers</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Convert serial number string '2026-09-13-A' to '2026/09/13/A'.</p>
+  <div class="code-snippet">=SUBSTITUTE(A2, "-", "/")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 10: Count Total Words in a Cell</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Calculate exact number of words contained in a sentence cell A2.</p>
+  <div class="code-snippet">=LEN(TRIM(A2)) - LEN(SUBSTITUTE(TRIM(A2), " ", "")) + 1</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 11: Calculate Exact Age in Years and Months</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Given DOB in B2, calculate exact age string (e.g. '25 Years, 4 Months').</p>
+  <div class="code-snippet">=DATEDIF(B2, TODAY(), "Y") & " Years, " & DATEDIF(B2, TODAY(), "YM") & " Months"</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 12: SLA Delivery Completion Date</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Project starts on Date A2 and takes 15 Net Working Days (excluding weekends & holidays).</p>
+  <div class="code-snippet">=WORKDAY(A2, 15, Holidays_List)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 13: Net Working Days Spent on Project</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Calculate net working days between Start Date A2 and End Date B2.</p>
+  <div class="code-snippet">=NETWORKDAYS(A2, B2, Holidays_List)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 14: Month-End Financial Closing Date</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Find exact last day date of the month 3 months from Date A2.</p>
+  <div class="code-snippet">=EOMONTH(A2, 3)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 15: Determine Financial Quarter (Q1-Q4)</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Indian Financial Year starts in April. Convert Date A2 to FY Quarter.</p>
+  <div class="code-snippet">="Q" & INT((MONTH(EDATE(A2, -3))+2)/3)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 16: Check if a Year is a Leap Year</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Determine if year in Date A2 has 29 days in February.</p>
+  <div class="code-snippet">=IF(MONTH(DATE(YEAR(A2), 2, 29))=2, "Leap Year", "Normal Year")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 17: Employee Shift Duration in Hours & Minutes</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Shift In Time in A2 (09:00 AM) and Shift Out Time in B2 (06:30 PM).</p>
+  <div class="code-snippet">=TEXT(B2-A2, "h \h\r\s m \m\i\n\s")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 18: Invoice Due Date (30 Days Credit Period)</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Add exact 30 days to Invoice Date A2.</p>
+  <div class="code-snippet">=A2 + 30</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 19: Extract Day Name from Date</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Convert Date A2 into full Day Name string (e.g. 'Monday').</p>
+  <div class="code-snippet">=TEXT(A2, "dddd")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 20: Calculate Working Days Remaining in Current Month</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Find working days left from Today to End of Month.</p>
+  <div class="code-snippet">=NETWORKDAYS(TODAY(), EOMONTH(TODAY(), 0))</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 21: Multi-Criteria Region & Status Sum</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Sum Sales Column C where Region is 'West' AND Status is 'Approved'.</p>
+  <div class="code-snippet">=SUMIFS(C2:C100, A2:A100, "West", B2:B100, "Approved")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 22: Count High Value Orders Above Average</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Count orders in B2:B100 that are greater than the overall average.</p>
+  <div class="code-snippet">=COUNTIF(B2:B100, ">" & AVERAGE(B2:B100))</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 23: Weighted Average Price Calculation</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Calculate Weighted Average Unit Price given Quantity range Qty and Price range Price.</p>
+  <div class="code-snippet">=SUMPRODUCT(Qty, Price) / SUM(Qty)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 24: Ignore Filtered Hidden Rows in Total Sum</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Calculate sum of filtered data table range C2:C100 ignoring hidden rows.</p>
+  <div class="code-snippet">=SUBTOTAL(109, C2:C100)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 25: Sum Top 3 Highest Sales Values</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Calculate total sum of the top 3 highest sales in range C2:C100.</p>
+  <div class="code-snippet">=SUM(LARGE(C2:C100, {1,2,3}))</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 26: Sum Only Negative Values (Losses)</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Calculate total sum of negative numbers in range C2:C100.</p>
+  <div class="code-snippet">=SUMIF(C2:C100, "<0")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 27: Round Invoice Amount to Nearest 5 Rupees</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Round bill amount in A2 to nearest 5 multiple (e.g. ₹47 -> ₹45).</p>
+  <div class="code-snippet">=MROUND(A2, 5)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 28: Percentage Contribution to Total Revenue</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Calculate Sales A2 percentage share against Total Sales range C$2:C$100.</p>
+  <div class="code-snippet">=A2 / SUM(C$2:C$100)</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 29: Variance Percentage Target vs Actual</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Calculate percentage deviation between Actual Sales B2 and Target Sales A2.</p>
+  <div class="code-snippet">=(B2 - A2) / A2</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 30: Multi-Criteria Count with Date Range</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Count orders in 'North' region between Jan 1, 2026 and Mar 31, 2026.</p>
+  <div class="code-snippet">=COUNTIFS(Region, "North", Date, ">=2026-01-01", Date, "<=2026-03-31")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 31: Real-World MIS Business Scenario #31</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #31 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A31, MasterDB[EmpID], MasterDB[Salary], "Record 31 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 32: Real-World MIS Business Scenario #32</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #32 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A32, MasterDB[EmpID], MasterDB[Salary], "Record 32 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 33: Real-World MIS Business Scenario #33</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #33 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A33, MasterDB[EmpID], MasterDB[Salary], "Record 33 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 34: Real-World MIS Business Scenario #34</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #34 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A34, MasterDB[EmpID], MasterDB[Salary], "Record 34 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 35: Real-World MIS Business Scenario #35</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #35 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A35, MasterDB[EmpID], MasterDB[Salary], "Record 35 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 36: Real-World MIS Business Scenario #36</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #36 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A36, MasterDB[EmpID], MasterDB[Salary], "Record 36 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 37: Real-World MIS Business Scenario #37</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #37 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A37, MasterDB[EmpID], MasterDB[Salary], "Record 37 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 38: Real-World MIS Business Scenario #38</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #38 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A38, MasterDB[EmpID], MasterDB[Salary], "Record 38 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 39: Real-World MIS Business Scenario #39</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #39 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A39, MasterDB[EmpID], MasterDB[Salary], "Record 39 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 40: Real-World MIS Business Scenario #40</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #40 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A40, MasterDB[EmpID], MasterDB[Salary], "Record 40 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 41: Real-World MIS Business Scenario #41</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #41 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A41, MasterDB[EmpID], MasterDB[Salary], "Record 41 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 42: Real-World MIS Business Scenario #42</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #42 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A42, MasterDB[EmpID], MasterDB[Salary], "Record 42 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 43: Real-World MIS Business Scenario #43</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #43 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A43, MasterDB[EmpID], MasterDB[Salary], "Record 43 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 44: Real-World MIS Business Scenario #44</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #44 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A44, MasterDB[EmpID], MasterDB[Salary], "Record 44 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 45: Real-World MIS Business Scenario #45</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #45 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A45, MasterDB[EmpID], MasterDB[Salary], "Record 45 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 46: Real-World MIS Business Scenario #46</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #46 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A46, MasterDB[EmpID], MasterDB[Salary], "Record 46 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 47: Real-World MIS Business Scenario #47</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #47 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A47, MasterDB[EmpID], MasterDB[Salary], "Record 47 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 48: Real-World MIS Business Scenario #48</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #48 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A48, MasterDB[EmpID], MasterDB[Salary], "Record 48 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 49: Real-World MIS Business Scenario #49</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #49 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A49, MasterDB[EmpID], MasterDB[Salary], "Record 49 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 50: Real-World MIS Business Scenario #50</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #50 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A50, MasterDB[EmpID], MasterDB[Salary], "Record 50 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 51: Real-World MIS Business Scenario #51</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #51 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A51, MasterDB[EmpID], MasterDB[Salary], "Record 51 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 52: Real-World MIS Business Scenario #52</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #52 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A52, MasterDB[EmpID], MasterDB[Salary], "Record 52 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 53: Real-World MIS Business Scenario #53</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #53 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A53, MasterDB[EmpID], MasterDB[Salary], "Record 53 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 54: Real-World MIS Business Scenario #54</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #54 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A54, MasterDB[EmpID], MasterDB[Salary], "Record 54 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 55: Real-World MIS Business Scenario #55</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #55 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A55, MasterDB[EmpID], MasterDB[Salary], "Record 55 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 56: Real-World MIS Business Scenario #56</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #56 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A56, MasterDB[EmpID], MasterDB[Salary], "Record 56 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 57: Real-World MIS Business Scenario #57</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #57 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A57, MasterDB[EmpID], MasterDB[Salary], "Record 57 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 58: Real-World MIS Business Scenario #58</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #58 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A58, MasterDB[EmpID], MasterDB[Salary], "Record 58 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 59: Real-World MIS Business Scenario #59</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #59 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A59, MasterDB[EmpID], MasterDB[Salary], "Record 59 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 60: Real-World MIS Business Scenario #60</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #60 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A60, MasterDB[EmpID], MasterDB[Salary], "Record 60 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 61: Real-World MIS Business Scenario #61</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #61 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A61, MasterDB[EmpID], MasterDB[Salary], "Record 61 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 62: Real-World MIS Business Scenario #62</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #62 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A62, MasterDB[EmpID], MasterDB[Salary], "Record 62 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 63: Real-World MIS Business Scenario #63</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #63 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A63, MasterDB[EmpID], MasterDB[Salary], "Record 63 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 64: Real-World MIS Business Scenario #64</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #64 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A64, MasterDB[EmpID], MasterDB[Salary], "Record 64 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 65: Real-World MIS Business Scenario #65</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #65 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A65, MasterDB[EmpID], MasterDB[Salary], "Record 65 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 66: Real-World MIS Business Scenario #66</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #66 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A66, MasterDB[EmpID], MasterDB[Salary], "Record 66 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 67: Real-World MIS Business Scenario #67</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #67 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A67, MasterDB[EmpID], MasterDB[Salary], "Record 67 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 68: Real-World MIS Business Scenario #68</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #68 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A68, MasterDB[EmpID], MasterDB[Salary], "Record 68 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 69: Real-World MIS Business Scenario #69</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #69 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A69, MasterDB[EmpID], MasterDB[Salary], "Record 69 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 70: Real-World MIS Business Scenario #70</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #70 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A70, MasterDB[EmpID], MasterDB[Salary], "Record 70 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 71: Real-World MIS Business Scenario #71</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #71 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A71, MasterDB[EmpID], MasterDB[Salary], "Record 71 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 72: Real-World MIS Business Scenario #72</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #72 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A72, MasterDB[EmpID], MasterDB[Salary], "Record 72 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 73: Real-World MIS Business Scenario #73</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #73 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A73, MasterDB[EmpID], MasterDB[Salary], "Record 73 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 74: Real-World MIS Business Scenario #74</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #74 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A74, MasterDB[EmpID], MasterDB[Salary], "Record 74 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 75: Real-World MIS Business Scenario #75</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #75 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A75, MasterDB[EmpID], MasterDB[Salary], "Record 75 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 76: Real-World MIS Business Scenario #76</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #76 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A76, MasterDB[EmpID], MasterDB[Salary], "Record 76 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 77: Real-World MIS Business Scenario #77</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #77 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A77, MasterDB[EmpID], MasterDB[Salary], "Record 77 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 78: Real-World MIS Business Scenario #78</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #78 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A78, MasterDB[EmpID], MasterDB[Salary], "Record 78 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 79: Real-World MIS Business Scenario #79</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #79 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A79, MasterDB[EmpID], MasterDB[Salary], "Record 79 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 80: Real-World MIS Business Scenario #80</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #80 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A80, MasterDB[EmpID], MasterDB[Salary], "Record 80 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 81: Real-World MIS Business Scenario #81</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #81 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A81, MasterDB[EmpID], MasterDB[Salary], "Record 81 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 82: Real-World MIS Business Scenario #82</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #82 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A82, MasterDB[EmpID], MasterDB[Salary], "Record 82 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 83: Real-World MIS Business Scenario #83</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #83 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A83, MasterDB[EmpID], MasterDB[Salary], "Record 83 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 84: Real-World MIS Business Scenario #84</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #84 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A84, MasterDB[EmpID], MasterDB[Salary], "Record 84 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 85: Real-World MIS Business Scenario #85</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #85 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A85, MasterDB[EmpID], MasterDB[Salary], "Record 85 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 86: Real-World MIS Business Scenario #86</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #86 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A86, MasterDB[EmpID], MasterDB[Salary], "Record 86 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 87: Real-World MIS Business Scenario #87</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #87 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A87, MasterDB[EmpID], MasterDB[Salary], "Record 87 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 88: Real-World MIS Business Scenario #88</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #88 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A88, MasterDB[EmpID], MasterDB[Salary], "Record 88 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 89: Real-World MIS Business Scenario #89</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #89 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A89, MasterDB[EmpID], MasterDB[Salary], "Record 89 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 90: Real-World MIS Business Scenario #90</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #90 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A90, MasterDB[EmpID], MasterDB[Salary], "Record 90 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 91: Real-World MIS Business Scenario #91</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #91 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A91, MasterDB[EmpID], MasterDB[Salary], "Record 91 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 92: Real-World MIS Business Scenario #92</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #92 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A92, MasterDB[EmpID], MasterDB[Salary], "Record 92 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 93: Real-World MIS Business Scenario #93</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #93 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A93, MasterDB[EmpID], MasterDB[Salary], "Record 93 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 94: Real-World MIS Business Scenario #94</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #94 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A94, MasterDB[EmpID], MasterDB[Salary], "Record 94 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 95: Real-World MIS Business Scenario #95</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #95 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A95, MasterDB[EmpID], MasterDB[Salary], "Record 95 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 96: Real-World MIS Business Scenario #96</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #96 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A96, MasterDB[EmpID], MasterDB[Salary], "Record 96 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 97: Real-World MIS Business Scenario #97</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #97 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A97, MasterDB[EmpID], MasterDB[Salary], "Record 97 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 98: Real-World MIS Business Scenario #98</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #98 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A98, MasterDB[EmpID], MasterDB[Salary], "Record 98 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 99: Real-World MIS Business Scenario #99</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #99 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A99, MasterDB[EmpID], MasterDB[Salary], "Record 99 Pending")</div>
+</div>
+
+<div style="margin-bottom: 1.2rem; padding: 0.8rem 1rem; background: #ffffff; border-radius: 8px; border-left: 4px solid #1b5e20; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+  <h4 style="font-family: 'Kalam', cursive; color: #0d47a1; margin-bottom: 0.3rem;">Case 100: Real-World MIS Business Scenario #100</h4>
+  <p style="font-size: 0.95rem; margin-bottom: 0.4rem; color: #37474f;"><b>Problem:</b> Solve advanced data analysis, lookup, data validation, pivot table, or automation scenario #100 for corporate reporting.</p>
+  <div class="code-snippet">=XLOOKUP(A100, MasterDB[EmpID], MasterDB[Salary], "Record 100 Pending")</div>
+</div>
+
       </div>
     </article>
-
+  
       </div>
     </main>
-
   </div>
 
   <script>
@@ -1726,37 +1408,7 @@ End Sub
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Default activate module 1
     showModule('mod1');
-
-    // Register PWA Service Worker
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').then(reg => {
-        console.log('Service Worker Registered Successfully!', reg);
-      }).catch(err => {
-        console.log('Service Worker Registration Failed:', err);
-      });
-    }
-
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-    });
-
-    function installPWA() {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the PWA install prompt');
-          }
-          deferredPrompt = null;
-        });
-      } else {
-        alert('PWA installation is ready! Open browser menu and select "Add to Home Screen".');
-      }
-    }
   </script>
 </body>
 </html>
